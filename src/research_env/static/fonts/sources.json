@@ -1,0 +1,65 @@
+[
+  {
+    "file": "geist-400-normal.ttf",
+    "source": "https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_RnOM4nQ.ttf",
+    "retrieved_at": "2026-10-06T21:50:00.686628+00:00",
+    "bytes": 72916,
+    "sha256": "ccce59465ae5c61930ada5453834f60500fbd95084d85db63e0e65fad0125455"
+  },
+  {
+    "file": "geist-600-normal.ttf",
+    "source": "https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_RQuQ4nQ.ttf",
+    "retrieved_at": "2026-10-06T21:50:00.594269+00:00",
+    "bytes": 73048,
+    "sha256": "7171f481b121803d007f5c6c76cd9988c0d41cce4202db9a18dff9945505d36d"
+  },
+  {
+    "file": "geist-mono-400-normal.ttf",
+    "source": "https://fonts.gstatic.com/s/geistmono/v6/or3yQ6H-1_WfwkMZI_qYPLs1a-t7PU0AbeE9KJ5T.ttf",
+    "retrieved_at": "2026-10-06T21:50:00.592049+00:00",
+    "bytes": 71160,
+    "sha256": "7022da390e9b401ea35b722f8ed2376948e70add10954bc798839b4bfe17ef3f"
+  },
+  {
+    "file": "geist-mono-500-normal.ttf",
+    "source": "https://fonts.gstatic.com/s/geistmono/v6/or3yQ6H-1_WfwkMZI_qYPLs1a-t7PU0AbeEPKJ5T.ttf",
+    "retrieved_at": "2026-10-06T21:50:00.686688+00:00",
+    "bytes": 71212,
+    "sha256": "5c1b7b77c2d6132460f03b60c175adc80da1ebd0b418c785135b1aed27a28b30"
+  },
+  {
+    "file": "instrument-serif-400-italic.ttf",
+    "source": "https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zATiw.ttf",
+    "retrieved_at": "2026-10-06T21:50:00.582423+00:00",
+    "bytes": 64208,
+    "sha256": "fecf4861d5202405b8bd45c683858b6870642a026784fe0dbf88ff55dedee8a0"
+  },
+  {
+    "file": "instrument-serif-400-normal.ttf",
+    "source": "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-2zI.ttf",
+    "retrieved_at": "2026-10-06T21:50:00.575882+00:00",
+    "bytes": 62284,
+    "sha256": "a99e3db50076202713812ed541feeb23ffeebb61db1fa6b1cf48fe590d37ef18"
+  },
+  {
+    "file": "geist-OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/geist/OFL.txt",
+    "retrieved_at": "2026-10-06T21:50:00.869464+00:00",
+    "bytes": 4387,
+    "sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f"
+  },
+  {
+    "file": "geistmono-OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/geistmono/OFL.txt",
+    "retrieved_at": "2026-10-06T21:50:00.900041+00:00",
+    "bytes": 4387,
+    "sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f"
+  },
+  {
+    "file": "instrumentserif-OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/instrumentserif/OFL.txt",
+    "retrieved_at": "2026-10-06T21:50:00.931663+00:00",
+    "bytes": 4405,
+    "sha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521"
+  }
+]

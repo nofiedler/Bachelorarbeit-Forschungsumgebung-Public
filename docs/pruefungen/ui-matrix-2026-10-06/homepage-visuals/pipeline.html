@@ -1,0 +1,105 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Was geschieht in einem Lauf?</title><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box} body{margin:0;padding:32px;background:#f5f5f5;color:#2d3142;font-family:'Geist',system-ui,sans-serif} main{max-width:1120px;margin:auto;min-width:0} h1{font-family:'Instrument Serif',Georgia,serif;font-size:28px;font-weight:400} .pipeline-figure { margin:1.5rem 0; min-width:0; }
+.pipeline-diagram { width:100%; overflow-x:auto; background:#f5f5f5; border-radius:8px; }
+.pipeline-diagram:focus-visible { outline:2px solid #6d42cf; outline-offset:4px; }
+.pipeline-diagram svg { display:block; width:100%; min-width:744px; max-width:960px; margin:0 auto; }
+.pipeline-diagram .node-name { font:600 16px 'Geist',system-ui,sans-serif; fill:#2d3142; }
+.pipeline-diagram .node-copy { font:400 12px 'Geist',system-ui,sans-serif; fill:#4f5d75; }
+.pipeline-diagram .tag { font:500 12px 'Geist Mono',monospace; letter-spacing:1px; fill:#4f5d75; }
+.pipeline-diagram .arrow-label { font:400 12px 'Geist Mono',monospace; letter-spacing:.5px; fill:#4f5d75; }
+.pipeline-diagram .callout { font:italic 14px 'Instrument Serif',Georgia,serif; fill:#4f5d75; }
+.pipeline-diagram .group-label { font:600 14px 'Geist',system-ui,sans-serif; fill:#2d3142; }
+.pipeline-diagram .edge { fill:none; stroke:#4f5d75; stroke-width:1.5; marker-end:url(#lauf-pipeline-arrow); }
+.pipeline-diagram .skip { stroke-dasharray:5 4; }
+.pipeline-figure figcaption { margin-top:.65rem; color:var(--muted,#4f5d75); font-size:.85rem; }
+@media print { .pipeline-diagram { overflow:visible; } .pipeline-diagram svg { min-width:0; } }
+
+</style></head><body><main><h1>Was geschieht in einem Lauf?</h1><figure class="pipeline-figure">
+<div class="pipeline-diagram" tabindex="0" role="region" aria-label="Pipeline-Diagramm; auf schmalen Bildschirmen horizontal scrollbar">
+<svg viewBox="0 0 744 792" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="lauf-pipeline-title lauf-pipeline-desc">
+<title id="lauf-pipeline-title">Vom Legacy-Code zum unabhängig bewerteten Laravel-Kandidaten</title>
+<desc id="lauf-pipeline-desc">Analyzer, optional Planner, Migrate, Test mit internem Runner, optional Review. Bei internem Fehler oder Änderungsbedarf folgt genau ein Repair und die Wiederholung derselben Tests. Sonst geht es direkt zum Seal. Nach dem Seal folgt die getrennte externe Bewertung ohne Rückmeldung an die Agenten. P bezeichnet Produktion und V Verifikation. Technische Abbrüche sind in dieser Übersicht nicht einzeln dargestellt.</desc>
+<defs><marker id="lauf-pipeline-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#4f5d75"/></marker></defs>
+<g transform="translate(12 12) scale(0.75)"><rect width="960" height="1024" fill="#f5f5f5"/>
+<text x="136" y="40" class="tag">FRISCHER AUSGANGSZUSTAND · K0 ODER K1 · ÖFFENTLICHER VERTRAG</text>
+
+<path class="edge " data-from="analyzer" data-to="planner" d="M316 128V160"/>
+<path class="edge " data-from="planner" data-to="migrate" d="M316 224V256"/>
+<path class="edge " data-from="migrate" data-to="test" d="M316 320V352"/>
+<path class="edge " data-from="test" data-to="review" d="M316 440V472"/>
+<path class="edge " data-from="review" data-to="decision" d="M316 536V568"/>
+<path class="edge " data-from="decision" data-to="seal" d="M316 680V728"/>
+<path class="edge " data-from="decision" data-to="repair" d="M436 624H592"/>
+<path class="edge " data-from="repair" data-to="seal" d="M736 688V752Q736 760 728 760H496"/>
+<path class="edge " data-from="seal" data-to="evaluation" d="M316 792V848"/>
+<path class="edge skip" data-from="analyzer" data-to="migrate" d="M136 96H104Q96 96 96 104V280Q96 288 104 288H136"/>
+<path class="edge skip" data-from="test" data-to="decision" d="M136 396H104Q96 396 96 404V616Q96 624 104 624H196"/>
+<rect x="44" y="198" width="44" height="16" fill="#f5f5f5"/><text x="66.0" y="209" class="arrow-label" text-anchor="middle">AUS</text>
+<rect x="44" y="526" width="44" height="16" fill="#f5f5f5"/><text x="66.0" y="537" class="arrow-label" text-anchor="middle">AUS</text>
+<rect x="480" y="600" width="68" height="16" fill="#f5f5f5"/><text x="514.0" y="611" class="arrow-label" text-anchor="middle">JA</text>
+<rect x="326" y="697" width="48" height="16" fill="#f5f5f5"/><text x="350.0" y="708" class="arrow-label" text-anchor="middle">NEIN</text>
+<g data-node="analyzer"><rect x="136" y="64" width="360" height="64" rx="6" fill="#ffffff" stroke="#bfc0c0"/>
+<text x="156" y="92" class="node-name">Analyzer</text>
+<text x="476" y="92" text-anchor="end" class="tag">P</text>
+<text x="156" y="112" class="node-copy">Quellcode und Zusammenhänge beschreiben.</text>
+</g>
+<g data-node="planner"><rect x="136" y="160" width="360" height="64" rx="6" fill="#ececec" stroke="#bfc0c0" stroke-dasharray="4 3"/>
+<text x="156" y="188" class="node-name">Planner · optional</text>
+<text x="476" y="188" text-anchor="end" class="tag">P</text>
+<text x="156" y="208" class="node-copy">Migrationsplan erstellen.</text>
+</g>
+<g data-node="migrate"><rect x="136" y="256" width="360" height="64" rx="6" fill="#fcf1eb" stroke="#eb6c36"/>
+<text x="156" y="284" class="node-name">Migrate</text>
+<text x="476" y="284" text-anchor="end" class="tag">P</text>
+<text x="156" y="304" class="node-copy">Laravel-Dateien im Zielgerüst erzeugen.</text>
+</g>
+<g data-node="test"><rect x="136" y="352" width="360" height="88" rx="6" fill="#ffffff" stroke="#bfc0c0"/>
+<text x="156" y="380" class="node-name">Test + interner Runner</text>
+<text x="476" y="380" text-anchor="end" class="tag">V + TOOL</text>
+<text x="156" y="400" class="node-copy">Interne Tests erstellen und ausführen;</text>
+<text x="156" y="420" class="node-copy">Syntax und Startfähigkeit prüfen.</text>
+</g>
+<g data-node="review"><rect x="136" y="472" width="360" height="64" rx="6" fill="#ececec" stroke="#bfc0c0" stroke-dasharray="4 3"/>
+<text x="156" y="500" class="node-name">Review · optional</text>
+<text x="476" y="500" text-anchor="end" class="tag">V</text>
+<text x="156" y="520" class="node-copy">Code und interne Rückmeldungen prüfen.</text>
+</g>
+<g data-node="decision"><path d="M316 568L436 624L316 680L196 624Z" fill="#ffffff" stroke="#bfc0c0"/><text x="316" y="620" class="node-name" text-anchor="middle">Interner Fehler</text><text x="316" y="640" class="node-copy" text-anchor="middle">oder Reviewbedarf?</text></g>
+<g data-node="repair"><rect x="592" y="584" width="288" height="104" rx="6" fill="#ffffff" stroke="#bfc0c0"/>
+<text x="612" y="612" class="node-name">Repair · einmal</text>
+<text x="860" y="612" text-anchor="end" class="tag">P + TOOL</text>
+<text x="612" y="632" class="node-copy">Modulcode korrigieren.</text>
+<text x="612" y="652" class="node-copy">Dieselben internen Tests erneut</text>
+<text x="612" y="672" class="node-copy">ausführen; kein zweites Review.</text>
+</g>
+<g data-node="seal"><rect x="136" y="728" width="360" height="64" rx="6" fill="#fcf1eb" stroke="#eb6c36"/>
+<text x="156" y="756" class="node-name">Seal</text>
+<text x="476" y="756" text-anchor="end" class="tag">TOOL</text>
+<text x="156" y="776" class="node-copy">Letzten Kandidaten unveränderlich sichern.</text>
+</g>
+<g data-node="evaluation"><rect x="136" y="848" width="744" height="88" rx="6" fill="#ffffff" stroke="#bfc0c0"/>
+<text x="156" y="876" class="node-name">Getrennte externe Bewertung</text>
+<text x="860" y="876" text-anchor="end" class="tag">NACH SEAL</text>
+<text x="156" y="896" class="node-copy">Referenztests · PHPStan/Larastan · menschliche Zielprüfung</text>
+<text x="156" y="916" class="node-copy">Ergebnisse und Ressourcen mit derselben Lauf-ID auswerten.</text>
+</g>
+
+<text x="592" y="184" class="group-label">Dasselbe Paket für alle aktiven Rollen</text>
+<text x="592" y="208" class="node-copy">Jede Rolle erhält K0 oder K1 plus ihre</text>
+<text x="592" y="228" class="node-copy">festgelegten Artefakte aus diesem Lauf.</text>
+<text x="592" y="280" class="callout">Ein Modell kann mehrere Rollen übernehmen.</text>
+<text x="592" y="416" class="group-label">Interne Prüfungen dürfen korrigieren helfen</text>
+<text x="592" y="440" class="node-copy">Ohne Review entscheidet allein das</text>
+<text x="592" y="460" class="node-copy">interne Prüfergebnis über Repair.</text>
+<text x="592" y="804" class="callout">Externe Ergebnisse fließen nicht zurück.</text>
+<line x1="40" y1="960" x2="920" y2="960" stroke="#bfc0c0"/>
+<text x="40" y="988" class="node-copy">P = Produktion</text><text x="208" y="988" class="node-copy">V = Verifikation</text>
+<text x="388" y="988" class="node-copy">TOOL = kein Modellaufruf</text>
+<line x1="680" y1="984" x2="716" y2="984" stroke="#4f5d75" stroke-dasharray="5 4"/>
+<text x="728" y="988" class="node-copy">AUS = Rolle überspringen</text>
+</g>
+</svg>
+</div>
+<figcaption>Regulärer Ablauf mit höchstens einem Repair. Technische Abbrüche und fehlende Kandidaten werden gesondert protokolliert. Auf schmalen Bildschirmen lässt sich die Grafik horizontal verschieben.</figcaption>
+</figure>
+</main></body></html>

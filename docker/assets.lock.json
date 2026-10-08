@@ -1,0 +1,7 @@
+{
+  "htmx_version": "2.0.11",
+  "files": {
+    "src/research_env/static/vendor/htmx.min.js": "d6fdc75f204e6bdefa99b69bf1e6d4ac69b8a364f77929f45c13476b4000f717",
+    "src/research_env/static/vendor/LICENSE": "d3d2456f76414f2456104660ebd65aff1c04cd7966b942bdabd63f3cdb316a38"
+  }
+}

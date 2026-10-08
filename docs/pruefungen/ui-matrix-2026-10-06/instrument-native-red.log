@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from research_env.config import Settings; from research_env.register import Register; from research_env.domain import Freeze; r=Register(Settings.from_environment(),readonly=True); r._gates(r.get("2c997e37-1279-4d3c-9baa-6db4f76ed446",Freeze)); print("READY")
+                                                                                                                                                                                         ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/research_env/register.py", line 664, in _gates
+    require_ready(self, {k:self._get(vid,ConfigurationVersion) for k,vid in f.configuration_version_ids.items()})
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/research_env/matrix_readiness.py", line 70, in require_ready
+    if errors: raise GateError('Voraussetzungen offen: '+'; '.join(errors))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+research_env.register.GateError: Voraussetzungen offen: Einrichtung noch nicht abgeschlossen. Unter Einstellungen die Grundausstattung vorbereiten.; Einrichtung noch nicht abgeschlossen. Unter Einstellungen die Grundausstattung vorbereiten.

@@ -1,0 +1,219 @@
+{
+  "access_scope": "shared role input; injected credentials excluded",
+  "allowlist_sha256": "6ac71dbaaf0335dcf55a082c124ce569b50d3ff631085b3a8f2b3a14203d9b00",
+  "approval": null,
+  "asset_version": "M2-SCAFFOLD-v0.1",
+  "dependencies": {
+    "M1_locks_unchanged": true,
+    "additional_extension": "mysqli compiled from fixed PHP source for private counterdesigns",
+    "composer_json_sha256": "3b9f3f67587249754f56f32a4ff66d0f258474c9f4906f77fc361f1703301193",
+    "composer_lock_sha256": "8f0f303583b6f014b25b679c2256f9a8cfecd5de075276f757b5e4ea7f534da2",
+    "images_lock_sha256": "fae912a00ac83efe38c2c23f92d5cee34d04d8b29184e7735a3a34e609c2211f",
+    "study_dockerfile_sha256": "51d94188957e2e05e381c3bc61dd01e3968729c6825937aa7c7354258710b720"
+  },
+  "files": {
+    ".editorconfig": {
+      "bytes": 275,
+      "sha256": "fe39e0ad06edea8e256e44f1fc4f319a8acfa785a7470af5cf6b9ed12dc34406"
+    },
+    ".gitattributes": {
+      "bytes": 186,
+      "sha256": "a40eb27ee0b545ca5b5542daaf99fec51f84f23b3766a6353864ef2a115bc51c"
+    },
+    ".gitignore": {
+      "bytes": 341,
+      "sha256": "3ee1060a695b64e763d8a438ac1fe87494ff00d92680c3f63ca56bc103ed4142"
+    },
+    ".npmrc": {
+      "bytes": 31,
+      "sha256": "e968d1d336604e9986ea31306a4d9e1442f4312fca262f444384baf928d6560e"
+    },
+    "app/Auth/ScaffoldUserProvider.php": {
+      "bytes": 829,
+      "sha256": "637681043c933ad3ace6a0d11f9f9ea0666568e755aa74020b4ae813ebd8bb71"
+    },
+    "app/Http/Controllers/Controller.php": {
+      "bytes": 77,
+      "sha256": "25d1c1ef8e6cc8a376553faacfba2b07d9dfaee9bdbb84f14f77517580e9deb1"
+    },
+    "app/Http/Controllers/StudyAccessController.php": {
+      "bytes": 1031,
+      "sha256": "1b77a11aa0da89cd74a8e7dca2c365bc038831917867526bea725ad1fd0edfc7"
+    },
+    "app/Providers/AppServiceProvider.php": {
+      "bytes": 344,
+      "sha256": "4c3b73a15192687262afffc02868d41776b3a0269367fba304de506252b04c9c"
+    },
+    "artisan": {
+      "bytes": 425,
+      "sha256": "f91a517c0c5d3a904c3f390933964a5e08ec1fc68146882730daac4aca4ffcec"
+    },
+    "bootstrap/app.php": {
+      "bytes": 684,
+      "sha256": "5affac529645646b3e4d599096e79c194aac63e8293690364b856d72c1e9ecbf"
+    },
+    "bootstrap/cache/.gitignore": {
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    "bootstrap/providers.php": {
+      "bytes": 89,
+      "sha256": "f720e185207a343d4c19fc99dbb317a4187efbcd7d38a303a695bbdd77ffb943"
+    },
+    "composer.json": {
+      "bytes": 2537,
+      "sha256": "3b9f3f67587249754f56f32a4ff66d0f258474c9f4906f77fc361f1703301193"
+    },
+    "composer.lock": {
+      "bytes": 285886,
+      "sha256": "8f0f303583b6f014b25b679c2256f9a8cfecd5de075276f757b5e4ea7f534da2"
+    },
+    "config/app.php": {
+      "bytes": 4281,
+      "sha256": "b4b25e15efa76846a7f2e19fd1044fec4945e4e928c4098126a2b0042b034383"
+    },
+    "config/auth.php": {
+      "bytes": 205,
+      "sha256": "4d8e8768e114d3f09fd8694d8b4bafd5dbed26bd81fab65057c16a65bbf89771"
+    },
+    "config/cache.php": {
+      "bytes": 4346,
+      "sha256": "cae9a2af1e5e4d796683d6ef04a664db03254c71104448376b36ffdc8dac1ecf"
+    },
+    "config/database.php": {
+      "bytes": 7175,
+      "sha256": "51177b2b3dd8dd8b69bd267882b5d87e35683c4d699c71e10f2505b30d1db00f"
+    },
+    "config/filesystems.php": {
+      "bytes": 2644,
+      "sha256": "a25bc072beb7fa81819a052a7fbf7ea53aab7634b1a2580af5064fd7645024d1"
+    },
+    "config/logging.php": {
+      "bytes": 4606,
+      "sha256": "beb1ffd0db910f6f0b4f75214c3d5aa385d692733ece8a450f4c169d2c99ce38"
+    },
+    "config/mail.php": {
+      "bytes": 3631,
+      "sha256": "c43ff49a31c5f32ce21eb7159f2a4b3cd2f4074eaed5838d265646dbfedd3474"
+    },
+    "config/queue.php": {
+      "bytes": 4170,
+      "sha256": "564a3184a5391bab066bd322f0b6f1c215cf7354849978962b438be0d9cf2bfa"
+    },
+    "config/services.php": {
+      "bytes": 1039,
+      "sha256": "b7ee786ea1adbc92db9f229f479431c94503527c47051da3862eb0e4d7db70aa"
+    },
+    "config/session.php": {
+      "bytes": 8396,
+      "sha256": "a2e75119a66e8fad8380255bfbef15161a5f9ec59ade8b9964d04fb8283f90bf"
+    },
+    "config/study.php": {
+      "bytes": 60,
+      "sha256": "8b77d7a427f9b4a862f036c5de41419bcdcf3e449a80b8804dfa73edad3c0383"
+    },
+    "database/.gitignore": {
+      "bytes": 10,
+      "sha256": "e758642d95e83e907e010b6e46b07b3f953c7cef11fe5ebefc2a77b9d7b4d5f7"
+    },
+    "database/development-users.sql": {
+      "bytes": 460,
+      "sha256": "1d24b532a52dbdf197022b118924c6ea7e185b68b22ce8985a0c4f7f3108248a"
+    },
+    "database/users.sql": {
+      "bytes": 933,
+      "sha256": "a9f1de8ddef2507ee6c661c9cf1a15a949e832047b6f3c23287c1b009c07e272"
+    },
+    "public/.htaccess": {
+      "bytes": 740,
+      "sha256": "b7e379c77639fd56144947dbae84c84eb466d9c686ea81f2f013ae85421da923"
+    },
+    "public/favicon.ico": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public/index.php": {
+      "bytes": 543,
+      "sha256": "eba77cba39695b6bd091fe5211d481f7ebb2ce2d8d26230b5a609465d0a4aff9"
+    },
+    "public/robots.txt": {
+      "bytes": 24,
+      "sha256": "e5c4b84484ee4216e9373be99380320c25dd94805f99f0a805846f087636553f"
+    },
+    "resources/views/access.blade.php": {
+      "bytes": 352,
+      "sha256": "da8afde01537f8ec8136f96874f43e467c5752bde4b2144660c4c1380f4f29ae"
+    },
+    "resources/views/home.blade.php": {
+      "bytes": 373,
+      "sha256": "8cac339a13ddd26dff591edf6a4f9d1a83989141685fcad2505dd78adbbbdd15"
+    },
+    "routes/console.php": {
+      "bytes": 210,
+      "sha256": "9adccc33e7dd400683e434774077c7fdb2f299c5712cedf16a43fdf56f2850fa"
+    },
+    "routes/study.php": {
+      "bytes": 95,
+      "sha256": "a6953a77564aa19f7daf89e60ea7404479e669a1d4103113827efd0673ef988e"
+    },
+    "routes/web.php": {
+      "bytes": 478,
+      "sha256": "aa578c57d388fb2627c6f44003e2cd9f1dd0e77d020109c9cc5756999e536efc"
+    },
+    "storage/app/.gitignore": {
+      "bytes": 33,
+      "sha256": "993b9e3709d7b5189da331725d1169d79e561a509db2490b722b525073d2d976"
+    },
+    "storage/app/private/.gitignore": {
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    "storage/app/public/.gitignore": {
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    "storage/app/study/uploads/.gitignore": {
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    "storage/framework/.gitignore": {
+      "bytes": 129,
+      "sha256": "37bc9570de232e9db87ce530b3e4e2d5fa8d75f3bd587069fd26e2fb4ef1ffa5"
+    },
+    "storage/framework/cache/.gitignore": {
+      "bytes": 29,
+      "sha256": "533853ce8390305dd856510063fdffdd1ae206f24c03b9294542d3cfe5c3e33a"
+    },
+    "storage/framework/cache/data/.gitignore": {
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    "storage/framework/cache/locks/.gitignore": {
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    "storage/framework/sessions/.gitignore": {
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    "storage/framework/testing/.gitignore": {
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    "storage/framework/views/.gitignore": {
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    "storage/logs/.gitignore": {
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    }
+  },
+  "human_review": "open",
+  "interfaces_sha256": "fd59707f499d791323a03f296258404f2739ef5e4920c78f5af40a8f8f30b6c1",
+  "scaffold_tree_sha256": "95642e0736ecfb907440510ebd74cd1983993a4d7b6390a694d5daa55cd4ac87",
+  "schema_version": 1,
+  "technical_status": "asset construction; runtime evidence separate",
+  "tools_sha256": "5202037506d8b649fd5b2da32f8b2c74efb1190612287489cd5fdac6f2e51d8d",
+  "type": "scaffold"
+}

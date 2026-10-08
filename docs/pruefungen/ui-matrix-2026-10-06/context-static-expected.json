@@ -1,0 +1,18 @@
+{
+  "LaravelGood": {
+    "source": "<?php\nnamespace App\\Study;\nfinal class LaravelGood { public function size(): int { return collect([1, 2])->count(); } }\n",
+    "D": 0,
+    "L": 2
+  },
+  "TypeError": {
+    "source": "<?php\nnamespace App\\Study;\nfinal class TypeError { public function value(): int { return \"bad\"; } public function size(): int { return strlen(123); } }\n",
+    "identifiers": [
+      "argument.type",
+      "return.type"
+    ]
+  },
+  "LaravelRule": {
+    "source": "<?php\nnamespace App\\Study;\nfinal class LaravelRule { public function value(): mixed { return env(\"SYNTHETIC_AUDIT_SETTING\"); } }\n",
+    "larastan_env_rule": true
+  }
+}

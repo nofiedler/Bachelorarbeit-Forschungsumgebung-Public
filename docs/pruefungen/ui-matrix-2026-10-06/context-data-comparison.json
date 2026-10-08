@@ -1,0 +1,13 @@
+{
+  "source_before": "source-tree-sha256:8c74b0f3cbb3ecf105312bdd24fe4c563aafe4051982a082f557088bbe7f71a7",
+  "source_after": "source-tree-sha256:d0c4d0bcb8a4a645a62a778adc711a53f0515d6753835c1d6fc12367425e4dcd",
+  "changed_source_files": [
+    "execution_compatibility.json",
+    "templates/context.html"
+  ],
+  "configuration_freeze_planned_run_and_model_records_unchanged": true,
+  "run_states_unchanged": true,
+  "model_calls_before": 6,
+  "model_calls_after": 6,
+  "non_source_instrument_parameters_identical": true
+}

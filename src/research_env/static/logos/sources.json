@@ -1,0 +1,73 @@
+[
+  {
+    "file": "dvwa.png",
+    "source": "https://raw.githubusercontent.com/digininja/DVWA/b496a5d3de6b967410155e1b7d3e51e9d035eb22/dvwa/images/login_logo.png",
+    "resolved_url": "https://raw.githubusercontent.com/digininja/DVWA/b496a5d3de6b967410155e1b7d3e51e9d035eb22/dvwa/images/login_logo.png",
+    "mime": "image/png",
+    "retrieved_at": "2026-10-06T21:46:38.720879+00:00",
+    "bytes": 9088,
+    "sha256": "262b6ebc6a6721a40bbe32741463a0750af09febc12468ecc6b7f4be976f4842"
+  },
+  {
+    "file": "laravel.svg",
+    "source": "https://raw.githubusercontent.com/laravel/art/master/laravel-logo.svg",
+    "resolved_url": "https://raw.githubusercontent.com/laravel/art/master/laravel-logo.svg",
+    "mime": "image/svg+xml",
+    "retrieved_at": "2026-10-06T21:46:38.754766+00:00",
+    "bytes": 733,
+    "sha256": "14beaa5ac6cb03bb6b53af2d3bdd0af4414b871bb1599c5d03a31d413d661dff"
+  },
+  {
+    "file": "langgraph.svg",
+    "source": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a994264a64b3afcdd880f6b_LangGraph_OSS%20Lockup_light%201.svg",
+    "resolved_url": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a994264a64b3afcdd880f6b_LangGraph_OSS%20Lockup_light%201.svg",
+    "mime": "image/svg+xml",
+    "retrieved_at": "2026-10-06T21:46:38.630840+00:00",
+    "bytes": 5313,
+    "sha256": "b58edf515d14b545e2be74cfeca47c215b565719c74261a63029435576dfd272"
+  },
+  {
+    "file": "langchain.svg",
+    "source": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a994264a64b3afcdd880f66_LangChain_OSS%20Lockup_light%201.svg",
+    "resolved_url": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a994264a64b3afcdd880f66_LangChain_OSS%20Lockup_light%201.svg",
+    "mime": "image/svg+xml",
+    "retrieved_at": "2026-10-06T21:46:38.628873+00:00",
+    "bytes": 4510,
+    "sha256": "becb1782238808ceeaf472aee054a5c38adb8da8266d9f356a344334d328b6ec"
+  },
+  {
+    "file": "phpstan.png",
+    "source": "https://phpstan.org/assets/logo-D3DIJ-HJ.png",
+    "resolved_url": "https://phpstan.org/assets/logo-D3DIJ-HJ.png",
+    "mime": "image/png",
+    "retrieved_at": "2026-10-06T21:46:38.639425+00:00",
+    "bytes": 19693,
+    "sha256": "e6ef536a30cd0da1f308b878608dd37568007a92614b4a2a5c31e7ed791924d0"
+  },
+  {
+    "file": "larastan.png",
+    "source": "https://raw.githubusercontent.com/larastan/larastan/master/docs/logo.png",
+    "resolved_url": "https://raw.githubusercontent.com/larastan/larastan/master/docs/logo.png",
+    "mime": "image/png",
+    "retrieved_at": "2026-10-06T21:46:38.723411+00:00",
+    "bytes": 19219,
+    "sha256": "0f51f51d37f1633b8be7314f261094457dafe592f562e63e1dd2c64c7d8235ea"
+  },
+  {
+    "file": "openrouter.svg",
+    "source": "https://mintcdn.com/openrouter-d02e98a0/ksNSeB_K7gD-BUDh/assets/logo-v2-light.svg?fit=max&auto=format&n=ksNSeB_K7gD-BUDh&q=85&s=690e45873843519efe02bcbe45795dac",
+    "resolved_url": "https://mintcdn.com/openrouter-d02e98a0/ksNSeB_K7gD-BUDh/assets/logo-v2-light.svg?fit=max&auto=format&n=ksNSeB_K7gD-BUDh&q=85&s=690e45873843519efe02bcbe45795dac",
+    "mime": "image/svg+xml",
+    "retrieved_at": "2026-10-06T21:46:38.667350+00:00",
+    "bytes": 4673,
+    "sha256": "5ec27f1f397e1bcad6a4966745fe6d1ce905c2d3e9813bd0c1d4b6d6ea3ae265"
+  },
+  {
+    "file": "docker.svg",
+    "source": "https://www.docker.com/static/Docker-Logos-1.zip",
+    "archive_member": "docker-logos/SVG/docker-logo-ocean-blue.svg",
+    "retrieved_at": "2026-10-06T21:46:38.999584+00:00",
+    "sha256": "db969db2ea1ef7e29938b3924f6d8afce6e0bdf047b94e76bb3bc6c89d36c630",
+    "bytes": 2473
+  }
+]

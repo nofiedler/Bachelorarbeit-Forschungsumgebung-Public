@@ -1,0 +1,1 @@
+<!doctype html><html><meta charset="utf-8"><form action="/study/upload" method="POST" enctype="multipart/form-data">@csrf<input type="file" name="uploaded"><button name="Upload">Upload</button></form>@include('study.parts.upload')</html>

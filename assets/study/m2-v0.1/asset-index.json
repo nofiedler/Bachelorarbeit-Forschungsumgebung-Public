@@ -1,0 +1,155 @@
+{
+  "access_scope": "trusted register metadata; never mount whole asset parent into roles",
+  "asset_version": "M2-ASSET-INDEX-v0.1",
+  "assets": [
+    {
+      "access_scope": "shared scaffold only",
+      "approval": null,
+      "artifact_root": "assets/study/m2-v0.1",
+      "human_review": "open",
+      "id": "scaffold",
+      "manifest": "assets/study/m2-v0.1/manifest.json",
+      "manifest_sha256": "89bf4d29a81c74e3138303a560af00e1984ab7c46dd30f4feb0fe9fcd632e46a",
+      "origin": "M1 skeleton + public M2 contract",
+      "schema_version": 1,
+      "suite_kind": null,
+      "type": "scaffold"
+    },
+    {
+      "access_scope": "public development",
+      "approval": null,
+      "artifact_root": "evaluation/development/m2-v0.1",
+      "human_review": "open",
+      "id": "development",
+      "manifest": "evaluation/development/m2-v0.1/manifest.json",
+      "manifest_sha256": "8008c11c8ee22019f12abb382dd60cbbe667c4932f2dba31931df8ed838424c4",
+      "origin": "independent synthetic public-contract examples",
+      "schema_version": 1,
+      "suite_kind": "development",
+      "type": "fixture_suite"
+    },
+    {
+      "access_scope": "trusted evaluator only",
+      "approval": null,
+      "artifact_root": "evaluation/study_holdout/m2-v0.1/implementations",
+      "human_review": "open",
+      "id": "references",
+      "manifest": "evaluation/study_holdout/m2-v0.1/implementations/manifest.json",
+      "manifest_sha256": "a0be86f07b44d52b43a4b5f36a62dbaf1f1c7b946056b4944e988ffe5814fb9b",
+      "origin": "unchanged M2 reference catalog materialized",
+      "schema_version": 1,
+      "suite_kind": "study_holdout",
+      "type": "reference"
+    },
+    {
+      "access_scope": "trusted evaluator only",
+      "approval": null,
+      "artifact_root": "evaluation/study_holdout/m2-v0.1",
+      "human_review": "open",
+      "id": "holdout_catalog",
+      "manifest": "evaluation/study_holdout/m2-v0.1/manifest.json",
+      "manifest_sha256": "b938271660fc4be4497ccdfaabfc43d0b5dc0b028a119ceeed72e80f756a1333",
+      "origin": "integrated issue3 catalog, unchanged",
+      "schema_version": 1,
+      "suite_kind": "study_holdout",
+      "type": "suite"
+    },
+    {
+      "access_scope": "assigned module/condition package.txt only",
+      "approval": null,
+      "artifact_root": "assets/context/m2-v0.1/BF/K0",
+      "human_review": "open",
+      "id": "context-BF-K0",
+      "manifest": "assets/context/m2-v0.1/BF/K0/manifest.json",
+      "manifest_sha256": "1e3ae44cdd1f2c83b20443a0376563a5a92a24b34195f5e2599d7f431220a7b1",
+      "origin": {
+        "commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+        "repository": "digininja/DVWA"
+      },
+      "schema_version": 1,
+      "suite_kind": null,
+      "type": "source_context"
+    },
+    {
+      "access_scope": "assigned module/condition package.txt only",
+      "approval": null,
+      "artifact_root": "assets/context/m2-v0.1/BF/K1",
+      "human_review": "open",
+      "id": "context-BF-K1",
+      "manifest": "assets/context/m2-v0.1/BF/K1/manifest.json",
+      "manifest_sha256": "eeb626ead081cc9aba62b17f4b9c9b896f410d46a17dfdf1e1bffb4e46328335",
+      "origin": {
+        "commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+        "repository": "digininja/DVWA"
+      },
+      "schema_version": 1,
+      "suite_kind": null,
+      "type": "source_context"
+    },
+    {
+      "access_scope": "assigned module/condition package.txt only",
+      "approval": null,
+      "artifact_root": "assets/context/m2-v0.1/SQL/K0",
+      "human_review": "open",
+      "id": "context-SQL-K0",
+      "manifest": "assets/context/m2-v0.1/SQL/K0/manifest.json",
+      "manifest_sha256": "20f0afc169e05e2f5bed0b0bf3b1d228a7cea5122b31da447dacb48a2605e34d",
+      "origin": {
+        "commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+        "repository": "digininja/DVWA"
+      },
+      "schema_version": 1,
+      "suite_kind": null,
+      "type": "source_context"
+    },
+    {
+      "access_scope": "assigned module/condition package.txt only",
+      "approval": null,
+      "artifact_root": "assets/context/m2-v0.1/SQL/K1",
+      "human_review": "open",
+      "id": "context-SQL-K1",
+      "manifest": "assets/context/m2-v0.1/SQL/K1/manifest.json",
+      "manifest_sha256": "7deabcb5e04e8c88e5c3acf05520ee43495e9a711661a301d27123f1d4eda8bd",
+      "origin": {
+        "commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+        "repository": "digininja/DVWA"
+      },
+      "schema_version": 1,
+      "suite_kind": null,
+      "type": "source_context"
+    },
+    {
+      "access_scope": "assigned module/condition package.txt only",
+      "approval": null,
+      "artifact_root": "assets/context/m2-v0.1/UP/K0",
+      "human_review": "open",
+      "id": "context-UP-K0",
+      "manifest": "assets/context/m2-v0.1/UP/K0/manifest.json",
+      "manifest_sha256": "152aea1f922b6919a23aa4281e31c76482b2a106334af47c892ed256a893afda",
+      "origin": {
+        "commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+        "repository": "digininja/DVWA"
+      },
+      "schema_version": 1,
+      "suite_kind": null,
+      "type": "source_context"
+    },
+    {
+      "access_scope": "assigned module/condition package.txt only",
+      "approval": null,
+      "artifact_root": "assets/context/m2-v0.1/UP/K1",
+      "human_review": "open",
+      "id": "context-UP-K1",
+      "manifest": "assets/context/m2-v0.1/UP/K1/manifest.json",
+      "manifest_sha256": "48b10d7a02f9e4575e913195afb9574376217a7faec072535cfe4680ff000cf7",
+      "origin": {
+        "commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+        "repository": "digininja/DVWA"
+      },
+      "schema_version": 1,
+      "suite_kind": null,
+      "type": "source_context"
+    }
+  ],
+  "schema_version": 1
+}

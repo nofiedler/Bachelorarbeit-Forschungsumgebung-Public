@@ -1,0 +1,56 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+____ test_fixed_matrix_is_ready_after_approved_ui_update_without_rewriting _____
+
+legacy_matrix = (<research_env.register.Register object at 0xffff80b86270>, Study(id=UUID('7bbfe7d3-5c73-4c40-8831-34a03dcfbdde'), cod...rce-tree-sha256:26a613f37ea2ef52164be5dfd3194a884f2da460b3807018e0c5cc7c05e64b9d', hardware=None, container_hashes={}))
+
+    def test_fixed_matrix_is_ready_after_approved_ui_update_without_rewriting(legacy_matrix):
+        r,study,phase,freeze,s=legacy_matrix
+        before={row['id']:row['payload'] for row in r.connection.execute('SELECT id,payload FROM register_record')}
+>       require_ready(r,latest_versions(r,phase.id))
+
+tests/test_instrument_compatibility.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+register = <research_env.register.Register object at 0xffff80b86270>
+versions = {'C-BF-0': ConfigurationVersion(id=UUID('cce93aed-f060-4c23-8a5a-b9c0753a6f2d'), code='CV-9f39c66a-96bd-478c-833f-fdae...27cb3f-4d31-4d68-a8ef-2ab1a463c3fb', '4d91a29c-0a67-47f9-a8c1-4d6ed41ba408'], 'working_copy_evidence_id': None}}), ...}
+
+    def require_ready(register, versions):
+        errors=[row['detail'] for row in checks(register,versions) if not row['ok']]
+>       if errors: raise GateError('Voraussetzungen offen: '+'; '.join(errors))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       research_env.register.GateError: Voraussetzungen offen: Einrichtung noch nicht abgeschlossen. Unter Einstellungen die Grundausstattung vorbereiten.; Einrichtung noch nicht abgeschlossen. Unter Einstellungen die Grundausstattung vorbereiten.
+
+src/research_env/matrix_readiness.py:70: GateError
+_ test_both_real_measurement_schedulers_keep_frozen_tools_and_record_actual_manifest _
+
+legacy_matrix = (<research_env.register.Register object at 0xffff7efc5310>, Study(id=UUID('46ed02bb-3f83-47ab-aa36-ac06e23a8fd0'), cod...rce-tree-sha256:26a613f37ea2ef52164be5dfd3194a884f2da460b3807018e0c5cc7c05e64b9d', hardware=None, container_hashes={}))
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_both_real_measurement_sch0')
+
+    def test_both_real_measurement_schedulers_keep_frozen_tools_and_record_actual_manifest(legacy_matrix,tmp_path):
+        r,study,phase,freeze,s=legacy_matrix
+        conf=r.get(freeze.configuration_version_ids['C-SQL-1'],ConfigurationVersion)
+        images=RuntimeImages(**json.loads((ROOT/'src/research_env/pipeline_runtime.lock.json').read_text()))
+        store=ArtifactStore(r.settings,r);sandbox=Sandbox(store,None,images=images,assets=ROOT)
+        worker=CompletionWorker(r,sandbox)
+>       functional=worker.tool(conf,evaluation.instrument_manifest(images))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_instrument_compatibility.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <research_env.completion.CompletionWorker object at 0xffff80688440>
+conf = ConfigurationVersion(id=UUID('138784e9-d482-4249-b509-75a6ce7f0350'), code='CV-70e0479f-ad7b-40cd-b437-79b518dcdc72', ...: ['a3ab3fc1-4dd9-4ec0-81c4-8b3ae2d82989', 'f139cbe6-410c-411f-941e-e336f1ab8dd2'], 'working_copy_evidence_id': None}})
+manifest = {'version': 'M6-evaluator-v1', 'parser': {'library': 'beautifulsoup4', 'version': '4.15.0', 'parser': 'html.parser', '...manifest_sha256': 'e3fe3027d944629c0a5433acc45d27f17a3736b1c1cd2223bfa8434bdd4db78b', 'version': 'M2-v0.1-CSRF1'}, ...}
+
+    def tool(self, conf, manifest):
+        found=[x for x in conf.settings.tool_ids if self.register.get(x,AssetVersion).manifest_hash==digest(manifest)]
+>       if len(found)!=1: raise GateError('Aktuelles Messinstrument fehlt in dieser Konfiguration. Neue Konfiguration vorbereiten; ältere Läufe werden nicht umgebunden.')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       research_env.register.GateError: Aktuelles Messinstrument fehlt in dieser Konfiguration. Neue Konfiguration vorbereiten; ältere Läufe werden nicht umgebunden.
+
+src/research_env/completion.py:85: GateError
+=========================== short test summary info ============================
+FAILED tests/test_instrument_compatibility.py::test_fixed_matrix_is_ready_after_approved_ui_update_without_rewriting
+FAILED tests/test_instrument_compatibility.py::test_both_real_measurement_schedulers_keep_frozen_tools_and_record_actual_manifest
+2 failed in 1.50s

@@ -1,0 +1,17 @@
+{% macro members(pop, group, role) -%}
+{% set ns=namespace(rows=[]) %}{% for row in pop.rows %}{% for member in row.memberships if member.group_key==group.key and member.role==role %}{% set ns.rows=ns.rows+[row] %}{% endfor %}{% endfor %}
+{% if ns.rows %}<p class="population-run-list"><strong>{{ {'used':'Verwendete Messwerte','not_used':'Nicht verwendet','bounded_missing':'Fehlende Werte, rechnerisch begrenzt','omitted':'In dieser Rechnung weggelassen'}.get(role,role) }}:</strong> {% for row in ns.rows %}<a href="#run-{{ row.position }}" title="{{ row.cell_key }} · Block {{ row.block_index }}">Lauf {{ row.position }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+{%- endmacro %}
+{% macro population(pop, csv_url=none) -%}{% if pop %}
+<div class="figure-population" data-population>
+<p class="population-summary"><strong>Datengrundlage:</strong> {{ pop.summary }}</p>
+<details class="population-details"><summary>Welche Läufe wurden berücksichtigt?</summary>
+<p>Die Laufnummern gehören zur festgelegten Reihenfolge dieser Versuchsreihe. Eine Laufmenge kann in mehreren Teilansichten vorkommen; diese Mengen werden nicht addiert.</p>
+{% for group in pop.groups %}<section class="population-group" data-population-group="{{ group.key }}"><h5>{{ group.label }}</h5><p>{{ group.explanation }}</p>
+{% if group.observation_count is not none %}<p class="population-count">{{ group.observation_count }} {{ {'planned_run':'Laufwerte','run':'Laufwerte','module_pair':'Paare','complete_module_pair':'vollständige Paare','retained_complete_core_block':'verbleibende Kernblöcke','planned_module_pair_for_bounds':'geplante Modulpaare','complete_exploratory_quartet':'vollständige Vierergruppen','complete_core_block':'vollständige Kernblöcke','complete_core_block_for_primary_contrast':'vollständige Kernblöcke','complete_quartet':'vollständige Vierergruppen','block':'Blöcke'}.get(group.observation_unit,'Beobachtungseinheiten') }} · {{ group.used_run_count }} Läufe mit verwendeten Messwerten · {{ group.planned_run_count }} geplante Laufpositionen im Vergleichsbereich</p>{% endif %}
+{% for role in ['used','not_used','bounded_missing','omitted'] %}{{ members(pop,group,role) }}{% endfor %}
+{% if group.observations %}<details class="population-identities"><summary>Zuordnung zu Paaren und Blöcken</summary><ul>{% for observation in group.observations %}<li>{% for position in observation.positions %}<a href="#run-{{ position }}">Lauf {{ position }}</a>{% if not loop.last %} / {% endif %}{% endfor %}</li>{% endfor %}</ul></details>{% endif %}
+</section>{% endfor %}
+<details class="population-identities"><summary>Lauf-IDs und Konfigurationen nachschlagen</summary><div class="table-wrap"><table class="report-table"><thead><tr><th>Lauf</th><th>Konfiguration</th><th>Block</th><th>Lauf-ID</th></tr></thead><tbody>{% for row in pop.rows %}<tr><th scope="row"><a href="#run-{{ row.position }}">Lauf {{ row.position }}</a></th><td>{{ row.cell_key }}</td><td>{{ row.block_index }}</td><td><code>{{ row.run_id or 'Nicht gestartet' }}</code><small>Geplante ID: {{ row.planned_id }}</small></td></tr>{% endfor %}</tbody></table></div></details>
+{% if csv_url %}<a class="report-download" download="{{ pop.csv_filename }}" href="{{ csv_url }}">Laufzuordnung als CSV ↓</a>{% endif %}
+</details></div>{% endif %}{%- endmacro %}

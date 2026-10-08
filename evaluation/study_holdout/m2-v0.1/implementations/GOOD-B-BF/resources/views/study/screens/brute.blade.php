@@ -1,0 +1,1 @@
+<!doctype html><html><meta charset="utf-8"><form action="/study/brute" method="GET"><input type="text" name="username"><input type="password" name="password"><button name="Login">Login</button></form>@include('study.parts.brute')</html>

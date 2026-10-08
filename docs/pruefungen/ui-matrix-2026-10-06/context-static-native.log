@@ -1,0 +1,13 @@
+Pinned native dependencies verified
+{"case": "LaravelGood", "D": 0, "L": 2, "S": "0", "identifiers": [], "seal_unchanged": true, "completed": true}
+{"case": "TypeError", "D": 2, "L": 2, "S": "100", "identifiers": ["return.type", "argument.type"], "seal_unchanged": true, "completed": true}
+Exception ignored in: <urllib3.response.HTTPResponse object at 0xffff9499cf10>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/urllib3/response.py", line 1313, in close
+    self._fp.close()
+  File "/usr/local/lib/python3.13/http/client.py", line 447, in close
+    super().close() # set "closed" flag
+  File "/usr/local/lib/python3.13/http/client.py", line 460, in flush
+    self.fp.flush()
+ValueError: I/O operation on closed file.
+{"case": "LaravelRule", "D": 1, "L": 2, "S": "50", "identifiers": ["larastan.noEnvCallsOutsideOfConfig"], "seal_unchanged": true, "completed": true}

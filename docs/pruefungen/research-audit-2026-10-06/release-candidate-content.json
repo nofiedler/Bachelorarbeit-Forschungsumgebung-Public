@@ -1,0 +1,15 @@
+{
+  "purpose": "tested clean public software snapshot; original development history and runs excluded",
+  "files_before_this_manifest_update": 661,
+  "bytes_before_this_manifest_update": 7582897,
+  "excluded": [
+    ".git",
+    "local",
+    "artifacts",
+    "secrets",
+    "historical docs/pruefungen",
+    "development issues"
+  ],
+  "full_regression_passed": 657,
+  "real_calls_in_clean_install": 0
+}

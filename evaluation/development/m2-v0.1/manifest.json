@@ -1,0 +1,27 @@
+{
+  "access_scope": "public development only",
+  "asset_version": "M2-DEV-v0.1",
+  "files": {
+    "README.md": {
+      "bytes": 1108,
+      "sha256": "b591e8f5431b2b5e24e27bd0eac6a1c9108588ab64a3fbed55eda7b27c198249"
+    },
+    "dev-pixel.png": {
+      "bytes": 69,
+      "sha256": "83527851ca5d1f50b5141458bcc72d58c2f28faa20b18a33f8d47c99c4aef5ac"
+    },
+    "fixtures.json": {
+      "bytes": 973,
+      "sha256": "abeaebf596188ebc04319a7e7d21cdf7b80adc64fdf8db39ec50c3880e2d77d4"
+    },
+    "users.sql": {
+      "bytes": 460,
+      "sha256": "1d24b532a52dbdf197022b118924c6ea7e185b68b22ce8985a0c4f7f3108248a"
+    }
+  },
+  "human_review": "open",
+  "origin": "independent synthetic examples from public contract, not copied/derived from holdout",
+  "schema_version": 1,
+  "suite_kind": "development",
+  "type": "fixture_suite"
+}

@@ -1,0 +1,11 @@
+{
+  "asset_version": "M2-TOOLS-v0.1",
+  "status": "prepared interface; enforcement in issue 7",
+  "tools": [
+    {"name": "read_file", "scope": "own package and scaffold/candidate only", "output": "requested UTF-8 content; no traversal, links, repository or extra context"},
+    {"name": "write_file", "scope": "candidate public write allowlist; internal tests in separate internal_tests", "output": "own write result"},
+    {"name": "php_syntax", "command": "php -l <own allowed PHP file>", "output": "own syntax diagnostics"},
+    {"name": "routes", "command": "php artisan route:list --path=study --json", "output": "own registered routes only"},
+    {"name": "internal_tests", "scope": "separate development resources, own tests and public development fixtures", "output": "own internal results, no study_holdout or external measurements"}
+  ]
+}

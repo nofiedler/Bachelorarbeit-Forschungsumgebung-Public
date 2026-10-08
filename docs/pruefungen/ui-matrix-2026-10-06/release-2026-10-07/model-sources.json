@@ -1,0 +1,28 @@
+[
+  {
+    "url": "https://openrouter.ai/api/v1/models/openai/gpt-6-luna/endpoints",
+    "file": "model-a.json",
+    "retrieved_at": "2026-10-06T22:25:14.859371+00:00",
+    "sha256": "be019b3b4085da25a2f50e66af8ea3368b7ac12e4b63cbc2dcf1ac87eb6edd48",
+    "model": "openai/gpt-6-luna",
+    "tag": "openai",
+    "matching_endpoints": 1,
+    "status": [
+      0
+    ],
+    "provider": [
+      "OpenAI"
+    ]
+  },
+  {
+    "url": "https://openrouter.ai/api/v1/models/deepseek/deepseek-v4.1-flash/endpoints",
+    "file": "model-b.json",
+    "retrieved_at": "2026-10-06T22:25:14.965499+00:00",
+    "sha256": "8de7e03fa50a46274193ee8176f4b597c9c835c7d3836708189ec534707ad413",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "tag": "open-inference/fp4",
+    "matching_endpoints": 0,
+    "status": [],
+    "provider": []
+  }
+]

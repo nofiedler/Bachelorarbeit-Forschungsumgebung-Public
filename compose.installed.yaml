@@ -1,0 +1,24 @@
+# Created runtime IDs belong to this installation and are frozen into new runs.
+services:
+  web:
+    image: research-env-installed:current
+    build:
+      args:
+        RESEARCH_DEPENDENCY_IMAGE: research-env-installed-dependencies:prepared
+    environment:
+      RESEARCH_INSPECTIONS_HOST: ""
+    volumes:
+      - ./local/runtime-images.json:/app/src/research_env/pipeline_runtime.lock.json:ro
+      - inspections:/data/inspections:ro
+  worker:
+    image: research-env-installed:current
+    build:
+      args:
+        RESEARCH_DEPENDENCY_IMAGE: research-env-installed-dependencies:prepared
+    environment:
+      RESEARCH_INSPECTIONS_HOST: ""
+    volumes:
+      - ./local/runtime-images.json:/app/src/research_env/pipeline_runtime.lock.json:ro
+      - inspections:/data/inspections
+volumes:
+  inspections:

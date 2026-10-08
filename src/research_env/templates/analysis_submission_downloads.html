@@ -1,0 +1,31 @@
+<section id="submission-downloads" class="submission-downloads" aria-labelledby="submission-downloads-heading">
+  <p class="eyebrow">Dateien für Manuskript und Nachrechnung</p>
+  <h2 id="submission-downloads-heading">Für die Abgabe</h2>
+  <p>Diese beiden ZIP-Dateien ergänzen die einzelnen Tabellen und Abbildungen dieser Auswertung.</p>
+  <div class="submission-download-grid">
+    <article class="submission-download-card" aria-labelledby="submission-code-heading">
+      <div class="submission-card-copy">
+        <p class="submission-card-label">01 · Quellcode und Nachrechnung</p>
+        <h3 id="submission-code-heading">Das verwendete Auswertungsskript</h3>
+        <p>Der zu diesem Analysestand gehörende Rechenkern, ein ausführbares Kommandozeilenskript, die festgelegten Abhängigkeitsversionen und eine README mit Anleitung.</p>
+        <p class="submission-card-note">Zusammen mit dem Rohdatenpaket lässt sich die Analyse unabhängig nachrechnen – ohne Anwendungsdatenbank, Docker oder API-Aufrufe.</p>
+      </div>
+      <div class="submission-card-actions">
+        <a class="button" href="/analyses/{{ analysis.id }}/code.zip" download>Auswertungsskript herunterladen</a>
+        <small>ZIP · Anleitung und ausführbarer Quellcode</small>
+      </div>
+    </article>
+    <article class="submission-download-card" aria-labelledby="submission-data-heading">
+      <div class="submission-card-copy">
+        <p class="submission-card-label">02 · Rohdaten und bestätigter Analysestand</p>
+        <h3 id="submission-data-heading">Die gesamte Forschungsserie</h3>
+        <p>Originaldateien, Messungen, Bewertungen und Aufrufprotokolle der gesamten Hauptphase einschließlich ihrer gespeicherten Revisionen zum Exportzeitpunkt sowie verknüpfte Pilotbelege.</p>
+        <p class="submission-card-note">Die bestätigte Analyse bleibt mit ihrer ursprünglichen Auswahl enthalten. Das Paket ergänzt sie um die Tabellen, Abbildungen und Hinweise zur Nachrechnung.</p>
+      </div>
+      <div class="submission-card-actions">
+        {% include 'analysis_raw_export.html' %}
+      </div>
+    </article>
+  </div>
+  <p class="submission-scope-note">Freie Tests, API-Schlüssel und Docker-Images sind nicht enthalten. Für die Abgabe beide ZIP-Dateien herunterladen und gemeinsam aufbewahren.</p>
+</section>

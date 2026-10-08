@@ -1,0 +1,9 @@
+{% extends 'base.html' %}{% block title %}Auswertung · {{ study_title }}{% endblock %}{% block content %}
+<a class="back-link" href="/analyses">← Alle Auswertungen</a>
+<div class="page-intro"><p class="eyebrow">{{ 'Synthetische technische Prüfung · keine Forschungsergebnisse' if result.data_origin=='synthetic' else 'Datenauswertung · bestätigter Stand' }}</p><h1>{{ study_title }}</h1><p>Bestätigt am {{ analysis.confirmed_at.strftime('%d.%m.%Y · %H:%M UTC') }} durch {{ analysis.confirmed_by }}. Die Darstellung verwendet ausschließlich die zu diesem Zeitpunkt ausgewählten Messungen und Bewertungen.</p></div>
+<p><a href="#submission-downloads">Auswertungsskript und gesammelte Rohdaten herunterladen ↓</a></p>
+{% include 'analysis_report.html' %}
+{% include 'analysis_submission_downloads.html' %}
+<section class="analysis-historical-exports"><h2>Archivierte Ausgaben</h2><p><a href="/packages">Gespeicherte Studienpakete öffnen und nachrechnen →</a></p>
+<details><summary>Ursprünglich bestätigte Exportdateien</summary><p>Diese Dateien bleiben im ursprünglichen Format erhalten. Die überarbeitete Darstellung oben ist separat an denselben Datenstand gebunden.</p><div class="file-list">{% for name,a in outputs %}<a download="{{ name }}" href="/analyses/{{ analysis.id }}/outputs/{{ a.id }}">{{ name }}</a>{% endfor %}</div></details></section>
+{% endblock %}

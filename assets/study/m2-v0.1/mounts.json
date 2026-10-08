@@ -1,0 +1,70 @@
+{
+  "asset_version": "M2-MOUNTS-v0.1",
+  "enforcement": "prepared contract; actual mounts, networks, negative access/reset proofs in issue 7",
+  "forbidden_role_inputs": [
+    "Vault",
+    "full_DVWA",
+    "git_history",
+    "study_holdout",
+    "references",
+    "external_measurements",
+    "foreign_runs",
+    "credentials"
+  ],
+  "human_holdout_rule": "No human feedback from protected cases/results into models/prompts/packages/choice, including before freeze",
+  "leakage_markers": {
+    "K1": "K1-SOURCE-<module>-M2-v0.1 / K1-MAPPING-<module>-M2-v0.1",
+    "private_reference": "PRIVATE-REFERENCES-M2-v0.1",
+    "suite": "PRIVATE-STUDY-HOLDOUT-M2-v0.1"
+  },
+  "profiles": {
+    "development_test": {
+      "read": [
+        "own_candidate",
+        "own_internal_tests",
+        "evaluation/development/m2-v0.1"
+      ],
+      "suite_kind": "development"
+    },
+    "role_K0": {
+      "read": [
+        "assets/context/m2-v0.1/<module>/K0/package.txt",
+        "assets/study/m2-v0.1/scaffold",
+        "own_role_artifacts"
+      ],
+      "suite_kind": null
+    },
+    "role_K1": {
+      "read": [
+        "assets/context/m2-v0.1/<module>/K1/package.txt",
+        "assets/study/m2-v0.1/scaffold",
+        "own_role_artifacts"
+      ],
+      "suite_kind": null
+    },
+    "static_analysis": {
+      "read": [
+        "own_candidate",
+        "frozen_analysis_tools"
+      ],
+      "suite_kind": null
+    },
+    "study_candidate": {
+      "note": "no suite/reference/oracle mount into candidate",
+      "read": [
+        "sealed_candidate",
+        "injected_runtime_fixture_state"
+      ],
+      "suite_kind": "study_holdout"
+    },
+    "study_evaluator": {
+      "access_scope": "trusted external evaluator only",
+      "read": [
+        "evaluation/study_holdout/m2-v0.1"
+      ],
+      "suite_kind": "study_holdout"
+    }
+  },
+  "schema_version": 1,
+  "type": "asset_access_contract"
+}

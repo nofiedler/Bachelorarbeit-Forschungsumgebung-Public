@@ -1,0 +1,7 @@
+<div class="run-intro">
+<a class="back-link" href="{{ run_nav.overview }}">← {{ run_nav.overview_label }}</a>
+<p class="eyebrow">{{ 'Kostenfreie Demo' if run_nav.is_mock else 'Freier Testlauf' if run_nav.purpose=='free_test' else 'Forschungslauf' }}</p>
+<h1>{{ run_nav.title }}</h1>
+<div class="config-chips"><span>{{ {'BF':'Brute Force','SQL':'SQL Injection','UP':'File Upload'}[run_nav.cell.module] }}</span><span>{{ run_nav.cell.context }} · {{ 'Basiskontext' if run_nav.cell.context=='K0' else 'Erweiterter Kontext' }}</span><span>Planner {{ 'an' if run_nav.cell.planner else 'aus' }}</span><span>Review {{ 'an' if run_nav.cell.review else 'aus' }}</span>{% for role,model in run_nav.models.items() %}<span title="{{ 'Produzent: Analyzer, Planner, Migration und Überarbeitung' if role=='P' else 'Verifikation: Test-Agent und Review' }}"><b>{{ role }} · Paket {{ model.package }}</b> {{ model.name }}</span>{% endfor %}</div>
+<p class="hint model-key">P = Produzent · V = Verifikation</p></div>
+<nav class="run-navigation" aria-label="Bereiche dieses Laufs">{% for suffix,label in [('', 'Ablauf'),('/results','Ergebnisse'),('/review','Manuelle Prüfung'),('/code','Laravel-Code'),('/configuration','Konfiguration'),('/evidence','Nachweise')] %}{% set url='/runs/' ~ run_nav.id ~ suffix %}<a href="{{ url }}" {% if request.url.path==url or (suffix=='/evidence' and request.url.path.startswith(url ~ '/')) %}aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}</nav>

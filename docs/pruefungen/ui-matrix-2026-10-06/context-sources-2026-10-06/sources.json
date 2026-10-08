@@ -1,0 +1,47 @@
+[
+  {
+    "file": "phpstan-rule-levels.html",
+    "url": "https://phpstan.org/user-guide/rule-levels",
+    "resolved_url": "https://phpstan.org/user-guide/rule-levels",
+    "retrieved_at": "2026-10-06T21:14:16.993259+00:00",
+    "content_type": "text/html",
+    "sha256": "d577f62706818155d6eb0494349d8f96d52010bdbdfdf60dfe09ae94a5b7b255",
+    "bytes": 33595
+  },
+  {
+    "file": "phpstan-config-reference.html",
+    "url": "https://phpstan.org/config-reference",
+    "resolved_url": "https://phpstan.org/config-reference",
+    "retrieved_at": "2026-10-06T21:14:17.124931+00:00",
+    "content_type": "text/html",
+    "sha256": "ff749cc83525493b570297382ce3dff2e14e63ec7f9c911301b92304a8765bce",
+    "bytes": 129534
+  },
+  {
+    "file": "larastan-readme.html",
+    "url": "https://github.com/larastan/larastan",
+    "resolved_url": "https://github.com/larastan/larastan",
+    "retrieved_at": "2026-10-06T21:14:17.883205+00:00",
+    "content_type": "text/html; charset=utf-8",
+    "sha256": "36f345fef2dc357b6f6c5dc390c38c1fc83d99c58f2200f724ec7a8c42959ef5",
+    "bytes": 348001
+  },
+  {
+    "file": "larastan-pinned-composer.json",
+    "url": "https://raw.githubusercontent.com/larastan/larastan/168fd3b955e723c51dbf81709849b0c3ac4ac5f6/composer.json",
+    "resolved_url": "https://raw.githubusercontent.com/larastan/larastan/168fd3b955e723c51dbf81709849b0c3ac4ac5f6/composer.json",
+    "retrieved_at": "2026-10-06T21:14:18.189184+00:00",
+    "content_type": "text/plain; charset=utf-8",
+    "sha256": "fa2e214efc879cb203d829291adbc2e5f9fc50655a48bf9748d1b513ec61f07d",
+    "bytes": 2804
+  },
+  {
+    "file": "larastan-pinned-custom-config.md",
+    "url": "https://raw.githubusercontent.com/larastan/larastan/168fd3b955e723c51dbf81709849b0c3ac4ac5f6/docs/custom-config-parameters.md",
+    "resolved_url": "https://raw.githubusercontent.com/larastan/larastan/168fd3b955e723c51dbf81709849b0c3ac4ac5f6/docs/custom-config-parameters.md",
+    "retrieved_at": "2026-10-06T21:14:18.466138+00:00",
+    "content_type": "text/plain; charset=utf-8",
+    "sha256": "ee82e1fc839255f2e94d171a725aaf9cdf6230cc4ed99e0885d984f0c8595d8d",
+    "bytes": 7268
+  }
+]

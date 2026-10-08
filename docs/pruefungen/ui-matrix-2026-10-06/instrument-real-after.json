@@ -1,0 +1,24 @@
+{
+  "copy_id": "3237bd9b-ac29-4f3d-a0af-4b9fd34f7696",
+  "study_id": "daf090e0-1666-4c2a-9195-c27c7d91cf6e",
+  "freeze_id": "2c997e37-1279-4d3c-9baa-6db4f76ed446",
+  "freeze_hash": "c7064a33462dfc906a67f24f2299ea8e1a7c84f976e7b0527bebc88fd3e188e1",
+  "installed_source": "source-tree-sha256:34c19b2acfeb515d72150a4cd1654a3e54ee53e4b987b55bcd9c7b8423a69207",
+  "freeze_identical": true,
+  "planned_runs_identical": true,
+  "runs_identical": true,
+  "model_calls_identical": true,
+  "model_call_count": 9,
+  "states_identical": true,
+  "next_original": "f40ffede-3c4f-526f-a87f-7b83c9107407",
+  "next_copy": "f40ffede-3c4f-526f-a87f-7b83c9107407",
+  "backup_status_original": "current",
+  "backup_status_copy": "awaiting_confirmation",
+  "next_block": 1,
+  "gate_error_copy": null,
+  "frozen_source": "source-tree-sha256:26a613f37ea2ef52164be5dfd3194a884f2da460b3807018e0c5cc7c05e64b9d",
+  "frozen_instrument_hashes": [
+    "79baa65358d04f2fcb99a4f398e3795c58819565de752c92007077bd36541d19",
+    "376324cce2535134ea28856908a0f5b5d2332c1a2ee2971b62d0ac8643581be1"
+  ]
+}

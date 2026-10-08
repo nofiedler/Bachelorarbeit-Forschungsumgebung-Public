@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-06",
+  "scope": "Erklärungen, Diagrammabdeckung und Grafikdownloads; keine Änderung der Auswertungsarithmetik",
+  "installed_image": "sha256:8b366dd3cada3aa6535173114b43ae292eaa2709bcb6d9b3e476a35cc95e17d3",
+  "original_package": "0c8639e2-0fcc-478b-aa89-49c87d007d3f",
+  "new_package": "7f724d32-324b-44f3-a614-522f46932b69",
+  "parallel_source_changes": [
+    "domain.py",
+    "register.py"
+  ],
+  "original_downloads": {
+    "png": {
+      "path": "/Users/noahfiedler/Downloads/statisch-S.png",
+      "bytes": 86516,
+      "sha256": "67d2c8f34c77cbe8615b70e058a7df72193bd10feb2c551842132841f23c7d31",
+      "byte_equal_to_archive": true
+    },
+    "svg": {
+      "path": "/Users/noahfiedler/Downloads/statisch-S.svg",
+      "bytes": 68121,
+      "sha256": "d8f06cee2b23b62d79986e5bdd629035127197daa99c0e3bcbb842d6e1514da3",
+      "byte_equal_to_archive": true
+    },
+    "pdf": {
+      "path": "/Users/noahfiedler/Downloads/statisch-S.pdf",
+      "bytes": 30749,
+      "sha256": "6ba430623399023318f6fa8e32f468d78c0963255dd6ce024f732e45e4ce2416",
+      "byte_equal_to_archive": true
+    }
+  },
+  "new_pdf_download": "/Users/noahfiedler/Downloads/statisch-S (1).pdf",
+  "new_pdf_byte_equal_to_archive": true,
+  "browser_observation": {
+    "planned_rows": 48,
+    "figures": 9,
+    "recalculated_exact": true
+  },
+  "regression": {
+    "passed": 112,
+    "seconds": 101.07,
+    "suites": [
+      "test_analysis",
+      "test_exchange",
+      "test_research_audit",
+      "test_workspace_ui",
+      "test_analysis_readability",
+      "test_public_acceptance"
+    ]
+  },
+  "new_package_sha256": "3b2f4564be33534683aa9d064f10307b26721232d8be5ff7a281b9e16fd87e03",
+  "source_binding": {
+    "files": {
+      "adapter.py": "dd214cec8961fa205b6fb0b8a37dac07a6c5da73a77e5742a7ae5fd8a90207a4",
+      "analysis.py": "b6be1ba07432405a0e3167d26ce04d31c87f34ed624d2e1338c5d7be1e739966",
+      "analysis_absence.py": "91571d02efbc2a4862326dea00ba35a209c606b8d1dd80ab85edd369890b0140",
+      "analysis_charts.py": "8a266779c4e37240d1ef2c472aa190ba037bd91bba8aac29da51d731e30397c9",
+      "analysis_export.py": "acc78aaf54fbe1c33cacc9d319269ecb05343d045915b95a6164fbdcd0b1911a",
+      "analysis_metrics.py": "eefe64f2d710441e8d15f5c8909aab7d5622e4f91824465016371668cb785dad",
+      "analysis_resources.py": "3575054f9ab23e505364c0b15601510cc92e728523f51085c4fe863455c018b4",
+      "analysis_store.py": "9cb7d48cebbacaf793d9c691914e9b6d2b4b26d9887143603059a235fdf50b55",
+      "analysis_tables.py": "4c189997f0327ceb3fedb2de1194f684a72fc7c659cce43da5c49e27bbd8e503",
+      "artifacts.py": "03a705fb401beb6cfda36965d03a54702567ffa3c9fe4a78e69313032ca984e5",
+      "domain.py": "b1562895b17aa415d78cfdc801318e76d144d8e78c1fad08a942126725d19f10",
+      "evaluation_assets.lock.json": "96aa42b958808d8b16eb04b6a98d781d8cfd8b0887bb567c6163e4a2380305be",
+      "evaluation_oracles.py": "c9f7ba9f0ac7818073da0b0b8bd2182b556dc1eb1f8d49b7aa331be43707c9d4",
+      "locks.py": "e98a1d97739d9ade04f8cf8cde30f8f04ab971dfc5a582ea0c3ef7615c15b4e1",
+      "matrix.py": "588fd9c3ac12e566da24ec346daa711f44e3f048f0530959a35c4b8c9df26878",
+      "migrations/011_analysis.sql": "8f603d8a00880acade3e22fe9d412e3783e47fdc62b1ab4a19512d5d651b7691",
+      "numeric.py": "30b8fa4cdadc2d9dcdad7de968064cd2622da09a3d001e407cc5c0de3fd94be5",
+      "providers.py": "19fd70c1f44d0aeb64a93f07883deaeb7d8e2acdb96c380b4f85f1d3ab290c74",
+      "register.py": "91dd8c9bfb0e51a8cb2db09b0197b8d41c4dd8a42147679367b8c51a44c68e78",
+      "timing.py": "275318b3d9ba2aa9148e180954196049005ec257a3bc28a593bc5025aae60b2f"
+    },
+    "schema": "M7-input-v1",
+    "version": "M7-analysis-v5"
+  },
+  "files": {
+    "src/research_env/analysis_ui.py": "e0ae67f4098729b4bb47d8b1bb7d81f337066c5e8693794be5c20a49b69ea029",
+    "src/research_env/web.py": "fea9b98c53045cad9cd95bc1acd629ca3afe1aa99597d19871d6083eca3f231a",
+    "src/research_env/templates/analysis_report.html": "d5c0b9313c674f84c2d0d1a0f1987e9bd93616efa7304d705de78b53a9c25dc0",
+    "src/research_env/templates/analysis.html": "dd9c8a3c675fd939fde45641e4522758de6891713f800ff1ddca3693f8f90ad1",
+    "src/research_env/templates/package.html": "8f5fb573bf9e92ad324b45b7a39d928c19332e3e535d857b9c85b269a9bd7f37",
+    "tests/test_analysis_readability.py": "8eda185a9f9f2ddca03bf0f97592d3da1cc4cec5e6fe2191fa2e7a46ae2bbf3e"
+  },
+  "final_deployed_image_tests": {
+    "passed": 9,
+    "seconds": 18.83,
+    "image": "sha256:8b366dd3cada3aa6535173114b43ae292eaa2709bcb6d9b3e476a35cc95e17d3"
+  }
+}

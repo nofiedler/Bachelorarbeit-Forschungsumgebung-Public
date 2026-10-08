@@ -1,0 +1,72 @@
+[
+  {
+    "url": "https://github.com/digininja/DVWA",
+    "resolved_url": "https://github.com/digininja/DVWA",
+    "retrieved_at": "2026-10-06T21:38:08.458148+00:00",
+    "file": "01.html",
+    "content_type": "text/html; charset=utf-8",
+    "sha256": "36ee72cb3506297998a0e10e83cfd8335929ca5e3d085c6bd4c3c38b44cfc61b"
+  },
+  {
+    "url": "https://laravel.com/docs/13.x",
+    "resolved_url": "https://laravel.com/framework/docs/13.x",
+    "retrieved_at": "2026-10-06T21:38:08.503611+00:00",
+    "file": "02.html",
+    "content_type": "text/html; charset=utf-8",
+    "sha256": "334934dd8f8e74d89efa6340ac8c75c3d7fb9c3d3220fb813d6fdc90a4e0e7a9",
+    "original_sha256": "1dbcc7cbee3c30cf2c04fbe1e89b388286ad869b6d5138e7a45916abd56ee422",
+    "redaction": {
+      "date": "2026-10-07",
+      "field": "embedded props.mapboxPublicKey",
+      "reason": "GitHub push protection detected a Mapbox access-token pattern in the externally downloaded webpage; unrelated to the documentation. Public copy redacted, original kept only in the local private source backup."
+    }
+  },
+  {
+    "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+    "resolved_url": "https://docs.langchain.com/oss/python/langgraph/overview",
+    "retrieved_at": "2026-10-06T21:38:08.121784+00:00",
+    "file": "03.html",
+    "content_type": "text/html; charset=utf-8",
+    "sha256": "ae49cb4a5a4fd7a4a884452154150f2319370a9728b1e82b3e2bc4c52bb571a3"
+  },
+  {
+    "url": "https://docs.langchain.com/oss/python/langchain/overview",
+    "resolved_url": "https://docs.langchain.com/oss/python/langchain/overview",
+    "retrieved_at": "2026-10-06T21:38:08.122513+00:00",
+    "file": "04.html",
+    "content_type": "text/html; charset=utf-8",
+    "sha256": "57e6cc3b2d9c09e9d60ff6de8fc1192cf3167c2e0b690d4827ff68588212c5c3"
+  },
+  {
+    "url": "https://phpstan.org/user-guide/getting-started",
+    "resolved_url": "https://phpstan.org/user-guide/getting-started",
+    "retrieved_at": "2026-10-06T21:38:08.265779+00:00",
+    "file": "05.html",
+    "content_type": "text/html",
+    "sha256": "2ff3b0e820f4e57e384c942384041035ee5125457eaeb0e500bf072029fbcbff"
+  },
+  {
+    "url": "https://github.com/larastan/larastan",
+    "resolved_url": "https://github.com/larastan/larastan",
+    "retrieved_at": "2026-10-06T21:38:08.873317+00:00",
+    "file": "06.html",
+    "content_type": "text/html; charset=utf-8",
+    "sha256": "27f1e4a81363e88968466cbef0fd95c0ea0e4ce0b05ceea2731d65f200cbaa72"
+  },
+  {
+    "url": "https://docs.docker.com/get-started/docker-overview/",
+    "resolved_url": "https://docs.docker.com/get-started/docker-overview/",
+    "retrieved_at": "2026-10-06T21:38:08.511784+00:00",
+    "file": "07.html",
+    "content_type": "text/html",
+    "sha256": "e908fea01c6690403da0ddf79a3aabb917230456c6993f62d9e0372ab967707c"
+  },
+  {
+    "url": "https://openrouter.ai/docs/quickstart",
+    "resolved_url": "https://openrouter.ai/docs/quickstart",
+    "retrieved_at": "2026-10-06T21:38:08.870989+00:00",
+    "file": "08.html",
+    "content_type": "text/html; charset=utf-8",
+    "sha256": "fc6811ff267dac9139bc60f7a6a314a5dfb9319260b85841719bf11536ffaeb3"
+  }
+]

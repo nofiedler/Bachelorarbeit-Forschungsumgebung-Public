@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% block content %}
+<h1>Versuchsreihe aus Sicherung wiederherstellen</h1>
+<div id="restore-progress" {% if copy.status in ['queued','restoring'] %}hx-get="/study-imports/{{ copy.id }}" hx-trigger="every 5s" hx-select="#restore-progress" hx-swap="outerHTML"{% endif %}>
+{% if copy.status=='ready' %}
+<p class="notice">Die Sicherung wurde geprüft und als getrennte fixierte Versuchsreihe angelegt. Es wurden keine Läufe gestartet.</p>
+<a class="button" href="/restored/{{ copy.id }}/studies/{{ copy.study_id }}">{{ copy.title }} · importierte Versuchsreihe öffnen</a>
+{% if copy.error %}<p class="hint">{{ copy.error }}</p>{% endif %}
+{% elif copy.status=='failed' %}<p class="error">Import nicht abgeschlossen: {{ copy.error }}</p>
+{% else %}{% include 'import_progress.html' %}<p class="hint">Du kannst diese Seite später wieder öffnen. Der gespeicherte Importauftrag läuft weiter.</p>{% endif %}
+</div>
+<p><a href="/studies">Zur Übersicht aller Versuchsreihen</a></p>
+{% endblock %}

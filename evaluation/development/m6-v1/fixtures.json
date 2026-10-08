@@ -1,0 +1,82 @@
+{
+  "version": "M6-DEV-v1",
+  "suite_kind": "development",
+  "origin": "independent public examples, public contract only; no holdout inputs",
+  "datasets": {
+    "DEV-A": [
+      {
+        "user_id": 211,
+        "first_name": "Cedar",
+        "last_name": "Brook",
+        "user": "cedar41",
+        "password": "bbe5baa01d1a751fa9c05430c5373776",
+        "avatar": "/dev-images/cedar41.png",
+        "last_login": null,
+        "failed_login": 0,
+        "role": "user",
+        "account_enabled": 1
+      },
+      {
+        "user_id": 734,
+        "first_name": "Fern",
+        "last_name": "Vale",
+        "user": "fern62",
+        "password": "00715a4921d4bbe081c16923e9c4820a",
+        "avatar": "/dev-images/fern62.png",
+        "last_login": null,
+        "failed_login": 0,
+        "role": "user",
+        "account_enabled": 1
+      }
+    ],
+    "DEV-B": [
+      {
+        "user_id": 211,
+        "first_name": "Maple",
+        "last_name": "Field",
+        "user": "cedar41",
+        "password": "bbe5baa01d1a751fa9c05430c5373776",
+        "avatar": "/dev-alt/cedar41.png",
+        "last_login": null,
+        "failed_login": 0,
+        "role": "user",
+        "account_enabled": 1
+      },
+      {
+        "user_id": 734,
+        "first_name": "Juniper",
+        "last_name": "Hill",
+        "user": "fern62",
+        "password": "00715a4921d4bbe081c16923e9c4820a",
+        "avatar": "/dev-alt/fern62.png",
+        "last_login": null,
+        "failed_login": 0,
+        "role": "user",
+        "account_enabled": 1
+      }
+    ]
+  },
+  "files": {
+    "dev-orange.png": {
+      "path": "dev-orange.png",
+      "size": 69,
+      "sha256": "18af837ca0a881a2cd9d60e289ed734b09cd5464b6a012bf6cad602a7651121c",
+      "media_type": "image/png"
+    },
+    "dev-purple.png": {
+      "path": "dev-purple.png",
+      "size": 69,
+      "sha256": "9f28ecabf2c8dc8de1c03261b16285a81da310092e2d7d655de19bf23ba5429e",
+      "media_type": "image/png"
+    },
+    "development-existing.txt": {
+      "path": "development-existing.txt",
+      "size": 40,
+      "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394",
+      "media_type": "text/plain"
+    }
+  },
+  "initial_uploads": {
+    "development-existing.txt": "development-existing.txt"
+  }
+}

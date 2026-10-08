@@ -1,0 +1,12 @@
+{
+  "source_before": "source-tree-sha256:d0c4d0bcb8a4a645a62a778adc711a53f0515d6753835c1d6fc12367425e4dcd",
+  "source_after": "source-tree-sha256:f67369787fa2e0e14b75ff203d2fc7244239358ad61fb7735f73057e9a969d75",
+  "changed_source_files": [
+    "execution_compatibility.json",
+    "templates/settings.html"
+  ],
+  "data_and_states_unchanged": true,
+  "model_calls_before": 6,
+  "model_calls_after": 6,
+  "instrument_parameters_unchanged": true
+}

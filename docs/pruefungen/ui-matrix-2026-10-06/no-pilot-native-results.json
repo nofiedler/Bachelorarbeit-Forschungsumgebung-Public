@@ -1,0 +1,58 @@
+{
+  "correction_id": "eec191e2-1172-459c-83c7-b219da5f3940",
+  "control_id": "a29887c7-0d03-4858-9b13-f2765e7d5882",
+  "generation_costs_seals_unchanged": true,
+  "results": [
+    {
+      "run_id": "be8a70a2-3e83-4517-86bc-3aa16ad63d3b",
+      "candidate_hash": "81d3dd45e55ae57abed5d662acce4fb335245ad62e294e371896b0c055a584cf",
+      "T_criteria": {
+        "T1": 1,
+        "T2": null,
+        "T3": null,
+        "T4": null,
+        "T5": 1
+      },
+      "F": null,
+      "completion": "completed",
+      "interrupted": false,
+      "raw_pass_ratio": {
+        "numerator": 10,
+        "denominator": 10
+      },
+      "measurement_id": "2c940340-48a6-4480-b43e-b5dca414d1b8",
+      "receipt_artifact_id": "6c973991-996b-4aa6-8e66-ec761d3b6946",
+      "execution": "9c50e761-65dd-4e35-b09a-05e444d1e921",
+      "entry_statuses": [
+        "passed"
+      ]
+    },
+    {
+      "run_id": "832ca9de-2cc5-44b3-b6b2-a6c37164a064",
+      "candidate_hash": "e6402faf1ccaeb7fa6f468dd75b81adc402a9725d614a76ebd42cdaa94462a90",
+      "T_criteria": {
+        "T1": 1,
+        "T2": null,
+        "T3": null,
+        "T4": null,
+        "T5": 0
+      },
+      "F": {
+        "numerator": 0,
+        "denominator": 6
+      },
+      "completion": "completed",
+      "interrupted": false,
+      "raw_pass_ratio": {
+        "numerator": 0,
+        "denominator": 10
+      },
+      "measurement_id": "de69df30-1f63-42ac-8ae7-926d8d6517ce",
+      "receipt_artifact_id": "88da73ef-76e5-40b2-8dfc-28fc7a11bde9",
+      "execution": "17a9329a-b406-4d2d-adb7-e542e3f363f8",
+      "entry_statuses": [
+        "blocked_candidate"
+      ]
+    }
+  ]
+}

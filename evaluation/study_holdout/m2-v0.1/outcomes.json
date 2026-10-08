@@ -1,0 +1,313 @@
+{
+  "version": "M2-v0.1",
+  "rubric_version": "RT-v0.1",
+  "audience": "evaluator_only",
+  "note": "Vorab Sollurteile für Ursachen-/Offenheitsprüfung; keine tatsächlichen Menschen, Freigaben oder Kandidatenausführungen.",
+  "scenarios": [
+    {
+      "id": "CAUSE-PROVIDER",
+      "module": "UP",
+      "kind": "classification_scenario",
+      "cause": "provider_failure_no_candidate",
+      "evidence_required": "Gesicherter Providerfehler vor verwertbarem Kandidaten; keine fachliche Nullbehauptung.",
+      "assertion_expectation": "technical_missing",
+      "R": {
+        "R1": null,
+        "R2": null,
+        "R3": null,
+        "R4": null,
+        "R5": null,
+        "R6": null
+      },
+      "T_criteria": {
+        "T1": null,
+        "T2": null,
+        "T3": null,
+        "T4": null,
+        "T5": null
+      },
+      "T": null,
+      "F": null,
+      "status": "technical_missing",
+      "human_review": "open",
+      "actual_execution": "not_run"
+    },
+    {
+      "id": "CAUSE-ABORT",
+      "module": "UP",
+      "kind": "classification_scenario",
+      "cause": "manual_abort_no_candidate",
+      "evidence_required": "Dokumentierter menschlicher Abbruch ohne bewertbaren Endstand.",
+      "assertion_expectation": "technical_missing",
+      "R": {
+        "R1": null,
+        "R2": null,
+        "R3": null,
+        "R4": null,
+        "R5": null,
+        "R6": null
+      },
+      "T_criteria": {
+        "T1": null,
+        "T2": null,
+        "T3": null,
+        "T4": null,
+        "T5": null
+      },
+      "T": null,
+      "F": null,
+      "status": "technical_missing",
+      "human_review": "open",
+      "actual_execution": "not_run"
+    },
+    {
+      "id": "CAUSE-UNCLEAR",
+      "module": "UP",
+      "kind": "classification_scenario",
+      "cause": "unclear_api_outcome",
+      "evidence_required": "Transportjournal zeigt unklaren Ausgang, kein Beleg fachlicher Generierungsursache.",
+      "assertion_expectation": "unclear",
+      "R": {
+        "R1": null,
+        "R2": null,
+        "R3": null,
+        "R4": null,
+        "R5": null,
+        "R6": null
+      },
+      "T_criteria": {
+        "T1": null,
+        "T2": null,
+        "T3": null,
+        "T4": null,
+        "T5": null
+      },
+      "T": null,
+      "F": null,
+      "status": "unclear",
+      "human_review": "open",
+      "actual_execution": "not_run"
+    },
+    {
+      "id": "CAUSE-MISSING-ACADEMIC",
+      "module": "UP",
+      "kind": "classification_scenario",
+      "cause": "proven_generation_failure",
+      "evidence_required": "Vollständige abgeschlossene Generierung/Artefaktvalidierung belegt fachlich fehlenden Kandidaten; kein Abbruch/Providerfehler. T2–T5 wegen fehlendem Code nicht prüfbar.",
+      "assertion_expectation": "blocked_by_candidate",
+      "R": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 0,
+        "R5": 0,
+        "R6": 0
+      },
+      "T_criteria": {
+        "T1": 0,
+        "T2": null,
+        "T3": null,
+        "T4": null,
+        "T5": null
+      },
+      "T": 0,
+      "F": {
+        "numerator": 0,
+        "denominator": 6
+      },
+      "status": "candidate_failure",
+      "human_review": "open",
+      "actual_execution": "not_run"
+    },
+    {
+      "id": "CAUSE-INFRA",
+      "module": "UP",
+      "kind": "classification_scenario",
+      "cause": "broken_evaluation_environment",
+      "evidence_required": "Auch unverändertes Gerüst scheitert im Kontrolllauf; keine Kandidatenursache.",
+      "assertion_expectation": "technical_missing",
+      "R": {
+        "R1": null,
+        "R2": null,
+        "R3": null,
+        "R4": null,
+        "R5": null,
+        "R6": null
+      },
+      "T_criteria": {
+        "T1": null,
+        "T2": null,
+        "T3": null,
+        "T4": null,
+        "T5": null
+      },
+      "T": null,
+      "F": null,
+      "status": "technical_missing",
+      "human_review": "open",
+      "actual_execution": "not_run"
+    },
+    {
+      "id": "CAUSE-UP-RIGHTS",
+      "module": "UP",
+      "kind": "classification_scenario",
+      "cause": "ineffective_write_fault",
+      "evidence_required": "Kontrollprobe zeigt weiterhin schreibbares Ziel; nur UP-R3-Assertions technical_missing, übrige Fälle pass.",
+      "assertion_expectation": {
+        "default": "pass",
+        "category_override": {
+          "R3": "technical_missing"
+        }
+      },
+      "R": {
+        "R1": 1,
+        "R2": 1,
+        "R3": null,
+        "R4": 1,
+        "R5": 1,
+        "R6": 1
+      },
+      "T_criteria": {
+        "T1": 1,
+        "T2": 1,
+        "T3": 1,
+        "T4": 1,
+        "T5": 1
+      },
+      "T": 1,
+      "F": null,
+      "status": "technical_missing",
+      "human_review": "open",
+      "actual_execution": "not_run"
+    },
+    {
+      "id": "CAUSE-T5-OPEN",
+      "module": "UP",
+      "kind": "classification_scenario",
+      "cause": "semantic_T5_doubt",
+      "evidence_required": "Unauffälliger Dateihash ersetzt menschliches Urteil zum semantischen T5-Zweifel nicht.",
+      "assertion_expectation": "pass",
+      "R": {
+        "R1": 1,
+        "R2": 1,
+        "R3": 1,
+        "R4": 1,
+        "R5": 1,
+        "R6": 1
+      },
+      "T_criteria": {
+        "T1": 1,
+        "T2": 1,
+        "T3": 1,
+        "T4": 1,
+        "T5": null
+      },
+      "T": null,
+      "F": null,
+      "status": "open",
+      "human_review": "open",
+      "actual_execution": "not_run"
+    },
+    {
+      "id": "CAUSE-T2-OPEN",
+      "module": "UP",
+      "kind": "classification_scenario",
+      "cause": "human_T2_review_pending",
+      "evidence_required": "HTTP/Suite pass, aber erforderliche menschliche T2-Prüfung ausstehend.",
+      "assertion_expectation": "pass",
+      "R": {
+        "R1": 1,
+        "R2": 1,
+        "R3": 1,
+        "R4": 1,
+        "R5": 1,
+        "R6": 1
+      },
+      "T_criteria": {
+        "T1": 1,
+        "T2": null,
+        "T3": 1,
+        "T4": 1,
+        "T5": 1
+      },
+      "T": null,
+      "F": null,
+      "status": "open",
+      "human_review": "open",
+      "actual_execution": "not_run"
+    },
+    {
+      "id": "CAUSE-T0-GAP",
+      "module": "UP",
+      "kind": "classification_scenario",
+      "cause": "proven_T3_failure_and_R3_gap",
+      "evidence_required": "T3-Verstoß aus Codebeleg; UP-R3 technisch fehlend; T5 offen. T2–T4 dennoch menschlich bearbeiten.",
+      "assertion_expectation": {
+        "default": "pass",
+        "category_override": {
+          "R3": "technical_missing"
+        }
+      },
+      "R": {
+        "R1": 1,
+        "R2": 1,
+        "R3": null,
+        "R4": 1,
+        "R5": 1,
+        "R6": 1
+      },
+      "T_criteria": {
+        "T1": 1,
+        "T2": 1,
+        "T3": 0,
+        "T4": 1,
+        "T5": null
+      },
+      "T": 0,
+      "F": {
+        "numerator": 0,
+        "denominator": 6
+      },
+      "status": "candidate_failure",
+      "human_review": "open",
+      "actual_execution": "not_run"
+    },
+    {
+      "id": "CAUSE-R0-GAP",
+      "module": "UP",
+      "kind": "classification_scenario",
+      "cause": "proven_R3_failure_and_other_R3_measurement_gap",
+      "evidence_required": "Wirksame Rechtepräparation belegt. UP-R3-HTTP500-Assertion fachlich fail; Datei-Istprüfung ausgefallen. Belegter R3-Fehler dominiert zusätzliche Lücke derselben Kategorie.",
+      "assertion_expectation": {
+        "default": "pass",
+        "id_overrides": {
+          "UP-R3-01-S01-HTTP": "fail",
+          "UP-R3-01-S01-FILES": "technical_missing"
+        }
+      },
+      "R": {
+        "R1": 1,
+        "R2": 1,
+        "R3": 0,
+        "R4": 1,
+        "R5": 1,
+        "R6": 1
+      },
+      "T_criteria": {
+        "T1": 1,
+        "T2": 1,
+        "T3": 1,
+        "T4": 1,
+        "T5": 1
+      },
+      "T": 1,
+      "F": {
+        "numerator": 5,
+        "denominator": 6
+      },
+      "status": "candidate_failure",
+      "human_review": "open",
+      "actual_execution": "not_run"
+    }
+  ]
+}

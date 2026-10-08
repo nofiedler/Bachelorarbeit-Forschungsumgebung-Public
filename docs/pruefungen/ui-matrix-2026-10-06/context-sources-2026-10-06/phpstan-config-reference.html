@@ -1,0 +1,1125 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth scroll-pt-20">
+<head>
+	<meta charset="utf-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<title>Config Reference | PHPStan</title>
+	
+	
+	<meta property="og:title" content="Config Reference" />
+
+	
+		<meta property="og:image" content="/assets/logo-big-CbtT9iBK.png" />
+		<meta name="twitter:image" content="/assets/logo-big-CbtT9iBK.png" />
+	
+
+	<link rel="icon" type="image/png" href="/assets/favicon-DrgKtcYh.png">
+	<link rel="alternate" type="application/rss+xml" title="PHPStan Blog" href="/assets/rss-Dbj15Wiu.xml">
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@phpstan" />
+	<meta name="twitter:creator" content="@ondrejmirtes" />
+	<meta name="twitter:title" content="Config Reference" />
+	<script src="https://cdn.usefathom.com/script.js" data-site="UDESFNRN" defer></script>
+	<script>
+		const query = window.matchMedia('(prefers-color-scheme: dark)');
+		const themeKey = 'phpstanWebTheme';
+		query.addEventListener('change', (event) => {
+			if (themeKey in localStorage) {
+				return;
+			}
+			if (event.matches) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+		});
+		if (localStorage[themeKey] === 'dark' || (!(themeKey in localStorage) && query.matches)) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+	</script>
+  <script type="module" crossorigin src="/assets/config-reference-COPdfm5a.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/index-CvytLowo.js">
+  <link rel="modulepreload" crossorigin href="/assets/MainMenuViewModel-CqRrkSks.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-BBjC2Vqr.css">
+  <link rel="stylesheet" crossorigin href="/assets/MainMenuViewModel-DmyQxVw1.css">
+</head>
+<body>
+
+<div class="flex flex-col main-area" style="background-color: #fff">
+	<nav class="bg-white border-b border-gray-200 flex-shrink z-20 nav-header">
+		<!-- ko with: mainMenu -->
+			<div class="max-w-5xl mx-auto px-4 md:px-6">
+				<div class="flex justify-between h-16">
+					<div class="flex flex-grow">
+						<div class="w-64 flex flex-none items-center">
+							<a href="/"><img class="block h-12 w-auto rounded-lg" src="/assets/logo-D3DIJ-HJ.png" alt="PHPStan" /></a>
+							<a href="/" class="ml-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6" viewBox="0 0 275 46" fill="none">
+								<g clip-path="url(#clip0)">
+									<path d="M36.86 16.24C36.86 24.61 31.36 31.05 21.24 31.05H13.12V40.67C13.12 43.1 11.81 44.42 9.37 44.42H3.75C1.31 44.42 0 43.1 0 40.67V4.44C0 2 1.31 0.690002 3.75 0.690002H21.24C31.42 0.690002 36.86 7.87 36.86 16.24ZM23.74 16.37C23.74 14.06 22.11 11.93 19.87 11.93H13.12V20.62H19.87C20.9389 20.5481 21.9386 20.0656 22.6599 19.2735C23.3812 18.4813 23.7682 17.441 23.74 16.37V16.37Z" fill="#231F20"/>
+									<path d="M41.79 40.67V4.44C41.79 2 43.11 0.690002 45.54 0.690002H51.17C53.6 0.690002 54.91 2 54.91 4.44V18.12H67.72V4.44C67.72 2 69 0.690002 71.47 0.690002H77.09C79.53 0.690002 80.84 2 80.84 4.44V40.67C80.84 43.1 79.53 44.42 77.09 44.42H71.47C69.03 44.42 67.72 43.1 67.72 40.67V28.8H54.91V40.67C54.91 43.1 53.6 44.42 51.17 44.42H45.54C43.11 44.42 41.79 43.1 41.79 40.67Z" fill="#231F20"/>
+									<path d="M125.32 16.24C125.32 24.61 119.82 31.05 109.7 31.05H101.58V40.67C101.58 43.1 100.27 44.42 97.83 44.42H92.21C89.78 44.42 88.46 43.1 88.46 40.67V4.44C88.46 2 89.78 0.690002 92.21 0.690002H109.7C119.89 0.690002 125.32 7.87 125.32 16.24ZM112.2 16.37C112.2 14.06 110.58 11.93 108.33 11.93H101.58V20.62H108.33C109.4 20.5505 110.401 20.0688 111.123 19.2761C111.845 18.4834 112.231 17.4416 112.2 16.37V16.37Z" fill="#231F20"/>
+									<path d="M128.51 35.11C127.64 32.73 128.89 31.11 131.26 30.55L134.82 29.74C137.01 29.24 138.13 30.17 139.44 32.17C140.75 34.17 142.88 35.11 145.88 35.11C148.88 35.11 151 34.11 151 32C151 30.94 150.44 29.57 147.31 28.57L142.38 26.69C140.26 26.01 129.63 23.2 129.51 13.89C129.51 5.43 136.63 0 146.19 0C152.94 0 157.68 2.69 160.5 7.68C161.81 9.93 160.75 11.81 158.31 12.49L154.94 13.43C152.81 14.06 151.62 13.18 150.06 11.43C149.597 10.9432 149.033 10.5631 148.408 10.3161C147.782 10.0692 147.111 9.96131 146.44 10C144.32 10 142.32 10.87 142.32 12.74C142.32 13.99 143.19 15.12 145.88 16.05L150.75 17.74C160.5 21.12 163.56 25.36 163.75 31.55C163.75 40.86 155.38 45.1 145.89 45.1C137.26 45.1 131 41.54 128.51 35.11Z" fill="#231F20"/>
+									<path d="M170.56 33.05V20.87H167.93C167.678 20.8949 167.424 20.8636 167.186 20.7785C166.948 20.6933 166.731 20.5563 166.553 20.3775C166.374 20.1986 166.237 19.9822 166.152 19.7441C166.066 19.5059 166.035 19.2517 166.06 19V13.43C166.035 13.1783 166.066 12.9241 166.152 12.6859C166.237 12.4477 166.374 12.2314 166.553 12.0525C166.731 11.8737 166.948 11.7367 167.186 11.6515C167.424 11.5664 167.678 11.5351 167.93 11.56H171.93L173 5.75C173.068 5.08776 173.396 4.47943 173.911 4.05786C174.426 3.63628 175.087 3.43573 175.75 3.5H180.63C180.967 3.46111 181.308 3.49919 181.628 3.61139C181.948 3.72358 182.238 3.90695 182.477 4.14767C182.716 4.38839 182.897 4.68019 183.007 5.00105C183.116 5.32192 183.152 5.66348 183.11 6V11.56H189.05C189.302 11.5351 189.556 11.5664 189.794 11.6515C190.032 11.7367 190.249 11.8737 190.427 12.0525C190.606 12.2314 190.743 12.4477 190.828 12.6859C190.914 12.9241 190.945 13.1783 190.92 13.43V19C190.946 19.2525 190.916 19.5078 190.832 19.7472C190.747 19.9867 190.611 20.2043 190.432 20.3843C190.253 20.5643 190.036 20.7022 189.797 20.788C189.558 20.8737 189.303 20.9051 189.05 20.88H183.11V33.18C183.11 34.62 183.8 35.18 184.68 35.18C185.99 35.18 186.42 33.87 186.42 32.68C186.432 32.3455 186.412 32.0107 186.36 31.68C186.24 30.37 186.67 29.68 187.92 29.68H192.55C193.008 29.6305 193.47 29.7408 193.856 29.9923C194.242 30.2437 194.53 30.6209 194.67 31.06C194.963 31.8838 195.131 32.7466 195.17 33.62C195.17 42.8 188.67 45.11 183.05 45.11C177.18 45.1 170.56 42.67 170.56 33.05Z" fill="#231F20"/>
+									<path d="M197 28C197 18.06 203.69 10.88 212.43 10.88C216.68 10.88 220.06 12.69 221.81 15.69V15.32C221.81 12.88 223.12 11.57 225.55 11.57H230.92C233.36 11.57 234.67 12.88 234.67 15.32V40.67C234.67 43.1 233.36 44.42 230.92 44.42H225.55C223.12 44.42 221.81 43.1 221.81 40.67V40.36C220.06 43.29 216.68 45.1 212.43 45.1C203.67 45.1 197 37.92 197 28ZM222 28C222 23.87 219.69 20.69 215.94 20.69C212.19 20.69 209.88 23.87 209.88 28C209.88 32.13 212.19 35.31 215.94 35.31C219.69 35.31 222 32.11 222 28Z" fill="#231F20"/>
+									<path d="M240.78 40.67V15.31C240.78 12.87 242.09 11.56 244.53 11.56H249.9C252.34 11.56 253.65 12.87 253.65 15.31V15.62C255.46 12.68 258.33 10.87 262.77 10.87C272.95 10.87 274.2 19.8 274.2 25.18V40.67C274.2 43.1 272.89 44.42 270.45 44.42H265.08C262.64 44.42 261.33 43.1 261.33 40.67V26.42C261.33 23.86 260.77 20.87 257.46 20.87C254.15 20.87 253.65 23.87 253.65 26.42V40.67C253.65 43.1 252.34 44.42 249.9 44.42H244.53C242.09 44.42 240.78 43.1 240.78 40.67Z" fill="#231F20"/>
+								</g>
+								<defs>
+									<clipPath id="clip0">
+									<rect width="275" height="46" fill="white"/>
+									</clipPath>
+								</defs>
+							</svg></a>
+						</div>
+						<div class="flex flex-grow justify-between">
+							<div class="hidden md:-my-px md:flex px-4 flex-grow">
+								<div class="flex flex-shrink md:-my-px">
+									
+										
+											<a href="/" class="mr-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+												<span>Home</span>
+											</a>
+										
+									
+										
+											<a href="/try" class="mr-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+												<span>Try</span>
+											</a>
+										
+									
+										
+											<a href="/documentation" class="mr-8 inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-md font-medium leading-5 text-gray-900 focus:outline-none focus:border-blue-700 transition duration-150 ease-in-out">
+												<span>Documentation</span>
+											</a>
+										
+									
+										
+											<a href="/blog" class="mr-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+												<span>Blog</span>
+											</a>
+										
+									
+								</div>
+
+								<div class="items-center flex flex-grow justify-end">
+									<div id="docsearch"></div>
+									<a target="_blank" href="https://github.com/phpstan/phpstan" class="ml-4 px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out">
+										<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+											<path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="-mr-2 flex items-center md:hidden">
+						<div id="docsearch-mobile"></div>
+						<button data-bind="click: toggleMainMenu" class="ml-2 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+							<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+								<path data-bind="css: {hidden: mainMenuOpen, 'inline-flex': !mainMenuOpen()}" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+								<path data-bind="css: {hidden: !mainMenuOpen(), 'inline-flex': mainMenuOpen}" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div data-bind="css: {block: mainMenuOpen, hidden: !mainMenuOpen()}" class="hidden md:hidden">
+				<div class="pt-2 pb-3">
+					
+						
+							<a href="/" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+								Home
+							</a>
+						
+					
+						
+							<a href="/try" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+								Try
+							</a>
+						
+					
+						
+							<a href="/documentation" class="algolia-active mt-1 block pl-3 pr-4 py-2 border-l-4 border-blue-500 text-base font-medium text-blue-700 bg-blue-50 focus:outline-none focus:text-blue-800 focus:bg-blue-100 focus:border-blue-700 transition duration-150 ease-in-out">
+								Documentation
+							</a>
+						
+					
+						
+							<a href="/blog" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+								Blog
+							</a>
+						
+					
+
+					<a target="_blank" href="https://github.com/phpstan/phpstan" class="flex items-center mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+						<span>GitHub</span>
+						<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4 ml-1"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+					</a>
+				</div>
+			</div>
+		<!-- /ko -->
+	</nav>
+	<div>
+		<main>
+			<div class="max-w-5xl mx-auto md:px-6">
+				
+
+<div class="flex">
+	<!-- ko with: mainMenu -->
+		<div class="sidebar w-64 md:block hidden flex-none pr-4 border-r border-gray-200 fixed bg-white overflow-y-auto top-0 bottom-0 mt-16 pt-6 pl-4 md:pl-0 z-10 md:z-auto" data-bind="css: { hidden: !sidebarOpen() }, event: { click: handleSidebarClick }">
+			
+				<a href="/documentation" class="flex items-center px-3 py-1 text-sm text-gray-400 hover:text-gray-600 transition ease-in-out duration-150">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+					All Documentation
+				</a>
+			
+
+			<div class="flex items-center mt-1">
+				<span id="sectionTitle" class="group flex-grow items-center px-3 py-2 text-lg leading-5 font-bold text-gray-900">Config Reference</span>
+
+				<span id="algoliaSectionTitle" class="hidden">Config Reference</span>
+			<span id="algoliaSearchKeywords" class="hidden">phpstan.neon, php version, stdclass</span>
+
+				<a href="#" class="md:hidden text-gray-400 hover:text-gray-500" data-bind="click: closeSidebar">
+					<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</a>
+			</div>
+
+			
+				<ul>
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#neon-format">NEON format</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#config-file">Config file</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#multiple-files">Multiple files</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#ignoring-errors">Ignoring errors</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#discovering-symbols">Discovering Symbols</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#bootstrap">Bootstrap</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#caching">Caching</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#analysed-files">Analysed files</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#rule-level">Rule level</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#custom-ruleset">Custom ruleset</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#bleeding-edge">Bleeding edge</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#solving-undefined-variables">Solving undefined variables</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#universal-object-crates">Universal object crates</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#constants">Constants</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#stub-files">Stub files</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#stricter-analysis">Stricter analysis</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#exceptions">Exceptions</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#vague-typehints">Vague typehints</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#type-aliases">Type aliases</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#phpstan-pro">PHPStan Pro</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#parallel-processing">Parallel processing</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#clickable-editor-url">Clickable editor URL</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#miscellaneous-parameters">Miscellaneous parameters</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#environment-variables">Environment variables</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#expanding-paths">Expanding paths</a></li>
+						
+					
+						
+							<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="#custom-parameters">Custom parameters</a></li>
+						
+					
+				</ul>
+			
+
+			<div class="mt-8 pt-6 border-t border-gray-200">
+				<div class="px-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Other Sections</div>
+				<ul>
+					
+						<li>
+							<a href="/user-guide/getting-started" class="flex items-center px-3 py-2 text-sm leading-5 font-semibold text-gray-700 rounded-md hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:bg-blue-50 transition ease-in-out duration-150">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+								User Guide
+							</a>
+						</li>
+					
+						<li>
+							<a href="/writing-php-code/phpdocs-basics" class="flex items-center px-3 py-2 text-sm leading-5 font-semibold text-gray-700 rounded-md hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:bg-blue-50 transition ease-in-out duration-150">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+								Writing PHP Code
+							</a>
+						</li>
+					
+						<li>
+							<a href="/developing-extensions/extension-types" class="flex items-center px-3 py-2 text-sm leading-5 font-semibold text-gray-700 rounded-md hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:bg-blue-50 transition ease-in-out duration-150">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+								Developing Extensions
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+			<div class="mt-8 rounded-lg bg-gradient-to-b from-blue-400 to-blue-700 to-80% text-white text-center font-semibold flex justify-center items-center text-2xl exclude-from-dark">
+				<a class="px-3 py-3 md:py-10" href="/sponsor">Sponsor PHPStan!</a>
+			</div>
+		</div>
+	<!-- /ko -->
+	<div class="content px-4 pt-4 min-w-0 w-full ml-0 md:ml-64">
+		<!-- ko with: mainMenu -->
+			<a href="#" class="text-sm text-gray-400 md:hidden no-underline hover:underline" data-bind="click: openSidebar">Menu</a>
+		<!-- /ko -->
+
+		<div class="flex items-center justify-between gap-4 mb-4">
+			<h1 class="leading-tight !mb-0">Config Reference</h1>
+			
+			<a href="https://github.com/phpstan/phpstan/edit/2.3.x/website/src/config-reference.md" class="flex-shrink-0 text-gray-300 hover:text-gray-500 transition duration-150" title="Edit this page on GitHub">
+				<svg fill="currentColor" viewBox="0 0 20 20" class="w-5 h-5"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+			</a>
+			
+		</div>
+		
+
+		
+			<div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4" role="alert">
+<p><strong>Getting started?</strong></p>
+<p>This page is about all the configuration options PHPStan has. If you want to learn how to start using PHPStan, head to <a href="/user-guide/getting-started">Getting Started</a> instead.</p>
+</div>
+<h2 id="neon-format" tabindex="-1">NEON format <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#neon-format">#</a></h2>
+<p>PHPStan uses configuration format called <a href="https://neon.nette.org/">NEON</a>. It’s very similar to YAML so if you’re familiar with it, you can also write NEON.</p>
+<p>This is how a possible example of a config file can look like:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">level</span><span class="token punctuation">:</span> <span class="token number">6</span>
+	<span class="token key atrule">paths</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> src
+		<span class="token punctuation">-</span> tests</code></pre>
+<h2 id="config-file" tabindex="-1">Config file <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#config-file">#</a></h2>
+<p>A config file can be passed to the <code>phpstan</code> executable using the <code>-c|--configuration</code> option:</p>
+<pre class="language-bash"><code class="language-diff-bash diff-highlight">vendor/bin/phpstan analyse <span class="token parameter variable">-c</span> phpstan.neon</code></pre>
+<p>When using a config file, you have to pass the <code>--level|-l</code> option to <code>analyse</code> command (default value <code>0</code> does not apply here), or provide it as a <code>level</code> parameter in the config file itself. <a href="/user-guide/command-line-usage">Learn more about other command line options »</a></p>
+<p>If you do not provide a config file explicitly, PHPStan will look for files named <code>phpstan.neon</code>, <code>phpstan.neon.dist</code>, or <code>phpstan.dist.neon</code> in the current directory.</p>
+<p>The resolution priority is as such:</p>
+<ol>
+<li>If config file is provided as a command line option, it will be used.</li>
+<li>Otherwise, if <code>phpstan.neon</code> exists in the current working directory, it will be used.</li>
+<li>Otherwise, if <code>phpstan.neon.dist</code> exists in the current working directory, it will be used.</li>
+<li>Otherwise, if <code>phpstan.dist.neon</code> exists in the current working directory, it will be used.</li>
+<li>If none of the above is true, no config will be used.</li>
+</ol>
+<p>The usual practice is to have <code>phpstan.neon.dist</code> or <code>phpstan.dist.neon</code> under version control, and allow the user to override certain settings in their environment (on their own computer or on a continuous integration server) by creating <code>phpstan.neon</code> that’s present in <code>.gitignore</code> file. See <a href="#multiple-files">Multiple files</a> for more details:</p>
+<h2 id="multiple-files" tabindex="-1">Multiple files <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#multiple-files">#</a></h2>
+<p>The NEON format supports an <code>includes</code> section to compose the final configuration from multiple files. Let’s say the <code>phpstan.neon.dist</code> project config file looks like this:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">level</span><span class="token punctuation">:</span> <span class="token number">6</span>
+	<span class="token key atrule">paths</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> src
+		<span class="token punctuation">-</span> tests</code></pre>
+<p>If the user doesn’t have certain PHP extensions, wants to ignore some reported errors from the analysis, and to disable parallel CPU processing, they can create <code>phpstan.neon</code> file with this content:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">includes</span><span class="token punctuation">:</span>
+	<span class="token punctuation">-</span> phpstan.neon.dist
+
+<span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">ignoreErrors</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> <span class="token string">'#Function pcntl_open not found\.#'</span>
+	<span class="token key atrule">parallel</span><span class="token punctuation">:</span>
+		<span class="token key atrule">maximumNumberOfProcesses</span><span class="token punctuation">:</span> <span class="token number">1</span></code></pre>
+<p>Relative paths in the <code>includes</code> section are resolved based on the directory of the config file is in. So in this example, <code>phpstan.neon.dist</code> and <code>phpstan.neon</code> are next to each other in the same directory.</p>
+<p><code>includes</code> can also reference PHP files that can be used to define dynamic configurations, see <a href="https://github.com/phpstan/phpstan-src/blob/1.8.5/build/ignore-by-php-version.neon.php">ignore-by-php-version.neon.php</a> and <a href="https://github.com/phpstan/phpstan-src/blob/1.8.5/build/phpstan.neon#L10">phpstan.neon</a> as examples.</p>
+<h2 id="ignoring-errors" tabindex="-1">Ignoring errors <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#ignoring-errors">#</a></h2>
+<p>Learn more about ignoring errors in the <a href="/user-guide/ignoring-errors">user guide</a>.</p>
+<p>Related config keys: <a href="/user-guide/ignoring-errors#ignoring-in-configuration-file"><code>ignoreErrors</code></a>,
+<a href="/user-guide/ignoring-errors#reporting-unused-ignores"><code>reportUnmatchedIgnoredErrors</code></a>,
+<a href="#reportignoreswithoutcomments"><code>reportIgnoresWithoutComments</code></a>.</p>
+<h3 id="reportignoreswithoutcomments" tabindex="-1"><code>reportIgnoresWithoutComments</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#reportignoreswithoutcomments">#</a></h3>
+<div class="text-xs inline-block border border-green-600 text-green-600 bg-green-100 rounded px-1 mb-4">Available in PHPStan 2.1.41</div>
+<p><strong>default</strong>: <code>false</code></p>
+<p>When set to <code>true</code>, PHPStan reports <code>@phpstan-ignore</code> identifiers that don’t have an accompanying comment in parentheses explaining why the error is being ignored. It also disallows <code>@phpstan-ignore-line</code> and <code>@phpstan-ignore-next-line</code> completely, because these don’t support error identifiers and comments.</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token keyword">echo</span> <span class="token variable">$foo</span><span class="token punctuation">;</span> <span class="token comment">// @phpstan-ignore variable.undefined — reported, no comment</span>
+<span class="token keyword">echo</span> <span class="token variable">$foo</span><span class="token punctuation">;</span> <span class="token comment">// @phpstan-ignore variable.undefined (not available at this point) — OK</span>
+
+<span class="token comment">// Multiple identifiers: each one needs its own comment</span>
+<span class="token keyword">echo</span> <span class="token variable">$foo</span><span class="token punctuation">;</span> <span class="token comment">// @phpstan-ignore variable.undefined, wrong.id — both reported</span>
+<span class="token keyword">echo</span> <span class="token variable">$foo</span><span class="token punctuation">;</span> <span class="token comment">// @phpstan-ignore variable.undefined (reason), wrong.id (reason) — OK</span>
+
+<span class="token keyword">echo</span> <span class="token variable">$foo</span><span class="token punctuation">;</span> <span class="token comment">// @phpstan-ignore-line — reported, not allowed</span>
+<span class="token comment">// @phpstan-ignore-next-line — reported, not allowed</span>
+<span class="token keyword">echo</span> <span class="token variable">$foo</span><span class="token punctuation">;</span></code></pre>
+<h2 id="discovering-symbols" tabindex="-1">Discovering symbols <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#discovering-symbols">#</a></h2>
+<p>Learn more about discovering symbols in the <a href="/user-guide/discovering-symbols">user guide</a>.</p>
+<p>Related config keys: <a href="/user-guide/discovering-symbols#third-party-code-outside-of-composer-dependencies"><code>scanFiles</code></a>,
+<a href="/user-guide/discovering-symbols#third-party-code-outside-of-composer-dependencies"><code>scanDirectories</code></a>,
+<a href="/user-guide/discovering-symbols#disable-the-symbol-discovery-error-tip"><code>tips.discoveringSymbols</code></a>.</p>
+<h2 id="bootstrap" tabindex="-1">Bootstrap <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#bootstrap">#</a></h2>
+<p>If you need to initialize something in PHP runtime before PHPStan runs (like your own autoloader), you can provide your own bootstrap files:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">bootstrapFiles</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> phpstan<span class="token punctuation">-</span>bootstrap.php</code></pre>
+<p>Relative paths in the <code>bootstrapFiles</code> key are resolved based on the directory of the config file is in.</p>
+<h2 id="caching" tabindex="-1">Caching <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#caching">#</a></h2>
+<p>By default, PHPStan stores its cache files in <code>sys_get_temp_dir() . '/phpstan'</code> (usually <code>/tmp/phpstan</code>). You can override this by setting the <code>tmpDir</code> parameter:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">tmpDir</span><span class="token punctuation">:</span> tmp</code></pre>
+<p>Relative path in the <code>tmpDir</code> key is resolved based on the directory of the config file is in. In this example PHPStan cache will be stored in <code>tmp</code> directory that’s next to the configuration file.</p>
+<h3 id="cache.nodesbystringcountmax" tabindex="-1"><code>cache.nodesByStringCountMax</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#cache.nodesbystringcountmax">#</a></h3>
+<p><strong>default</strong>: <code>256</code></p>
+<p>Maximum number of parsed PHP files cached in memory by the parser. Increasing this value uses more memory but can speed up analysis by avoiding re-parsing frequently accessed files.</p>
+<h3 id="cache.nodesbystringsourcebytesmax" tabindex="-1"><code>cache.nodesByStringSourceBytesMax</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#cache.nodesbystringsourcebytesmax">#</a></h3>
+<p><strong>default</strong>: <code>4194304</code> (4 MB)</p>
+<p>A second cap on the in-memory parser cache, working alongside <a href="#cachenodesbystringcountmax"><code>cache.nodesByStringCountMax</code></a>. It limits the total size (in bytes) of the source code whose parsed ASTs are kept in memory. Because a parsed AST takes up roughly 50–60× more memory than its source code, this byte-based cap prevents a few large files from pinning hundreds of megabytes in each worker process. When the limit is exceeded, the least-recently-used entries are evicted. Set it to <code>0</code> to disable the byte-based cap and rely solely on the entry-count limit.</p>
+<h3 id="cache.resolvedphpdocblockcachecountmax" tabindex="-1"><code>cache.resolvedPhpDocBlockCacheCountMax</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#cache.resolvedphpdocblockcachecountmax">#</a></h3>
+<p><strong>default</strong>: <code>2048</code></p>
+<p>Maximum number of resolved PHPDoc blocks cached in memory. PHPDoc resolution is expensive, so this cache improves performance. Increase this for very large codebases with many PHPDoc annotations.</p>
+<h3 id="cache.namescopemapmemorycachecountmax" tabindex="-1"><code>cache.nameScopeMapMemoryCacheCountMax</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#cache.namescopemapmemorycachecountmax">#</a></h3>
+<p><strong>default</strong>: <code>2048</code></p>
+<p>Maximum number of file name scope maps (namespace and import context) cached in memory. Used during PHPDoc resolution to look up the correct namespace and <code>use</code> statement context.</p>
+<h3 id="cache.phpstormstubsnodescountmax" tabindex="-1"><code>cache.phpStormStubsNodesCountMax</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#cache.phpstormstubsnodescountmax">#</a></h3>
+<p><strong>default</strong>: <code>128</code></p>
+<p>Maximum number of parsed nodes from the bundled <a href="https://github.com/JetBrains/phpstorm-stubs">JetBrains phpstorm-stubs</a> kept in memory. These stubs provide the signatures of built-in PHP functions, classes, and constants. Increasing this value uses more memory but can avoid re-parsing stub files. Set it to <code>0</code> for an unlimited cache.</p>
+<h3 id="cache.membercachekeysmax" tabindex="-1"><code>cache.memberCacheKeysMax</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#cache.membercachekeysmax">#</a></h3>
+<p><strong>default</strong>: <code>2048</code></p>
+<p>Maximum number of classes whose reflected members (methods and properties, both native and including annotations) are kept in an in-memory LRU cache. When the limit is exceeded, the members of the least-recently-used class are evicted. Set it to <code>0</code> for an unlimited cache, which uses more memory on large codebases.</p>
+<h3 id="cache.resolvedlocaltypealiasescountmax" tabindex="-1"><code>cache.resolvedLocalTypeAliasesCountMax</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#cache.resolvedlocaltypealiasescountmax">#</a></h3>
+<p><strong>default</strong>: <code>2048</code></p>
+<p>Maximum number of resolved local type aliases (<code>@phpstan-type</code> aliases defined in class PHPDocs) kept in an in-memory LRU cache. Because a resolved alias type transitively pins the class reflections it references, the least-recently-used entry is evicted once this limit is exceeded to keep memory usage in check. Set it to <code>0</code> for an unlimited cache.</p>
+<h2 id="analysed-files" tabindex="-1">Analysed files <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#analysed-files">#</a></h2>
+<p>PHPStan accepts a list of files and directories on the command line:</p>
+<pre class="language-bash"><code class="language-diff-bash diff-highlight">vendor/bin/phpstan analyse <span class="token parameter variable">-c</span> src tests</code></pre>
+<p>You can save some keystrokes each time you run PHPStan by moving the analysed paths to the config file:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">paths</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> src
+		<span class="token punctuation">-</span> tests</code></pre>
+<p>Relative paths in the <code>paths</code> key are resolved based on the directory of the config file is in.</p>
+<p>If you provide analysed paths to PHPStan on the command line and in the config file at the same time, they are not merged. Only the paths on the command line will be used.</p>
+<div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4" role="alert">
+<p>You should only analyse files with the code you’ve written yourself. There’s no need to analyse the <code>vendor</code> directory with 3rd party dependencies because it’s not in your power to fix all the mistakes made by the developers you don’t work with directly.</p>
+<p>Yes, PHPStan needs to know about all the classes, interfaces, traits, and functions your code uses, but that’s achieved through <a href="/user-guide/discovering-symbols">discovering symbols</a>, not by including the files in the analysis.</p>
+</div>
+<p>If your codebase contains some files that are broken on purpose (e. g. to test behaviour of your application on files with invalid PHP code), you can exclude them using the <code>excludePaths</code> key. Each entry is used as a pattern for the <a href="https://www.php.net/manual/en/function.fnmatch.php"><code>fnmatch()</code></a> function.</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">excludePaths</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> tests/<span class="token important">*/data/*</span></code></pre>
+<p>This is a shortcut for:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">excludePaths</span><span class="token punctuation">:</span>
+	    <span class="token key atrule">analyseAndScan</span><span class="token punctuation">:</span>
+		    <span class="token punctuation">-</span> tests/<span class="token important">*/data/*</span></code></pre>
+<p>If your project’s directory structure mixes your own code (the one you want to analyse and fix bugs in) and third party code (which you’re using for <a href="https://phpstan.org/user-guide/discovering-symbols">discovering symbols</a>, but don’t want to analyse), the file structure might look like this:</p>
+<pre><code>├── phpstan.neon
+└── src
+    ├── foo.php
+    ├── ...
+    └── thirdparty
+        └── bar.php
+</code></pre>
+<p>In this case, you want to analyse the whole <code>src</code> directory, but want to exclude <code>src/thirdparty</code> from analysing. This is how to configure PHPStan:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+    <span class="token key atrule">excludePaths</span><span class="token punctuation">:</span>
+        <span class="token key atrule">analyse</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> src/thirdparty</code></pre>
+<p>Additionally, there might be a <code>src/broken</code> directory which contains files that you don’t want to analyse nor use for discovering symbols. You can modify the configuration to achieve that effect:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+    <span class="token key atrule">excludePaths</span><span class="token punctuation">:</span>
+        <span class="token key atrule">analyse</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> src/thirdparty
+        <span class="token key atrule">analyseAndScan</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> src/broken</code></pre>
+<p>By default, PHPStan analyses only files with the <code>.php</code> extension. To include other extensions, use the <code>fileExtensions</code> key:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">fileExtensions</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> php
+		<span class="token punctuation">-</span> module
+		<span class="token punctuation">-</span> inc</code></pre>
+<h2 id="rule-level" tabindex="-1">Rule level <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#rule-level">#</a></h2>
+<p>Learn more about rule levels in the <a href="/user-guide/rule-levels">user guide</a>.</p>
+<p>Instead of using the CLI option <code>--level</code>, you can save some keystrokes each time you run PHPStan by moving the desired level to the config file:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">level</span><span class="token punctuation">:</span> <span class="token number">6</span></code></pre>
+<h2 id="custom-ruleset" tabindex="-1">Custom ruleset <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#custom-ruleset">#</a></h2>
+<p>PHPStan requires you to specify a level to run which means it will choose the enforced rules for you. If you don’t want to follow the predefined rule levels and want to create your own ruleset, tell PHPStan to not require a level by setting <code>customRulesetUsed</code> to true:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">customRulesetUsed</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
+<p>You can then choose your own ruleset by copying parts of the <a href="https://github.com/phpstan/phpstan-src/tree/2.3.x/conf">level configuration files</a> from PHPStan sources, or include your own custom rules.</p>
+<h2 id="bleeding-edge" tabindex="-1">Bleeding edge <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#bleeding-edge">#</a></h2>
+<p>Bleeding edge offers a preview of the next major version. When you enable Bleeding edge in your configuration file, you will get new rules, behaviour, and bug fixes that will be enabled for everyone later when the next PHPStan’s major version is released.</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">includes</span><span class="token punctuation">:</span>
+	<span class="token punctuation">-</span> phar<span class="token punctuation">:</span>//phpstan.phar/conf/bleedingEdge.neon</code></pre>
+<p><a href="/blog/what-is-bleeding-edge">Learn more</a> about bleeding edge.</p>
+<h2 id="solving-undefined-variables" tabindex="-1">Solving undefined variables <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#solving-undefined-variables">#</a></h2>
+<p>Learn more about solving undefined variables in <a href="/writing-php-code/solving-undefined-variables">Writing PHP Code</a>.</p>
+<p>Related config keys: <a href="/writing-php-code/solving-undefined-variables"><code>earlyTerminatingMethodCalls</code></a>,
+<a href="/writing-php-code/solving-undefined-variables"><code>earlyTerminatingFunctionCalls</code></a>.</p>
+<h2 id="universal-object-crates" tabindex="-1">Universal object crates <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#universal-object-crates">#</a></h2>
+<p>Classes without predefined structure are common in PHP applications. They are used as universal holders of data - any property can be set and read on them. Notable examples include <code>stdClass</code>, <code>SimpleXMLElement</code> (these are enabled by default), objects with results of database queries etc. Use <code>universalObjectCratesClasses</code> key to let PHPStan know which classes with these characteristics are used in your codebase:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">universalObjectCratesClasses</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> Dibi\Row
+		<span class="token punctuation">-</span> Ratchet\ConnectionInterface</code></pre>
+<p>See also <a href="/writing-php-code/phpdoc-types#object-shapes">object shape</a> PHPDoc type for a better alternative that lets you describe types of properties of such objects.</p>
+<h2 id="constants" tabindex="-1">Constants <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#constants">#</a></h2>
+<p>Learn more about letting PHPStan know about your global constants in <a href="/user-guide/discovering-symbols">the user guide</a>.</p>
+<p>Sometimes your constants can have different values in different environments, like <code>DATABASE_ENGINE</code> that can have different values like <code>mysql</code> or <code>pgsql</code>. To let PHPStan know that the value of the constant can be different, and prevent errors like <code>Strict comparison using === between 'pgsql' and 'mysql' will always evaluate to false.</code>, add the constant name to <code>dynamicConstantNames</code> key:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">dynamicConstantNames</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> DATABASE_ENGINE
+		<span class="token punctuation">-</span> Foo<span class="token punctuation">:</span><span class="token punctuation">:</span>BAR_CONSTANT <span class="token comment"># class constants are also supported</span></code></pre>
+<p>In PHPStan 2.1.23 and later, it’s possible to explicitly set the constant type:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">dynamicConstantNames</span><span class="token punctuation">:</span>
+		<span class="token key atrule">DATABASE_ENGINE</span><span class="token punctuation">:</span> string<span class="token punctuation">|</span>null
+		<span class="token key atrule">Foo::BAR_CONSTANT</span><span class="token punctuation">:</span> int<span class="token punctuation">|</span>string<span class="token punctuation">|</span>null</code></pre>
+<h2 id="stub-files" tabindex="-1">Stub files <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#stub-files">#</a></h2>
+<p>Learn more about stub files in the <a href="/user-guide/stub-files">user guide</a>.</p>
+<p>Related config key: <a href="/user-guide/stub-files"><code>stubFiles</code></a>.</p>
+<h2 id="stricter-analysis" tabindex="-1">Stricter analysis <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#stricter-analysis">#</a></h2>
+<p>Existing outside of rule levels there are additional parameters affecting analysis result you can tune.</p>
+<h3 id="pollutescopewithloopinitialassignments" tabindex="-1"><code>polluteScopeWithLoopInitialAssignments</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#pollutescopewithloopinitialassignments">#</a></h3>
+<p><strong>default</strong>: <code>true</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>false</code>)</p>
+<p><strong>example</strong>: <a href="/r/23bb1a01-c802-4e60-a50a-73b9b8c3d7bf">with <code>true</code></a>, <a href="/r/ad4a5198-099b-4f1a-99a5-1dd9eb9cc7c6">with <code>false</code></a></p>
+<p>When set to <code>false</code> it prevents reading variables set in <code>for</code> loop initial statement and <code>while</code> loop condition after the loop.</p>
+<h3 id="pollutescopewithalwaysiterableforeach" tabindex="-1"><code>polluteScopeWithAlwaysIterableForeach</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#pollutescopewithalwaysiterableforeach">#</a></h3>
+<p><strong>default</strong>: <code>true</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>false</code>)</p>
+<p><strong>example</strong>: <a href="/r/daf81a57-4f06-44d5-9d76-8fa2ce937db5">with <code>true</code></a>, <a href="/r/df2ac8cf-761d-4606-bdd9-46468010863d">with <code>false</code></a></p>
+<p>When set to <code>false</code> it prevents reading key and value variables set in foreach when iterating over a non-empty array.</p>
+<h3 id="pollutescopewithblock" tabindex="-1"><code>polluteScopeWithBlock</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#pollutescopewithblock">#</a></h3>
+<div class="text-xs inline-block border border-green-600 text-green-600 bg-green-100 rounded px-1 mb-4">Available in PHPStan 2.0</div>
+<p><strong>default</strong>: <code>true</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>false</code>)</p>
+<p><strong>example</strong>: <a href="/r/cdee163b-325a-4189-8b85-1fc6f103dcb7">with <code>true</code></a>, <a href="/r/2d6facb9-e4bc-45bf-a8b1-52c70851bac4">with <code>false</code></a></p>
+<p>When set to <code>false</code> it prevents reading key and value variables set in a separate code block in <code>{...}</code>.</p>
+<h3 id="checkexplicitmixedmissingreturn" tabindex="-1"><code>checkExplicitMixedMissingReturn</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#checkexplicitmixedmissingreturn">#</a></h3>
+<p><strong>default</strong>: <code>false</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>true</code>)</p>
+<p><strong>example</strong>: <a href="/r/cc69160f-4c08-4e28-a210-119088381ae2">with <code>false</code></a>, <a href="/r/d80c3739-bf4c-431f-abe9-3a0a37a6a13a">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it reports code paths with missing <code>return</code> statement in functions and methods with <code>@return mixed</code> PHPDoc.</p>
+<h3 id="checkfunctionnamecase" tabindex="-1"><code>checkFunctionNameCase</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#checkfunctionnamecase">#</a></h3>
+<p><strong>default</strong>: <code>false</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>true</code>)</p>
+<p><strong>example</strong>: <a href="/r/1d6b7920-71e5-4f69-a1fd-8e0e7ed48e28">with <code>false</code></a>, <a href="/r/3b876a1a-743e-42c7-8a5e-0c143372f74b">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it reports function and method calls with incorrect name case.</p>
+<h3 id="checkinternalclasscasesensitivity" tabindex="-1"><code>checkInternalClassCaseSensitivity</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#checkinternalclasscasesensitivity">#</a></h3>
+<p><strong>default</strong>: <code>false</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>true</code>)</p>
+<p><strong>example</strong>: <a href="/r/0c0a8ef1-945c-4fc9-abe2-5e4e286186aa">with <code>false</code></a>, <a href="/r/a2c4e602-b7ec-4f5e-9c72-bdd67800f8f5">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it reports references to built-in classes with incorrect name case.</p>
+<h3 id="reportmaybesinmethodsignatures" tabindex="-1"><code>reportMaybesInMethodSignatures</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#reportmaybesinmethodsignatures">#</a></h3>
+<p><strong>default</strong>: <code>false</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>true</code>)</p>
+<p><strong>example</strong>: <a href="/r/34e1217e-8ac4-46b9-b753-49916ca74963">with <code>false</code></a>, <a href="/r/772bbb00-21f7-4286-8856-f52f45a25c1a">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it reports violations of parameter type contravariance and return type covariance. By default, PHPStan only reports completely incompatible types in signatures, <a href="/r/65d77b12-3421-48b4-b27c-b76a01a22f98">see this example</a>.</p>
+<h3 id="reportmaybesinpropertyphpdoctypes" tabindex="-1"><code>reportMaybesInPropertyPhpDocTypes</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#reportmaybesinpropertyphpdoctypes">#</a></h3>
+<p><strong>default</strong>: <code>false</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>true</code>)</p>
+<p><strong>example</strong>: <a href="/r/b9648bc4-619f-4fe5-8c75-d79b3cd2fc96">with <code>false</code></a>, <a href="/r/4e2ad8f5-21b4-4382-a6d9-9a8a33e487a3">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it reports violations of property type invariance. By default, PHPStan only reports completely incompatible PHPDoc types, <a href="/r/64857536-abc5-49c6-b7f8-1600df1460cf">see this example</a>.</p>
+<h3 id="reportstaticmethodsignatures" tabindex="-1"><code>reportStaticMethodSignatures</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#reportstaticmethodsignatures">#</a></h3>
+<p><strong>default</strong>: <code>false</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>true</code>)</p>
+<p><strong>example</strong>: <a href="/r/b132c693-006d-481d-a3b0-2535b3c33b5a">with <code>false</code></a>, <a href="/r/8a2faef7-d64c-46f9-ada8-a68a4675c283">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it reports violations of parameter type contravariance and return type covariance in static methods.</p>
+<h3 id="checktoowidereturntypesinprotectedandpublicmethods" tabindex="-1"><code>checkTooWideReturnTypesInProtectedAndPublicMethods</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#checktoowidereturntypesinprotectedandpublicmethods">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p><strong>example</strong>: <a href="/r/11de1608-ef3a-41b8-923a-a46b5367e2bd">with <code>false</code></a>, <a href="/r/fe4250b4-e56b-4972-9562-9b1c8b143559">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it reports return typehints that could be narrowed down because some of the listed types are never returned from a public or protected method. For <a href="/r/cd10f589-4557-47ff-8f5c-fd66e85469d2">private methods</a> PHPStan does this by default.</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">doFoo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token operator">?</span><span class="token keyword return-type">string</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// Method Foo::doFoo() never returns null so it can be removed from the return typehint.</span>
+	<span class="token keyword">return</span> <span class="token string single-quoted-string">'str'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="checktoowideparameteroutinprotectedandpublicmethods" tabindex="-1"><code>checkTooWideParameterOutInProtectedAndPublicMethods</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#checktoowideparameteroutinprotectedandpublicmethods">#</a></h3>
+<div class="text-xs inline-block border border-green-600 text-green-600 bg-green-100 rounded px-1 mb-4">Available in PHPStan 2.1.23</div>
+<p><strong>default</strong>: <code>false</code></p>
+<p><strong>example</strong>: <a href="/r/df982d3c-9788-4be9-ada3-535bc1d7ab44">with <code>false</code></a>, <a href="/r/a70d9b5c-e2d5-4d1d-839d-fa96687f9440">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it reports param-out typehints that could be narrowed down because some of the listed types are never returned from a public or protected method. For <a href="/r/7df92fe3-cc07-4f8e-ac46-bd42e678f23c">private methods</a> PHPStan does this by default.</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token comment">/**
+ * @param mixed $x
+ * @param-out string|int $x
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">doFoo</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token variable">$x</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">void</span> <span class="token punctuation">{</span>
+	<span class="token comment">// Method Foo::doFoo() never assigns int to &amp;$x so it can be removed from the @param-out type.</span>
+	<span class="token variable">$x</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"foo"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="checktoowidethrowtypesinprotectedandpublicmethods" tabindex="-1"><code>checkTooWideThrowTypesInProtectedAndPublicMethods</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#checktoowidethrowtypesinprotectedandpublicmethods">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p><strong>example</strong>: <a href="/r/92117bc4-22a7-4cef-b7b7-1ae53cf30b87">with <code>false</code></a>, <a href="/r/aa7fa006-b3b9-479a-8324-393f45d94804">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it reports <code>@throws</code> PHPDoc types that could be narrowed down because some of the listed exception types are never thrown from a public or protected method. For private methods and methods in final classes PHPStan does this by default.</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token comment">/**
+ * @throws \InvalidArgumentException|RuntimeException
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">doFoo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">void</span> <span class="token punctuation">{</span>
+	<span class="token comment">// Method Foo::doFoo() never throws RuntimeException so it can be removed from the @throws type.</span>
+	<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>InvalidArgumentException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="checkuninitializedproperties" tabindex="-1"><code>checkUninitializedProperties</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#checkuninitializedproperties">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p><strong>example</strong>: <a href="/r/b4d6868f-1ea4-4af2-8aae-700250de05fe">playground</a></p>
+<p>When set to <code>true</code>, it reports properties with native types that weren’t initialized in the class constructor.</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token comment">// "Class has an uninitialized property $foo. Give it default value or assign it in the constructor."</span>
+<span class="token keyword">private</span> <span class="token keyword type-declaration">int</span> <span class="token variable">$foo</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">setFoo</span><span class="token punctuation">(</span><span class="token keyword type-hint">int</span> <span class="token variable">$foo</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">void</span>
+<span class="token punctuation">{</span>
+	<span class="token variable">$this</span><span class="token operator">-></span><span class="token property">foo</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>If properties are initialized in methods other than the constructor, see <a href="#additionalconstructors"><code>additionalConstructors</code></a> or <a href="/developing-extensions/additional-constructors-extensions">additional constructors extensions</a>.</p>
+<h3 id="checkdynamicproperties" tabindex="-1"><code>checkDynamicProperties</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#checkdynamicproperties">#</a></h3>
+<p><strong>default</strong>: <code>false</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>true</code>)</p>
+<p><strong>example</strong>: <a href="/r/3784cac0-9773-4975-8e10-2dc3412a059d">with <code>false</code></a>, <a href="/r/e2c2a609-3181-44c5-ad04-e1fac42a40f8">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it reports use of dynamic properties as undefined.</p>
+<h3 id="rememberpossiblyimpurefunctionvalues" tabindex="-1"><code>rememberPossiblyImpureFunctionValues</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#rememberpossiblyimpurefunctionvalues">#</a></h3>
+<p><strong>default</strong>: <code>true</code></p>
+<p><strong>example</strong>: <a href="/r/2433535b-2983-4d02-8762-0680d8b522bc">with <code>true</code></a>, <a href="/r/2d67a9e2-2ef0-4115-864a-e3191346b9b8">with <code>false</code></a></p>
+<p>By default, PHPStan considers all functions that return a value to be pure. That means that second call to the same function in the same scope will return the same narrowed type:</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">string</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token variable">$this</span><span class="token operator">-></span><span class="token property">name</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-></span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string single-quoted-string">'Foo'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">echo</span> <span class="token variable">$this</span><span class="token operator">-></span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// still 'Foo'</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This is a sane default in case of getters but sometimes we have a function that can return different values based on a global state like a random number generator, database, or time.</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">getRandomNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">int</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$this</span><span class="token operator">-></span><span class="token function">getRandomNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">echo</span> <span class="token variable">$this</span><span class="token operator">-></span><span class="token function">getRandomNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// it's not going to be 4 but PHPStan will think it is</span>
+<span class="token punctuation">}</span></code></pre>
+<p>You can mark <code>getRandomNumber()</code> with <code>/** @phpstan-impure */</code> but if you have many functions like this in your codebase and don’t want to assume functions return the same value when called multiple times, you can set <code>rememberPossiblyImpureFunctionValues</code> to <code>false</code>:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">rememberPossiblyImpureFunctionValues</span><span class="token punctuation">:</span> <span class="token boolean important">false</span></code></pre>
+<h3 id="checkbenevolentuniontypes" tabindex="-1"><code>checkBenevolentUnionTypes</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#checkbenevolentuniontypes">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p><strong>example</strong>: <a href="/r/009ebdf3-812f-4e03-a790-7f4054d60bf8">with <code>false</code></a>, <a href="/r/13881884-be81-4848-a41e-85c179232901">with <code>true</code></a></p>
+<p>PHPStan defines benevolent union types, such as <code>array-key</code>. Benevolent unions aren’t checked strictly even at the highest level:</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">requireInt</span><span class="token punctuation">(</span><span class="token keyword type-hint">int</span> <span class="token variable">$value</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">void</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">requireString</span><span class="token punctuation">(</span><span class="token keyword type-hint">string</span> <span class="token variable">$value</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">void</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * @param array-key  $value1 // array-key is a benevolent union (int|string)
+ * @param int|string $value2
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">test</span><span class="token punctuation">(</span><span class="token variable">$value1</span><span class="token punctuation">,</span> <span class="token keyword type-declaration">int</span><span class="token operator">|</span><span class="token keyword type-declaration">string</span> <span class="token variable">$value2</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">int</span>
+<span class="token punctuation">{</span>
+    <span class="token variable">$this</span><span class="token operator">-></span><span class="token function">requireInt</span><span class="token punctuation">(</span><span class="token variable">$value1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// No error</span>
+    <span class="token variable">$this</span><span class="token operator">-></span><span class="token function">requireString</span><span class="token punctuation">(</span><span class="token variable">$value1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// No error</span>
+    <span class="token variable">$this</span><span class="token operator">-></span><span class="token function">requireInt</span><span class="token punctuation">(</span><span class="token variable">$value2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// Error</span>
+    <span class="token variable">$this</span><span class="token operator">-></span><span class="token function">requireString</span><span class="token punctuation">(</span><span class="token variable">$value2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Error</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Enable stricter analysis of benevolent union types with the <code>checkBenevolentUnionTypes</code> option (needs level 7 or higher):</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+    <span class="token key atrule">checkBenevolentUnionTypes</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
+<h3 id="reportpossiblynonexistentgeneralarrayoffset" tabindex="-1"><code>reportPossiblyNonexistentGeneralArrayOffset</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#reportpossiblynonexistentgeneralarrayoffset">#</a></h3>
+<p>By default PHPStan does not report possibly nonexistent offset on general arrays:</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token comment">/**
+ * @param array&lt;string, int> $array
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">doFoo</span><span class="token punctuation">(</span><span class="token keyword type-hint">array</span> <span class="token variable">$array</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">int</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token variable">$array</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'foo'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>By setting <code>reportPossiblyNonexistentGeneralArrayOffset</code> to <code>true</code> this will be reported as an error. This option has effect on <a href="/user-guide/rule-levels">rule level</a> 7 and up.</p>
+<h3 id="reportpossiblynonexistentconstantarrayoffset" tabindex="-1"><code>reportPossiblyNonexistentConstantArrayOffset</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#reportpossiblynonexistentconstantarrayoffset">#</a></h3>
+<p>By default PHPStan does not report possibly nonexistent offset on array shapes:</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">doFoo</span><span class="token punctuation">(</span><span class="token keyword type-hint">string</span> <span class="token variable">$s</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">void</span>
+<span class="token punctuation">{</span>
+    <span class="token variable">$a</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'foo'</span> <span class="token operator">=></span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token variable">$a</span><span class="token punctuation">[</span><span class="token variable">$s</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>By setting <code>reportPossiblyNonexistentConstantArrayOffset</code> to <code>true</code> this will be reported as an error. This option has effect on <a href="/user-guide/rule-levels">rule level</a> 7 and up.</p>
+<h3 id="reportalwaystrueinlastcondition" tabindex="-1"><code>reportAlwaysTrueInLastCondition</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#reportalwaystrueinlastcondition">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p>By default PHPStan does not report always true last condition in a series of <code>elseif</code> branches:</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token comment">// $o is A|B</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$o</span> <span class="token keyword">instanceof</span> <span class="token class-name">A</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span> <span class="token keyword">elseif</span> <span class="token punctuation">(</span><span class="token variable">$o</span> <span class="token keyword">instanceof</span> <span class="token class-name">B</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// "Instanceof between B and B will always evaluate to true." IS NOT reported</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre>
+<p>By setting <code>reportAlwaysTrueInLastCondition</code> to <code>true</code> the error in <code>elseif</code> will be reported.</p>
+<h3 id="reportnonintstringarraykey" tabindex="-1"><code>reportNonIntStringArrayKey</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#reportnonintstringarraykey">#</a></h3>
+<div class="text-xs inline-block border border-green-600 text-green-600 bg-green-100 rounded px-1 mb-4">Available in PHPStan 2.1.39</div>
+<p><strong>default</strong>: <code>false</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>true</code> with bleeding edge)</p>
+<p><strong>example</strong>: <a href="/r/d6f23858-e966-404b-9b70-f18b4099aa4d">with <code>true</code></a>, <a href="/r/f7314f39-9593-49e1-a0a5-4afa04582f09">with <code>false</code></a></p>
+<p>By default, PHPStan does not report when array keys are used that are neither integers nor strings at compile time:</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token variable">$array</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$array</span><span class="token punctuation">[</span><span class="token constant boolean">true</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'value'</span><span class="token punctuation">;</span>  <span class="token comment">// boolean is cast into int</span>
+<span class="token variable">$array</span><span class="token punctuation">[</span><span class="token number">4.5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'value'</span><span class="token punctuation">;</span>   <span class="token comment">// float is cast into int</span>
+<span class="token variable">$array</span><span class="token punctuation">[</span><span class="token constant">null</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'value'</span><span class="token punctuation">;</span>  <span class="token comment">// null key is converted to ''</span></code></pre>
+<p>By setting <code>reportNonIntStringArrayKey</code> to true, PHPStan will report these cases, helping you catch potentially confusing implicit conversions.</p>
+<h3 id="reportunsafearraystringkeycasting" tabindex="-1"><code>reportUnsafeArrayStringKeyCasting</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#reportunsafearraystringkeycasting">#</a></h3>
+<div class="text-xs inline-block border border-green-600 text-green-600 bg-green-100 rounded px-1 mb-4">Available in PHPStan 2.2.0</div>
+<p><strong>default</strong>: <code>null</code></p>
+<p><strong>example</strong>: <a href="/r/dcbe6433-b2bb-4c1e-b378-2d61190ff253">unsafe (null)</a>, <a href="/r/170d5184-42cd-4ad1-8cc7-c10d83d0f967">detect</a>, <a href="/r/c05a336c-727e-44ae-81d8-1e63bfaac563">prevent</a></p>
+<p>PHP silently casts array keys that look like decimal integers from <code>string</code> to <code>int</code>. This means <code>array&lt;string, mixed&gt;</code> can’t guarantee that keys are actually strings at runtime. <a href="/blog/why-array-string-keys-are-not-type-safe">Read more about this problem »</a></p>
+<p>PHPStan 2.2.0 introduces <code>non-decimal-int-string</code> and <code>decimal-int-string</code> types alongside this config parameter to give you control over how strictly array string keys are checked.</p>
+<p>This parameter accepts three values:</p>
+<ul>
+<li><strong><code>null</code></strong> (default) — Current behaviour. No additional checks. String keys that look like decimal integers are silently cast to <code>int</code> at runtime without any PHPStan errors.</li>
+<li><strong><code>'detect'</code></strong> — Typehinted <code>array&lt;string, mixed&gt;</code> accepts other <code>array&lt;string, mixed&gt;</code>, but when you get a key out of it (e.g. via <code>foreach</code> or <code>array_keys</code>), the key type will be <code>int|non-decimal-int-string</code> instead of <code>string</code>. This reveals potential issues without requiring you to change all your array type annotations.</li>
+<li><strong><code>'prevent'</code></strong> — Typehinted <code>array&lt;string, mixed&gt;</code> is essentially treated as <code>array&lt;non-decimal-int-string, mixed&gt;</code>. It will only accept another array with safe string keys. Additionally, any <code>string</code> being used as an array key is correctly narrowed to <code>int|non-decimal-int-string</code>.</li>
+</ul>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+    <span class="token key atrule">reportUnsafeArrayStringKeyCasting</span><span class="token punctuation">:</span> detect <span class="token comment"># or: prevent, null</span></code></pre>
+<p>Please note this is highly experimental and things can change as the types are adjusted and made more practical and useful.</p>
+<h3 id="reportwrongphpdoctypeinvartag" tabindex="-1"><code>reportWrongPhpDocTypeInVarTag</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#reportwrongphpdoctypeinvartag">#</a></h3>
+<p><strong>default</strong>: <code>false</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>true</code>)</p>
+<p><strong>example</strong>: <a href="/r/55f53970-7db4-41e9-8444-473fb1475690">with <code>true</code></a>, <a href="/r/25b91a89-848a-4873-8c2f-5422b32ed217">with <code>false</code></a></p>
+<p>By default PHPStan reports wrong type in <code>@var</code> tag only for native types on the right side of <code>=</code>. With <code>reportWrongPhpDocTypeInVarTag</code> set to <code>true</code> it will consider PHPDoc types too.</p>
+<p>This effectively means that inline <code>@var</code> cast can only be used to narrow down original types. PHPStan offers many utilities to use instead:</p>
+<ul>
+<li><a href="/writing-php-code/phpdoc-types#conditional-return-types">Conditional return types</a></li>
+<li><a href="/writing-php-code/narrowing-types#custom-type-checking-functions-and-methods"><code>@phpstan-assert</code></a></li>
+<li><a href="/blog/generics-in-php-using-phpdocs">Generics</a></li>
+<li><a href="/user-guide/stub-files">Stub files</a> for overriding 3rd party PHPDocs</li>
+<li><a href="/developing-extensions/dynamic-return-type-extensions">Dynamic return type extensions</a></li>
+</ul>
+<h3 id="reportanytypewideninginvartag" tabindex="-1"><code>reportAnyTypeWideningInVarTag</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#reportanytypewideninginvartag">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p>This option strictens checks used in <code>reportWrongPhpDocTypeInVarTag</code>. It strictly disallows any type widening. Compared to default behaviour, it disallows array key widening in inline PHPDoc <code>@var</code> tags, so those would get reported:</p>
+<ul>
+<li><code>list&lt;int&gt;</code> =&gt; <code>array&lt;int&gt;</code></li>
+<li><code>array&lt;int, int&gt;</code> =&gt; <code>array&lt;int&gt;</code></li>
+</ul>
+<h3 id="checkmissingoverridemethodattribute" tabindex="-1"><code>checkMissingOverrideMethodAttribute</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#checkmissingoverridemethodattribute">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p><strong>example</strong>: <a href="/r/8804a9d0-16a6-4671-848b-cfd5848b6cdb">playground</a></p>
+<p>When set to <code>true</code>, PHPStan reports missing <code>#[\Override]</code> attribute above methods that override a method coming from their parent classes, implemented interfaces, or abstract method from a used trait.</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token keyword">class</span> <span class="token class-name-definition class-name">Foo</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">doFoo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">void</span>
+	<span class="token punctuation">{</span>
+
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">Bar</span> <span class="token keyword">extends</span> <span class="token class-name">Foo</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">doFoo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">void</span>
+	<span class="token punctuation">{</span>
+		<span class="token comment">// missing #[\Override] above this method</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Please note that aside from setting this config parameter to <code>true</code>, you also need to set <a href="#phpversion"><code>phpVersion</code></a> to <code>80300</code> or higher. If you’re not changing <code>phpVersion</code> in your config, make sure you’re running PHPStan with PHP 8.3 or newer.</p>
+<h3 id="checkmissingoverridepropertyattribute" tabindex="-1"><code>checkMissingOverridePropertyAttribute</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#checkmissingoverridepropertyattribute">#</a></h3>
+<p><strong>default</strong>: <code>null</code></p>
+<p>Controls whether PHPStan reports missing <code>#[\Override]</code> attribute on properties that override a parent class property. This is a PHP 8.5 feature.</p>
+<ul>
+<li>When <code>null</code> (default): the check is enabled automatically when <a href="#checkmissingoverridemethodattribute"><code>checkMissingOverrideMethodAttribute</code></a> is <code>true</code> and <a href="#phpversion"><code>phpVersion</code></a> is <code>80500</code> or higher.</li>
+<li>When <code>true</code>: always checks for missing <code>#[\Override]</code> on overriding properties.</li>
+<li>When <code>false</code>: never checks.</li>
+</ul>
+<h3 id="checkstrictprintfplaceholdertypes" tabindex="-1"><code>checkStrictPrintfPlaceholderTypes</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#checkstrictprintfplaceholdertypes">#</a></h3>
+<div class="text-xs inline-block border border-green-600 text-green-600 bg-green-100 rounded px-1 mb-4">Available in PHPStan 2.1.29</div>
+<p><strong>default</strong>: <code>false</code> (<a href="https://github.com/phpstan/phpstan-strict-rules">strict-rules</a> sets it to <code>true</code>)</p>
+<p><strong>example</strong>: <a href="/r/2abca81b-ebb4-4443-ab88-d59cf1405355">with <code>false</code></a>, <a href="/r/37874f07-e0f8-4768-853a-82771e090998">with <code>true</code></a></p>
+<p>Requires Bleeding Edge until PHPStan 3.0. It determines which value types are allowed to be passed to various placeholders in printf-like functions:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>false</code></th>
+<th><code>true</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%d</code></td>
+<td>anything castable to int</td>
+<td>int</td>
+</tr>
+<tr>
+<td><code>%f</code></td>
+<td>anything castable to float</td>
+<td>float, int</td>
+</tr>
+<tr>
+<td><code>%s</code></td>
+<td>anything castable to string</td>
+<td>string, int, float, objects with <code>__toString()</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>int</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<p>This affects for example booleans which are castable to int/float/string, but it may not be what you intended.</p>
+<h2 id="exceptions" tabindex="-1">Exceptions <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#exceptions">#</a></h2>
+<p>Advanced exceptions-related rules are available. <a href="/blog/bring-your-exceptions-under-control">Read this article for more details »</a>.</p>
+<p>For custom logic that dynamically decides whether an exception is checked or unchecked based on scope, you can implement a custom <a href="/developing-extensions/exception-type-resolver">exception type resolver</a>.</p>
+<p>Related config keys: <code>exceptions.implicitThrows</code>, <code>exceptions.uncheckedExceptionRegexes</code>, <code>exceptions.uncheckedExceptionClasses</code>, <code>exceptions.checkedExceptionRegexes</code>, <code>exceptions.checkedExceptionClasses</code>, <code>exceptions.reportUncheckedExceptionDeadCatch</code>, <code>exceptions.check.missingCheckedExceptionInThrows</code>, <code>exceptions.check.throwTypeCovariance</code>, <code>exceptions.check.tooWideImplicitThrowType</code></p>
+<h3 id="exceptions.implicitthrows" tabindex="-1"><code>exceptions.implicitThrows</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#exceptions.implicitthrows">#</a></h3>
+<p><strong>default</strong>: <code>true</code></p>
+<p><strong>example</strong>: <a href="/r/c8a2ba3a-2121-4661-a717-7d7b0a163387">with <code>true</code></a>, <a href="/r/195ae8a1-ffb9-43a5-a84b-661af20a5a51">with <code>false</code></a></p>
+<p>When set to <code>true</code> (the default), a function or method without a <code>@throws</code> tag is assumed to potentially throw any exception. When set to <code>false</code>, absent <code>@throws</code> is interpreted as the function not throwing any exception. You can write <code>@throws void</code> to explicitly mark a function that doesn’t throw.</p>
+<h3 id="exceptions.reportuncheckedexceptiondeadcatch" tabindex="-1"><code>exceptions.reportUncheckedExceptionDeadCatch</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#exceptions.reportuncheckedexceptiondeadcatch">#</a></h3>
+<p><strong>default</strong>: <code>true</code></p>
+<p><strong>example</strong>: <a href="/r/8ea48a1a-61ec-41c3-8097-5665c46efe72">with <code>false</code></a>, <a href="/r/6a211a87-80ed-425a-8dce-820bf548a60a">with <code>true</code></a></p>
+<p>When set to <code>true</code> (the default), PHPStan reports dead catch blocks for unchecked exceptions — catch blocks that can never be reached because the called code never throws that exception type. Set to <code>false</code> if you don’t plan to annotate <code>@throws</code> tags for unchecked exceptions but still occasionally catch them.</p>
+<h3 id="exceptions.check.missingcheckedexceptioninthrows" tabindex="-1"><code>exceptions.check.missingCheckedExceptionInThrows</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#exceptions.check.missingcheckedexceptioninthrows">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p><strong>example</strong>: <a href="/r/25faef78-318f-4d03-a537-b8c3d51ccde5">with <code>false</code></a>, <a href="/r/efc31418-db3e-4f08-95f9-a24794292ba1">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it reports missing <code>@throws</code> tags for checked exceptions above functions and methods. Requires configuring <code>exceptions.checkedExceptionClasses</code> or <code>exceptions.checkedExceptionRegexes</code>.</p>
+<h3 id="exceptions.check.throwtypecovariance" tabindex="-1"><code>exceptions.check.throwTypeCovariance</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#exceptions.check.throwtypecovariance">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p><strong>example</strong>: <a href="/r/bc4e2f13-d946-407a-bccf-6e437fa12577">playground</a></p>
+<p>When set to <code>true</code>, it enforces that <code>@throws</code> types in overriding methods are covariant with the parent method’s <code>@throws</code> types. A child method cannot declare broader exception types than its parent. This follows the Liskov Substitution Principle for exception declarations.</p>
+<h3 id="exceptions.check.toowideimplicitthrowtype" tabindex="-1"><code>exceptions.check.tooWideImplicitThrowType</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#exceptions.check.toowideimplicitthrowtype">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p><strong>example</strong>: <a href="/r/9addfc65-4e62-44c7-a459-aa37d37faac5">with <code>false</code></a>, <a href="/r/36bdac56-7df9-47aa-b00d-da45c524b859">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it extends <a href="/error-identifiers/throws.unusedType"><code>throws.unusedType</code></a> to also report too-wide <code>@throws</code> types that were inherited or implicitly inferred, not just those explicitly written in PHPDoc. By default, only explicitly written <code>@throws</code> types are checked.</p>
+<h2 id="vague-typehints" tabindex="-1">Vague typehints <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#vague-typehints">#</a></h2>
+<p>If you use callables, you might find that <code>callable</code> or <code>\Closure</code> is too vague for your liking.
+For example, PHPStan won’t complain if you pass <code>callable(int) : void</code> to <code>callable</code>, but it will complain if you pass <code>callable(int) : void</code> to <code>callable(string) : void</code>. So, being specific with callable signatures helps PHPStan find more bugs.</p>
+<p>However, by default PHPStan won’t complain if you don’t specify a signature for a callable or closure.</p>
+<p>You can make PHPStan require that callable signatures are specified with PHPStan’s <a href="/writing-php-code/phpdoc-types#callables">callable PHPDoc syntax</a> by setting the <code>checkMissingCallableSignature</code> key to <code>true</code> (disabled by default):</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">checkMissingCallableSignature</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
+<p>This also requires level 6 and up.</p>
+<h2 id="type-aliases" tabindex="-1">Type aliases <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#type-aliases">#</a></h2>
+<p>Learn more about type aliases in <a href="/writing-php-code/phpdoc-types#global-type-aliases">Writing PHP Code</a>.</p>
+<p>Related config key: <a href="/writing-php-code/phpdoc-types#global-type-aliases"><code>typeAliases</code></a>.</p>
+<h2 id="phpstan-pro" tabindex="-1">PHPStan Pro <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#phpstan-pro">#</a></h2>
+<p>You can override the DNS servers <a href="https://phpstan.org/blog/introducing-phpstan-pro" class="phpstan-pro-label">PHPStan Pro</a> uses to download the application:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">pro</span><span class="token punctuation">:</span>
+		<span class="token key atrule">dnsServers</span><span class="token punctuation">:</span>
+			<span class="token punctuation">-</span> <span class="token string">'8.8.8.8'</span></code></pre>
+<p>By default, <a href="https://phpstan.org/blog/introducing-phpstan-pro" class="phpstan-pro-label">PHPStan Pro</a> stores its files in <code>sys_get_temp_dir() . '/phpstan-fixer'</code>. If that does not work for you for example because of multi-user environment, you can change this setting. You can also take advantage of <a href="#environment-variables">environment variables</a>:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">pro</span><span class="token punctuation">:</span>
+		<span class="token key atrule">tmpDir</span><span class="token punctuation">:</span> tmp</code></pre>
+<p>Relative path in the <code>pro.tmpDir</code> key is resolved based on the directory of the config file is in. In this example PHPStan cache will be stored in <code>tmp</code> directory that’s next to the configuration file.</p>
+<h2 id="parallel-processing" tabindex="-1">Parallel processing <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#parallel-processing">#</a></h2>
+<p>PHPStan runs in multiple threads by default, taking advantage of multiple cores in your CPU. It uses <a href="https://github.com/phpstan/phpstan-src/blob/a97bdead71d24694dfe2bbe96de80486119b27a1/src/Parallel/Scheduler.php#L28-L45">a formula</a> to figure out how many child processes to spawn. The child processes are given “jobs” - each job represents a batch of a certain number of files to process. The inputs to the formula are:</p>
+<ul>
+<li>Auto-detected number of logical CPU cores on your system. If you have 8 physical cores and hyper-threading-enabled CPU, you have 16 logical CPU cores.</li>
+<li>Maximum number of desired spawned processes, to prevent CPU hogging of the whole system if it’s resource-constrained. (<code>maximumNumberOfProcesses</code>)</li>
+<li>Minimum number of jobs per process. Process is spawned only if it will process at least 2 jobs by default.  (<code>minimumNumberOfJobsPerProcess</code>)</li>
+<li>Job size - how many files are analysed in a single batch (<code>jobSize</code>)</li>
+<li>Number of analysed files - it’s different each time because of how your codebase changes, and also thanks to the <a href="/blog/from-minutes-to-seconds-massive-performance-gains-in-phpstan">result cache</a>.</li>
+</ul>
+<p>These variables can be changed in the configuration. Here are the defaults:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">parallel</span><span class="token punctuation">:</span>
+		<span class="token key atrule">jobSize</span><span class="token punctuation">:</span> <span class="token number">20</span>
+		<span class="token key atrule">maximumNumberOfProcesses</span><span class="token punctuation">:</span> <span class="token number">8</span>
+		<span class="token key atrule">minimumNumberOfJobsPerProcess</span><span class="token punctuation">:</span> <span class="token number">2</span></code></pre>
+<p>You might encounter this error message when running PHPStan:</p>
+<blockquote>
+<p>Child process timed out after 600 seconds. Try making it longer with <code>parallel.processTimeout</code> setting.</p>
+</blockquote>
+<p>This can happen when a single job takes longer than the set timeout. It prevents PHPStan from running indefinitely when something unexpected occurs. In case of large files, it might be normal that the analysis of some of them takes longer. You can make the timeout longer in the configuration:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">parallel</span><span class="token punctuation">:</span>
+		<span class="token key atrule">processTimeout</span><span class="token punctuation">:</span> <span class="token number">900.0</span></code></pre>
+<p>To disable parallel processing altogether, set <code>maximumNumberOfProcesses</code> to <code>1</code>:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">parallel</span><span class="token punctuation">:</span>
+		<span class="token key atrule">maximumNumberOfProcesses</span><span class="token punctuation">:</span> <span class="token number">1</span></code></pre>
+<p>Parallel processing is also disabled when running with <a href="/user-guide/command-line-usage#--debug"><code>--debug</code></a>. <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<h3 id="parallel.buffer" tabindex="-1"><code>parallel.buffer</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#parallel.buffer">#</a></h3>
+<p><strong>default</strong>: <code>134217728</code> (128 MB)</p>
+<p>Sets the maximum buffer size in bytes for communication between the main process and worker processes during parallel analysis. You might need to increase this if you encounter issues with very large analysis results.</p>
+<h3 id="parallel.loadlimit" tabindex="-1"><code>parallel.loadLimit</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#parallel.loadlimit">#</a></h3>
+<p><strong>default</strong>: <code>1.0</code></p>
+<p>A percentage in the range <code>[0.0, 1.0]</code> representing the fraction of available CPU cores that PHPStan should use for parallel workers. The number of available cores is determined by the system load average — busy cores are subtracted from the total.</p>
+<p>For example, if the system has 11 cores and 5 are busy, there are 6 available cores. Setting <code>loadLimit</code> to <code>0.7</code> means PHPStan will use 70% of 6 = 4 cores for parallel workers. Setting it to <code>null</code> skips this check entirely.</p>
+<p>Note that <code>1.0</code> does not mean “no limit” — it means 100% of the <em>available</em> cores, not the total number of cores on the machine.</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">parallel</span><span class="token punctuation">:</span>
+		<span class="token key atrule">loadLimit</span><span class="token punctuation">:</span> <span class="token null important">null</span> <span class="token comment"># skip load-based adjustment</span></code></pre>
+<h2 id="clickable-editor-url" tabindex="-1">Clickable editor URL <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#clickable-editor-url">#</a></h2>
+<p>You can configure PHPStan to show clickable editor URL leading to the file and line with error in the default <code>table</code> error formatter. <a href="/user-guide/output-format#opening-file-in-an-editor">Learn more</a></p>
+<p>Related config keys: <code>editorUrl</code>, <code>editorUrlTitle</code></p>
+<h3 id="editorurltitle" tabindex="-1"><code>editorUrlTitle</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#editorurltitle">#</a></h3>
+<p><strong>default</strong>: <code>null</code></p>
+<p>Customizes the link text shown for editor URLs in the <code>table</code> error formatter. Supports the same <code>%file%</code>, <code>%relFile%</code>, and <code>%line%</code> placeholders as <code>editorUrl</code>. When not set, the relative file path is used as the link text.</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+    <span class="token key atrule">editorUrl</span><span class="token punctuation">:</span> <span class="token string">'phpstorm://open?file=%%file%%&amp;line=%%line%%'</span>
+    <span class="token key atrule">editorUrlTitle</span><span class="token punctuation">:</span> <span class="token string">'%%relFile%%:%%line%%'</span></code></pre>
+<h2 id="miscellaneous-parameters" tabindex="-1">Miscellaneous parameters <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#miscellaneous-parameters">#</a></h2>
+<h3 id="phpversion" tabindex="-1"><code>phpVersion</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#phpversion">#</a></h3>
+<p><strong>default</strong>: <code>null</code> (current PHP version is used)</p>
+<p>If you want to analyse a codebase as if it was written for a different PHP version than you’re currently running, change the <code>phpVersion</code> parameter:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+    <span class="token key atrule">phpVersion</span><span class="token punctuation">:</span> <span class="token number">70400</span> <span class="token comment"># PHP 7.4</span></code></pre>
+<p>Since PHPStan 2.0 you can define a range of minimum and maximum <code>phpVersion</code> parameter:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">phpVersion</span><span class="token punctuation">:</span>
+		<span class="token key atrule">min</span><span class="token punctuation">:</span> <span class="token number">80103</span> <span class="token comment"># PHP 8.1.3</span>
+		<span class="token key atrule">max</span><span class="token punctuation">:</span> <span class="token number">80304</span> <span class="token comment"># PHP 8.3.4</span></code></pre>
+<p>PHPStan will automatically infer the <code>config.platform.php</code> version from the last <code>composer.json</code> file it can find, if not configured in the PHPStan configuration file.</p>
+<h3 id="inferprivatepropertytypefromconstructor" tabindex="-1"><code>inferPrivatePropertyTypeFromConstructor</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#inferprivatepropertytypefromconstructor">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p><strong>example</strong>: <a href="/r/585cd7b6-d844-4d77-b5b0-0a1c27860a40">with <code>false</code></a>, <a href="/r/25a7b04d-4710-47f0-9694-b2d992284994">with <code>true</code></a></p>
+<p>When set to <code>true</code>, it doesn’t require typehints for properties if the types can be inferred from constructor injection:</p>
+<pre class="language-php"><code class="language-diff-php diff-highlight"><span class="token keyword">private</span> <span class="token variable">$foo</span><span class="token punctuation">;</span> <span class="token comment">// PHPStan infers $foo to be Foo</span>
+
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">__construct</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Foo</span> <span class="token variable">$foo</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token variable">$this</span><span class="token operator">-></span><span class="token property">foo</span> <span class="token operator">=</span> <span class="token variable">$foo</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="treatphpdoctypesascertain" tabindex="-1"><code>treatPhpDocTypesAsCertain</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#treatphpdoctypesascertain">#</a></h3>
+<p><strong>default</strong>: <code>true</code></p>
+<p><strong>example</strong>: <a href="/r/af59f2c2-9700-4c0a-9fe6-c51b70a08d43">with <code>true</code></a>, <a href="/r/c7d4173c-d3ba-4857-a260-ce9cac36e399">with <code>false</code></a></p>
+<p>PHPStan by default doesn’t differentiate between PHPDoc and native types. It considers them both as certain.</p>
+<p>This might not be what you want in case you’re writing a library whose users might pass a wrong argument type to a function. Setting <code>treatPhpDocTypesAsCertain</code> to <code>false</code> relaxes some of the rules around type-checking.</p>
+<h3 id="tips" tabindex="-1"><code>tips</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#tips">#</a></h3>
+<p>If you want to turn off a tip that PHPStan shows, you can do this in the tips section:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+    <span class="token key atrule">tips</span><span class="token punctuation">:</span>
+        <span class="token key atrule">treatPhpDocTypesAsCertain</span><span class="token punctuation">:</span> <span class="token boolean important">false</span></code></pre>
+<h4 id="tips.possiblyimpure" tabindex="-1"><code>tips.possiblyImpure</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#tips.possiblyimpure">#</a></h4>
+<p><strong>default</strong>: <code>true</code></p>
+<p>When set to <code>true</code>, PHPStan appends a tip to “always true/false” condition errors when the condition contains a function or method call whose return value was remembered (treated as pure). The tip suggests annotating the function with <code>@phpstan-impure</code> if it actually has side effects.</p>
+<p>Set to <code>false</code> to suppress these tips globally.</p>
+<h3 id="tipsoftheday" tabindex="-1"><code>tipsOfTheDay</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#tipsoftheday">#</a></h3>
+<p><strong>default</strong>: <code>true</code></p>
+<p>From time to time, PHPStan shows “💡 Tips of the Day” at the end of a successful analysis. You can turn this off by setting <code>tipsOfTheDay</code> key to <code>false</code>.</p>
+<h3 id="errorformat" tabindex="-1"><code>errorFormat</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#errorformat">#</a></h3>
+<p><strong>default</strong>: <code>null</code></p>
+<p>If you want to change the default <a href="/user-guide/output-format">error formatter</a>, you can specify that using:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+    <span class="token key atrule">errorFormat</span><span class="token punctuation">:</span> json</code></pre>
+<h3 id="additionalconstructors" tabindex="-1"><code>additionalConstructors</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#additionalconstructors">#</a></h3>
+<p><strong>default</strong>: <code>[]</code></p>
+<p>If you want to avoid errors caused by writing to readonly properties outside of constructors, configure <code>additionalConstructors</code> to specify methods to treat as constructors:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">additionalConstructors</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> PHPUnit\Framework\TestCase<span class="token punctuation">:</span><span class="token punctuation">:</span>setUp</code></pre>
+<p>This is useful when injecting dependencies with setter methods, or when writing “wither” methods on immutable objects.</p>
+<p>For dynamic logic, you can also write an <a href="/developing-extensions/additional-constructors-extensions">additional constructors extension</a>.</p>
+<h3 id="propertyalwayswrittentags" tabindex="-1"><code>propertyAlwaysWrittenTags</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#propertyalwayswrittentags">#</a></h3>
+<p><strong>default</strong>: <code>[]</code></p>
+<p>A list of PHPDoc tag strings. Properties annotated with any of these tags are considered always written to, suppressing “property is never written, only read” errors from dead code detection. This is useful for properties managed by frameworks like Doctrine ORM.</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">propertyAlwaysWrittenTags</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> <span class="token string">'@ORM\Column'</span>
+		<span class="token punctuation">-</span> <span class="token string">'@ORM\ManyToOne'</span></code></pre>
+<h3 id="propertyalwaysreadtags" tabindex="-1"><code>propertyAlwaysReadTags</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#propertyalwaysreadtags">#</a></h3>
+<p><strong>default</strong>: <code>[]</code></p>
+<p>A list of PHPDoc tag strings. Properties annotated with any of these tags are considered always read, suppressing “property is never read, only written” errors from dead code detection.</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">propertyAlwaysReadTags</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> <span class="token string">'@get'</span></code></pre>
+<h3 id="usepathconstantsasconstantstring" tabindex="-1"><code>usePathConstantsAsConstantString</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#usepathconstantsasconstantstring">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p>When set to <code>true</code>, the magic constants <code>__FILE__</code> and <code>__DIR__</code> are resolved to their literal file path values instead of being generalized to <code>string</code>. This enables rules that depend on exact path values, such as checking whether a file referenced by <code>require</code> actually exists.</p>
+<h3 id="internalerrorscountlimit" tabindex="-1"><code>internalErrorsCountLimit</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#internalerrorscountlimit">#</a></h3>
+<p><strong>default</strong>: <code>50</code></p>
+<p>The maximum number of internal errors (unexpected exceptions during analysis) before PHPStan stops the analysis. This prevents PHPStan from running indefinitely when encountering systemic issues.</p>
+<h3 id="mixinexcludeclasses" tabindex="-1"><code>mixinExcludeClasses</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#mixinexcludeclasses">#</a></h3>
+<p><strong>default</strong>: <code>[]</code></p>
+<p>A list of class names to exclude from <code>@mixin</code> resolution. Methods and properties from these mixin classes will not be available on classes that use them via <code>@mixin</code>.</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+	<span class="token key atrule">mixinExcludeClasses</span><span class="token punctuation">:</span>
+		<span class="token punctuation">-</span> Eloquent\Model</code></pre>
+<h3 id="resultcachepath" tabindex="-1"><code>resultCachePath</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#resultcachepath">#</a></h3>
+<p><strong>default</strong>: <code>%tmpDir%/resultCache.php</code></p>
+<p>The file path where PHPStan stores the result cache for incremental analysis.</p>
+<h3 id="resultcacheskipifolderthandays" tabindex="-1"><code>resultCacheSkipIfOlderThanDays</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#resultcacheskipifolderthandays">#</a></h3>
+<p><strong>default</strong>: <code>7</code></p>
+<p>Forces a full re-analysis if the result cache is older than the specified number of days, ensuring PHPStan periodically performs a complete analysis.</p>
+<h3 id="resultcachechecksprojectextensionfilesdependencies" tabindex="-1"><code>resultCacheChecksProjectExtensionFilesDependencies</code> <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#resultcachechecksprojectextensionfilesdependencies">#</a></h3>
+<p><strong>default</strong>: <code>false</code></p>
+<p>When set to <code>true</code>, PHPStan tracks transitive dependencies of project extension files for cache invalidation. This adds overhead but catches more scenarios where the cache should be invalidated.</p>
+<h2 id="environment-variables" tabindex="-1">Environment variables <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#environment-variables">#</a></h2>
+<p>Parameters can reference environment variables:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+    <span class="token key atrule">tmpDir</span><span class="token punctuation">:</span> %env.PHPSTAN_TMP_DIR%</code></pre>
+<p>This example assumes you’ve set an environment variable called <code>PHPSTAN_TMP_DIR</code> before running PHPStan:</p>
+<pre><code>export PHPSTAN_TMP_DIR=/home/ondrej/phpstan-temp
+</code></pre>
+<p>Special functions like <code>bool()</code>, <code>int()</code>, <code>float()</code>, and <code>string()</code> can be used in .neon files for lossless type casting:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+    <span class="token key atrule">parallel</span><span class="token punctuation">:</span>
+        <span class="token key atrule">maximumNumberOfProcesses</span><span class="token punctuation">:</span> int(%env.PHPSTAN_CPU%)
+</code></pre>
+<h2 id="expanding-paths" tabindex="-1">Expanding paths <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#expanding-paths">#</a></h2>
+<p>There are two predefined parameters usable to expand in config parameters that represent paths:</p>
+<ul>
+<li><code>%rootDir%</code> - root directory where PHPStan resides (i.e. <code>vendor/phpstan/phpstan</code> in Composer installation)</li>
+<li><code>%currentWorkingDirectory%</code> - current working directory where PHPStan was executed</li>
+</ul>
+<p>These are no longer very useful as all relative paths in config parameters are resolved based on the directory of the config file is in, resulting in a short and concise notation.</p>
+<p>Consider this directory structure:</p>
+<pre><code>app/
+  model/
+  ui/
+	Foo.php
+build/
+  phpstan.neon
+src/
+tests/
+vendor/
+</code></pre>
+<p>To reference the <code>Foo.php</code> file from <code>phpstan.neon</code>, you can simply use <code>../app/ui/Foo.php</code>.</p>
+<p>To reference the <code>Foo.php</code> involving <code>%rootDir%</code>, you’d have to use <code>%rootDir%/../../../app/ui/Foo.php</code> which isn’t really nice.</p>
+<h2 id="custom-parameters" tabindex="-1">Custom parameters <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#custom-parameters">#</a></h2>
+<p>When <a href="/developing-extensions/extension-types">developing custom PHPStan extensions</a>, you might need a custom config parameter to provide customization to the user.</p>
+<p>PHPStan does not allow unknown parameters to be present in the config in order to prevent typos. Any new parameter also needs to be added to the top-level <code>parametersSchema</code> section of the config file.</p>
+<p>The schema is defined using <a href="https://github.com/nette/schema">nette/schema</a> library. Definition of some of the built-in PHPStan parameters looks like this:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parametersSchema</span><span class="token punctuation">:</span>
+	<span class="token key atrule">earlyTerminatingMethodCalls</span><span class="token punctuation">:</span> arrayOf(listOf(string()))
+	<span class="token key atrule">earlyTerminatingFunctionCalls</span><span class="token punctuation">:</span> listOf(string())
+	<span class="token key atrule">memoryLimitFile</span><span class="token punctuation">:</span> string()
+	<span class="token key atrule">staticReflectionClassNamePatterns</span><span class="token punctuation">:</span> listOf(string())
+	<span class="token key atrule">dynamicConstantNames</span><span class="token punctuation">:</span> listOf(string())
+	<span class="token key atrule">customRulesetUsed</span><span class="token punctuation">:</span> bool()</code></pre>
+<p>If your parameters are nested arrays, you need to use the <code>structure</code> keyword:</p>
+<pre class="language-yaml"><code class="language-diff-yaml diff-highlight"><span class="token key atrule">parametersSchema</span><span class="token punctuation">:</span>
+	<span class="token key atrule">symfony</span><span class="token punctuation">:</span> structure(<span class="token punctuation">[</span>
+		<span class="token key atrule">container_xml_path</span><span class="token punctuation">:</span> schema(string()<span class="token punctuation">,</span> nullable())
+		<span class="token key atrule">constant_hassers</span><span class="token punctuation">:</span> bool()
+		<span class="token key atrule">console_application_loader</span><span class="token punctuation">:</span> schema(string()<span class="token punctuation">,</span> nullable())
+	<span class="token punctuation">]</span>)</code></pre>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Although you don’t want to always run PHPStan with this option. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+		
+
+		
+		
+
+		<div class="mt-16">
+			<div class="md:flex md:items-center md:justify-between mt-8 mb-8">
+	<div class="flex justify-center items-center md:order-2 text-gray-400">
+		<span class="text-sm">Theme</span>
+		<div class="ml-2 flex flex-col" data-bind="with: mainMenu">
+			<div class="flex rounded border border-gray-400 w-36 text-sm text-gray-400">
+				<div class="flex basis-0 flex-grow items-center justify-center py-1 font-medium text-base" data-bind="click: switchToAutoTheme, css: {'cursor-default text-white bg-gray-400': theme() === 'auto', 'cursor-pointer hover:text-gray-500 border-r border-gray-400': theme() !== 'auto'}" title="Theme follows system-level setting">
+					<span>A</span>
+				</div>
+				<div class="flex basis-0 flex-grow items-center justify-center py-1" data-bind="click: switchToLightTheme, css: {'cursor-default text-white bg-gray-400': theme() === 'light', 'cursor-pointer hover:text-gray-500 border-r border-gray-400': theme() !== 'light'}" title="Theme will always use light colors">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                    </svg>
+				</div>
+				<div class="flex basis-0 flex-grow items-center justify-center py-1" data-bind="click: switchToDarkTheme, css: {'cursor-default text-white bg-gray-400': theme() === 'dark', 'cursor-pointer hover:text-gray-500 border-gray-400': theme() !== 'dark'}" title="Theme will always use dark colors">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="flex justify-center md:order-3 mt-8 md:mt-0">
+		<a href="https://twitter.com/phpstan" class="ml-6 text-gray-400 hover:text-gray-500" target="_blank">
+			<span class="sr-only">Twitter</span>
+			<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+				<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+			</svg>
+		</a>
+		<a rel="me" href="https://phpc.social/@phpstan" class="ml-6 text-gray-400 hover:text-gray-500" target="_blank">
+			<span class="sr-only">Mastodon</span>
+			<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 216.4144 232.00976">
+				<path d="M211.80734 139.0875c-3.18125 16.36625-28.4925 34.2775-57.5625 37.74875-15.15875 1.80875-30.08375 3.47125-45.99875 2.74125-26.0275-1.1925-46.565-6.2125-46.565-6.2125 0 2.53375.15625 4.94625.46875 7.2025 3.38375 25.68625 25.47 27.225 46.39125 27.9425 21.11625.7225 39.91875-5.20625 39.91875-5.20625l.8675 19.09s-14.77 7.93125-41.08125 9.39c-14.50875.7975-32.52375-.365-53.50625-5.91875C9.23234 213.82 1.40609 165.31125.20859 116.09125c-.365-14.61375-.14-28.39375-.14-39.91875 0-50.33 32.97625-65.0825 32.97625-65.0825C49.67234 3.45375 78.20359.2425 107.86484 0h.72875c29.66125.2425 58.21125 3.45375 74.8375 11.09 0 0 32.975 14.7525 32.975 65.0825 0 0 .41375 37.13375-4.59875 62.915"/>
+			  	<path fill="#fff" d="M177.50984 80.077v60.94125h-24.14375v-59.15c0-12.46875-5.24625-18.7975-15.74-18.7975-11.6025 0-17.4175 7.5075-17.4175 22.3525v32.37625H96.20734V85.42325c0-14.845-5.81625-22.3525-17.41875-22.3525-10.49375 0-15.74 6.32875-15.74 18.7975v59.15H38.90484V80.077c0-12.455 3.17125-22.3525 9.54125-29.675 6.56875-7.3225 15.17125-11.07625 25.85-11.07625 12.355 0 21.71125 4.74875 27.8975 14.2475l6.01375 10.08125 6.015-10.08125c6.185-9.49875 15.54125-14.2475 27.8975-14.2475 10.6775 0 19.28 3.75375 25.85 11.07625 6.36875 7.3225 9.54 17.22 9.54 29.675"/>
+
+			</svg>
+		</a>
+		<a href="https://www.youtube.com/@phpstan" class="ml-6 text-gray-400 hover:text-gray-500" target="_blank">
+			<span class="sr-only">YouTube</span>
+			<svg viewBox="0 0 28.57 20" class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					<path d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5677 5.35042 27.9727 3.12324Z"></path>
+					<path d="M11.4253 14.2854L18.8477 10.0004L11.4253 5.71533V14.2854Z" fill="white"></path>
+				</g>
+			</svg>
+		</a>
+		<a href="/rss.xml" class="ml-6 text-gray-400 hover:text-gray-500" target="_blank">
+			<span class="sr-only">RSS</span>
+			<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+				<path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.71-7.118-15.758-15.839-15.82zm0-3.368c10.58.046 19.152 8.594 19.183 19.188h4.817c-.03-13.231-10.755-23.954-24-24v4.812z"/>
+			</svg>
+		</a>
+	</div>
+	<div class="mt-8 md:mt-0 md:order-1 flex items-center justify-center">
+		<div class="text-center text-sm leading-6 text-gray-400">&copy; 2026 PHPStan s.r.o.</div>
+	</div>
+</div>
+
+		</div>
+	</div>
+</div>
+
+
+			</div>
+		</main>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

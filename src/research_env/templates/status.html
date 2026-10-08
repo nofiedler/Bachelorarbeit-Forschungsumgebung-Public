@@ -1,0 +1,7 @@
+<div id="component-status" hx-get="/status" hx-trigger="every 2s" hx-swap="outerHTML">
+  <dl class="versions"><div><dt>Software</dt><dd>{{ status.version }}</dd></div><div><dt>Python</dt><dd>{{ status.python }}</dd></div><div><dt>Plattform im Container</dt><dd>{{ status.architecture }}</dd></div></dl>
+  <ul class="components">
+    {% for component in status.components %}<li><div class="component-title"><strong>{{ component.name }}</strong><span class="badge {{ component.state }}">{{ {'ok':'Verfügbar','missing':'Fehlt','error':'Fehler','unknown':'Unbekannt'}[component.state] }}</span></div><p>{{ component.detail }}</p></li>{% endfor %}
+  </ul>
+  <p class="installation">Installationskennung: <code>{{ status.installation_id or 'nicht verfügbar' }}</code></p>
+</div>

@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h1 id="run-list">Laufregister</h1><p>Anzeige {{ rows|length }} von {{ total }} IDs. Suchfilter verändern keine wissenschaftliche Analysemenge; nicht gestartete eingefrorene IDs bleiben erhalten.</p>{% with register_action='/runs' %}{% include 'run_filters.html' %}{% endwith %}{% include 'run_table.html' %}{% endblock %}

@@ -1,0 +1,75 @@
+{
+  "asset_version": "M2-ASSET-INDEX-v0.1-CSRF1",
+  "contexts": [
+    {
+      "access_scope": "assigned module/condition package.txt only",
+      "artifact_root": "assets/context/m2-v0.1-csrf1/BF/K0",
+      "contract_manifest_sha256": "e3fe3027d944629c0a5433acc45d27f17a3736b1c1cd2223bfa8434bdd4db78b",
+      "id": "context-BF-K0",
+      "manifest": "assets/context/m2-v0.1-csrf1/BF/K0/manifest.json",
+      "manifest_sha256": "611d5e9cce4f6a86bdc6556b99725652fc37b6cf146f0967df6fbeed9007abde",
+      "original_manifest_sha256": "1e3ae44cdd1f2c83b20443a0376563a5a92a24b34195f5e2599d7f431220a7b1",
+      "type": "source_context"
+    },
+    {
+      "access_scope": "assigned module/condition package.txt only",
+      "artifact_root": "assets/context/m2-v0.1-csrf1/BF/K1",
+      "contract_manifest_sha256": "e3fe3027d944629c0a5433acc45d27f17a3736b1c1cd2223bfa8434bdd4db78b",
+      "id": "context-BF-K1",
+      "manifest": "assets/context/m2-v0.1-csrf1/BF/K1/manifest.json",
+      "manifest_sha256": "f943a2dcc0fd4d428a4809b6061b2f9eafdc1008e921548d73654ff572c92918",
+      "original_manifest_sha256": "eeb626ead081cc9aba62b17f4b9c9b896f410d46a17dfdf1e1bffb4e46328335",
+      "type": "source_context"
+    },
+    {
+      "access_scope": "assigned module/condition package.txt only",
+      "artifact_root": "assets/context/m2-v0.1-csrf1/SQL/K0",
+      "contract_manifest_sha256": "e3fe3027d944629c0a5433acc45d27f17a3736b1c1cd2223bfa8434bdd4db78b",
+      "id": "context-SQL-K0",
+      "manifest": "assets/context/m2-v0.1-csrf1/SQL/K0/manifest.json",
+      "manifest_sha256": "83ce7e2f69a06fcac084bc4c46895f99d57a76ee68fabbde1ebc0e752061291c",
+      "original_manifest_sha256": "20f0afc169e05e2f5bed0b0bf3b1d228a7cea5122b31da447dacb48a2605e34d",
+      "type": "source_context"
+    },
+    {
+      "access_scope": "assigned module/condition package.txt only",
+      "artifact_root": "assets/context/m2-v0.1-csrf1/SQL/K1",
+      "contract_manifest_sha256": "e3fe3027d944629c0a5433acc45d27f17a3736b1c1cd2223bfa8434bdd4db78b",
+      "id": "context-SQL-K1",
+      "manifest": "assets/context/m2-v0.1-csrf1/SQL/K1/manifest.json",
+      "manifest_sha256": "7e51598fc8ec128dc7c4f852cc1de4982420b98300a2d351056c584853d4dc8b",
+      "original_manifest_sha256": "7deabcb5e04e8c88e5c3acf05520ee43495e9a711661a301d27123f1d4eda8bd",
+      "type": "source_context"
+    },
+    {
+      "access_scope": "assigned module/condition package.txt only",
+      "artifact_root": "assets/context/m2-v0.1-csrf1/UP/K0",
+      "contract_manifest_sha256": "e3fe3027d944629c0a5433acc45d27f17a3736b1c1cd2223bfa8434bdd4db78b",
+      "id": "context-UP-K0",
+      "manifest": "assets/context/m2-v0.1-csrf1/UP/K0/manifest.json",
+      "manifest_sha256": "a9e69d4e65619f409425ba6bf1bbb3e4182082a8411e871e0a9b74009af42581",
+      "original_manifest_sha256": "152aea1f922b6919a23aa4281e31c76482b2a106334af47c892ed256a893afda",
+      "type": "source_context"
+    },
+    {
+      "access_scope": "assigned module/condition package.txt only",
+      "artifact_root": "assets/context/m2-v0.1-csrf1/UP/K1",
+      "contract_manifest_sha256": "e3fe3027d944629c0a5433acc45d27f17a3736b1c1cd2223bfa8434bdd4db78b",
+      "id": "context-UP-K1",
+      "manifest": "assets/context/m2-v0.1-csrf1/UP/K1/manifest.json",
+      "manifest_sha256": "ddffd1bfacd61c2a3eecdc061fa088602acf9da19cfee6b3498e227927fb81ff",
+      "original_manifest_sha256": "48b10d7a02f9e4575e913195afb9574376217a7faec072535cfe4680ff000cf7",
+      "type": "source_context"
+    }
+  ],
+  "contract": {
+    "manifest": "docs/vertraege/m2-v0.1-csrf1/manifest.json",
+    "manifest_sha256": "e3fe3027d944629c0a5433acc45d27f17a3736b1c1cd2223bfa8434bdd4db78b"
+  },
+  "original_asset_index": {
+    "path": "assets/study/m2-v0.1/asset-index.json",
+    "sha256": "c6b4d775d7af692799ed6293bf74261e70d9bdd2e9831ca498c8f0b01f14e33a"
+  },
+  "scaffold_suite_reference_assets": "Unchanged original asset index entries",
+  "scope": "trusted register metadata; no parent role mount"
+}

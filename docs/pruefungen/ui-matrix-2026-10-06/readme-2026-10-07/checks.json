@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-07",
+  "checkout": "/Users/noahfiedler/Test/Bachelorarbeit-Forschungsumgebung-Public",
+  "dvwa": [
+    {
+      "module": "BF",
+      "context": "K0",
+      "source_commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+      "source_sha256": "304781c4f17bdccbf85f834e29fa42ee9e0aa44658b2a261c3b32ce178713be9"
+    },
+    {
+      "module": "BF",
+      "context": "K1",
+      "source_commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+      "source_sha256": "304781c4f17bdccbf85f834e29fa42ee9e0aa44658b2a261c3b32ce178713be9"
+    },
+    {
+      "module": "SQL",
+      "context": "K0",
+      "source_commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+      "source_sha256": "652bb44d14a9d81c9245f05ed8440beecf7977e982e00d3ddb916126a72e85bf"
+    },
+    {
+      "module": "SQL",
+      "context": "K1",
+      "source_commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+      "source_sha256": "652bb44d14a9d81c9245f05ed8440beecf7977e982e00d3ddb916126a72e85bf"
+    },
+    {
+      "module": "UP",
+      "context": "K0",
+      "source_commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+      "source_sha256": "a958136c538b253829ffbb8d8e6e7daee5061b31a531c4b9bcc99e8d2099503f"
+    },
+    {
+      "module": "UP",
+      "context": "K1",
+      "source_commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+      "source_sha256": "a958136c538b253829ffbb8d8e6e7daee5061b31a531c4b9bcc99e8d2099503f"
+    }
+  ],
+  "relative_link_count": 24,
+  "all_relative_link_targets_exist": true,
+  "evaluation_section_unchanged": true,
+  "pipeline": {
+    "svg_sha256": "f63deb902f5b5bdfbdd3d72478d7776c099b831279c6c5425f63d36942b0e784",
+    "same_texts_and_edges_as_homepage": true,
+    "viewBox": "0 0 744 792",
+    "nodes": 9,
+    "edges": 11,
+    "fonts_embedded": 5,
+    "browser_image_loaded": true,
+    "natural_size": [
+      744,
+      792
+    ],
+    "browser_page_overflow": false
+  },
+  "scope": "README, exported existing diagram and evidence only; no runtime changes; no platform installation performed"
+}

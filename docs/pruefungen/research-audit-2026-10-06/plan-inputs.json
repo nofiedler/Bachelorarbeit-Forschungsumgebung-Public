@@ -1,0 +1,37 @@
+{
+  "kind": "local project decisions; no independent literature revalidation",
+  "files": [
+    {
+      "path": "002-Forschungslücke/01-Forschungslücke - KI-Agenten für die Migration von Legacy-PHP nach Laravel.md",
+      "sha256": "26ac9625da2c5f5a0d866495be1a2f5949f617a4a6fee531e850fc90b96ad3e1"
+    },
+    {
+      "path": "003-Forschungsfragen/01-Forschungsfragen - Kontextgestaltung bei der Migration von PHP nach Laravel.md",
+      "sha256": "52ab6f9512014e12538ba40db6bfbc9e2921f422e6571be02942c1744ad4abab"
+    },
+    {
+      "path": "004-Hypothesen/01-Hypothesen und explorative Einordnung der Forschungsfragen.md",
+      "sha256": "b8cf2b50f36e6d51b6e35c7ae0547eea1b564d2e8e6f3f9fd637d7f5dd9adcd7"
+    },
+    {
+      "path": "005-Forschungsablauf/03-Baseline, Variablen und konstante Bedingungen.md",
+      "sha256": "095f855d2f3c67278855dcfb6349101ba47981a8a7abb598fb5787ebd2190efb"
+    },
+    {
+      "path": "005-Forschungsablauf/01-Operationalisierung-und-Auswertungsplan.md",
+      "sha256": "bc009d8c20e537c5c9a8a275c0244fb99b71de72252d25e7386ae4d301defb27"
+    },
+    {
+      "path": "005-Forschungsablauf/04-Forschungsablauf einfach erklärt.md",
+      "sha256": "280f9d4ceb6247c6ee45d4af80f815c9340820d71e9cd73c7c4f8b1ff4d60c24"
+    },
+    {
+      "path": "005-Forschungsablauf/02-Forschungsablauf.md",
+      "sha256": "95b3aad74470b5d48696e744bc78b3d0448cec07145206437d2256c66be3e851"
+    },
+    {
+      "path": "Allgemeine Informationen zur Bachelor-Thesis.md",
+      "sha256": "2e4784c64f26d67aa9c0855dd0fb3f2a7b03567b660c516170a4b77bd967156e"
+    }
+  ]
+}

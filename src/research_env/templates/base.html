@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="htmx-config" content='{"allowEval":false,"includeIndicatorStyles":false,"allowScriptTags":false}'>
+<title>{% block title %}Forschungsumgebung{% endblock %}</title>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="/static/design-system.css">
+<link rel="stylesheet" href="/static/app-shell.css">
+<link rel="stylesheet" href="/static/code-view.css">
+<script src="/static/vendor/htmx.min.js" defer></script>
+</head>
+<body class="app-shell">
+{% from 'ui_icons.html' import icon %}
+{% set nav_path = request.url.path %}
+{% if nav_path.startswith('/restored/') %}{% set nav_path = '/' ~ nav_path.split('/', 3)[-1] %}{% endif %}
+{% set nav_area = '' %}
+{% if nav_path == '/' or nav_path == '/status' %}{% set nav_area = 'home' %}
+{% elif nav_path.startswith('/analyses') or nav_path.startswith('/packages') %}{% set nav_area = 'analysis' %}
+{% elif nav_path.startswith('/settings') %}{% set nav_area = 'settings' %}
+{% elif run_nav %}{% set nav_area = 'test' if run_nav.purpose == 'free_test' else 'research' %}
+{% elif nav_path.startswith('/free-tests') or nav_path.startswith('/free-configurations') %}{% set nav_area = 'test' %}
+{% elif nav_path.startswith('/configurations') and phase is defined %}{% set nav_area = 'research' if phase.purpose == 'main' else 'test' %}
+{% elif nav_path.startswith('/commands') and command is defined %}
+  {% if command.kind in ['analysis_propose', 'analysis_confirm'] %}{% set nav_area = 'analysis' %}
+  {% elif command.kind in ['initialize', 'model_lookup', 'model_import'] %}{% set nav_area = 'settings' %}
+  {% elif command.kind in ['free', 'demo'] %}{% set nav_area = 'test' %}
+  {% else %}{% set nav_area = 'research' %}{% endif %}
+{% elif nav_path.startswith('/studies') or nav_path.startswith('/series') or nav_path.startswith('/backups') or nav_path.startswith('/freeze') or nav_path.startswith('/research-configurations') or nav_path.startswith('/runs') or nav_path.startswith('/configurations') %}{% set nav_area = 'research' %}
+{% endif %}
+<div class="app-mobile-bar" hidden>
+<button type="button" class="app-icon-button" data-sidebar-open aria-controls="app-sidebar" aria-expanded="false" aria-label="Navigation öffnen" title="Navigation öffnen">{{ icon('menu') }}</button>
+</div>
+<button type="button" class="app-sidebar-backdrop" data-sidebar-backdrop aria-label="Navigation schließen" tabindex="-1" hidden></button>
+<aside id="app-sidebar" class="app-sidebar">
+<div class="app-sidebar-brand">
+<span class="app-brand-mark">{{ icon('research') }}</span>
+<p class="eyebrow">Bachelorarbeit · lokale Forschungsumgebung</p>
+<button type="button" class="app-icon-button app-sidebar-close" data-sidebar-close aria-label="Navigation schließen" title="Navigation schließen" hidden>{{ icon('close') }}</button>
+</div>
+<nav class="app-navigation" aria-label="Bereiche">
+{% for area, href, label in [('home', '/', 'Startseite'), ('test', '/free-tests', 'Testläufe'), ('research', '/studies', 'Forschung'), ('analysis', '/analyses', 'Auswertung'), ('settings', '/settings', 'Einstellungen')] %}
+<a href="{{ href }}" aria-label="{{ label }}" title="{{ label }}" {% if nav_area == area %}aria-current="page"{% endif %}>{{ icon(area) }}<span class="app-nav-label">{{ label }}</span></a>
+{% endfor %}
+</nav>
+<div class="app-sidebar-bottom">
+<button type="button" class="app-sidebar-toggle" data-sidebar-toggle aria-controls="app-sidebar" aria-expanded="true" aria-label="Seitenleiste einklappen" title="Seitenleiste einklappen" hidden>{{ icon('panel') }}<span class="app-toggle-label">Seitenleiste einklappen</span></button>
+</div>
+</aside>
+<main id="main-content" class="app-main"><div class="app-content">
+{% if restored_study %}<section class="notice"><strong>Importierte Sicherung · getrennte Versuchsreihe</strong><p>Original-IDs und gespeicherter Stand bleiben erhalten. Änderungen gelten nur für diese Kopie.</p><!-- restore-home --></section>{% endif %}{% if run_nav %}{% include 'run_navigation.html' %}{% endif %}{% block content %}{% endblock %}<footer>Forschungsumgebung · Ergebnisse und ihre Herkunft bleiben nachvollziehbar gespeichert.</footer>
+</div></main>
+<script src="/static/run-progress.js" defer></script><script src="/static/backup-save.js" defer></script><script src="/static/import-progress.js" defer></script>
+<script src="/static/app-shell.js" defer></script><script src="/static/code-highlight.js" defer></script>
+</body></html>

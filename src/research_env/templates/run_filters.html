@@ -1,0 +1,7 @@
+<form method="get" action="{{ register_action }}#run-list" class="filters">
+<label>ID / Suche <input name="q" value="{{ filters.get('q','') }}" placeholder="Lauf-ID oder Titel"></label>
+{% for key,label in [('status','Status'),('module','Modul'),('planner','Planner'),('model','Modell (P oder V)')] %}
+<label>{{ label }}<select name="{{ key }}"><option value="">Alle</option>{% for choice in choices[key] %}<option value="{{ choice }}" {% if filters.get(key)==choice %}selected{% endif %}>{{ {'BF':'Brute Force','SQL':'SQL Injection','UP':'File Upload','on':'An','off':'Aus'}.get(choice,choice) }}</option>{% endfor %}</select></label>
+{% endfor %}<button>Anzeige filtern</button><a class="filter-reset" href="{{ register_action }}#run-list">Zurücksetzen</a>
+{% for key in ['context','review','phase','config','purpose'] %}{% if filters.get(key) %}<input type="hidden" name="{{ key }}" value="{{ filters[key] }}">{% endif %}{% endfor %}
+</form><p class="hint" role="status">{{ rows|length }} von {{ total }} Läufen{% if filters.get('review') %} · Review {{ 'an' if filters.review=='on' else 'aus' }}{% endif %}{% if filters.get('context') %} · {{ filters.context }}{% endif %}</p>

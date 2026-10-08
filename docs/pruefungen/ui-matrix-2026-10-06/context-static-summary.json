@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "synthetic": true,
+  "model_calls": 0,
+  "cases": [
+    {
+      "case": "LaravelGood",
+      "D": 0,
+      "L": 2,
+      "S": "0",
+      "identifiers": [],
+      "seal_unchanged": true,
+      "completed": true
+    },
+    {
+      "case": "TypeError",
+      "D": 2,
+      "L": 2,
+      "S": "100",
+      "identifiers": [
+        "return.type",
+        "argument.type"
+      ],
+      "seal_unchanged": true,
+      "completed": true
+    },
+    {
+      "case": "LaravelRule",
+      "D": 1,
+      "L": 2,
+      "S": "50",
+      "identifiers": [
+        "larastan.noEnvCallsOutsideOfConfig"
+      ],
+      "seal_unchanged": true,
+      "completed": true
+    }
+  ],
+  "instrument": {
+    "version": "M6-static-v1",
+    "measure": {
+      "version": "M6-static-level5-v1",
+      "php": "8.4.26",
+      "phpstan": "2.2.16",
+      "larastan": "v3.12.1",
+      "vendor_sha256": "b5a9638815c5a32fe1a41519c379a3440df5ed3096edaef2799d6e527804251b",
+      "configuration_sha256": "e5cdd39bf8ffac5b68a7adf0fb7e049d78c1945cc1d9657b02912330dce0ff66",
+      "D": "all unchanged file diagnostics of completed analysis in selected module PHP",
+      "L": "physical lines intersecting a non-comment PHP token; tags/whitespace/HTML excluded; once per line",
+      "scope": "changed/added module PHP from union of diff and complete manifest; unchanged scaffold, vendor, cache, generated, tests, Blade excluded",
+      "S": "100*D/L only completed valid analysis and L>0"
+    },
+    "tool": {
+      "version": "M6-static-instrument-v1",
+      "measure_version": "M6-static-level5-v1",
+      "php": "8.4.26",
+      "phpstan": "2.2.16",
+      "larastan": "v3.12.1",
+      "phpstan_distribution": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/phpstan/phpstan/zipball/46a6d9060e5a7763adfcc21ebcb8b504ebdbcb92",
+        "reference": "46a6d9060e5a7763adfcc21ebcb8b504ebdbcb92",
+        "shasum": ""
+      },
+      "larastan_distribution": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/larastan/larastan/zipball/168fd3b955e723c51dbf81709849b0c3ac4ac5f6",
+        "reference": "168fd3b955e723c51dbf81709849b0c3ac4ac5f6",
+        "shasum": ""
+      },
+      "phpstan_phar_sha256": "1a2fb5460c142502d3cd06272529c18b19fda004ada974bd2581cb9fd6c0a53b",
+      "phpstan_entry_sha256": "9bc7af1d6a040fea36f9375e75d662ad3916fff045d4d77780cc972e09ef656d",
+      "vendor_sha256": "b5a9638815c5a32fe1a41519c379a3440df5ed3096edaef2799d6e527804251b",
+      "vendor_file_count": 7912,
+      "image": "sha256:60cb376e2526769acef2b7b24905d461bc6d501c2b23da9202f72ab28e2edf32",
+      "level": 5,
+      "parallel": "disabled by --debug; no worker processTimeout",
+      "candidate_baselines": false
+    },
+    "images": {
+      "php": "sha256:60cb376e2526769acef2b7b24905d461bc6d501c2b23da9202f72ab28e2edf32",
+      "mysql": "mysql:8.4.11-oraclelinux9@sha256:6ea90827b1100f8f2ae306a539f86d2c264a26ed435a2a9f75551dd5c3aeb242",
+      "client": "sha256:bff79d60604d8d3b2e704c06e0b7e40d04913116f9e6ad9da5921153d0b1b3d9",
+      "guard": "sha256:05417150ad6d5a86a256b34ad993f5991183fee85856371f32296f9231540c57"
+    },
+    "sources": {
+      "static_analysis.py": "8fab94b9df7b479aab12329b6cf9273228df8001233dd36f0d6f342233b4b4af",
+      "static_tokens.php": "c3090ca40c6b8f8fb61096a46874d9710226d0ce3382d0ffa2536191d21436ea",
+      "static_launcher.php": "133d1090c7eb9337e1e094d2d3781a039bb84cfc8da4290477bdf6c2210c2b0d",
+      "static_analysis.neon": "e5cdd39bf8ffac5b68a7adf0fb7e049d78c1945cc1d9657b02912330dce0ff66",
+      "static_tool.lock.json": "2d067b056871764f2779a43336abccb1687871f3c97a71672887dffe1619d8be",
+      "sandbox_runtime.py": "392e73ed88fff63bb2321c484ee9dc1a655a1ed146861919c4d3db64be050324",
+      "register.py": "91dd8c9bfb0e51a8cb2db09b0197b8d41c4dd8a42147679367b8c51a44c68e78",
+      "domain.py": "b1562895b17aa415d78cfdc801318e76d144d8e78c1fad08a942126725d19f10",
+      "snapshots.py": "4c73bc923cad74b8ba938119f6d6e413de521717d7ef4f22bbb595a70789fb60",
+      "artifacts.py": "03a705fb401beb6cfda36965d03a54702567ffa3c9fe4a78e69313032ca984e5",
+      "backup.py": "997bea94744c3359f922981bab2a79b8cb2b2e0b54785b2de3af33567d08586f",
+      "pipeline_assets.lock.json": "b26c276e3686c642660a58a29a6e6e48528dfc3cf4a7ad59bb3d08d4e934efd9",
+      "migrations/010_static_analysis.sql": "a13e24bc034c22849170a6508393eeca0818798028d02d30b8e2a8b8c6da615c"
+    },
+    "command": [
+      "php",
+      "-d",
+      "max_execution_time=0",
+      "-d",
+      "memory_limit=512M",
+      "-d",
+      "phpstan.restarted=1",
+      "/tools/launcher.php"
+    ],
+    "phpstan_args": [
+      "analyse",
+      "--configuration=/tools/analysis.neon",
+      "--no-progress",
+      "--no-ansi",
+      "--error-format=json",
+      "--debug",
+      "--memory-limit=512M"
+    ],
+    "network": "none",
+    "model_feedback": false,
+    "elapsed_cutoff": null
+  },
+  "tool": {
+    "version": "M6-static-instrument-v1",
+    "measure_version": "M6-static-level5-v1",
+    "php": "8.4.26",
+    "phpstan": "2.2.16",
+    "larastan": "v3.12.1",
+    "phpstan_distribution": {
+      "type": "zip",
+      "url": "https://api.github.com/repos/phpstan/phpstan/zipball/46a6d9060e5a7763adfcc21ebcb8b504ebdbcb92",
+      "reference": "46a6d9060e5a7763adfcc21ebcb8b504ebdbcb92",
+      "shasum": ""
+    },
+    "larastan_distribution": {
+      "type": "zip",
+      "url": "https://api.github.com/repos/larastan/larastan/zipball/168fd3b955e723c51dbf81709849b0c3ac4ac5f6",
+      "reference": "168fd3b955e723c51dbf81709849b0c3ac4ac5f6",
+      "shasum": ""
+    },
+    "phpstan_phar_sha256": "1a2fb5460c142502d3cd06272529c18b19fda004ada974bd2581cb9fd6c0a53b",
+    "phpstan_entry_sha256": "9bc7af1d6a040fea36f9375e75d662ad3916fff045d4d77780cc972e09ef656d",
+    "vendor_sha256": "b5a9638815c5a32fe1a41519c379a3440df5ed3096edaef2799d6e527804251b",
+    "vendor_file_count": 7912,
+    "image": "sha256:60cb376e2526769acef2b7b24905d461bc6d501c2b23da9202f72ab28e2edf32",
+    "level": 5,
+    "parallel": "disabled by --debug; no worker processTimeout",
+    "candidate_baselines": false
+  }
+}

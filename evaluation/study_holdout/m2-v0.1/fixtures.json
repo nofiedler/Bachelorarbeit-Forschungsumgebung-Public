@@ -1,0 +1,122 @@
+{
+  "version": "M2-v0.1",
+  "audience": "evaluator_only",
+  "origin": "Eigene synthetische Testdaten; keine realen Personen/Passwörter. Vor Modelloutputs festgelegt; menschliche Prüfung offen.",
+  "datasets": {
+    "DB-A": [
+      {
+        "user_id": 17,
+        "first_name": "Ada",
+        "last_name": "Wolke",
+        "user": "lotus7",
+        "password": "2680f8f661f88420be9406cc928abef6",
+        "avatar": "study/avatars/lotus7.png",
+        "last_login": "2026-01-02 03:04:05",
+        "failed_login": 0,
+        "role": "user",
+        "account_enabled": 1
+      },
+      {
+        "user_id": 82,
+        "first_name": "Béla",
+        "last_name": "Stein & Co",
+        "user": "mohn8",
+        "password": "376e70e526dd25f838f4af045b32aae1",
+        "avatar": "study/avatars/mohn8.png",
+        "last_login": "2026-01-02 03:04:05",
+        "failed_login": 0,
+        "role": "user",
+        "account_enabled": 1
+      }
+    ],
+    "DB-B": [
+      {
+        "user_id": 17,
+        "first_name": "Mira",
+        "last_name": "Nord",
+        "user": "lotus7",
+        "password": "75dc5c44434694c05c7a2bb62115a530",
+        "avatar": "study/avatars/lotus7b.png",
+        "last_login": null,
+        "failed_login": 2,
+        "role": "user",
+        "account_enabled": 1
+      },
+      {
+        "user_id": 82,
+        "first_name": "Ivo",
+        "last_name": "Süd",
+        "user": "mohn8",
+        "password": "c0a6c1a6709167da0250bad45e022bd4",
+        "avatar": "study/avatars/mohn8b.png",
+        "last_login": "2026-01-02 03:04:05",
+        "failed_login": 0,
+        "role": "admin",
+        "account_enabled": 0
+      }
+    ]
+  },
+  "credentials": {
+    "DB-A": {
+      "lotus7": "Feld9",
+      "mohn8": "Birke20"
+    },
+    "DB-B": {
+      "lotus7": "Wind4",
+      "mohn8": "Wiese6"
+    }
+  },
+  "unknown_users": [
+    "farn404"
+  ],
+  "wrong_password": "Falsch99",
+  "unknown_ids": [
+    404,
+    999999
+  ],
+  "files": {
+    "amber.png": {
+      "path": "fixtures/amber.png",
+      "size": 73,
+      "sha256": "5152b4f262397512ec8d1d6f076c509a6052674e3814a0c78fb7bf368b4d5b62",
+      "kind": "valid_image",
+      "media_type": "image/png"
+    },
+    "blue.jpg": {
+      "path": "fixtures/blue.jpg",
+      "size": 777,
+      "sha256": "bfd0fb4d7039a1716a766f83be930226c9d8649aa4deeb926013cbe24dd53888",
+      "kind": "valid_image",
+      "media_type": "image/jpeg"
+    },
+    "blue.png": {
+      "path": "fixtures/blue.png",
+      "size": 73,
+      "sha256": "4442d728adc33566e2be10ba0d573a8b4ec1ca033335b75eaac003a97facfc26",
+      "kind": "valid_image",
+      "media_type": "image/png"
+    },
+    "green.png": {
+      "path": "fixtures/green.png",
+      "size": 73,
+      "sha256": "31bd12297554963e960c136b22a7a6dade4b234dc5c5a370bb16671f12af98ad",
+      "kind": "valid_image",
+      "media_type": "image/png"
+    },
+    "sentinel.txt": {
+      "path": "fixtures/sentinel.txt",
+      "size": 28,
+      "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29",
+      "kind": "existing_file",
+      "media_type": "text/plain"
+    }
+  },
+  "initial_uploads": {
+    "sentinel.txt": "sentinel.txt"
+  },
+  "generation": {
+    "png": "Eigener PNG-Encoder: 8-bit RGB, Filter0, zlib9; amber 2x2 RGB230/150/20, blue3x2 RGB20/60/210, green2x3 RGB20/180/80.",
+    "jpeg": "macOS sips -s format jpeg blue.png --out blue.jpg; eingefrorene Bytes/Hashes sind maßgeblich, nicht plattformabhängige Neugenerierung.",
+    "sentinel": "UTF-8: M2 existing upload sentinel + LF"
+  }
+}

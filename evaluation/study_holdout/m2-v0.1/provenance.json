@@ -1,0 +1,223 @@
+{
+  "version": "M2-v0.1",
+  "retrieved_local_date": "2026-10-03",
+  "issue_original_historical_source": {
+    "commit": "3490c5e971d1ecc467129885e270781a23a0fa90",
+    "sha256": "c54dcb4a8830cf13bfc56ac448056c98225b90170bd1020c672ef84ce2e70c92",
+    "note": "Historische Herkunft im Issue; aktueller gelesener Volltext ist oben hashgebunden. Maßgebliche §§2.2–2.4/6.1 fachlich abgeglichen, spätere Ressourcenänderungen nicht in R/T übernommen."
+  },
+  "sources": [
+    {
+      "id": "OP-2.2",
+      "repository": "Bachelorarbeit-Dokumentation",
+      "path": "005-Forschungsablauf/01-Operationalisierung-und-Auswertungsplan.md",
+      "commit": "42cf379b5588e7eff939bbf063567836bb3d4cb3",
+      "sha256": "bc009d8c20e537c5c9a8a275c0244fb99b71de72252d25e7386ae4d301defb27",
+      "location": "§2.2",
+      "lines": [
+        29,
+        35
+      ]
+    },
+    {
+      "id": "OP-2.3",
+      "repository": "Bachelorarbeit-Dokumentation",
+      "path": "005-Forschungsablauf/01-Operationalisierung-und-Auswertungsplan.md",
+      "commit": "42cf379b5588e7eff939bbf063567836bb3d4cb3",
+      "sha256": "bc009d8c20e537c5c9a8a275c0244fb99b71de72252d25e7386ae4d301defb27",
+      "location": "§2.3",
+      "lines": [
+        37,
+        68
+      ]
+    },
+    {
+      "id": "OP-2.4",
+      "repository": "Bachelorarbeit-Dokumentation",
+      "path": "005-Forschungsablauf/01-Operationalisierung-und-Auswertungsplan.md",
+      "commit": "42cf379b5588e7eff939bbf063567836bb3d4cb3",
+      "sha256": "bc009d8c20e537c5c9a8a275c0244fb99b71de72252d25e7386ae4d301defb27",
+      "location": "§2.4",
+      "lines": [
+        70,
+        82
+      ]
+    },
+    {
+      "id": "OP-6.1",
+      "repository": "Bachelorarbeit-Dokumentation",
+      "path": "005-Forschungsablauf/01-Operationalisierung-und-Auswertungsplan.md",
+      "commit": "42cf379b5588e7eff939bbf063567836bb3d4cb3",
+      "sha256": "bc009d8c20e537c5c9a8a275c0244fb99b71de72252d25e7386ae4d301defb27",
+      "location": "§6.1",
+      "lines": [
+        176,
+        190
+      ]
+    },
+    {
+      "id": "REQUIREMENTS",
+      "repository": "Bachelorarbeit-Forschungsumgebung",
+      "path": "docs/planung/01-Anforderungen an die Forschungsumgebung.md",
+      "sha256": "780c9085ad2e4a47f1fc8519ba8390da2031cc36a29ebd8431a8328a822c8613",
+      "location": "7,27,28,29,41",
+      "input_base_commit": "13e87b058b463308f89f662cf7c28070faf600f1"
+    },
+    {
+      "id": "PLAN",
+      "repository": "Bachelorarbeit-Forschungsumgebung",
+      "path": "docs/planung/02-Technischer-Implementierungsplan.md",
+      "sha256": "38822eecc184c8c1ac4868df0137be2141988e6c4ae1d80bc2e9f85fef953c01",
+      "location": "§§1,5.1,7.1–7.2,11,13",
+      "input_base_commit": "13e87b058b463308f89f662cf7c28070faf600f1"
+    },
+    {
+      "id": "FLOW",
+      "repository": "Bachelorarbeit-Forschungsumgebung",
+      "path": "docs/planung/03-Nutzungsablauf.md",
+      "sha256": "bc6590cb3a4ab97c287318923ca506fec475df307b94650ba4c1aa1405401305",
+      "location": "N03,N05",
+      "input_base_commit": "13e87b058b463308f89f662cf7c28070faf600f1"
+    },
+    {
+      "id": "ACCEPTANCE",
+      "repository": "Bachelorarbeit-Forschungsumgebung",
+      "path": "docs/planung/04-Zielbild-und-Gesamtabnahme.md",
+      "sha256": "80a4f8f83b4efba71e72af6a50bb6fcab62665b9b7ef92b7507bb2c617041204",
+      "location": "G03,G06; gemeinsame Nachweise",
+      "input_base_commit": "13e87b058b463308f89f662cf7c28070faf600f1"
+    },
+    {
+      "id": "ISSUE-3",
+      "repository": "Bachelorarbeit-Forschungsumgebung",
+      "path": "docs/pruefungen/m2/inputs/issue-3.json",
+      "sha256": "bd6f43eb34b33a33f563ac4f73cad17d8f39ea43aaafaf1e4b59728e1d4d2733",
+      "location": "vollständiger Body, Labels und beide Kommentare",
+      "input_base_commit": "13e87b058b463308f89f662cf7c28070faf600f1"
+    },
+    {
+      "id": "M1-IMAGES",
+      "repository": "Bachelorarbeit-Forschungsumgebung",
+      "path": "docker/images.lock.json",
+      "sha256": "fae912a00ac83efe38c2c23f92d5cee34d04d8b29184e7735a3a34e609c2211f",
+      "location": "bestehende Versionsbasis",
+      "input_base_commit": "13e87b058b463308f89f662cf7c28070faf600f1"
+    },
+    {
+      "id": "M1-LARAVEL",
+      "repository": "Bachelorarbeit-Forschungsumgebung",
+      "path": "assets/laravel-source.json",
+      "sha256": "bbd40f56683e1b4d42b7d63f339cfba3d287cd34faa44fdbe006aa937a63fa77",
+      "location": "Ursprung des Ausgangsgerüsts",
+      "input_base_commit": "13e87b058b463308f89f662cf7c28070faf600f1"
+    },
+    {
+      "id": "M1-COMPOSER",
+      "repository": "Bachelorarbeit-Forschungsumgebung",
+      "path": "assets/laravel/composer.lock",
+      "sha256": "8f0f303583b6f014b25b679c2256f9a8cfecd5de075276f757b5e4ea7f534da2",
+      "location": "bestehende Versionsbasis",
+      "input_base_commit": "13e87b058b463308f89f662cf7c28070faf600f1"
+    },
+    {
+      "id": "DVWA-SCHEMA",
+      "repository": "digininja/DVWA",
+      "commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+      "path": "dvwa/includes/DBMS/MySQL.php",
+      "sha256": "ae9f7c006b009a131088bb2e32e06f0caa73fe62006061cefa386e44a12c6f8b",
+      "location": "CREATE users Zeile42, ALTER role Zeile67, ALTER account_enabled Zeilen144–145"
+    },
+    {
+      "id": "DVWA-BF",
+      "repository": "digininja/DVWA",
+      "commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+      "path": "vulnerabilities/brute/source/low.php",
+      "sha256": "304781c4f17bdccbf85f834e29fa42ee9e0aa44658b2a261c3b32ce178713be9",
+      "location": "Zeilen3–28"
+    },
+    {
+      "id": "DVWA-SQL",
+      "repository": "digininja/DVWA",
+      "commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+      "path": "vulnerabilities/sqli/source/low.php",
+      "sha256": "652bb44d14a9d81c9245f05ed8440beecf7977e982e00d3ddb916126a72e85bf",
+      "location": "MySQL-Zweig Zeilen3–26"
+    },
+    {
+      "id": "DVWA-UP",
+      "repository": "digininja/DVWA",
+      "commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+      "path": "vulnerabilities/upload/source/low.php",
+      "sha256": "a958136c538b253829ffbb8d8e6e7daee5061b31a531c4b9bcc99e8d2099503f",
+      "location": "Zeilen3–17"
+    },
+    {
+      "id": "DVWA-UP-FORM",
+      "repository": "digininja/DVWA",
+      "commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+      "path": "vulnerabilities/upload/index.php",
+      "sha256": "a4246bd6e6d827b7b060dcc9e847139c7f5d53bc893a478bc47dd12c1b9bb865",
+      "location": "Formular Zeilen51–57"
+    },
+    {
+      "id": "DESIGN-v0.1",
+      "origin": "Eigene technische Konkretisierung gemäß Issue #3; Schemadefaults/Collation/SQLmodus/Marker/Allowlist/Fixturewerte und Referenzentwürfe vor Evaluatorimplementierung festgelegt. Keine menschliche Fachfreigabe."
+    }
+  ],
+  "rule_mapping": {
+    "scope": [
+      "OP-2.2",
+      "ISSUE-3"
+    ],
+    "domains_http_dom": [
+      "OP-2.3",
+      "PLAN",
+      "ISSUE-3"
+    ],
+    "schema": [
+      "OP-2.3",
+      "DVWA-SCHEMA",
+      "DESIGN-v0.1"
+    ],
+    "BF": [
+      "OP-2.3",
+      "DVWA-BF"
+    ],
+    "SQL": [
+      "OP-2.3",
+      "DVWA-SQL"
+    ],
+    "UP": [
+      "OP-2.3",
+      "DVWA-UP",
+      "DVWA-UP-FORM"
+    ],
+    "R1_R2_R3_R4_R5_R6": [
+      "OP-2.3",
+      "ISSUE-3"
+    ],
+    "T1_T2_T3_T4_T5": [
+      "OP-2.4",
+      "PLAN",
+      "ISSUE-3"
+    ],
+    "aggregation_missing": [
+      "OP-2.4",
+      "OP-6.1",
+      "ISSUE-3"
+    ],
+    "gates": [
+      "PLAN",
+      "FLOW",
+      "ACCEPTANCE"
+    ],
+    "fixtures_and_counterdesigns": [
+      "DESIGN-v0.1"
+    ]
+  },
+  "human_review": {
+    "status": "open",
+    "reviewer": null,
+    "at": null
+  }
+}

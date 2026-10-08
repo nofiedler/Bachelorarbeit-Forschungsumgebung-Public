@@ -1,0 +1,12 @@
+{
+  "files": {
+    "docs/vertraege/m2-v0.1-csrf1/addendum.md": "1edd8c67373eb0606f34ede3619200a8d29e533bd519e7412716632f6237f31f",
+    "docs/vertraege/m2-v0.1-csrf1/manifest.json": "e3fe3027d944629c0a5433acc45d27f17a3736b1c1cd2223bfa8434bdd4db78b",
+    "docs/vertraege/m2-v0.1/README.md": "d981e9ddde27abc25cd7a5370f808c688e1dc44033b0ff8a341b66c7f4a0959a",
+    "docs/vertraege/m2-v0.1/rubrik.md": "e3056197301bd09b43486d6b3e337c57c7fafc6cb544a838282dfa047f57c5f2",
+    "docs/vertraege/m2-v0.1/users.sql": "a9f1de8ddef2507ee6c661c9cf1a15a949e832047b6f3c23287c1b009c07e272",
+    "docs/vertraege/m2-v0.1/vertrag.md": "b14a5ff6fed94b4c92bff6b7c2547787001b2aa7abb5a0beab793b0035ffc21c"
+  },
+  "manifest_sha256": "e3fe3027d944629c0a5433acc45d27f17a3736b1c1cd2223bfa8434bdd4db78b",
+  "version": "M2-v0.1-CSRF1"
+}

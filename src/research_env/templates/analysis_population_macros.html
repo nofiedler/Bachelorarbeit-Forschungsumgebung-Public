@@ -1,0 +1,8 @@
+{% macro table_population(pop, label='Verwendete Läufe') -%}
+{% if pop %}<details class="table-population"><summary>{{ label }}</summary>
+{% for group in pop.groups %}<div class="table-population-group" data-population-role="{{ group.role }}">
+<p><strong>{{ group.label|metric_label }}</strong><br>n = {{ group.n }} {{ group.unit }} · {{ group.run_count }} zugehörige {% if group.role=='planned' %}Planplätze{% else %}Läufe{% endif %}</p>
+{% if group.note %}<p class="report-note">{{ group.note }}</p>{% endif %}
+<ul class="table-population-runs">{% for run in group.runs %}<li>{% if run.position is not none %}<a href="#run-{{ run.position }}">Lauf {{ run.position }}</a> · {{ run.cell_key }} · Block {{ run.block_index }}{% else %}Lauf außerhalb der Planmatrix{% endif %}<small>{% if run.run_id %}Lauf-ID: {{ run.run_id }}{% else %}Nicht gestartet · Plan-ID: {{ run.id }}{% endif %}</small></li>{% else %}<li>Keine zugehörigen Läufe.</li>{% endfor %}</ul>
+</div>{% endfor %}</details>{% endif %}
+{%- endmacro %}

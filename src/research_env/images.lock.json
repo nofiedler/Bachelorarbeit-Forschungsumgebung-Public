@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "images": {
+    "python": {
+      "tag": "python:3.13.16-slim-trixie",
+      "reference": "python:3.13.16-slim-trixie@sha256:5434c2206183169a6c2b11d6156b775a02cce9a2fd00f9482bb8b9bb785e9b3f",
+      "index_digest": "sha256:5434c2206183169a6c2b11d6156b775a02cce9a2fd00f9482bb8b9bb785e9b3f",
+      "platforms": {
+        "amd64": "sha256:b92e6b9bb1ea9d826e9956fd8d30bf18bc384c130231d74fdf0ba3460c290b0b",
+        "arm64": "sha256:af7e5047e10ef70882ab774f03310df7151118fe77b8e63bac5e0766c4f5cc8c"
+      }
+    },
+    "php-cli": {
+      "tag": "php:8.4.26-cli-trixie",
+      "reference": "php:8.4.26-cli-trixie@sha256:0177c7589c0715b63e5343342a7c1f1887db759ad0b0d6ad3bb949938bba6b47",
+      "index_digest": "sha256:0177c7589c0715b63e5343342a7c1f1887db759ad0b0d6ad3bb949938bba6b47",
+      "platforms": {
+        "amd64": "sha256:628a8a4ab1cbe671245d5cfc45f241114ce45bb16644c3259917107655d9cc4b",
+        "arm64": "sha256:4811e2fd39d183711abdc5d6880a61772081c2023f68598063f176d1e6af9616"
+      }
+    },
+    "php-apache": {
+      "tag": "php:8.4.26-apache-trixie",
+      "reference": "php:8.4.26-apache-trixie@sha256:75325cceea4f9a8200f4e9e146e8155ec1b6466b2957b87accf0286b94547cbd",
+      "index_digest": "sha256:75325cceea4f9a8200f4e9e146e8155ec1b6466b2957b87accf0286b94547cbd",
+      "platforms": {
+        "amd64": "sha256:5ecc3c3502343003ae97ab127af4a047a9d8bc21c13ce67e3af67ab7f43fcd91",
+        "arm64": "sha256:ec066f6ec4b6f15c6e6af82d0659cd2d656f8fd5bdbd247b9bcfeec9bc208323"
+      }
+    },
+    "composer": {
+      "tag": "composer:2.10.3",
+      "reference": "composer:2.10.3@sha256:af98f42dfff7c68ba8d53c2164fd9fde1087b7d449514baa38c418b1f6bc4bac",
+      "index_digest": "sha256:af98f42dfff7c68ba8d53c2164fd9fde1087b7d449514baa38c418b1f6bc4bac",
+      "platforms": {
+        "amd64": "sha256:bdd249749908be12facc9dec72e19704371bb893f96dff3e024ec89528a5a08d",
+        "arm64": "sha256:6b0fbf488bd5f441362f6e9a67daf63f55f9fba8e5670e7292408150669d6171"
+      }
+    },
+    "mysql": {
+      "tag": "mysql:8.4.11-oraclelinux9",
+      "reference": "mysql:8.4.11-oraclelinux9@sha256:6ea90827b1100f8f2ae306a539f86d2c264a26ed435a2a9f75551dd5c3aeb242",
+      "index_digest": "sha256:6ea90827b1100f8f2ae306a539f86d2c264a26ed435a2a9f75551dd5c3aeb242",
+      "platforms": {
+        "amd64": "sha256:80f4933e3835f9dc4d35a28ec500d7986cb4414e6c6821c5461239cb7beb8995",
+        "arm64": "sha256:ca3f0494c0f1fc86eb45f5e4786a1bb9f64d2f85b562cc74a9595046f6519a42"
+      }
+    }
+  }
+}

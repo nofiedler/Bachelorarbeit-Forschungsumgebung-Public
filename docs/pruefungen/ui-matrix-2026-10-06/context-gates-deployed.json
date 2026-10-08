@@ -1,0 +1,17 @@
+{
+  "software": "source-tree-sha256:d0c4d0bcb8a4a645a62a778adc711a53f0515d6753835c1d6fc12367425e4dcd",
+  "freezes": [
+    {
+      "freeze_id": "1a9dace7-da8e-414d-9c5b-d58dd82a19e9",
+      "freeze_hash": "d5fd3d4fafe43a02672a7aa690efed719b8b38ab9552dccd14e365fd8d67505f",
+      "technical_gates": "passed",
+      "backup": "current",
+      "next_id": "3359bd37-64a1-5f12-95fa-188a939258f1"
+    }
+  ],
+  "model_calls": 6,
+  "active": {
+    "generation": 0,
+    "evaluation": 0
+  }
+}

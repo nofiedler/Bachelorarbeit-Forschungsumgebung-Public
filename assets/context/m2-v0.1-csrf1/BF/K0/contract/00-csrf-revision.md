@@ -1,0 +1,11 @@
+# Öffentliche Auslegungsrevision M2-v0.1-CSRF1
+
+Stand 05.10.2026. Diese begrenzte Präzisierung wurde ausdrücklich menschlich bestätigt: auf die Frage nach der folgenden Formulierung antwortete der Nutzer „ja“. Die Entscheidung erteilt keine Pilot-, Studien-, Kosten- oder sonstige Fachfreigabe. Die ursprüngliche Vertrags- und Rubrikfassung M2-v0.1 / RT-v0.1 bleibt unverändert erhalten; alle übrigen offenen Fachprüfungen bleiben offen.
+
+Für POST-Anfragen verwendet der Prüfer den aktuellen gültigen CSRF-Token der authentifizierten Gerüstsession. Das Uploadformular muss diesen als verborgenes `_token` bereitstellen; dies wird im Formulartest geprüft. Die vorgegebenen Testsequenzen bleiben unverändert.
+
+Diese Regel grenzt ausschließlich den Satz in M2-v0.1, `vertrag.md` §2 (Zeile39), „Der Prüfer behält Cookiejar und Session innerhalb eines Falls, übernimmt den aktuellen CSRF-Token aus dem UP-Formular und sendet ihn beim POST“, ein: Cookiejar und Session bleiben erhalten; für den POST stammt der Token aus der aktuellen authentifizierten Gerüstsession. Ein zusätzlicher Aufruf des UP-Formulars ist dafür nicht erforderlich. Der gültige versteckte Formulartoken bleibt eine eigenständige R1-Anforderung. Authentifizierung und CSRF-Middleware bleiben aktiv, Kandidaten dürfen sie weiterhin nicht abschalten. Fehlende/abgelaufene Gerüstsession und ungültige Prüfertoken bleiben technische Voraussetzungslücken. Ein falscher Formulartoken ist unabhängig davon ein Formulardefekt.
+
+Keine anderen Requestcases, Fixtures, Referenzimplementierungen, Sollurteile, Domänen, R-/T-Kriterien oder Rubrikgewichte ändern sich. Reset zwischen Fällen und Zustandserhalt innerhalb R6 bleiben unverändert. Bestehende Messungen erhalten keine nachträgliche neue Vertragszuordnung; neue Messkonfigurationen binden Originalvertrag und diese Revision ausdrücklich vor neuen Outputs.
+
+In den zugeordneten neuen K0-/K1-Paketen gilt dieses Addendum zusammen mit den vier bytegleichen Originalvertragsdateien. Die ursprüngliche vierteilige Allowlist in deren README bezeichnet die Originalfassung; für die neue Version gehört zusätzlich genau dieses Addendum zum gemeinsamen öffentlichen Vertragsinput. Links erweitern den Rolleninput weiterhin nicht automatisch.

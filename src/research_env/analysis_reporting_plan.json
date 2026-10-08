@@ -1,0 +1,193 @@
+{
+  "schema": "research-reporting-plan-v1",
+  "version": "2026-10-08.2",
+  "reviewed_on": "2026-10-08",
+  "scope": "Local research-plan alignment of descriptive reporting; source texts and research observations are not modified or embedded.",
+  "sources": [
+    {
+      "id": "research_questions",
+      "filename": "01-Forschungsfragen - Kontextgestaltung bei der Migration von PHP nach Laravel.md",
+      "sha256": "52ab6f9512014e12538ba40db6bfbc9e2921f422e6571be02942c1744ad4abab",
+      "selected_sections": [
+        "Hauptforschungsfrage",
+        "Unterfragen und ihre Priorität",
+        "Gemeinsame Auslegung und Anschluss an die Operationalisierung"
+      ]
+    },
+    {
+      "id": "hypotheses",
+      "filename": "01-Hypothesen und explorative Einordnung der Forschungsfragen.md",
+      "sha256": "b8cf2b50f36e6d51b6e35c7ae0547eea1b564d2e8e6f3f9fd637d7f5dd9adcd7",
+      "selected_sections": [
+        "2. H-K: Kontextvarianten und funktionale Korrektheit",
+        "4. Zuordnung und Übergabe an die Methodik"
+      ]
+    },
+    {
+      "id": "operationalization",
+      "filename": "01-Operationalisierung-und-Auswertungsplan.md",
+      "sha256": "bc009d8c20e537c5c9a8a275c0244fb99b71de72252d25e7386ae4d301defb27",
+      "selected_sections": [
+        "2.3 Funktionale Anforderungskategorien",
+        "2.4 Prüfkatalog für die Laravel-Zielkonformität",
+        "5.2 Neue Konfigurationsmatrix",
+        "5.4 Blöcke und Ausführungsreihenfolge",
+        "6. Messgrößen und Berechnungen",
+        "7. Auswertung je Forschungsfrage und H-K",
+        "8. Fehlversuche, fehlende Werte und Abhängigkeiten",
+        "9. Benötigte Daten und Reproduzierbarkeit"
+      ]
+    },
+    {
+      "id": "variables",
+      "filename": "03-Baseline, Variablen und konstante Bedingungen.md",
+      "sha256": "8fe26a4c177894b78f1cdc57e859029fa7bd1c08aed5db6b8e623ef1cd315481",
+      "selected_sections": [
+        "2. Untersuchungseinheiten und Zählung",
+        "5. Ergebnisvariablen und Messgrenzen",
+        "7. Konfigurationsmatrix und budgetabhängiger Umfang",
+        "8. Auswertbare Vergleiche und tatsächliche Nenner"
+      ]
+    },
+    {
+      "id": "workflow",
+      "filename": "02-Forschungsablauf.md",
+      "sha256": "95b3aad74470b5d48696e744bc78b3d0448cec07145206437d2256c66be3e851",
+      "selected_sections": [
+        "6. Phase D: Haupterhebung in Wiederholungsblöcken",
+        "7. Phase E: Endstände unabhängig bewerten und Daten sichern",
+        "8. Fehler, Abbrüche und Änderungen",
+        "9. Phase F: Daten aufbereiten und Forschungsfragen beantworten",
+        "9.1 Studienpaket übergeben und ohne Modellschlüssel prüfen"
+      ]
+    },
+    {
+      "id": "thesis_information",
+      "filename": "Allgemeine Informationen zur Bachelor-Thesis.md",
+      "sha256": "2e4784c64f26d67aa9c0855dd0fb3f2a7b03567b660c516170a4b77bd967156e",
+      "selected_sections": [
+        "Was ist die Bachelor-Thesis?",
+        "Wo und wie reiche ich die Bachelor-Thesis ein?"
+      ]
+    }
+  ],
+  "question_mapping": {
+    "F1": {
+      "role": "Synthesis without another overall score",
+      "sections": [
+        "6",
+        "7.7"
+      ]
+    },
+    "UF2 / H-K": {
+      "role": "Primary ungerichteter deskriptiver Kontextvergleich",
+      "sections": [
+        "6.1",
+        "7.1",
+        "8"
+      ]
+    },
+    "UF1": {
+      "role": "Modulspezifische Kontextunterschiede",
+      "sections": [
+        "7.2"
+      ]
+    },
+    "UF3": {
+      "role": "Explorative P/V-Modellzuordnung in SQL/K1",
+      "sections": [
+        "7.3",
+        "8"
+      ]
+    },
+    "UF4": {
+      "role": "Explorative Planner-/Reviewkomponenten in SQL/K1/A/A",
+      "sections": [
+        "7.4",
+        "8"
+      ]
+    },
+    "UF5": {
+      "role": "Ressourcen desselben Laufs und Kontextdifferenzen",
+      "sections": [
+        "6.3",
+        "7.5"
+      ]
+    },
+    "UF6": {
+      "role": "Wiederholungsstreuung je vollständiger Konfiguration",
+      "sections": [
+        "7.6"
+      ]
+    }
+  },
+  "formulas": {
+    "F": "T * sum(R1..R6) / 6; T=0 fixes F=0; otherwise required unresolved criteria keep F missing",
+    "context_pair": "d_mb = F_m,K1,b - F_m,K0,b",
+    "core": "Delta_C = mean_B_C[(d_BF,b + d_SQL,b + d_UP,b)/3]",
+    "sample_sd": "sqrt(sum((x-mean)^2)/(n-1)); undefined for n<2",
+    "leave_one_out": "Delta_C,-b = sum(g_a for a in B_C except b)/(n_C-1); undefined for n_C<2",
+    "missing_bounds": "sum(l_K1-u_K0)/(3*r_C) through sum(u_K1-l_K0)/(3*r_C); missing F has [l,u]=[0,1]",
+    "static_density": "S=100*D/L; undefined for L=0 or incomplete analysis",
+    "UF3": [
+      "AB-AA",
+      "BA-BB",
+      "BA-AA",
+      "BB-AB"
+    ],
+    "UF4": [
+      "11-01",
+      "10-00",
+      "11-10",
+      "01-00",
+      "11-01-10+00"
+    ]
+  },
+  "denominator_rules": [
+    "Primary core uses complete six-F blocks B_C and actual n_C.",
+    "Supplementary module pairs use their own complete-pair block sets and n_m.",
+    "Exploratory reference C-SQL-1 uses only first planned r_E blocks B_E; F contrasts use complete quartets n_EM/n_EP.",
+    "Every other metric uses its own observed population.",
+    "Missing-value bounds use all planned core runs and planned denominator 3*r_C.",
+    "Static analysis ratio uses actually sealed candidates, with separate valid D/L/S counts."
+  ],
+  "reporting_constraints": [
+    "No inferential test, p-value, bootstrap or confidence interval.",
+    "No automatic acceptance/rejection of H-K and no interpretation of observed numeric direction.",
+    "Preserve observations, hashes, selected revisions, missing statuses and exact values.",
+    "Do not count shared C-SQL-1 reference twice as a new independent migration.",
+    "Do not add overlapping cache/reasoning token categories to total tokens.",
+    "Raw test fraction is passed/planned cases; show technical gaps separately.",
+    "No zero imputation for absent measurements or billing."
+  ],
+  "R_categories": {
+    "R1": "Formularbereitstellung",
+    "R2": "Positiver Kernvorgang",
+    "R3": "Negativer Vorgang",
+    "R4": "Unvollständige Eingabe",
+    "R5": "Daten-/Dateitreue",
+    "R6": "Aufeinanderfolgende Vorgänge"
+  },
+  "T_criteria": {
+    "T1": "Start im eingefrorenen Laravel-Gerüst",
+    "T2": "Laravel-Routen und modulspezifischer Controller",
+    "T3": "Tatsächlich verwendete Blade-Darstellung",
+    "T4": "Laravel-Datenbank-/Request-/Dateianbindung",
+    "T5": "Erlaubte Anwendungsdateien und unveränderte gemeinsame Voraussetzungen"
+  },
+  "question_mapping_sections_source": "operationalization",
+  "reading_order": [
+    "UF2 / H-K",
+    "UF1",
+    "UF5",
+    "UF6",
+    "UF3",
+    "UF4"
+  ],
+  "display_rules": [
+    "Show individual observations before summaries; no invisible observations behind boxes.",
+    "Identify whether each mark is a run value, paired difference, or block mean.",
+    "Every table and figure states its research question, purpose, reading instructions and limitations.",
+    "No change to frozen computation, observed values or research-plan estimands."
+  ]
+}

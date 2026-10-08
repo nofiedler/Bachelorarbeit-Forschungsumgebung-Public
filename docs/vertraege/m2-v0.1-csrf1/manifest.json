@@ -1,0 +1,23 @@
+{
+  "addendum": {
+    "path": "docs/vertraege/m2-v0.1-csrf1/addendum.md",
+    "sha256": "1edd8c67373eb0606f34ede3619200a8d29e533bd519e7412716632f6237f31f"
+  },
+  "criteria_requestcases_fixtures_references_unchanged": true,
+  "decision": {
+    "date": "2026-10-05",
+    "reply": "ja",
+    "scope": "CSRF token origin only; no pilot/study approval"
+  },
+  "original_files": {
+    "docs/vertraege/m2-v0.1/README.md": "d981e9ddde27abc25cd7a5370f808c688e1dc44033b0ff8a341b66c7f4a0959a",
+    "docs/vertraege/m2-v0.1/rubrik.md": "e3056197301bd09b43486d6b3e337c57c7fafc6cb544a838282dfa047f57c5f2",
+    "docs/vertraege/m2-v0.1/users.sql": "a9f1de8ddef2507ee6c661c9cf1a15a949e832047b6f3c23287c1b009c07e272",
+    "docs/vertraege/m2-v0.1/vertrag.md": "b14a5ff6fed94b4c92bff6b7c2547787001b2aa7abb5a0beab793b0035ffc21c"
+  },
+  "original_version": "M2-v0.1",
+  "remaining_human_review": "open",
+  "rubric_version": "RT-v0.1",
+  "type": "contract",
+  "version": "M2-v0.1-CSRF1"
+}

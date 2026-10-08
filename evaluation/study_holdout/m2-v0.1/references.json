@@ -1,0 +1,2269 @@
+{
+  "version": "M2-v0.1",
+  "rubric_version": "RT-v0.1",
+  "audience": "evaluator_only",
+  "semantics": "Entwurfs-Sollurteile, keine beobachteten Ergebnisse. assertions.default gilt für jede Assertion aller case_scope-Fälle; fail_ids überschreibt ausschließlich genannte IDs. R enthält sämtliche erwarteten Nebeneffekte. T_criteria 1/0 sind hypothetische Urteile nach vollständiger erforderlicher Prüfung, niemals reale Freigaben. null bedeutet offen.",
+  "references": [
+    {
+      "id": "GOOD-A-BF",
+      "kind": "correct_design",
+      "module": "BF",
+      "description_ref": "referenzentwuerfe.md#entwurf-a",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 6,
+          "denominator": 6
+        },
+        "complete": 1,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "GOOD-A-SQL",
+      "kind": "correct_design",
+      "module": "SQL",
+      "description_ref": "referenzentwuerfe.md#entwurf-a",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 6,
+          "denominator": 6
+        },
+        "complete": 1,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "GOOD-A-UP",
+      "kind": "correct_design",
+      "module": "UP",
+      "description_ref": "referenzentwuerfe.md#entwurf-a",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 6,
+          "denominator": 6
+        },
+        "complete": 1,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "GOOD-B-BF",
+      "kind": "correct_design",
+      "module": "BF",
+      "description_ref": "referenzentwuerfe.md#entwurf-b",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 6,
+          "denominator": 6
+        },
+        "complete": 1,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "GOOD-B-SQL",
+      "kind": "correct_design",
+      "module": "SQL",
+      "description_ref": "referenzentwuerfe.md#entwurf-b",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 6,
+          "denominator": 6
+        },
+        "complete": 1,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "GOOD-B-UP",
+      "kind": "correct_design",
+      "module": "UP",
+      "description_ref": "referenzentwuerfe.md#entwurf-b",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 6,
+          "denominator": 6
+        },
+        "complete": 1,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-BF-R1",
+      "kind": "faulty_R_design",
+      "module": "BF",
+      "targets": [
+        "R1"
+      ],
+      "mutation": "Formular lässt erstes Pflichtfeld weg; direkte Verarbeitungsrequests bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "BF-R1-01-S01-FORM"
+          ]
+        },
+        "R": {
+          "R1": 0,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 5,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-BF-R2",
+      "kind": "faulty_R_design",
+      "module": "BF",
+      "targets": [
+        "R2"
+      ],
+      "mutation": "Alle eigentlich positiven Verarbeitungen geben NEGATIVE ohne Ergebnisdaten aus; negative und R4-Pfade bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "BF-R2-01-S01-RESULT",
+            "BF-R2-02-S01-RESULT",
+            "BF-R5-01-S01-RESULT",
+            "BF-R5-02-S01-RESULT",
+            "BF-R6-01-S01-RESULT",
+            "BF-R6-01-S03-RESULT"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 0,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 3,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-BF-R3",
+      "kind": "faulty_R_design",
+      "module": "BF",
+      "targets": [
+        "R3"
+      ],
+      "mutation": "Negative Domänenfälle liefern SUCCESS mit einem fremden Ergebnis statt NEGATIVE; positive und R4-Pfade bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "BF-R3-01-S01-RESULT",
+            "BF-R3-02-S01-RESULT",
+            "BF-R6-01-S02-RESULT"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 0,
+          "R4": 1,
+          "R5": 1,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 4,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-BF-R4",
+      "kind": "faulty_R_design",
+      "module": "BF",
+      "targets": [
+        "R4"
+      ],
+      "mutation": "Fehlende/leere Pflichtfelder geben 200/NEGATIVE ohne Daten statt 422/INPUT_ERROR aus; keine Speicheränderung.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "BF-R4-01-S01-HTTP",
+            "BF-R4-01-S01-RESULT",
+            "BF-R4-02-S01-HTTP",
+            "BF-R4-02-S01-RESULT",
+            "BF-R4-03-S01-HTTP",
+            "BF-R4-03-S01-RESULT",
+            "BF-R4-04-S01-HTTP",
+            "BF-R4-04-S01-RESULT",
+            "BF-R4-05-S01-HTTP",
+            "BF-R4-05-S01-RESULT",
+            "BF-R4-06-S01-HTTP",
+            "BF-R4-06-S01-RESULT",
+            "BF-R4-07-S01-HTTP",
+            "BF-R4-07-S01-RESULT",
+            "BF-R4-08-S01-HTTP",
+            "BF-R4-08-S01-RESULT"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 0,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 5,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-BF-R5",
+      "kind": "faulty_R_design",
+      "module": "BF",
+      "targets": [
+        "R5"
+      ],
+      "mutation": "Bei mohn8 wird statt des zugehörigen Avatars immer der Avatar von lotus7 aus demselben Fixture ausgegeben; Datenbank bleibt unverändert.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "BF-R2-02-S01-RESULT",
+            "BF-R5-02-S01-RESULT",
+            "BF-R6-01-S03-RESULT"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 0,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 3,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-BF-R6",
+      "kind": "faulty_R_design",
+      "module": "BF",
+      "targets": [
+        "R6"
+      ],
+      "mutation": "Erstes positives Ergebnis wird in Session gecacht und bei folgenden Verarbeitungen unverändert angezeigt; erster Request jedes frischen Falls korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "BF-R6-01-S02-RESULT",
+            "BF-R6-01-S03-RESULT"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 5,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-BF-T1",
+      "kind": "faulty_T_design",
+      "module": "BF",
+      "targets": [
+        "T1"
+      ],
+      "mutation": "Syntaxfehler in Modulcontroller. Intaktes identisches Gerüst besteht Kontrollstart; Kandidatenbootfehler fachlich belegt.",
+      "expected": {
+        "assertions": {
+          "default": "blocked_by_candidate",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 0,
+          "R2": 0,
+          "R3": 0,
+          "R4": 0,
+          "R5": 0,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 0,
+          "T2": null,
+          "T3": null,
+          "T4": null,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Syntax-/Bootlog, Gerüstkontrolllog; T2–T4 trotz T1=0 menschlich lesen, erforderliche Integrationsbelege fehlen: Einzelurteile offen."
+    },
+    {
+      "id": "BAD-BF-T2",
+      "kind": "faulty_T_design",
+      "module": "BF",
+      "targets": [
+        "T2"
+      ],
+      "mutation": "Registrierte Route verarbeitet die Modulaktion in einer Closure und ruft Blade direkt auf; kein modulspezifischer Controller. Äußere Antworten bleiben korrekt. Das verletzt T2 und zusätzlich T3 (Controller-Verwendung fehlt).",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 0,
+          "T3": 0,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Routenauflösung und Codezeilen der Closure; menschliche T2-Prüfung."
+    },
+    {
+      "id": "BAD-BF-T3",
+      "kind": "faulty_T_design",
+      "module": "BF",
+      "targets": [
+        "T3"
+      ],
+      "mutation": "Controller liefert vollständiges HTML direkt; kein tatsächlicher Blade-Aufruf. Äußere Antworten bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 0,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Controller-Return und fehlende Blade-Verwendung; menschliche T3-Prüfung."
+    },
+    {
+      "id": "BAD-BF-T4",
+      "kind": "faulty_T_design",
+      "module": "BF",
+      "targets": [
+        "T4"
+      ],
+      "mutation": "Eigene globale mysqli-Verbindung auf dieselbe Datenbank statt bereitgestellter Laravel-Anbindung; äußere Antworten bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 0,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Codepfad der abweichenden Daten-/Dateischnittstelle und wechselnde Integrationsfixtures; menschliche T4-Prüfung."
+    },
+    {
+      "id": "BAD-BF-T5",
+      "kind": "faulty_T_design",
+      "module": "BF",
+      "targets": [
+        "T5"
+      ],
+      "mutation": "Geschützte gemeinsame Konfiguration wird um nicht benötigten Eintrag verändert; erlaubte Modullogik und alle äußeren Antworten bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 0
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Geschützte Dateidifferenz und Gerüstmanifest; bei semantischem Zweifel menschlich."
+    },
+    {
+      "id": "BAD-SQL-R1",
+      "kind": "faulty_R_design",
+      "module": "SQL",
+      "targets": [
+        "R1"
+      ],
+      "mutation": "Formular lässt erstes Pflichtfeld weg; direkte Verarbeitungsrequests bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "SQL-R1-01-S01-FORM"
+          ]
+        },
+        "R": {
+          "R1": 0,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 5,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-SQL-R2",
+      "kind": "faulty_R_design",
+      "module": "SQL",
+      "targets": [
+        "R2"
+      ],
+      "mutation": "Alle eigentlich positiven Verarbeitungen geben NEGATIVE ohne Ergebnisdaten aus; negative und R4-Pfade bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "SQL-R2-01-S01-RESULT",
+            "SQL-R2-02-S01-RESULT",
+            "SQL-R5-01-S01-RESULT",
+            "SQL-R5-02-S01-RESULT",
+            "SQL-R6-01-S01-RESULT",
+            "SQL-R6-01-S03-RESULT"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 0,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 3,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-SQL-R3",
+      "kind": "faulty_R_design",
+      "module": "SQL",
+      "targets": [
+        "R3"
+      ],
+      "mutation": "Negative Domänenfälle liefern SUCCESS mit einem fremden Ergebnis statt NEGATIVE; positive und R4-Pfade bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "SQL-R3-01-S01-RESULT",
+            "SQL-R3-02-S01-RESULT",
+            "SQL-R6-01-S02-RESULT"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 0,
+          "R4": 1,
+          "R5": 1,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 4,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-SQL-R4",
+      "kind": "faulty_R_design",
+      "module": "SQL",
+      "targets": [
+        "R4"
+      ],
+      "mutation": "Fehlende/leere Pflichtfelder geben 200/NEGATIVE ohne Daten statt 422/INPUT_ERROR aus; keine Speicheränderung.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "SQL-R4-01-S01-HTTP",
+            "SQL-R4-01-S01-RESULT",
+            "SQL-R4-02-S01-HTTP",
+            "SQL-R4-02-S01-RESULT"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 0,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 5,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-SQL-R5",
+      "kind": "faulty_R_design",
+      "module": "SQL",
+      "targets": [
+        "R5"
+      ],
+      "mutation": "ID82 liefert Vor-/Nachname von ID17 aus demselben Fixture; Datenbank bleibt unverändert.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "SQL-R2-02-S01-RESULT",
+            "SQL-R5-02-S01-RESULT",
+            "SQL-R6-01-S03-RESULT"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 0,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 3,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-SQL-R6",
+      "kind": "faulty_R_design",
+      "module": "SQL",
+      "targets": [
+        "R6"
+      ],
+      "mutation": "Erstes positives Ergebnis wird in Session gecacht und bei folgenden Verarbeitungen unverändert angezeigt; erster Request jedes frischen Falls korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "SQL-R6-01-S02-RESULT",
+            "SQL-R6-01-S03-RESULT"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 5,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-SQL-T1",
+      "kind": "faulty_T_design",
+      "module": "SQL",
+      "targets": [
+        "T1"
+      ],
+      "mutation": "Syntaxfehler in Modulcontroller. Intaktes identisches Gerüst besteht Kontrollstart; Kandidatenbootfehler fachlich belegt.",
+      "expected": {
+        "assertions": {
+          "default": "blocked_by_candidate",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 0,
+          "R2": 0,
+          "R3": 0,
+          "R4": 0,
+          "R5": 0,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 0,
+          "T2": null,
+          "T3": null,
+          "T4": null,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Syntax-/Bootlog, Gerüstkontrolllog; T2–T4 trotz T1=0 menschlich lesen, erforderliche Integrationsbelege fehlen: Einzelurteile offen."
+    },
+    {
+      "id": "BAD-SQL-T2",
+      "kind": "faulty_T_design",
+      "module": "SQL",
+      "targets": [
+        "T2"
+      ],
+      "mutation": "Registrierte Route verarbeitet die Modulaktion in einer Closure und ruft Blade direkt auf; kein modulspezifischer Controller. Äußere Antworten bleiben korrekt. Das verletzt T2 und zusätzlich T3 (Controller-Verwendung fehlt).",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 0,
+          "T3": 0,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Routenauflösung und Codezeilen der Closure; menschliche T2-Prüfung."
+    },
+    {
+      "id": "BAD-SQL-T3",
+      "kind": "faulty_T_design",
+      "module": "SQL",
+      "targets": [
+        "T3"
+      ],
+      "mutation": "Controller liefert vollständiges HTML direkt; kein tatsächlicher Blade-Aufruf. Äußere Antworten bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 0,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Controller-Return und fehlende Blade-Verwendung; menschliche T3-Prüfung."
+    },
+    {
+      "id": "BAD-SQL-T4",
+      "kind": "faulty_T_design",
+      "module": "SQL",
+      "targets": [
+        "T4"
+      ],
+      "mutation": "Eigene globale mysqli-Verbindung auf dieselbe Datenbank statt bereitgestellter Laravel-Anbindung; äußere Antworten bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 0,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Codepfad der abweichenden Daten-/Dateischnittstelle und wechselnde Integrationsfixtures; menschliche T4-Prüfung."
+    },
+    {
+      "id": "BAD-SQL-T5",
+      "kind": "faulty_T_design",
+      "module": "SQL",
+      "targets": [
+        "T5"
+      ],
+      "mutation": "Geschützte gemeinsame Konfiguration wird um nicht benötigten Eintrag verändert; erlaubte Modullogik und alle äußeren Antworten bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 0
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Geschützte Dateidifferenz und Gerüstmanifest; bei semantischem Zweifel menschlich."
+    },
+    {
+      "id": "BAD-UP-R1",
+      "kind": "faulty_R_design",
+      "module": "UP",
+      "targets": [
+        "R1"
+      ],
+      "mutation": "Formular lässt erstes Pflichtfeld weg; direkte Verarbeitungsrequests bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "UP-R1-01-S01-FORM"
+          ]
+        },
+        "R": {
+          "R1": 0,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 5,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-UP-R2",
+      "kind": "faulty_R_design",
+      "module": "UP",
+      "targets": [
+        "R2"
+      ],
+      "mutation": "Normaler positiver Pfad meldet korrekt SUCCESS/Pfad, speichert aber keine Datei; kontrollierter Fehler- und R4-Pfad bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "UP-R2-01-S01-FILES",
+            "UP-R2-02-S01-FILES",
+            "UP-R5-01-S01-FILES",
+            "UP-R5-02-S01-FILES",
+            "UP-R6-01-S01-FILES",
+            "UP-R6-01-S02-FILES",
+            "UP-R6-01-S03-FILES"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 0,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 3,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-UP-R3",
+      "kind": "faulty_R_design",
+      "module": "UP",
+      "targets": [
+        "R3"
+      ],
+      "mutation": "Bei tatsächlichem Schreibfehler liefert der Catch-Zweig 200/SUCCESS mit Pfad, obwohl keine Datei geschrieben wurde.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "UP-R3-01-S01-HTTP",
+            "UP-R3-01-S01-RESULT"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 0,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 5,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-UP-R4",
+      "kind": "faulty_R_design",
+      "module": "UP",
+      "targets": [
+        "R4"
+      ],
+      "mutation": "Fehlende/leere Pflichtfelder geben 200/NEGATIVE ohne Daten statt 422/INPUT_ERROR aus; keine Speicheränderung.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "UP-R4-01-S01-HTTP",
+            "UP-R4-01-S01-RESULT",
+            "UP-R4-02-S01-HTTP",
+            "UP-R4-02-S01-RESULT"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 0,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 5,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-UP-R5",
+      "kind": "faulty_R_design",
+      "module": "UP",
+      "targets": [
+        "R5"
+      ],
+      "mutation": "Bei jedem erfolgreichen Upload wird ein LF-Byte angehängt; Status, Name und Pfad stimmen, Größe/Hash weichen ab.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "UP-R2-01-S01-FILES",
+            "UP-R2-02-S01-FILES",
+            "UP-R5-01-S01-FILES",
+            "UP-R5-02-S01-FILES",
+            "UP-R6-01-S01-FILES",
+            "UP-R6-01-S02-FILES",
+            "UP-R6-01-S03-FILES"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 0,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 3,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-UP-R6",
+      "kind": "faulty_R_design",
+      "module": "UP",
+      "targets": [
+        "R6"
+      ],
+      "mutation": "Vor dem zweiten und jedem weiteren Upload derselben Session wird die vorherige neue Uploaddatei entfernt; initiale Sentineldatei bleibt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "UP-R6-01-S02-FILES",
+            "UP-R6-01-S03-FILES"
+          ]
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 1,
+        "F": {
+          "numerator": 5,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented"
+    },
+    {
+      "id": "BAD-UP-T1",
+      "kind": "faulty_T_design",
+      "module": "UP",
+      "targets": [
+        "T1"
+      ],
+      "mutation": "Syntaxfehler in Modulcontroller. Intaktes identisches Gerüst besteht Kontrollstart; Kandidatenbootfehler fachlich belegt.",
+      "expected": {
+        "assertions": {
+          "default": "blocked_by_candidate",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 0,
+          "R2": 0,
+          "R3": 0,
+          "R4": 0,
+          "R5": 0,
+          "R6": 0
+        },
+        "T_criteria": {
+          "T1": 0,
+          "T2": null,
+          "T3": null,
+          "T4": null,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Syntax-/Bootlog, Gerüstkontrolllog; T2–T4 trotz T1=0 menschlich lesen, erforderliche Integrationsbelege fehlen: Einzelurteile offen."
+    },
+    {
+      "id": "BAD-UP-T2",
+      "kind": "faulty_T_design",
+      "module": "UP",
+      "targets": [
+        "T2"
+      ],
+      "mutation": "Registrierte Route verarbeitet die Modulaktion in einer Closure und ruft Blade direkt auf; kein modulspezifischer Controller. Äußere Antworten bleiben korrekt. Das verletzt T2 und zusätzlich T3 (Controller-Verwendung fehlt).",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 0,
+          "T3": 0,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Routenauflösung und Codezeilen der Closure; menschliche T2-Prüfung."
+    },
+    {
+      "id": "BAD-UP-T3",
+      "kind": "faulty_T_design",
+      "module": "UP",
+      "targets": [
+        "T3"
+      ],
+      "mutation": "Controller liefert vollständiges HTML direkt; kein tatsächlicher Blade-Aufruf. Äußere Antworten bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 0,
+          "T4": 1,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Controller-Return und fehlende Blade-Verwendung; menschliche T3-Prüfung."
+    },
+    {
+      "id": "BAD-UP-T4",
+      "kind": "faulty_T_design",
+      "module": "UP",
+      "targets": [
+        "T4"
+      ],
+      "mutation": "Direkter Zugriff auf $_FILES und move_uploaded_file statt Laravel-Request-/Dateischnittstellen; Ziel/Bytes/Antworten bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 0,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Codepfad der abweichenden Daten-/Dateischnittstelle und wechselnde Integrationsfixtures; menschliche T4-Prüfung."
+    },
+    {
+      "id": "BAD-UP-T5",
+      "kind": "faulty_T_design",
+      "module": "UP",
+      "targets": [
+        "T5"
+      ],
+      "mutation": "Geschützte gemeinsame Konfiguration wird um nicht benötigten Eintrag verändert; erlaubte Modullogik und alle äußeren Antworten bleiben korrekt.",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 0
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "evidence_required": "Geschützte Dateidifferenz und Gerüstmanifest; bei semantischem Zweifel menschlich."
+    },
+    {
+      "id": "BAD-BF-T2-FACADE",
+      "kind": "faulty_T_design",
+      "module": "BF",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 0,
+          "T3": 0,
+          "T4": 0,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "targets": [
+        "T2"
+      ],
+      "mutation": "Registrierte Web-Route zeigt auf modulspezifischen Controller, der ein ausführbares Legacy-Verarbeitungsskript als PHP-Helfer einbindet. Dieses erzeugt die vollständige Formular-/Ergebnis-HTML-Antwort direkt und verwendet eigene mysqli-Anbindung. Äußere Domänen-/Status-/Marker-/Datenreaktionen sind im Gegenentwurf angepasst und korrekt; Gerüstdateien bleiben geschützt. T2,T3,T4 scheitern trotz formal vorhandenem Controller.",
+      "evidence_required": "Routenauflösung plus Controller-require/include-Codepfad und ausführbares Hilfsskript mit Direkt-HTML/eigener Schnittstelle; menschliche T2–T4-Prüfung auch nach erstem T=0."
+    },
+    {
+      "id": "BAD-SQL-T2-FACADE",
+      "kind": "faulty_T_design",
+      "module": "SQL",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 0,
+          "T3": 0,
+          "T4": 0,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "targets": [
+        "T2"
+      ],
+      "mutation": "Registrierte Web-Route zeigt auf modulspezifischen Controller, der ein ausführbares Legacy-Verarbeitungsskript als PHP-Helfer einbindet. Dieses erzeugt die vollständige Formular-/Ergebnis-HTML-Antwort direkt und verwendet eigene mysqli-Anbindung. Äußere Domänen-/Status-/Marker-/Datenreaktionen sind im Gegenentwurf angepasst und korrekt; Gerüstdateien bleiben geschützt. T2,T3,T4 scheitern trotz formal vorhandenem Controller.",
+      "evidence_required": "Routenauflösung plus Controller-require/include-Codepfad und ausführbares Hilfsskript mit Direkt-HTML/eigener Schnittstelle; menschliche T2–T4-Prüfung auch nach erstem T=0."
+    },
+    {
+      "id": "BAD-UP-T2-FACADE",
+      "kind": "faulty_T_design",
+      "module": "UP",
+      "expected": {
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T_criteria": {
+          "T1": 1,
+          "T2": 0,
+          "T3": 0,
+          "T4": 0,
+          "T5": 1
+        },
+        "T": 0,
+        "F": {
+          "numerator": 0,
+          "denominator": 6
+        },
+        "complete": 0,
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ]
+      },
+      "human_review": "open",
+      "execution": "not_implemented",
+      "targets": [
+        "T2"
+      ],
+      "mutation": "Registrierte Web-Route zeigt auf modulspezifischen Controller, der ein ausführbares Legacy-Verarbeitungsskript als PHP-Helfer einbindet. Dieses erzeugt die vollständige Formular-/Ergebnis-HTML-Antwort direkt und verwendet $_FILES/move_uploaded_file. Äußere Domänen-/Status-/Marker-/Datenreaktionen sind im Gegenentwurf angepasst und korrekt; Gerüstdateien bleiben geschützt. T2,T3,T4 scheitern trotz formal vorhandenem Controller.",
+      "evidence_required": "Routenauflösung plus Controller-require/include-Codepfad und ausführbares Hilfsskript mit Direkt-HTML/eigener Schnittstelle; menschliche T2–T4-Prüfung auch nach erstem T=0."
+    }
+  ]
+}

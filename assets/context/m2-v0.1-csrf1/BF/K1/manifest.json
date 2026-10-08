@@ -1,0 +1,99 @@
+{
+  "access_scope": "only assigned module/condition role input",
+  "asset_version": "M2-CONTEXT-v0.1-CSRF1",
+  "bytes": 73337,
+  "characters": 72770,
+  "condition": "K1",
+  "contract_manifest_sha256": "e3fe3027d944629c0a5433acc45d27f17a3736b1c1cd2223bfa8434bdd4db78b",
+  "files": [
+    {
+      "bytes": 32485,
+      "category": "gemeinsam/bereits K0",
+      "characters": 32485,
+      "path": "LICENSE-DVWA.txt",
+      "sha256": "6fdb4bcc182a526d6496c7adf24a82a01cc7e9727e5b2d0418a478bffe1f94a4"
+    },
+    {
+      "bytes": 2296,
+      "category": "gemeinsam/bereits K0",
+      "characters": 2246,
+      "path": "contract/00-csrf-revision.md",
+      "sha256": "1edd8c67373eb0606f34ede3619200a8d29e533bd519e7412716632f6237f31f"
+    },
+    {
+      "bytes": 2285,
+      "category": "gemeinsam/bereits K0",
+      "characters": 2245,
+      "path": "contract/README.md",
+      "sha256": "d981e9ddde27abc25cd7a5370f808c688e1dc44033b0ff8a341b66c7f4a0959a"
+    },
+    {
+      "bytes": 9432,
+      "category": "gemeinsam/bereits K0",
+      "characters": 9274,
+      "path": "contract/rubrik.md",
+      "sha256": "e3056197301bd09b43486d6b3e337c57c7fafc6cb544a838282dfa047f57c5f2"
+    },
+    {
+      "bytes": 933,
+      "category": "gemeinsam/bereits K0",
+      "characters": 930,
+      "path": "contract/users.sql",
+      "sha256": "a9f1de8ddef2507ee6c661c9cf1a15a949e832047b6f3c23287c1b009c07e272"
+    },
+    {
+      "bytes": 14953,
+      "category": "gemeinsam/bereits K0",
+      "characters": 14730,
+      "path": "contract/vertrag.md",
+      "sha256": "b14a5ff6fed94b4c92bff6b7c2547787001b2aa7abb5a0beab793b0035ffc21c"
+    },
+    {
+      "bytes": 5161,
+      "category": "zusätzlicher Quellbeleg",
+      "characters": 5131,
+      "path": "integration/excerpts.md",
+      "sha256": "03abfc5cacf765f8dfe5295a785ab1ef8b385ce0f5ad29d557c22d8248049f22"
+    },
+    {
+      "bytes": 701,
+      "category": "explizitere Aufbereitung",
+      "characters": 676,
+      "path": "integration/mapping.md",
+      "sha256": "97cce6ccbef3d21865abe1ab23feb8075fdd23dd0acdd264fa6e57b4467cffc6"
+    },
+    {
+      "bytes": 2860,
+      "category": "gemeinsam/bereits K0",
+      "characters": 2822,
+      "path": "interfaces.md",
+      "sha256": "fd59707f499d791323a03f296258404f2739ef5e4920c78f5af40a8f8f30b6c1"
+    },
+    {
+      "bytes": 1028,
+      "category": "gemeinsam/bereits K0",
+      "characters": 1028,
+      "path": "legacy/low.php",
+      "sha256": "304781c4f17bdccbf85f834e29fa42ee9e0aa44658b2a261c3b32ce178713be9"
+    },
+    {
+      "bytes": 850,
+      "category": "gemeinsam/bereits K0",
+      "characters": 850,
+      "path": "tools.json",
+      "sha256": "5202037506d8b649fd5b2da32f8b2c74efb1190612287489cd5fdac6f2e51d8d"
+    }
+  ],
+  "follow_links": false,
+  "human_review": "open",
+  "model_input": "package.txt",
+  "module": "BF",
+  "original_manifest_sha256": "eeb626ead081cc9aba62b17f4b9c9b896f410d46a17dfdf1e1bffb4e46328335",
+  "package_sha256": "82df42e3bd6a3e7bce3c60e09c436719931333075399037a1f01c51331e39a62",
+  "provider_context_and_defaults": "open",
+  "schema_version": 1,
+  "source_commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+  "token_status": "unbestimmt: Modell A/Tokenizer nicht gewählt; keine Schätzung vorgenommen",
+  "tokens": null,
+  "type": "source_context"
+}

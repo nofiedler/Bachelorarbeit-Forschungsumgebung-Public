@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-env"
+version = "0.1.0"
+description = "Lokale technische Betriebsbasis der Bachelorarbeit"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "fastapi==0.142.2",
+  "pydantic==2.13.5",
+  "jinja2==3.1.6",
+  "langgraph==1.2.12",
+  "langgraph-checkpoint-sqlite==3.1.1",
+  "httpx==0.28.1",
+  "pytest==9.1.1",
+  "beautifulsoup4==4.15.0",
+  "pymysql==1.2.3",
+  "matplotlib==3.11.2",
+  "uvicorn==0.54.0",
+  "python-multipart==0.0.32",
+  "docker==7.2.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+research_env = ["migrations/*.sql", "templates/*.html", "static/*.css", "static/*.js", "static/vendor/*", "static/logos/*", "static/fonts/*", "images.lock.json", "contract_assets.lock.json", "evidence_schema.json", "analysis_reporting_plan.json", "execution_compatibility.json", "sandbox_assets.lock.json", "sandbox_syntax.php", "pipeline_runtime.lock.json", "pipeline_assets.lock.json", "evaluation_assets.lock.json", "static_tool.lock.json", "static_*.php", "static_analysis.neon"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

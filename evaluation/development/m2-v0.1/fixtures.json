@@ -1,0 +1,41 @@
+{
+  "asset_version": "M2-DEV-v0.1",
+  "suite_kind": "development",
+  "origin": "independently authored synthetic public contract examples; no holdout data copied",
+  "users": [
+    {
+      "user_id": 211,
+      "first_name": "Cedar",
+      "last_name": "Brook",
+      "user": "cedar41",
+      "password": "bbe5baa01d1a751fa9c05430c5373776",
+      "avatar": "/dev-images/cedar41.png",
+      "last_login": null,
+      "failed_login": 0,
+      "role": "user",
+      "account_enabled": 1
+    },
+    {
+      "user_id": 734,
+      "first_name": "Fern",
+      "last_name": "Vale",
+      "user": "fern62",
+      "password": "00715a4921d4bbe081c16923e9c4820a",
+      "avatar": "/dev-images/fern62.png",
+      "last_login": null,
+      "failed_login": 0,
+      "role": "user",
+      "account_enabled": 1
+    }
+  ],
+  "credentials": [
+    {
+      "username": "cedar41",
+      "password": "CedarPass9"
+    },
+    {
+      "username": "fern62",
+      "password": "FernPass8"
+    }
+  ]
+}

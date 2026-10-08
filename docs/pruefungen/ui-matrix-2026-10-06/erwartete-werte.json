@@ -1,0 +1,12 @@
+{
+  "data_origin": "synthetic",
+  "planned": 48,
+  "observed": 24,
+  "n_C": 2,
+  "delta": "5/18",
+  "lower": "-22/45",
+  "upper": "32/45",
+  "UF3_AB_AA": "0",
+  "UF3_BA_BB": "1/4",
+  "UF4_Interaction": "-1/6"
+}

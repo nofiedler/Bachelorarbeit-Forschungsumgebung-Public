@@ -1,0 +1,114 @@
+[
+  {
+    "file": "git-install.html",
+    "url": "https://git-scm.com/install/",
+    "resolved_url": "https://git-scm.com/install/",
+    "retrieved_at": "2026-10-06T22:08:30.339398+00:00",
+    "sha256": "9d64dd4a3dc38db3c65d259e75187375427c0b35cc395a37843d0a3f5d2ebd7a",
+    "bytes": 5606
+  },
+  {
+    "file": "git-linux.html",
+    "url": "https://git-scm.com/install/linux",
+    "resolved_url": "https://git-scm.com/install/linux",
+    "retrieved_at": "2026-10-06T22:08:30.337625+00:00",
+    "sha256": "fafaa7a7b161b7aa8e97c0d37ac1e5a09f75231a9e0bbcb8ee8c335d1505eb3e",
+    "bytes": 7190
+  },
+  {
+    "file": "wsl-install.html",
+    "url": "https://learn.microsoft.com/en-us/windows/wsl/install",
+    "resolved_url": "https://learn.microsoft.com/en-us/windows/wsl/install",
+    "retrieved_at": "2026-10-06T22:08:30.559093+00:00",
+    "sha256": "f99ab8ec329d273e7bcff38629708cd9f449ac61900a1c5e5ba38ba6c266d06f",
+    "bytes": 63157
+  },
+  {
+    "file": "docker-windows.html",
+    "url": "https://docs.docker.com/desktop/setup/install/windows-install/",
+    "resolved_url": "https://docs.docker.com/desktop/setup/install/windows-install/",
+    "retrieved_at": "2026-10-06T22:08:30.880992+00:00",
+    "sha256": "08cb5b62318707518126174e7b92d1fbc23ac8040597ccbf8483220bd54d7458",
+    "bytes": 582308
+  },
+  {
+    "file": "docker-wsl.html",
+    "url": "https://docs.docker.com/desktop/features/wsl/",
+    "resolved_url": "https://docs.docker.com/desktop/features/wsl/",
+    "retrieved_at": "2026-10-06T22:08:30.881210+00:00",
+    "sha256": "6a71252aa7030a4a2667849cde2010bb6a5ccce26447e0589e6d9b61ebbf1086",
+    "bytes": 534609
+  },
+  {
+    "file": "docker-mac.html",
+    "url": "https://docs.docker.com/desktop/setup/install/mac-install/",
+    "resolved_url": "https://docs.docker.com/desktop/setup/install/mac-install/",
+    "retrieved_at": "2026-10-06T22:08:30.901104+00:00",
+    "sha256": "0ec60e0ca6b6d097ff8b4c7df27420fa28221a4dfb0011ab5a55a4192c942045",
+    "bytes": 547681
+  },
+  {
+    "file": "docker-engine.html",
+    "url": "https://docs.docker.com/engine/install/",
+    "resolved_url": "https://docs.docker.com/engine/install/",
+    "retrieved_at": "2026-10-06T22:08:30.922699+00:00",
+    "sha256": "7a084a353427d83863ad1d07702e56ca57903a7a291ed5c3658cba10efbe8921",
+    "bytes": 526749
+  },
+  {
+    "file": "docker-compose.html",
+    "url": "https://docs.docker.com/compose/install/",
+    "resolved_url": "https://docs.docker.com/compose/install/",
+    "retrieved_at": "2026-10-06T22:08:30.880169+00:00",
+    "sha256": "4c938026447e826b5352825717582a552aee0c5dc411c62ac8472ee76af5d32c",
+    "bytes": 522249
+  },
+  {
+    "file": "docker-compose-linux.html",
+    "url": "https://docs.docker.com/compose/install/linux/",
+    "resolved_url": "https://docs.docker.com/compose/install/linux/",
+    "retrieved_at": "2026-10-06T22:08:30.953501+00:00",
+    "sha256": "249794fb795842a5a88b0d50027da8b552b2692a9cb1ce35248cd0499c4a4e30",
+    "bytes": 541725
+  },
+  {
+    "file": "docker-settings.html",
+    "url": "https://docs.docker.com/desktop/settings-and-maintenance/settings/",
+    "resolved_url": "https://docs.docker.com/desktop/settings-and-maintenance/settings/",
+    "retrieved_at": "2026-10-06T22:08:30.992347+00:00",
+    "sha256": "ab5f0b69b4c96609851897d05524f0d1fd6aedcb2a93493c00d4412160bc4f41",
+    "bytes": 559954
+  },
+  {
+    "file": "dvwa-commit.json",
+    "url": "https://api.github.com/repos/digininja/DVWA/commits/b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+    "resolved_url": "https://api.github.com/repos/digininja/DVWA/commits/b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+    "retrieved_at": "2026-10-06T22:08:31.025741+00:00",
+    "sha256": "5105e5e79fa399258294793618ec037a5234039c96f5dfc9c2cf43930536fe8c",
+    "bytes": 4083
+  },
+  {
+    "file": "BF-low.php",
+    "url": "https://raw.githubusercontent.com/digininja/DVWA/b496a5d3de6b967410155e1b7d3e51e9d035eb22/vulnerabilities/brute/source/low.php",
+    "resolved_url": "https://raw.githubusercontent.com/digininja/DVWA/b496a5d3de6b967410155e1b7d3e51e9d035eb22/vulnerabilities/brute/source/low.php",
+    "retrieved_at": "2026-10-06T22:08:31.166613+00:00",
+    "sha256": "304781c4f17bdccbf85f834e29fa42ee9e0aa44658b2a261c3b32ce178713be9",
+    "bytes": 1028
+  },
+  {
+    "file": "SQL-low.php",
+    "url": "https://raw.githubusercontent.com/digininja/DVWA/b496a5d3de6b967410155e1b7d3e51e9d035eb22/vulnerabilities/sqli/source/low.php",
+    "resolved_url": "https://raw.githubusercontent.com/digininja/DVWA/b496a5d3de6b967410155e1b7d3e51e9d035eb22/vulnerabilities/sqli/source/low.php",
+    "retrieved_at": "2026-10-06T22:08:31.159220+00:00",
+    "sha256": "652bb44d14a9d81c9245f05ed8440beecf7977e982e00d3ddb916126a72e85bf",
+    "bytes": 1650
+  },
+  {
+    "file": "UP-low.php",
+    "url": "https://raw.githubusercontent.com/digininja/DVWA/b496a5d3de6b967410155e1b7d3e51e9d035eb22/vulnerabilities/upload/source/low.php",
+    "resolved_url": "https://raw.githubusercontent.com/digininja/DVWA/b496a5d3de6b967410155e1b7d3e51e9d035eb22/vulnerabilities/upload/source/low.php",
+    "retrieved_at": "2026-10-06T22:08:31.154573+00:00",
+    "sha256": "a958136c538b253829ffbb8d8e6e7daee5061b31a531c4b9bcc99e8d2099503f",
+    "bytes": 511
+  }
+]

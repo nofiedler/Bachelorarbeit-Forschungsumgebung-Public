@@ -1,0 +1,21 @@
+.git
+.env
+.env.*
+secrets
+assets/laravel/vendor
+**/node_modules
+**/__pycache__
+**/.pytest_cache
+docs
+!docs
+docs/*
+!docs/vertraege
+*.tar
+local
+dist
+.venv
+tests
+scripts
+
+# Published study data are downloaded/imported separately, not built into images.
+/Ergebnisse

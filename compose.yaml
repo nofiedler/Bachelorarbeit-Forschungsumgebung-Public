@@ -1,0 +1,73 @@
+name: research-env
+services:
+  web:
+    labels:
+      org.bachelorarbeit.component: web
+    environment:
+      RESEARCH_COMPONENT: web
+      RESEARCH_INSPECTIONS_DIR: /data/inspections
+      RESEARCH_INSPECTIONS_HOST: "${RESEARCH_INSPECTIONS_HOST:-}"
+    image: research-env-python:0.1.0
+    build:
+      context: .
+      dockerfile: docker/python.Dockerfile
+    command: ["python", "-m", "uvicorn", "research_env.web:app", "--host", "0.0.0.0", "--port", "8000"]
+    user: "10001:10001"
+    ports:
+      - "127.0.0.1:${RESEARCH_PORT:-8000}:8000"
+    volumes:
+      - control:/data/control
+      - artifacts:/data/artifacts:ro
+      - staging:/data/staging
+      - secrets:/data/secrets
+      - ./local/inspections:/data/inspections:ro
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    init: true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz')"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+  worker:
+    labels:
+      org.bachelorarbeit.component: worker
+    environment:
+      RESEARCH_COMPONENT: worker
+      RESEARCH_INSPECTIONS_DIR: /data/inspections
+      RESEARCH_INSPECTIONS_HOST: "${RESEARCH_INSPECTIONS_HOST:-}"
+      OPENROUTER_API_KEY: "${OPENROUTER_API_KEY:-}"
+    user: "10001:10001"
+    group_add: ["${RESEARCH_DOCKER_SOCKET_GID:-0}"]
+    image: research-env-python:0.1.0
+    build:
+      context: .
+      dockerfile: docker/python.Dockerfile
+    command: ["python", "-m", "research_env.worker"]
+    depends_on:
+      web:
+        condition: service_healthy
+    volumes:
+      - control:/data/control
+      - artifacts:/data/artifacts
+      - checkpoints:/data/checkpoints
+      - staging:/data/staging
+      - secrets:/data/secrets:ro
+      - ./local/inspections:/data/inspections
+      - /var/run/docker.sock:/var/run/docker.sock
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    init: true
+    restart: unless-stopped
+volumes:
+  control:
+  artifacts:
+  checkpoints:
+  staging:
+  secrets:

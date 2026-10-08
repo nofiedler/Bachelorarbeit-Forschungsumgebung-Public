@@ -1,0 +1,69 @@
+........................................................................ [ 10%]
+........................................................................ [ 21%]
+........................................................................ [ 32%]
+........................................................................ [ 43%]
+........................................................................ [ 54%]
+........................................................................ [ 65%]
+........................................................................ [ 76%]
+.................................F.F.................................... [ 87%]
+........................................................................ [ 98%]
+........                                                                 [100%]
+=================================== FAILURES ===================================
+_____ test_read_only_browser_routes_do_not_mutate_database_or_expose_keys ______
+
+settings = Settings(control=PosixPath('/tmp/pytest/test_read_only_browser_routes_0/control'), artifacts=PosixPath('/tmp/pytest/te...st_read_only_browser_routes_0/staging'), migration_failed=False, secrets=None, inspections=None, inspections_host=None)
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0xffff982bef90>
+
+    def test_read_only_browser_routes_do_not_mutate_database_or_expose_keys(settings, monkeypatch):
+        monkeypatch.setenv("OPENROUTER_API_KEY", "M1-SYNTHETIC-SECRET-DO-NOT-DISPLAY")
+        before = hashlib.sha256(settings.database.read_bytes()).hexdigest()
+        with TestClient(create_app(settings)) as client:
+            for route in ("/", "/status", "/api/status", "/healthz", "/static/vendor/htmx.min.js"):
+                response = client.get(route)
+>               assert response.status_code == 200
+E               assert 404 == 200
+E                +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_runtime.py:87: AssertionError
+_________________ test_local_assets_and_image_catalogue_match __________________
+
+    def test_local_assets_and_image_catalogue_match():
+        root = Path(__file__).parents[1]
+        package = root / "src/research_env"
+        assert (package / "images.lock.json").read_bytes() == (root / "docker/images.lock.json").read_bytes()
+        images = json.loads((package / "images.lock.json").read_text())["images"]
+        for image in images.values():
+            assert "@sha256:" in image["reference"]
+            assert set(image["platforms"]) == {"arm64", "amd64"}
+        assets = json.loads((root / "docker/assets.lock.json").read_text())
+        for relative, digest in assets["files"].items():
+>           assert hashlib.sha256((root / relative).read_bytes()).hexdigest() == digest
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_runtime.py:119: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/local/lib/python3.13/pathlib/_abc.py:625: in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/src/research_env/static/vendor/htmx.min.js')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/src/research_env/static/vendor/htmx.min.js'
+
+/usr/local/lib/python3.13/pathlib/_local.py:537: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_runtime.py::test_read_only_browser_routes_do_not_mutate_database_or_expose_keys
+FAILED tests/test_runtime.py::test_local_assets_and_image_catalogue_match - F...
+2 failed, 654 passed in 373.69s (0:06:13)

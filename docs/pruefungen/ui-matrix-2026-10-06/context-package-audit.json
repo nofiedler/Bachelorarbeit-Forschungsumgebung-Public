@@ -1,0 +1,47 @@
+[
+  {
+    "module": "BF",
+    "shared_files": 9,
+    "additional_files": [
+      "integration/excerpts.md",
+      "integration/mapping.md"
+    ],
+    "k0_bytes": 67402,
+    "k1_bytes": 73337,
+    "additional_bytes": 5935,
+    "additional_characters": 5880,
+    "source_excerpts_exact": 15,
+    "tokens": "unbestimmt: Modell A/Tokenizer nicht gewählt; keine Schätzung vorgenommen",
+    "human_review": "open"
+  },
+  {
+    "module": "SQL",
+    "shared_files": 10,
+    "additional_files": [
+      "integration/excerpts.md",
+      "integration/mapping.md"
+    ],
+    "k0_bytes": 68165,
+    "k1_bytes": 74173,
+    "additional_bytes": 6008,
+    "additional_characters": 5949,
+    "source_excerpts_exact": 18,
+    "tokens": "unbestimmt: Modell A/Tokenizer nicht gewählt; keine Schätzung vorgenommen",
+    "human_review": "open"
+  },
+  {
+    "module": "UP",
+    "shared_files": 9,
+    "additional_files": [
+      "integration/excerpts.md",
+      "integration/mapping.md"
+    ],
+    "k0_bytes": 66885,
+    "k1_bytes": 73008,
+    "additional_bytes": 6123,
+    "additional_characters": 6065,
+    "source_excerpts_exact": 17,
+    "tokens": "unbestimmt: Modell A/Tokenizer nicht gewählt; keine Schätzung vorgenommen",
+    "human_review": "open"
+  }
+]

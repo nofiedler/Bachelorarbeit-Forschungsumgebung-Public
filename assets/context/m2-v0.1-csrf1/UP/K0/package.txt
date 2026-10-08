@@ -1,0 +1,827 @@
+
+===== LICENSE-DVWA.txt =====
+                    GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+
+ Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+                            Preamble
+
+  The GNU General Public License is a free, copyleft license for
+software and other kinds of works.
+
+  The licenses for most software and other practical works are designed
+to take away your freedom to share and change the works.  By contrast,
+the GNU General Public License is intended to guarantee your freedom to
+share and change all versions of a program--to make sure it remains free
+software for all its users.  We, the Free Software Foundation, use the
+GNU General Public License for most of our software; it applies also to
+any other work released this way by its authors.  You can apply it to
+your programs, too.
+
+  When we speak of free software, we are referring to freedom, not
+price.  Our General Public Licenses are designed to make sure that you
+have the freedom to distribute copies of free software (and charge for
+them if you wish), that you receive source code or can get it if you
+want it, that you can change the software or use pieces of it in new
+free programs, and that you know you can do these things.
+
+  To protect your rights, we need to prevent others from denying you
+these rights or asking you to surrender the rights.  Therefore, you have
+certain responsibilities if you distribute copies of the software, or if
+you modify it: responsibilities to respect the freedom of others.
+
+  For example, if you distribute copies of such a program, whether
+gratis or for a fee, you must pass on to the recipients the same
+freedoms that you received.  You must make sure that they, too, receive
+or can get the source code.  And you must show them these terms so they
+know their rights.
+
+  Developers that use the GNU GPL protect your rights with two steps:
+(1) assert copyright on the software, and (2) offer you this License
+giving you legal permission to copy, distribute and/or modify it.
+
+  For the developers' and authors' protection, the GPL clearly explains
+that there is no warranty for this free software.  For both users' and
+authors' sake, the GPL requires that modified versions be marked as
+changed, so that their problems will not be attributed erroneously to
+authors of previous versions.
+
+  Some devices are designed to deny users access to install or run
+modified versions of the software inside them, although the manufacturer
+can do so.  This is fundamentally incompatible with the aim of
+protecting users' freedom to change the software.  The systematic
+pattern of such abuse occurs in the area of products for individuals to
+use, which is precisely where it is most unacceptable.  Therefore, we
+have designed this version of the GPL to prohibit the practice for those
+products.  If such problems arise substantially in other domains, we
+stand ready to extend this provision to those domains in future versions
+of the GPL, as needed to protect the freedom of users.
+
+  Finally, every program is threatened constantly by software patents.
+States should not allow patents to restrict development and use of
+software on general-purpose computers, but in those that do, we wish to
+avoid the special danger that patents applied to a free program could
+make it effectively proprietary.  To prevent this, the GPL assures that
+patents cannot be used to render the program non-free.
+
+  The precise terms and conditions for copying, distribution and
+modification follow.
+
+                       TERMS AND CONDITIONS
+
+  0. Definitions.
+
+  "This License" refers to version 3 of the GNU General Public License.
+
+  "Copyright" also means copyright-like laws that apply to other kinds of
+works, such as semiconductor masks.
+
+  "The Program" refers to any copyrightable work licensed under this
+License.  Each licensee is addressed as "you".  "Licensees" and
+"recipients" may be individuals or organizations.
+
+  To "modify" a work means to copy from or adapt all or part of the work
+in a fashion requiring copyright permission, other than the making of an
+exact copy.  The resulting work is called a "modified version" of the
+earlier work or a work "based on" the earlier work.
+
+  A "covered work" means either the unmodified Program or a work based
+on the Program.
+
+  To "propagate" a work means to do anything with it that, without
+permission, would make you directly or secondarily liable for
+infringement under applicable copyright law, except executing it on a
+computer or modifying a private copy.  Propagation includes copying,
+distribution (with or without modification), making available to the
+public, and in some countries other activities as well.
+
+  To "convey" a work means any kind of propagation that enables other
+parties to make or receive copies.  Mere interaction with a user through
+a computer network, with no transfer of a copy, is not conveying.
+
+  An interactive user interface displays "Appropriate Legal Notices"
+to the extent that it includes a convenient and prominently visible
+feature that (1) displays an appropriate copyright notice, and (2)
+tells the user that there is no warranty for the work (except to the
+extent that warranties are provided), that licensees may convey the
+work under this License, and how to view a copy of this License.  If
+the interface presents a list of user commands or options, such as a
+menu, a prominent item in the list meets this criterion.
+
+  1. Source Code.
+
+  The "source code" for a work means the preferred form of the work
+for making modifications to it.  "Object code" means any non-source
+form of a work.
+
+  A "Standard Interface" means an interface that either is an official
+standard defined by a recognized standards body, or, in the case of
+interfaces specified for a particular programming language, one that
+is widely used among developers working in that language.
+
+  The "System Libraries" of an executable work include anything, other
+than the work as a whole, that (a) is included in the normal form of
+packaging a Major Component, but which is not part of that Major
+Component, and (b) serves only to enable use of the work with that
+Major Component, or to implement a Standard Interface for which an
+implementation is available to the public in source code form.  A
+"Major Component", in this context, means a major essential component
+(kernel, window system, and so on) of the specific operating system
+(if any) on which the executable work runs, or a compiler used to
+produce the work, or an object code interpreter used to run it.
+
+  The "Corresponding Source" for a work in object code form means all
+the source code needed to generate, install, and (for an executable
+work) run the object code and to modify the work, including scripts to
+control those activities.  However, it does not include the work's
+System Libraries, or general-purpose tools or generally available free
+programs which are used unmodified in performing those activities but
+which are not part of the work.  For example, Corresponding Source
+includes interface definition files associated with source files for
+the work, and the source code for shared libraries and dynamically
+linked subprograms that the work is specifically designed to require,
+such as by intimate data communication or control flow between those
+subprograms and other parts of the work.
+
+  The Corresponding Source need not include anything that users
+can regenerate automatically from other parts of the Corresponding
+Source.
+
+  The Corresponding Source for a work in source code form is that
+same work.
+
+  2. Basic Permissions.
+
+  All rights granted under this License are granted for the term of
+copyright on the Program, and are irrevocable provided the stated
+conditions are met.  This License explicitly affirms your unlimited
+permission to run the unmodified Program.  The output from running a
+covered work is covered by this License only if the output, given its
+content, constitutes a covered work.  This License acknowledges your
+rights of fair use or other equivalent, as provided by copyright law.
+
+  You may make, run and propagate covered works that you do not
+convey, without conditions so long as your license otherwise remains
+in force.  You may convey covered works to others for the sole purpose
+of having them make modifications exclusively for you, or provide you
+with facilities for running those works, provided that you comply with
+the terms of this License in conveying all material for which you do
+not control copyright.  Those thus making or running the covered works
+for you must do so exclusively on your behalf, under your direction
+and control, on terms that prohibit them from making any copies of
+your copyrighted material outside their relationship with you.
+
+  Conveying under any other circumstances is permitted solely under
+the conditions stated below.  Sublicensing is not allowed; section 10
+makes it unnecessary.
+
+  3. Protecting Users' Legal Rights From Anti-Circumvention Law.
+
+  No covered work shall be deemed part of an effective technological
+measure under any applicable law fulfilling obligations under article
+11 of the WIPO copyright treaty adopted on 20 December 1996, or
+similar laws prohibiting or restricting circumvention of such
+measures.
+
+  When you convey a covered work, you waive any legal power to forbid
+circumvention of technological measures to the extent such circumvention
+is effected by exercising rights under this License with respect to
+the covered work, and you disclaim any intention to limit operation or
+modification of the work as a means of enforcing, against the work's
+users, your or third parties' legal rights to forbid circumvention of
+technological measures.
+
+  4. Conveying Verbatim Copies.
+
+  You may convey verbatim copies of the Program's source code as you
+receive it, in any medium, provided that you conspicuously and
+appropriately publish on each copy an appropriate copyright notice;
+keep intact all notices stating that this License and any
+non-permissive terms added in accord with section 7 apply to the code;
+keep intact all notices of the absence of any warranty; and give all
+recipients a copy of this License along with the Program.
+
+  You may charge any price or no price for each copy that you convey,
+and you may offer support or warranty protection for a fee.
+
+  5. Conveying Modified Source Versions.
+
+  You may convey a work based on the Program, or the modifications to
+produce it from the Program, in the form of source code under the
+terms of section 4, provided that you also meet all of these conditions:
+
+    a) The work must carry prominent notices stating that you modified
+    it, and giving a relevant date.
+
+    b) The work must carry prominent notices stating that it is
+    released under this License and any conditions added under section
+    7.  This requirement modifies the requirement in section 4 to
+    "keep intact all notices".
+
+    c) You must license the entire work, as a whole, under this
+    License to anyone who comes into possession of a copy.  This
+    License will therefore apply, along with any applicable section 7
+    additional terms, to the whole of the work, and all its parts,
+    regardless of how they are packaged.  This License gives no
+    permission to license the work in any other way, but it does not
+    invalidate such permission if you have separately received it.
+
+    d) If the work has interactive user interfaces, each must display
+    Appropriate Legal Notices; however, if the Program has interactive
+    interfaces that do not display Appropriate Legal Notices, your
+    work need not make them do so.
+
+  A compilation of a covered work with other separate and independent
+works, which are not by their nature extensions of the covered work,
+and which are not combined with it such as to form a larger program,
+in or on a volume of a storage or distribution medium, is called an
+"aggregate" if the compilation and its resulting copyright are not
+used to limit the access or legal rights of the compilation's users
+beyond what the individual works permit.  Inclusion of a covered work
+in an aggregate does not cause this License to apply to the other
+parts of the aggregate.
+
+  6. Conveying Non-Source Forms.
+
+  You may convey a covered work in object code form under the terms
+of sections 4 and 5, provided that you also convey the
+machine-readable Corresponding Source under the terms of this License,
+in one of these ways:
+
+    a) Convey the object code in, or embodied in, a physical product
+    (including a physical distribution medium), accompanied by the
+    Corresponding Source fixed on a durable physical medium
+    customarily used for software interchange.
+
+    b) Convey the object code in, or embodied in, a physical product
+    (including a physical distribution medium), accompanied by a
+    written offer, valid for at least three years and valid for as
+    long as you offer spare parts or customer support for that product
+    model, to give anyone who possesses the object code either (1) a
+    copy of the Corresponding Source for all the software in the
+    product that is covered by this License, on a durable physical
+    medium customarily used for software interchange, for a price no
+    more than your reasonable cost of physically performing this
+    conveying of source, or (2) access to copy the
+    Corresponding Source from a network server at no charge.
+
+    c) Convey individual copies of the object code with a copy of the
+    written offer to provide the Corresponding Source.  This
+    alternative is allowed only occasionally and noncommercially, and
+    only if you received the object code with such an offer, in accord
+    with subsection 6b.
+
+    d) Convey the object code by offering access from a designated
+    place (gratis or for a charge), and offer equivalent access to the
+    Corresponding Source in the same way through the same place at no
+    further charge.  You need not require recipients to copy the
+    Corresponding Source along with the object code.  If the place to
+    copy the object code is a network server, the Corresponding Source
+    may be on a different server (operated by you or a third party)
+    that supports equivalent copying facilities, provided you maintain
+    clear directions next to the object code saying where to find the
+    Corresponding Source.  Regardless of what server hosts the
+    Corresponding Source, you remain obligated to ensure that it is
+    available for as long as needed to satisfy these requirements.
+
+    e) Convey the object code using peer-to-peer transmission, provided
+    you inform other peers where the object code and Corresponding
+    Source of the work are being offered to the general public at no
+    charge under subsection 6d.
+
+  A separable portion of the object code, whose source code is excluded
+from the Corresponding Source as a System Library, need not be
+included in conveying the object code work.
+
+  A "User Product" is either (1) a "consumer product", which means any
+tangible personal property which is normally used for personal, family,
+or household purposes, or (2) anything designed or sold for incorporation
+into a dwelling.  In determining whether a product is a consumer product,
+doubtful cases shall be resolved in favor of coverage.  For a particular
+product received by a particular user, "normally used" refers to a
+typical or common use of that class of product, regardless of the status
+of the particular user or of the way in which the particular user
+actually uses, or expects or is expected to use, the product.  A product
+is a consumer product regardless of whether the product has substantial
+commercial, industrial or non-consumer uses, unless such uses represent
+the only significant mode of use of the product.
+
+  "Installation Information" for a User Product means any methods,
+procedures, authorization keys, or other information required to install
+and execute modified versions of a covered work in that User Product from
+a modified version of its Corresponding Source.  The information must
+suffice to ensure that the continued functioning of the modified object
+code is in no case prevented or interfered with solely because
+modification has been made.
+
+  If you convey an object code work under this section in, or with, or
+specifically for use in, a User Product, and the conveying occurs as
+part of a transaction in which the right of possession and use of the
+User Product is transferred to the recipient in perpetuity or for a
+fixed term (regardless of how the transaction is characterized), the
+Corresponding Source conveyed under this section must be accompanied
+by the Installation Information.  But this requirement does not apply
+if neither you nor any third party retains the ability to install
+modified object code on the User Product (for example, the work has
+been installed in ROM).
+
+  The requirement to provide Installation Information does not include a
+requirement to continue to provide support service, warranty, or updates
+for a work that has been modified or installed by the recipient, or for
+the User Product in which it has been modified or installed.  Access to a
+network may be denied when the modification itself materially and
+adversely affects the operation of the network or violates the rules and
+protocols for communication across the network.
+
+  Corresponding Source conveyed, and Installation Information provided,
+in accord with this section must be in a format that is publicly
+documented (and with an implementation available to the public in
+source code form), and must require no special password or key for
+unpacking, reading or copying.
+
+  7. Additional Terms.
+
+  "Additional permissions" are terms that supplement the terms of this
+License by making exceptions from one or more of its conditions.
+Additional permissions that are applicable to the entire Program shall
+be treated as though they were included in this License, to the extent
+that they are valid under applicable law.  If additional permissions
+apply only to part of the Program, that part may be used separately
+under those permissions, but the entire Program remains governed by
+this License without regard to the additional permissions.
+
+  When you convey a copy of a covered work, you may at your option
+remove any additional permissions from that copy, or from any part of
+it.  (Additional permissions may be written to require their own
+removal in certain cases when you modify the work.)  You may place
+additional permissions on material, added by you to a covered work,
+for which you have or can give appropriate copyright permission.
+
+  Notwithstanding any other provision of this License, for material you
+add to a covered work, you may (if authorized by the copyright holders of
+that material) supplement the terms of this License with terms:
+
+    a) Disclaiming warranty or limiting liability differently from the
+    terms of sections 15 and 16 of this License; or
+
+    b) Requiring preservation of specified reasonable legal notices or
+    author attributions in that material or in the Appropriate Legal
+    Notices displayed by works containing it; or
+
+    c) Prohibiting misrepresentation of the origin of that material, or
+    requiring that modified versions of such material be marked in
+    reasonable ways as different from the original version; or
+
+    d) Limiting the use for publicity purposes of names of licensors or
+    authors of the material; or
+
+    e) Declining to grant rights under trademark law for use of some
+    trade names, trademarks, or service marks; or
+
+    f) Requiring indemnification of licensors and authors of that
+    material by anyone who conveys the material (or modified versions of
+    it) with contractual assumptions of liability to the recipient, for
+    any liability that these contractual assumptions directly impose on
+    those licensors and authors.
+
+  All other non-permissive additional terms are considered "further
+restrictions" within the meaning of section 10.  If the Program as you
+received it, or any part of it, contains a notice stating that it is
+governed by this License along with a term that is a further
+restriction, you may remove that term.  If a license document contains
+a further restriction but permits relicensing or conveying under this
+License, you may add to a covered work material governed by the terms
+of that license document, provided that the further restriction does
+not survive such relicensing or conveying.
+
+  If you add terms to a covered work in accord with this section, you
+must place, in the relevant source files, a statement of the
+additional terms that apply to those files, or a notice indicating
+where to find the applicable terms.
+
+  Additional terms, permissive or non-permissive, may be stated in the
+form of a separately written license, or stated as exceptions;
+the above requirements apply either way.
+
+  8. Termination.
+
+  You may not propagate or modify a covered work except as expressly
+provided under this License.  Any attempt otherwise to propagate or
+modify it is void, and will automatically terminate your rights under
+this License (including any patent licenses granted under the third
+paragraph of section 11).
+
+  However, if you cease all violation of this License, then your
+license from a particular copyright holder is reinstated (a)
+provisionally, unless and until the copyright holder explicitly and
+finally terminates your license, and (b) permanently, if the copyright
+holder fails to notify you of the violation by some reasonable means
+prior to 60 days after the cessation.
+
+  Moreover, your license from a particular copyright holder is
+reinstated permanently if the copyright holder notifies you of the
+violation by some reasonable means, this is the first time you have
+received notice of violation of this License (for any work) from that
+copyright holder, and you cure the violation prior to 30 days after
+your receipt of the notice.
+
+  Termination of your rights under this section does not terminate the
+licenses of parties who have received copies or rights from you under
+this License.  If your rights have been terminated and not permanently
+reinstated, you do not qualify to receive new licenses for the same
+material under section 10.
+
+  9. Acceptance Not Required for Having Copies.
+
+  You are not required to accept this License in order to receive or
+run a copy of the Program.  Ancillary propagation of a covered work
+occurring solely as a consequence of using peer-to-peer transmission
+to receive a copy likewise does not require acceptance.  However,
+nothing other than this License grants you permission to propagate or
+modify any covered work.  These actions infringe copyright if you do
+not accept this License.  Therefore, by modifying or propagating a
+covered work, you indicate your acceptance of this License to do so.
+
+  10. Automatic Licensing of Downstream Recipients.
+
+  Each time you convey a covered work, the recipient automatically
+receives a license from the original licensors, to run, modify and
+propagate that work, subject to this License.  You are not responsible
+for enforcing compliance by third parties with this License.
+
+  An "entity transaction" is a transaction transferring control of an
+organization, or substantially all assets of one, or subdividing an
+organization, or merging organizations.  If propagation of a covered
+work results from an entity transaction, each party to that
+transaction who receives a copy of the work also receives whatever
+licenses to the work the party's predecessor in interest had or could
+give under the previous paragraph, plus a right to possession of the
+Corresponding Source of the work from the predecessor in interest, if
+the predecessor has it or can get it with reasonable efforts.
+
+  You may not impose any further restrictions on the exercise of the
+rights granted or affirmed under this License.  For example, you may
+not impose a license fee, royalty, or other charge for exercise of
+rights granted under this License, and you may not initiate litigation
+(including a cross-claim or counterclaim in a lawsuit) alleging that
+any patent claim is infringed by making, using, selling, offering for
+sale, or importing the Program or any portion of it.
+
+  11. Patents.
+
+  A "contributor" is a copyright holder who authorizes use under this
+License of the Program or a work on which the Program is based.  The
+work thus licensed is called the contributor's "contributor version".
+
+  A contributor's "essential patent claims" are all patent claims
+owned or controlled by the contributor, whether already acquired or
+hereafter acquired, that would be infringed by some manner, permitted
+by this License, of making, using, or selling its contributor version,
+but do not include claims that would be infringed only as a
+consequence of further modification of the contributor version.  For
+purposes of this definition, "control" includes the right to grant
+patent sublicenses in a manner consistent with the requirements of
+this License.
+
+  Each contributor grants you a non-exclusive, worldwide, royalty-free
+patent license under the contributor's essential patent claims, to
+make, use, sell, offer for sale, import and otherwise run, modify and
+propagate the contents of its contributor version.
+
+  In the following three paragraphs, a "patent license" is any express
+agreement or commitment, however denominated, not to enforce a patent
+(such as an express permission to practice a patent or covenant not to
+sue for patent infringement).  To "grant" such a patent license to a
+party means to make such an agreement or commitment not to enforce a
+patent against the party.
+
+  If you convey a covered work, knowingly relying on a patent license,
+and the Corresponding Source of the work is not available for anyone
+to copy, free of charge and under the terms of this License, through a
+publicly available network server or other readily accessible means,
+then you must either (1) cause the Corresponding Source to be so
+available, or (2) arrange to deprive yourself of the benefit of the
+patent license for this particular work, or (3) arrange, in a manner
+consistent with the requirements of this License, to extend the patent
+license to downstream recipients.  "Knowingly relying" means you have
+actual knowledge that, but for the patent license, your conveying the
+covered work in a country, or your recipient's use of the covered work
+in a country, would infringe one or more identifiable patents in that
+country that you have reason to believe are valid.
+
+  If, pursuant to or in connection with a single transaction or
+arrangement, you convey, or propagate by procuring conveyance of, a
+covered work, and grant a patent license to some of the parties
+receiving the covered work authorizing them to use, propagate, modify
+or convey a specific copy of the covered work, then the patent license
+you grant is automatically extended to all recipients of the covered
+work and works based on it.
+
+  A patent license is "discriminatory" if it does not include within
+the scope of its coverage, prohibits the exercise of, or is
+conditioned on the non-exercise of one or more of the rights that are
+specifically granted under this License.  You may not convey a covered
+work if you are a party to an arrangement with a third party that is
+in the business of distributing software, under which you make payment
+to the third party based on the extent of your activity of conveying
+the work, and under which the third party grants, to any of the
+parties who would receive the covered work from you, a discriminatory
+patent license (a) in connection with copies of the covered work
+conveyed by you (or copies made from those copies), or (b) primarily
+for and in connection with specific products or compilations that
+contain the covered work, unless you entered into that arrangement,
+or that patent license was granted, prior to 28 March 2007.
+
+  Nothing in this License shall be construed as excluding or limiting
+any implied license or other defenses to infringement that may
+otherwise be available to you under applicable patent law.
+
+  12. No Surrender of Others' Freedom.
+
+  If conditions are imposed on you (whether by court order, agreement or
+otherwise) that contradict the conditions of this License, they do not
+excuse you from the conditions of this License.  If you cannot convey a
+covered work so as to satisfy simultaneously your obligations under this
+License and any other pertinent obligations, then as a consequence you may
+not convey it at all.  For example, if you agree to terms that obligate you
+to collect a royalty for further conveying from those to whom you convey
+the Program, the only way you could satisfy both those terms and this
+License would be to refrain entirely from conveying the Program.
+
+  13. Use with the GNU Affero General Public License.
+
+  Notwithstanding any other provision of this License, you have
+permission to link or combine any covered work with a work licensed
+under version 3 of the GNU Affero General Public License into a single
+combined work, and to convey the resulting work.  The terms of this
+License will continue to apply to the part which is the covered work,
+but the special requirements of the GNU Affero General Public License,
+section 13, concerning interaction through a network will apply to the
+combination as such.
+
+  14. Revised Versions of this License.
+
+  The Free Software Foundation may publish revised and/or new versions of
+the GNU General Public License from time to time.  Such new versions will
+be similar in spirit to the present version, but may differ in detail to
+address new problems or concerns.
+
+  Each version is given a distinguishing version number.  If the
+Program specifies that a certain numbered version of the GNU General
+Public License "or any later version" applies to it, you have the
+option of following the terms and conditions either of that numbered
+version or of any later version published by the Free Software
+Foundation.  If the Program does not specify a version number of the
+GNU General Public License, you may choose any version ever published
+by the Free Software Foundation.
+
+  If the Program specifies that a proxy can decide which future
+versions of the GNU General Public License can be used, that proxy's
+public statement of acceptance of a version permanently authorizes you
+to choose that version for the Program.
+
+  Later license versions may give you additional or different
+permissions.  However, no additional obligations are imposed on any
+author or copyright holder as a result of your choosing to follow a
+later version.
+
+  15. Disclaimer of Warranty.
+
+  THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
+APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
+HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY
+OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
+IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF
+ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+  16. Limitation of Liability.
+
+  IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS
+THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY
+GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE
+USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF
+DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD
+PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),
+EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES.
+
+  17. Interpretation of Sections 15 and 16.
+
+  If the disclaimer of warranty and limitation of liability provided
+above cannot be given local legal effect according to their terms,
+reviewing courts shall apply local law that most closely approximates
+an absolute waiver of all civil liability in connection with the
+Program, unless a warranty or assumption of liability accompanies a
+copy of the Program in return for a fee.
+
+                     END OF TERMS AND CONDITIONS
+
+            
+===== contract/00-csrf-revision.md =====
+# Öffentliche Auslegungsrevision M2-v0.1-CSRF1
+
+Stand 05.10.2026. Diese begrenzte Präzisierung wurde ausdrücklich menschlich bestätigt: auf die Frage nach der folgenden Formulierung antwortete der Nutzer „ja“. Die Entscheidung erteilt keine Pilot-, Studien-, Kosten- oder sonstige Fachfreigabe. Die ursprüngliche Vertrags- und Rubrikfassung M2-v0.1 / RT-v0.1 bleibt unverändert erhalten; alle übrigen offenen Fachprüfungen bleiben offen.
+
+Für POST-Anfragen verwendet der Prüfer den aktuellen gültigen CSRF-Token der authentifizierten Gerüstsession. Das Uploadformular muss diesen als verborgenes `_token` bereitstellen; dies wird im Formulartest geprüft. Die vorgegebenen Testsequenzen bleiben unverändert.
+
+Diese Regel grenzt ausschließlich den Satz in M2-v0.1, `vertrag.md` §2 (Zeile39), „Der Prüfer behält Cookiejar und Session innerhalb eines Falls, übernimmt den aktuellen CSRF-Token aus dem UP-Formular und sendet ihn beim POST“, ein: Cookiejar und Session bleiben erhalten; für den POST stammt der Token aus der aktuellen authentifizierten Gerüstsession. Ein zusätzlicher Aufruf des UP-Formulars ist dafür nicht erforderlich. Der gültige versteckte Formulartoken bleibt eine eigenständige R1-Anforderung. Authentifizierung und CSRF-Middleware bleiben aktiv, Kandidaten dürfen sie weiterhin nicht abschalten. Fehlende/abgelaufene Gerüstsession und ungültige Prüfertoken bleiben technische Voraussetzungslücken. Ein falscher Formulartoken ist unabhängig davon ein Formulardefekt.
+
+Keine anderen Requestcases, Fixtures, Referenzimplementierungen, Sollurteile, Domänen, R-/T-Kriterien oder Rubrikgewichte ändern sich. Reset zwischen Fällen und Zustandserhalt innerhalb R6 bleiben unverändert. Bestehende Messungen erhalten keine nachträgliche neue Vertragszuordnung; neue Messkonfigurationen binden Originalvertrag und diese Revision ausdrücklich vor neuen Outputs.
+
+In den zugeordneten neuen K0-/K1-Paketen gilt dieses Addendum zusammen mit den vier bytegleichen Originalvertragsdateien. Die ursprüngliche vierteilige Allowlist in deren README bezeichnet die Originalfassung; für die neue Version gehört zusätzlich genau dieses Addendum zum gemeinsamen öffentlichen Vertragsinput. Links erweitern den Rolleninput weiterhin nicht automatisch.
+
+===== contract/README.md =====
+# Öffentlicher Modulvertrag M2-v0.1
+
+Stand 03.10.2026, **technischer Entwurf, menschliche Fachprüfung offen**. Vertragsversion `M2-v0.1`, Rubrikversion `RT-v0.1`. Dieser Ordner enthält ausschließlich für K0 und K1 identische öffentliche Regeln. „Öffentlich“ bezeichnet erlaubten Rolleninput, keine Repositoryveröffentlichung. Der Vertrag ist ohne Vaultzugriff verständlich. Er ist vor Evaluatorimplementierung und vor Modelloutputs festgelegt; ausführbare Referenzen, technische Instrumentvalidierung und Freigabe werden damit nicht behauptet.
+
+Verbindlicher Umfang dieses Entwurfs: [Modul- und Gerüstvertrag](vertrag.md), [R-/T-Rubrik](rubrik.md), [vollständiges users-Schema](users.sql). Diese vier Dateien bilden die **abschließende Paket-Allowlist** für den öffentlichen Vertrag; weder übergeordnete Ordner noch verlinkte Originalquellen automatisch als Rolleninput einlesen. Konkrete externe Fälle, Datensätze, Dateien, Sequenzen, Referenzentwürfe und ihre Oraclewerte gehören ausschließlich in den getrennten Evaluatorbereich. Öffentliche Entwicklungsfixtures für interne Tests/Demo werden gesondert erstellt, nicht aus diesem Holdout abgeleitet. Menschliches Holdoutwissen darf ebenfalls nicht zur Optimierung von Rolleninputs, Modellen oder Kandidaten dienen.
+
+Technische Weiterarbeit an Gerüst und Evaluator darf gegen diese bezeichnete Entwurfsversion beginnen. Die fachliche Detailabnahme (Domänen, Gleichgewichtung, T-Kriterien, Marker, Referenzen), Name der prüfenden Person und Freigabedatum sind **offen**. Modellpiloten bleiben bis zur vollständigen Instrument-/Isolations-/Mockvalidierung und dokumentierten menschlichen Freigabe gesperrt. Eine spätere Fachänderung erhält eine neue Vertrags-/Rubrikversion und neue betroffene Nachweise; keine Anpassung an beobachtete Modelloutputs.
+
+Die Vorlage/Checkliste muss Version, technische Nachweise und menschliche Entscheidung getrennt führen (N03/N05). Kein synthetisches Formularurteil ist eine menschliche Prüfung. Quellen: [Issue #3](https://github.com/nofiedler/Bachelorarbeit-Forschungsumgebung/issues/3), [N03](../../planung/03-Nutzungsablauf.md#n03), [N05](../../planung/03-Nutzungsablauf.md#n05), [Plan §§5.1, 7.1–7.2](../../planung/02-Technischer-Implementierungsplan.md).
+
+===== contract/rubrik.md =====
+# R-/T-Rubrik RT-v0.1
+
+**Entwurf, menschliche Fachprüfung offen; gehört zu M2-v0.1.** Grundlage: Operationalisierung §§2.3, 2.4, 6.1 ([Original](https://github.com/nofiedler/Bachelorarbeit-Dokumentation/blob/42cf379b5588e7eff939bbf063567836bb3d4cb3/005-Forschungsablauf/01-Operationalisierung-und-Auswertungsplan.md)), konkretisiert durch [Issue #3](https://github.com/nofiedler/Bachelorarbeit-Forschungsumgebung/issues/3) und [Plan §7.2](../../planung/02-Technischer-Implementierungsplan.md#72-funktionale-prüfung-und-laravel-struktur). HTTP-, DOM-, Daten- und Speicherregeln stehen vollständig im [Vertrag](vertrag.md). Folgende Mindestabdeckung ist öffentlicher Rolleninput; konkrete Fälle und Sollwerte nicht.
+
+## 1. R1–R6 und Mindestabdeckung
+
+| Kategorie | BF | SQL | UP |
+| --- | --- | --- | --- |
+| R1 | Formular `username`, `password`, `Login`, GET | Formular `id`, `Submit`, GET | Formular `uploaded`, `Upload`, POST-Multipart/CSRF |
+| R2 | Mindestens zwei getrennte gültige Paare → 200/Erfolg und zugehöriger Avatar | Mindestens zwei getrennte vorhandene IDs → 200/zugehöriger Vor-/Nachname | Mindestens zwei getrennte gültige Bilder → 200/gespeicherte Datei und Erfolg |
+| R3 | Sowohl falsches nicht leeres Passwort als auch unbekannte Kennung → 200/negativ, kein Erfolg/Avatar | Mindestens zwei unbekannte gültige IDs → 200/kein Datensatz | Mindestens ein wirksam kontrollierter Schreibfehler → 500/behandelter Fehler, keine neue/teilweise Datei, alte unverändert |
+| R4 | Jedes fehlende/leere Pflichtfeld einzeln und beide gemeinsam → 422/Eingabefehler | Fehlende und leere ID → 422/Eingabefehler | Fehlender Dateipart und leerer File-Part → 422/Eingabefehler |
+| R5 | Mindestens zwei verschiedene Benutzer korrekt zugeordnet; gesamte DB unverändert | Mindestens zwei verschiedene IDs korrekt zugeordnet; gesamte DB unverändert | Mindestens zwei verschiedene Bildinhalte bytegleich; Originalname/Pfad korrekt; Ausgangsbestand unverändert |
+| R6 | Eine Folge positiv → negativ → anderer positiver Vorgang ohne Ergebnisreste | Eine Folge positiv → negativ → anderer positiver Vorgang ohne Ergebnisreste | Mindestens drei verschiedene gültige Namen; zuvor gespeicherte Dateien bleiben bytegleich |
+
+R4 verlangt bei vorhandenem Aktionsfeld weder Erfolg noch Datensatz/Modulavatar/Pfad und keine Änderung von DB/Uploadinventar. Keine Aktion bedeutet Formularanzeige. Datenintegrität gilt zusätzlich **nach jeder Anfrage** aller Kategorien. R5/R6 sind eigene Fälle mit eigenen Zwecken, obwohl sie Teilfunktionen aus R2/R3 wiederverwenden. Zwischen Fällen wird DB, Uploadbestand, Session und Cache zurückgesetzt; innerhalb einer Sequenz bleiben sie erhalten. Der vertrauenswürdige Prüfer protokolliert Reset und R3-Rechtekontrolle. Die R3-Präparation wird nach dem Fall zurückgesetzt. Eine technische Messlücke kann die Kategorie nicht allein scheitern lassen.
+
+Jeder externe funktionale Fall besitzt eine feste ID, genau eine R-Zuordnung und eine oder mehrere feste Assertions. Eine Sequenz ist ein Fall mit mehreren Schritten, keine zusätzliche unabhängige Beobachtung. Jede Kategorie hat Gewicht `1/6`; Fall-/Assertionsanzahl verändert das nicht. Alle einer Kategorie zugeordneten Fälle/Assertions müssen bestehen. Ein fachlich belegtes Scheitern genügt für `z=0`, auch neben weiteren Messlücken; ohne solches Scheitern ist `z=1` nur bei vollständigem Bestehen möglich, ansonsten bleibt `z=null` mit Ursache. Kategorien sind keine unabhängigen statistischen Beobachtungen. Die sechs R-Werte werden zusammen mit F und vollständigem Erfolg berichtet, keine nachträgliche Umgewichtung.
+
+## 2. T1–T5 und Belegregeln
+
+| Kriterium | Bestehensregel | Erforderlicher Beleg / Prüfinstanz |
+| --- | --- | --- |
+| T1 | Kandidat startet im eingefrorenen Gerüst unter bereitgestellten Voraussetzungen | Syntax-/Bootlog mit Exitstatus, Version/Hashes und Kontrolllauf des identischen intakten Gerüsts; technisch prüfen, Ursache dokumentieren |
+| T2 | Jede Modulaktion über registrierte Web-Route an Methode eines modulspezifischen Controllers; kein bloßes Einbinden ausführbarer Legacy-Verarbeitung | Routenauflösung und tatsächlicher Aufrufpfad mit Datei-/Zeilen-/Hashbeleg; **Mensch** prüft |
+| T3 | Controller verwendet tatsächlich Blade für Formular **und** Ergebnis; kein vollständiger direkter HTML-Ersatz | Controller-Viewaufruf und zugehörige Blade-Datei, unterstützende HTTP-Befunde; **Mensch** prüft |
+| T4 | DB über bereitgestellte Laravel-Anbindung; UP über Laravel-Request-/Dateischnittstellen und vereinbarten Speicher; keine fest eingebauten Antworten | Codepfad/Zeilen sowie unabhängige Integrationsbefunde mit wechselnden synthetischen DB-Fixtures bzw. Dateien; **Mensch** prüft; Eloquent/Query Builder gleichwertig |
+| T5 | Gemeinsame Konfiguration, Schema, Zugang, Abhängigkeiten unverändert; Modullogik nur in öffentlicher Allowlist, interne Tests getrennt | Diff und Dateimanifest gegen Gerüsthash; semantischer Zweifel bleibt bis **menschlichem** begründeten Urteil offen |
+
+T2–T4 werden für **jeden vorhandenen Kandidaten** manuell geprüft, auch wenn T1, T5 oder ein anderes T bereits scheitert. Nicht ausführbare Integration verhindert nicht das Lesen vorhandener Codepfade; wo ein notwendiger Beleg fehlt, bleibt das Einzelkriterium begründet offen. Bei fehlendem Kandidaten wird Nichtprüfbarkeit erfasst, nicht drei erfundene Negativurteile. Reiner HTTP-Erfolg, ein Hashvergleich bei semantischem Zweifel oder PHPStan ersetzt kein solches Urteil. Interne Namen, Layout und weitere Vorstellungen von „idiomatischem Laravel“ sind keine Kriterien. Ein Mensch darf den versiegelten Kandidaten bei der Bewertung nicht reparieren; weder automatische noch manuelle Codereparatur gehört in den Evaluator.
+
+Je Einzelurteil speichern: Rubrikversion, Kandidatenhash/Seal, Kriterium, `pass|fail|open|technical_missing|unclear`, Begründung, konkrete Datei+Zeilen+Dateihash oder Prüfloghash, prüfende Person/Instanz, UTC-Zeit und Revision. Für T4 zusätzlich Integrationseingaben/-logs; für T1 Kontrolllog. Ein menschlicher Entwurf darf `open` bleiben; Prüferperson und -datum werden nie synthetisch als echte Freigabe vorbelegt. Neue Entscheidungen erzeugen Revisionen, alte Urteile/Originale bleiben erhalten. Die spätere Benutzeroberfläche zeigt technischen Status, menschliche Prüfung und Freigabe separat.
+
+## 3. Ursachen und aggregierte Sollurteile
+
+| Zustand | Assertion/Fall | z-Kategorie | T / F |
+| --- | --- | --- | --- |
+| Vollständig erfüllte Funktion, gültige Messung | `pass` | 1, wenn alle zugeordneten Assertions bestehen | T=1 erst nach fünf belegten T-Erfüllungen; dann F=Summe(z)/6, sofern alle sechs bestimmbar |
+| Belegter fachlicher Verhaltensfehler | betroffene Assertions `fail`, Soll/Ist und Ursache | 0 für jede dadurch betroffene Kategorie | R-Fehler allein setzt T nicht auf 0; bei T=1 regulärer R-Score |
+| Belegter T-Verstoß, Kandidat startfähig | R weiterhin soweit ausführbar prüfen | messbare z erhalten | T=0 und F=0, auch wenn übrige Kriterien/Messungen offen sind |
+| Kandidatenbootfehler oder fehlender Kandidat aus **belegter fachlicher Generierungsursache** | nicht ausführbare R-Fälle `blocked_by_candidate`, Beleg erforderlich | 0 für blockierte Kategorien | T=0/F=0; übrige T einzeln belegen oder offen halten |
+| Evaluator-/Infrastruktur-/Providerfehler ohne belegten Kandidatenverstoß | `technical_missing`, Fehlerlog | null, sofern kein anderer fachlicher Fehler der Kategorie belegt | T/F fehlend, soweit technisch nicht bestimmbar; bereits belegtes T=0 hat Vorrang |
+| Manueller Abbruch ohne bewertbaren Endstand | `technical_missing`, Ursache `manual_abort` | null ohne fachlichen Beleg | kein fingiertes T=0/F=0 |
+| Unklarer API-/Transportausgang, Ursache ungeklärt | `unclear`, Unsicherheitsbeleg | null ohne fachlichen Beleg | T/F offen; keine zusätzliche Generierung als stiller Ersatz |
+| Menschliches Pflichturteil ausstehend / T5 semantisch zweifelhaft | vorhandene R-Messungen erhalten | messbare z erhalten | ohne bereits belegten T-Verstoß T/F `null`, Status `open` |
+
+`null` bedeutet fehlend/unbewertet, **niemals null Punkte**. `T=1` verlangt fünf `pass`; ein belegtes `fail` begründet `T=0`, sonst bleibt T offen/fehlend. Bei T=0 steht F=0 unabhängig von weiteren Lücken. Bei T=1 ist F nur berechenbar, wenn alle sechs z bestimmbar sind. Vollständiger Erfolg ist 1 genau bei F=1, 0 bei bestimmtem F<1, sonst fehlend. Roh-Testpassquote separat: bestandene Fälle / alle vorgesehenen Fälle, mit ausdrücklich ausgewiesenen fehlenden/blockierten Fällen und Nenner; sie ist kein Ersatz für F und keine Umgewichtung. Die Zahl technischer Assertions ist kein Auswertungsnenner.
+
+Spätere Messberichte binden `asset_version` (Vertrag, Rubrik, Suite, Fixture, Referenz, Gerüst/Tools als Hash+Version) und `measurement_attempt` an denselben versiegelten Kandidaten. Sie enthalten Fall-/Assertion-ID, Request/Response, konkrete Soll-/Istwerte, Status/Ursache und Logs; Nachmessung erhält Originalversuch/Kandidatenhash. Diese Felder sind ein Übergabevertrag, noch keine Datenbankimplementierung. Eine fehlende Messumgebung bzw. unwirksame Upload-Rechtesperre darf niemals R3=0 oder F=0 allein erzeugen. Quelle: Operationalisierung §§2.4/6.1 und [Plan §§4.1, 7.2](../../planung/02-Technischer-Implementierungsplan.md).
+
+===== contract/users.sql =====
+-- M2-v0.1: vollständige deklarative Gerüstvorgabe, keine ausgeführte Migration.
+-- Keine konkreten Studienfixtures. Tabelle im laufgebundenen MySQL-Schema.
+CREATE TABLE users (
+    user_id INT UNSIGNED NOT NULL,
+    first_name VARCHAR(15) NOT NULL,
+    last_name VARCHAR(15) NOT NULL,
+    user VARCHAR(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+    password CHAR(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+    avatar VARCHAR(70) NOT NULL,
+    last_login TIMESTAMP NULL DEFAULT NULL,
+    failed_login INT UNSIGNED NOT NULL DEFAULT 0,
+    role VARCHAR(20) NOT NULL DEFAULT 'user',
+    account_enabled TINYINT UNSIGNED NOT NULL DEFAULT 1,
+    PRIMARY KEY (user_id),
+    UNIQUE KEY users_user_unique (user),
+    CONSTRAINT users_id_domain CHECK (user_id BETWEEN 1 AND 999999),
+    CONSTRAINT users_account_enabled CHECK (account_enabled IN (0, 1))
+) ENGINE=InnoDB DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+
+===== contract/vertrag.md =====
+# Modul- und Gerüstvertrag M2-v0.1
+
+**Entwurf, keine Fachfreigabe.** Die drei Module übertragen jeweils die Verarbeitung von DVWA `source/low.php` und ihre Formularfunktion in dasselbe frische Laravel-Gerüst. Je Kandidat wird genau ein Modul bearbeitet. Web-Routen, modulspezifischer Controller und tatsächliche Blade-Darstellung sind verpflichtend. Schutzmechanismen sind erlaubt, solange sie diese legitimen Fälle erhalten. Injection-Effekte, ausführbare Uploads, vollständige DVWA-Verhaltensäquivalenz, Passwortmigration und Sicherheitsverbesserung sind keine Endpunkte. Die Domänen und definierten Fehlerantworten sind bewusste Studienanpassungen, keine Behauptung vollständiger Legacygleichheit. Grundlage: Operationalisierung §§2.2–2.4, [Original am Quellenstand](https://github.com/nofiedler/Bachelorarbeit-Dokumentation/blob/42cf379b5588e7eff939bbf063567836bb3d4cb3/005-Forschungsablauf/01-Operationalisierung-und-Auswertungsplan.md), [Issue #3](https://github.com/nofiedler/Bachelorarbeit-Forschungsumgebung/issues/3).
+
+## 1. Gemeinsame HTTP- und DOM-Schnittstelle
+
+| Modul | Öffentlicher Pfad | Anzeige | Verarbeitung | Pflichtfelder / Aktionsfeld |
+| --- | --- | --- | --- | --- |
+| BF – Brute Force | `/study/brute` | GET ohne `Login` | GET mit vorhandenem `Login` | `username`, `password` / `Login` |
+| SQL – SQL Injection | `/study/sqli` | GET ohne `Submit` | GET mit vorhandenem `Submit` | `id` / `Submit` |
+| UP – File Upload | `/study/upload` | GET ohne `Upload` | POST, `multipart/form-data`, mit `Upload` | `uploaded` / `Upload` |
+
+Ein Aktionsfeld zählt nach Vorhandensein, auch mit leerem Wert; kein Vergleich auf einen bestimmten Buttontext. Requestparameter sind skalare Zeichenketten; Array-/Mehrfachparameter, andere Methoden und sonstige Eingaben außerhalb der unten definierten Domänen sind keine Messfälle. Das jeweils zugehörige Formular hat den Modulpfad als `action`, die genannte Methode, bedienbare benannte Eingabefelder sowie ein Submit-Control mit dem Aktionsnamen. Das Passwortfeld hat `type=password`, das Uploadfeld `type=file`. UP hat Multipart-Encoding und ein gültiges verborgenes `_token`. `MAX_FILE_SIZE=100000` darf zusätzlich vorhanden sein; es ist keine zusätzliche R-Anforderung. BF/SQL verwenden URL-Queryparameter. Bewertet werden die angegebenen Formularattribute und Funktionen; Feldreihenfolge, IDs, Buttontext, HTML-Tag der Ergebnisregion, CSS und Einrückung bleiben frei.
+
+Alle unten beschriebenen Antworten sind unmittelbare HTML-Antworten (`text/html`, UTF-8); keine Redirectkette als Ersatz des verlangten 200/422/500. GET ohne Aktion liefert 200 und Formular, auch wenn andere Datenfelder vorhanden sind. Auf Verarbeitung folgt genau eine Ergebnisregion `[data-study-result]`. Für die reine Anzeige ist dieselbe Region vorhanden und leer. Ein Verarbeitungsergebnis enthält genau ein sichtbares Element `[data-study-status]` mit einem der vollständigen Textmarker `SUCCESS`, `NEGATIVE`, `INPUT_ERROR`, `UPLOAD_ERROR`. Sichtbar heißt im regulären HTML-Inhalt, nicht in Kommentar, Script/Style, `hidden` oder einem absichtlich versteckten Element. Der spätere Prüfer darf Layout nicht als Korrektheitsmaß verwenden.
+
+Der Prüfer liest ausschließlich diese markierte Ergebnisregion als DOM, dekodiert HTML-Entities und normalisiert ausschließlich Whitespace (Folgen von Unicode-Whitespace → ein Leerzeichen, Ränder entfernen). Keine Kleinschreibung, Sortierung, Teilstringtreffer, Akzent-/Unicode-Normalisierung oder Interpretation frei formulierter Meldungen. Die Statuszeichenkette ist danach exakt. Datenfelder werden getrennt verglichen, ebenfalls nur mit dieser Whitespacebehandlung. DOM-dekodierte Attributwerte, besonders `src`, und relative Uploadpfade werden **ohne weitere Normalisierung exakt** verglichen. Keine Auflösung relativer URLs, kein URL-Decoding als Gleichsetzung. Alle erwarteten Datensätze/Elemente sind eindeutig; zusätzliche Ergebnisdatensätze oder Modulavatare sind ein Fehler. Außerhalb der Region darf etwa das gemeinsame Gerüst einen eigenen Avatar zeigen; dieser ist kein Modulergebnis.
+
+| Ergebnis | Inhalt der Ergebnisregion |
+| --- | --- |
+| BF positiv | `SUCCESS`; genau ein `img`, dessen `src` dem gespeicherten Avatarpfad exakt entspricht |
+| BF negativ | `NEGATIVE`; kein `img`, keine Erfolgsdaten |
+| SQL bekannt | `SUCCESS`; genau ein `[data-study-field="first_name"]` und ein `[data-study-field="last_name"]` mit exakt zugehörigem Inhalt; kein weiterer Datensatz |
+| SQL unbekannt | `NEGATIVE`; keine Benutzerdatenfelder, kein `img` |
+| UP erfolgreich | `SUCCESS`; genau ein `[data-study-field="path"]` mit dem exakten relativen Zielpfad |
+| Unvollständige Eingabe | `INPUT_ERROR`; keine Benutzerdatenfelder, kein `img`, kein Pfad/Erfolg |
+| Kontrollierter Schreibfehler | `UPLOAD_ERROR`; kein Pfad/Erfolg, keine Benutzerdatenfelder oder Modulavatare |
+
+Für den jeweiligen Fall nicht genannte Ergebnisdatenfelder fehlen. Freie erklärende Texte außerhalb der festgelegten Daten-/Statuselemente werden nicht auf Wortlaut geprüft. Namen interner Controller, Methoden, Helfer und Views sind kein Oracle. Die Marker konkretisieren ausdrücklich den Vorschlag aus [Plan §7.1](../../planung/02-Technischer-Implementierungsplan.md#71-gerüst-pakete-und-zugriffsgrenzen); keine nachträgliche Ableitung aus Modellantworten.
+
+## 2. Datenbank, Zugang und technische Gerüstvoraussetzungen
+
+Das vollständige Schema ist [users.sql](users.sql). Es enthält **alle zehn** bereitgestellten Spalten; keine weiteren Tabellen gehören zum fachlichen Fixturebestand. `user_id` und `user` sind eindeutig, auch unter der festgelegten Collation. `password` enthält den kleingeschriebenen 32-stelligen MD5-Hexdigest der ASCII-Passwortbytes. Synthetische Namen und Avatarpfade werden unverändert gelesen. `last_login`, `failed_login`, `role` und `account_enabled` sind ebenfalls unveränderliche Fixturewerte, keine zusätzlichen Filter für BF oder SQL. Es gibt weder Auto-Increment noch automatisch aktualisierte Zeitspalten. Das ganze Tabelleninventar, Schema und alle Zeilen/Spalten des bereitgestellten Datenbestands bleiben nach **jeder** Anfrage unverändert, auch im Fehlerfall. Session-/Cache-/Logdateien werden getrennt davon verwaltet.
+
+Die technische Vorgabe für den Gerüstbauer ist Laravel-Verbindung `mysql` als Standardverbindung, ein isoliertes Schema pro Messung, InnoDB, Verbindungszeichensatz `utf8mb4`, Verbindungscollation `utf8mb4_bin`, Zeitzone `+00:00`. `user` und `password` verwenden abweichend `ascii_bin` gemäß DDL. SQL-Modus, als ungeordnete Menge exakt zu prüfen: `ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION`. Der Preflight muss Server- und Sessionwerte sowie `SHOW CREATE TABLE` protokollieren; Abweichungen sind technische Voraussetzungenlücken, keine Kandidatenfehler. Zugangsdaten sind laufgebunden, synthetisch und keine Rolleninputs. Der Kandidat nutzt die bereitgestellte Laravel-Anbindung; Eloquent, Query Builder und Laravel-eigene parametrisierte Abfragen sind zulässig. Keine zusätzliche Forderung eines bestimmten ORM-Stils.
+
+Das Schema übernimmt Spaltenzweck/-längen des DVWA-Standes `b496a5d3de6b967410155e1b7d3e51e9d035eb22`: [MySQL.php](https://github.com/digininja/DVWA/blob/b496a5d3de6b967410155e1b7d3e51e9d035eb22/dvwa/includes/DBMS/MySQL.php), ursprüngliches CREATE in Zeile 42 **und spätere Ergänzungen `role`/`account_enabled`**. Unique-Key, Domänenchecks, explizite Null-/Defaultregeln und Collations sind eigene technische Entwurfsfestlegungen. Weitere DVWA-Tabellen und dessen echte Datensätze werden nicht übernommen.
+
+Gemeinsames Gerüst: eine vom vertrauenswürdigen Ablauf vor Fallbeginn hergestellte, gültig angemeldete Laravel-Websession; Speicherung über Dateisession außerhalb MySQL-`users`. Die Authentifizierungsidentität des Gerüsts ist vom geprüften BF-Benutzer getrennt. Das Gerüst stellt Middleware, Sessioncookie, CSRF-Verifikation und CSRF-Token bereit. Der spätere vertrauenswürdige Sessionadapter muss die reguläre Middleware passieren; keine Kandidatenänderung zum Abschalten von Auth/CSRF. Der Prüfer behält Cookiejar und Session innerhalb eines Falls, übernimmt den aktuellen CSRF-Token aus dem UP-Formular und sendet ihn beim POST. Fehlende/abgelaufene Gerüstsession oder ungültige Token sind Preflight-/Messfehler; die Suite sendet sie nicht als R4-Fälle. Je neuem Fall frische Session/Cache/DB/Uploads, innerhalb R6 keine Rücksetzung. BF verändert weder Authidentität noch Session-ID und eröffnet keine Anmeldung; normale Gerüstverwaltung der Session bleibt möglich. Ein internes Login-API- oder Cookieformat wird erst im Gerüstmanifest festgeschrieben und ist kein Kandidatenauftrag.
+
+PHP/Laravel/MySQL und Abhängigkeiten werden aus den vorhandenen M1-Locks übernommen und vor Messung gehasht; keine neue Installation durch Kandidaten. Der M1-Laravel-Ausgangsbestand enthält aktuell das Standardschema und ist **noch nicht** dieses Studiengerüst. Der nachfolgende Gerüstauftrag implementiert die hier deklarierte Abweichung; dieser Vertrag verändert M1 nicht. Bezug: Operationalisierung §§2.2–2.4 und [Plan §7.1](../../planung/02-Technischer-Implementierungsplan.md#71-gerüst-pakete-und-zugriffsgrenzen).
+
+## 3. Moduldomänen und Reaktionen
+
+**BF:** `username` entspricht `[a-z0-9]{1,15}`, `password` entspricht `[A-Za-z0-9]{1,32}` (volle ASCII-Zeichenkette). Gültiges Paar → 200/SUCCESS und zugehöriger Avatar. Falsches nicht leeres Passwort oder unbekannter Benutzer innerhalb der Domäne → 200/NEGATIVE, kein Erfolg/Modulavatar. Passwortvergleich gegen vorhandenes MD5-Format, keine Hashmigration. Fehlend oder leer (`""`) bei vorhandenem `Login` → 422/INPUT_ERROR. Keine Änderung der DB, Uploads oder Anmeldung. Legacyanteil: [brute/source/low.php, Zeilen 3–28](https://github.com/digininja/DVWA/blob/b496a5d3de6b967410155e1b7d3e51e9d035eb22/vulnerabilities/brute/source/low.php#L3); HTTP422/Domänen/Marker sind Studienanpassungen.
+
+**SQL:** `id` ist dezimale Ganzzahl 1–999999 ohne führende Nullen, formal `[1-9][0-9]{0,5}`. Bekannte ID → 200/SUCCESS und genau deren Vor-/Nachname. Unbekannte gültige ID → 200/NEGATIVE ohne Datensatz. Fehlende oder leere ID bei vorhandenem `Submit` → 422/INPUT_ERROR. Datenbank und Uploads bleiben unverändert. Andere Eingaben/Injection-Auswirkungen sind nicht Messgegenstand. Legacyanteil: MySQL-Zweig [sqli/source/low.php, Zeilen 3–26](https://github.com/digininja/DVWA/blob/b496a5d3de6b967410155e1b7d3e51e9d035eb22/vulnerabilities/sqli/source/low.php#L3); die Studienverbindung ist ausschließlich MySQL.
+
+**UP:** vollständig übertragene PNG-/JPEG-Dateien mit tatsächlichem decodierbarem Bildinhalt und 1–100000 Bytes einschließlich. Basisname insgesamt 1–64 ASCII-Zeichen, nur Buchstaben/Ziffern/Punkt/Unterstrich/Bindestrich, erstes Zeichen Buchstabe/Ziffer, Endung exakt `.png`, `.jpg` oder `.jpeg`. Namen innerhalb einer Sequenz sind verschieden und vorher nicht vorhanden. Kollision, Überschreiben, andere Typen, beschädigte/abgebrochene Übertragung und ausführbare Dateien sind ausgeschlossen. Gültige Datei → 200/SUCCESS; speichern unter dem Originalbasisnamen, unveränderte Bytes/Größe/SHA-256 und exakter relativer Pfad. Fehlendes `uploaded` oder leeres File-Control (`filename=""`, keine Datei, `UPLOAD_ERR_NO_FILE`) bei vorhandenem `Upload` → 422/INPUT_ERROR, keine DB-/Uploadänderung. Eine Nullbyte-Datei mit Dateiname ist außerhalb der gültigen Domäne und kein Ersatz für „keine Datei“.
+
+Uploadziel: Laravel-Disk `study_uploads`, lokale Wurzel `storage/app/study/uploads` relativ zum Laravel-Projekt. Rückgemeldeter Pfad: `study/uploads/<Originalbasisname>` ohne führenden Slash. Dies ist ein Speicherpfad, keine Download-URL; kein öffentlicher Symlink oder ausführbarer Webpfad erforderlich. Alle alten Dateien bleiben bytegleich erhalten. Laravel-Request-/UploadedFile-/Dateischnittstellen verwenden; konkrete Methoden sind frei. Unter normalen Voraussetzungen ist das Ziel für den Nicht-root-PHP-Prozess schreibbar. Der kontrollierte R3-Fall entzieht **ausschließlich diesem Zielverzeichnis** Schreibrechte, nicht PHP-Temp-, Session-, Cache- oder Logpfaden: 500/UPLOAD_ERROR, kein Erfolg, keine neue/teilweise Datei und keine veränderte alte Datei. Der vertrauenswürdige Ablauf protokolliert effektive UID/GID, Besitz/Modus/ACL/Mountzustand sowie wirksame Schreibverweigerung mit intakter Referenz, prüft Nachzustand und stellt danach das Ziel wieder her. Ausfall des Mounts oder unwirksame Rechtepräparation ist Messfehler. Legacyanteil: [upload/source/low.php, Zeilen 3–17](https://github.com/digininja/DVWA/blob/b496a5d3de6b967410155e1b7d3e51e9d035eb22/vulnerabilities/upload/source/low.php#L3); Größe angelehnt an [upload/index.php, Zeile 52](https://github.com/digininja/DVWA/blob/b496a5d3de6b967410155e1b7d3e51e9d035eb22/vulnerabilities/upload/index.php#L52). Speicherpfad/Typ-/Namensdomäne/Fehlerstatus sind Studienanpassungen.
+
+## 4. Schreiballowlist und Isolation
+
+Während der **Codeerstellung** sind relativ zum Gerüst ausschließlich `routes/study.php`, neue Modulcontroller `app/Http/Controllers/Study/**/*.php`, benannte PHP-Helfer `app/Study/**/*.php` und Blade-Views `resources/views/study/**/*.blade.php` zulässig. `**` umfasst auch die direkte Ordnerebene. Dateinamen und Untergliederung bleiben frei; bestehende geschützte Dateien dürfen nicht umgeschrieben werden. Helfer dürfen auch eigene Eloquent-Modelle im PSR-4-Namespace `App\Study` enthalten. Das Gerüst bindet `routes/study.php` unter Web-/Auth-/CSRF-Voraussetzungen ein. Routen dürfen diese Voraussetzungen nicht entfernen. Intern generierte Tests liegen außerhalb des Kandidaten unter eigenem `internal_tests/`, niemals im externen Prüfpaket. Composerdateien, Bootstrap, gemeinsame Controller/Provider, Konfiguration, Schema, Zugang und Dependencies bleiben geschützt. Es gibt keine erlaubte ausführbare Legacy-Einbindung als Modulersatz.
+
+Während der **Ausführung** bleiben Code/Dependencies read-only; nur eigene Session-/Cache-/Logbereiche unter `storage/`, `bootstrap/cache`, der genannte Uploadbereich und laufgebundene temporäre Dateien sind beschreibbar. Diese Betriebsrechte erlauben nicht, Modullogik dort zu verstecken. Der Prüfer vergleicht DB und Uploadinventar mit eigenen lesenden Zugängen; keine vom Kandidaten behaupteten Prüfergebnisse. Reguläre Dateien, keine Symlink-/Hardlink-/Traversalpfade; atomar abgesicherter Lesezugriff und konsistenter Snapshot ohne fremde Mounts. Quellrepo, Vault, Git-History, externe Suite/Referenzen/Ergebnisse und fremde Läufe gelangen nicht in Rolleninputs. Diese Grenzen sind Vorgaben für spätere Isolationstests, kein bereits erbrachter Zugriffsbeweis. Quelle: [Plan §§7.1–7.2](../../planung/02-Technischer-Implementierungsplan.md).
+
+===== interfaces.md =====
+# Gemeinsame Gerüst-/Toolschnittstellen M2-v0.1
+
+Unvollständiges Laravel-Gerüst auf M1: PHP 8.4.26, Laravel 13.34.0, Composer 2.10.3, MySQL 8.4.11. Composer-/Dependencylocks bleiben identisch M1; keine Installation durch Rollen. `App\` → `app/` ist PSR-4, neue Klassen unter erlaubten Unterordnern laden auch ohne neue Dependencies oder Namenskonvention.
+
+`routes/study.php` ist leer und bereits durch geschützte Web-/Session-/Auth-/CSRF-Einbindung geladen. Die Modulrouten und Implementierungen sind der Auftrag. Schreiballowlist: `routes/study.php`, `app/Http/Controllers/Study/**/*.php`, `app/Study/**/*.php`, `resources/views/study/**/*.blade.php`; `**` umfasst die direkte Ebene. Geschützte Basisdateien einschließlich Zugang, Schema, Konfiguration, Composer und Bootstrap bleiben unverändert. Laufzeitschreibrechte sind keine Codeallowlist.
+
+Gerüstidentität `scaffold-operator` ist ein eigener synthetischer GenericUser, niemals eine Zeile aus `users`. FileSession und FileCache verwenden eigene laufgebundene Bereiche. Ein vertrauenswürdiger Adapter ruft GET `/study-access` auf, liest CSRF-Token, sendet POST mit `_token` und laufgebundenem `access_token`, behält die Cookies nach Sessionregeneration und prüft GET `/`. Der Token wird als `STUDY_ACCESS_TOKEN` vom Runner injiziert, ist kein Rolleninput. POST ohne CSRF wird abgewiesen. Auth/CSRF werden für Kandidaten nicht abgeschaltet; BF-Prüfung führt keine Gerüstanmeldung durch.
+
+DB: Standardverbindung `mysql`, `users` exakt nach gemeinsamem `users.sql`. utf8mb4/utf8mb4_bin, user/password ascii_bin, InnoDB, UTC +00:00, SQL-Modus exakt `ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION`. Zugang wird je Sandbox injiziert; Schema/ganze Tabelle bleiben nach jeder Anfrage unverändert. Öffentliche synthetische Entwicklungsbeispiele sind unabhängig von geschützter Studiensuite; sie sind keine empirischen Daten.
+
+Disk `study_uploads`: lokale Wurzel `storage/app/study/uploads`, Exceptions aktiv. Erfolgsangabe `study/uploads/<Originalbasisname>` gemäß Vertrag. Nicht-root-Prozess; ausschließlich laufgebundene storage/cache/temp-Verzeichnisse beschreibbar. Gerüst enthält keine UP-Verarbeitung.
+
+Tools arbeiten nur auf eigenem Paket, Gerüst/Kandidat und erlaubten eigenen Artefakten. Sie geben keine Legacy-Integrationsdateien, K1-Zusätze für K0, Git-History, Vault, Studienfälle, Referenzen, Oracle, fremde Läufe oder Secrets aus. Toolbeschreibungen sind vorbereitet; tatsächliche Abschirmung wird in #7 geprüft. Pfade/Kommandos in `tools.json` sind kein Netzwerk-/Repositoryzugriff. Authadapter läuft vertrauenswürdig außerhalb der Rollen. Modell/Tokenizer, Tokens, tatsächliche Anbietergrenzen/-defaults bleiben offen; exakte Bytes/Zeichen stehen im Paketmanifest, keine Anwendungscaps.
+
+===== legacy/low.php =====
+<?php
+
+if( isset( $_POST[ 'Upload' ] ) ) {
+	// Where are we going to be writing to?
+	$target_path  = DVWA_WEB_PAGE_TO_ROOT . "hackable/uploads/";
+	$target_path .= basename( $_FILES[ 'uploaded' ][ 'name' ] );
+
+	// Can we move the file to the upload folder?
+	if( !move_uploaded_file( $_FILES[ 'uploaded' ][ 'tmp_name' ], $target_path ) ) {
+		// No
+		$html .= '<pre>Your image was not uploaded.</pre>';
+	}
+	else {
+		// Yes!
+		$html .= "<pre>{$target_path} succesfully uploaded!</pre>";
+	}
+}
+
+?>
+
+===== tools.json =====
+{
+  "asset_version": "M2-TOOLS-v0.1",
+  "status": "prepared interface; enforcement in issue 7",
+  "tools": [
+    {"name": "read_file", "scope": "own package and scaffold/candidate only", "output": "requested UTF-8 content; no traversal, links, repository or extra context"},
+    {"name": "write_file", "scope": "candidate public write allowlist; internal tests in separate internal_tests", "output": "own write result"},
+    {"name": "php_syntax", "command": "php -l <own allowed PHP file>", "output": "own syntax diagnostics"},
+    {"name": "routes", "command": "php artisan route:list --path=study --json", "output": "own registered routes only"},
+    {"name": "internal_tests", "scope": "separate development resources, own tests and public development fixtures", "output": "own internal results, no study_holdout or external measurements"}
+  ]
+}

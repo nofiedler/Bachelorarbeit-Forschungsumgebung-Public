@@ -1,0 +1,2495 @@
+{
+  "access_scope": "trusted instrument validation only; never role/development mount",
+  "asset_version": "M2-REFERENCES-v0.1",
+  "human_review": "open",
+  "leakage_marker": "PRIVATE-REFERENCES-M2-v0.1",
+  "references": [
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 6
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 1
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "bb447f15799c54580c4bfd8f85fc7bbcfb90ecf0f13f77b48e5e3ab22cb02be8",
+        "resources/views/study/brute.blade.php": "798dc797ce6159bd9d31770de118ef76be9c7375f7afece2507faca0db95e09c",
+        "routes/study.php": "e94a371f5e376e76bdda4318af140686c32d5d5fad36fa95877a9b5a657a660b"
+      },
+      "human_review": "open",
+      "id": "GOOD-A-BF",
+      "kind": "correct_design",
+      "module": "BF",
+      "overlay": "GOOD-A-BF",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "dc44de146cd226bf5655b435a88a29abb91226118a1663f8ed4255e26cc046cc"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 6
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 1
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "8d0f60d44286c2cf777d686db45c09066142887002b38c67aaf5d8884de7f69a",
+        "resources/views/study/sqli.blade.php": "fbff2be116fdf83f2cf4dd2cd3ec9960c61a5bccc04af715cc67a02c08f54173",
+        "routes/study.php": "a28799439e170c862316850064dce26ce420b78cfc27f14ee01bf75a03d00f45"
+      },
+      "human_review": "open",
+      "id": "GOOD-A-SQL",
+      "kind": "correct_design",
+      "module": "SQL",
+      "overlay": "GOOD-A-SQL",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "89b36db2f11473ba0a2a0bde7b599513cec813b6b37031ef70e0d04700dd4146"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 6
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 1
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "160ce8d02f7860e749355b4375914eb1dd5243515bc164c34d28c809d71c4575",
+        "resources/views/study/upload.blade.php": "8a667849a576a521a9ff43600bc4e2e0b044eaa0777368c12d68725cc786d7eb",
+        "routes/study.php": "12939664c2ccdb2df1294278d4be69bb714a4d4239d75d40e7c95a3357d748da"
+      },
+      "human_review": "open",
+      "id": "GOOD-A-UP",
+      "kind": "correct_design",
+      "module": "UP",
+      "overlay": "GOOD-A-UP",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "72542882b433b1da22b5cf3b30f53dcf99b1b1fb1db50e31dc4f9f31d68325b2"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 6
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 1
+      },
+      "files": {
+        "app/Http/Controllers/Study/Entry/Screen.php": "ba44cdefda6eac4d62e12b53ebc552d920484ffedf6525b71b4cf742147a864c",
+        "app/Study/Identity/LegacyAccount.php": "92852ab1474403f52a219f6b6db2e0ee3234a7261affbb7f23c7a2f0fa7bf1ff",
+        "app/Study/Reader.php": "f9de107e6947a715c2f7dbe9ec9fdb6cac031d55e41ccca88f1afa137c818334",
+        "resources/views/study/parts/brute.blade.php": "a7eafc5d59bc68c11e5e55010adc4ccd7169c0e7eae2e2ae788a38059d8493cf",
+        "resources/views/study/screens/brute.blade.php": "b6d659f589c7aaa917d1a60f9c7dbee46ba5771aae279427fd72a9ec4c68b604",
+        "routes/study.php": "ddbab80adc7040a0c78f1628e1ea73f91a8ce3988e43e2f0e667b5f19aca187b"
+      },
+      "human_review": "open",
+      "id": "GOOD-B-BF",
+      "kind": "correct_design",
+      "module": "BF",
+      "overlay": "GOOD-B-BF",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "0ab413417e481b70614c219657c56b9cae258a6fa25597c2fb7b03c69c39d46f"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 6
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 1
+      },
+      "files": {
+        "app/Http/Controllers/Study/Entry/Screen.php": "f442031c77788143d32f0cae1de72e29468db81cc523fa289a7ef0db1e7bbee5",
+        "app/Study/Identity/LegacyAccount.php": "92852ab1474403f52a219f6b6db2e0ee3234a7261affbb7f23c7a2f0fa7bf1ff",
+        "app/Study/Reader.php": "abe74872b76ab923ccdcda2263c62e36e26d70d4c70c84b4f18207c742339d61",
+        "resources/views/study/parts/sqli.blade.php": "a7eafc5d59bc68c11e5e55010adc4ccd7169c0e7eae2e2ae788a38059d8493cf",
+        "resources/views/study/screens/sqli.blade.php": "5afea771e62a07d11d18e807b37f684829cc9e0abb1bdb845a80a1c13cff9689",
+        "routes/study.php": "b6984035a2ebf89680272435f5ad61f04964f9b7345334a86b2e6b25bb51523c"
+      },
+      "human_review": "open",
+      "id": "GOOD-B-SQL",
+      "kind": "correct_design",
+      "module": "SQL",
+      "overlay": "GOOD-B-SQL",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "ab97d1355abe6cebbb0b9b12ca12fd6323752272a53715fd2f27bf73f4bb12b4"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 6
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 1
+      },
+      "files": {
+        "app/Http/Controllers/Study/Entry/Screen.php": "622db47c706ba084afd03a8e2de059da0e04851bc610e61af96ad1443342013c",
+        "app/Study/Identity/LegacyAccount.php": "92852ab1474403f52a219f6b6db2e0ee3234a7261affbb7f23c7a2f0fa7bf1ff",
+        "app/Study/Reader.php": "d15ba1561bfa1bb10b30476dfb8acdba53c000c35aca284d59a262a82cc8e0f9",
+        "resources/views/study/parts/upload.blade.php": "a7eafc5d59bc68c11e5e55010adc4ccd7169c0e7eae2e2ae788a38059d8493cf",
+        "resources/views/study/screens/upload.blade.php": "57d6e91b19c73c6c3254552da07f301d84754d1cab9acd34782854206b1e6143",
+        "routes/study.php": "2303c3fbf41efa4cad383c19ca6a588a98abac62c6e0cb4831db7d2c2fbe240c"
+      },
+      "human_review": "open",
+      "id": "GOOD-B-UP",
+      "kind": "correct_design",
+      "module": "UP",
+      "overlay": "GOOD-B-UP",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "95a71d034a07d076a66a685d27b4c453ba4f6ca72ed222292f7aeed3d422e824"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "R": {
+          "R1": 0,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "BF-R1-01-S01-FORM"
+          ]
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "bb447f15799c54580c4bfd8f85fc7bbcfb90ecf0f13f77b48e5e3ab22cb02be8",
+        "resources/views/study/brute.blade.php": "0b189af99c5179076c862d26bc5d5090b3b3e690cf795b11942cdcdfe2bb0473",
+        "routes/study.php": "e94a371f5e376e76bdda4318af140686c32d5d5fad36fa95877a9b5a657a660b"
+      },
+      "human_review": "open",
+      "id": "BAD-BF-R1",
+      "kind": "faulty_R_design",
+      "module": "BF",
+      "overlay": "BAD-BF-R1",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "3b37724494b77ad17971b629f5aa71f06c83393d64f941fb91cb2f06d9a04dde"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 3
+        },
+        "R": {
+          "R1": 1,
+          "R2": 0,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0,
+          "R6": 0
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "BF-R2-01-S01-RESULT",
+            "BF-R2-02-S01-RESULT",
+            "BF-R5-01-S01-RESULT",
+            "BF-R5-02-S01-RESULT",
+            "BF-R6-01-S01-RESULT",
+            "BF-R6-01-S03-RESULT"
+          ]
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "d345a9323adfe195032817ce1645d541907220c28abfbf3b20aa3208c06177b7",
+        "resources/views/study/brute.blade.php": "798dc797ce6159bd9d31770de118ef76be9c7375f7afece2507faca0db95e09c",
+        "routes/study.php": "e94a371f5e376e76bdda4318af140686c32d5d5fad36fa95877a9b5a657a660b"
+      },
+      "human_review": "open",
+      "id": "BAD-BF-R2",
+      "kind": "faulty_R_design",
+      "module": "BF",
+      "overlay": "BAD-BF-R2",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "ac5447d71584a1d51cde1ce6b87b1063cfc6603d92cacdf40b6e5b40a73ac545"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 4
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 0,
+          "R4": 1,
+          "R5": 1,
+          "R6": 0
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "BF-R3-01-S01-RESULT",
+            "BF-R3-02-S01-RESULT",
+            "BF-R6-01-S02-RESULT"
+          ]
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "b34a62cd05870ef0b2cc73bfe651a6237d41ced8396d256d9384cc6aed1c8e9a",
+        "resources/views/study/brute.blade.php": "798dc797ce6159bd9d31770de118ef76be9c7375f7afece2507faca0db95e09c",
+        "routes/study.php": "e94a371f5e376e76bdda4318af140686c32d5d5fad36fa95877a9b5a657a660b"
+      },
+      "human_review": "open",
+      "id": "BAD-BF-R3",
+      "kind": "faulty_R_design",
+      "module": "BF",
+      "overlay": "BAD-BF-R3",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "a1e79fb59adfe4e426d9b8ea0cde419679caa15e8e534c3a123b1e9bfa6b3697"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 0,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "BF-R4-01-S01-HTTP",
+            "BF-R4-01-S01-RESULT",
+            "BF-R4-02-S01-HTTP",
+            "BF-R4-02-S01-RESULT",
+            "BF-R4-03-S01-HTTP",
+            "BF-R4-03-S01-RESULT",
+            "BF-R4-04-S01-HTTP",
+            "BF-R4-04-S01-RESULT",
+            "BF-R4-05-S01-HTTP",
+            "BF-R4-05-S01-RESULT",
+            "BF-R4-06-S01-HTTP",
+            "BF-R4-06-S01-RESULT",
+            "BF-R4-07-S01-HTTP",
+            "BF-R4-07-S01-RESULT",
+            "BF-R4-08-S01-HTTP",
+            "BF-R4-08-S01-RESULT"
+          ]
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "6e9c0ac69748c60eecc839103f3ff5b71c4225b2c1817612b5e4c88515840de1",
+        "resources/views/study/brute.blade.php": "798dc797ce6159bd9d31770de118ef76be9c7375f7afece2507faca0db95e09c",
+        "routes/study.php": "e94a371f5e376e76bdda4318af140686c32d5d5fad36fa95877a9b5a657a660b"
+      },
+      "human_review": "open",
+      "id": "BAD-BF-R4",
+      "kind": "faulty_R_design",
+      "module": "BF",
+      "overlay": "BAD-BF-R4",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "65186fde10e833528d9a16a0c2a62da5d8512b3231776e196a6d3095f340e6d6"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 3
+        },
+        "R": {
+          "R1": 1,
+          "R2": 0,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0,
+          "R6": 0
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "BF-R2-02-S01-RESULT",
+            "BF-R5-02-S01-RESULT",
+            "BF-R6-01-S03-RESULT"
+          ]
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "0671835bfafabfaa6b18abea02192032455df4b80c17ef81f4e7e8f2c1239c0e",
+        "resources/views/study/brute.blade.php": "798dc797ce6159bd9d31770de118ef76be9c7375f7afece2507faca0db95e09c",
+        "routes/study.php": "e94a371f5e376e76bdda4318af140686c32d5d5fad36fa95877a9b5a657a660b"
+      },
+      "human_review": "open",
+      "id": "BAD-BF-R5",
+      "kind": "faulty_R_design",
+      "module": "BF",
+      "overlay": "BAD-BF-R5",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "951b2325985a70fef2a845e3fd05c729db492fa00c6d23538a858c1a32be3c2e"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 0
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "BF-R6-01-S02-RESULT",
+            "BF-R6-01-S03-RESULT"
+          ]
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "ca482aed613c287cf94560b77b2caa1913dbac75ffc2c80d4edac7425e3416b9",
+        "resources/views/study/brute.blade.php": "798dc797ce6159bd9d31770de118ef76be9c7375f7afece2507faca0db95e09c",
+        "routes/study.php": "e94a371f5e376e76bdda4318af140686c32d5d5fad36fa95877a9b5a657a660b"
+      },
+      "human_review": "open",
+      "id": "BAD-BF-R6",
+      "kind": "faulty_R_design",
+      "module": "BF",
+      "overlay": "BAD-BF-R6",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "8833fd5d8774edff56548b4b42cc66ad5137ea1d5eeba483a6990e301904b2ef"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": true,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 0,
+          "R2": 0,
+          "R3": 0,
+          "R4": 0,
+          "R5": 0,
+          "R6": 0
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 0,
+          "T2": null,
+          "T3": null,
+          "T4": null,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "blocked_by_candidate",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "e50dc73055acedbbe043e0b54e4e3b2dc36e07695eb6b470e8b52f499290f647",
+        "resources/views/study/brute.blade.php": "798dc797ce6159bd9d31770de118ef76be9c7375f7afece2507faca0db95e09c",
+        "routes/study.php": "e94a371f5e376e76bdda4318af140686c32d5d5fad36fa95877a9b5a657a660b"
+      },
+      "human_review": "open",
+      "id": "BAD-BF-T1",
+      "kind": "faulty_T_design",
+      "module": "BF",
+      "overlay": "BAD-BF-T1",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "39f8f99545a414e4695cefab9e19252beab8a1cc6470cf1371981c0ce76cfac9"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 0,
+          "T3": 0,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "resources/views/study/brute.blade.php": "798dc797ce6159bd9d31770de118ef76be9c7375f7afece2507faca0db95e09c",
+        "routes/study.php": "57ad940aad170c5968a1cada3ac0729d943c4a3df91d5424aba369b22ff13109"
+      },
+      "human_review": "open",
+      "id": "BAD-BF-T2",
+      "kind": "faulty_T_design",
+      "module": "BF",
+      "overlay": "BAD-BF-T2",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "c25b792a3e4802c864131efb161ff9ec021efb4f0724f346ae595d01740c2e22"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 0,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "2b3438a57b03c7933698aba6c281c125d62ac3688c2a41f36a261da473c91f26",
+        "resources/views/study/brute.blade.php": "798dc797ce6159bd9d31770de118ef76be9c7375f7afece2507faca0db95e09c",
+        "routes/study.php": "e94a371f5e376e76bdda4318af140686c32d5d5fad36fa95877a9b5a657a660b"
+      },
+      "human_review": "open",
+      "id": "BAD-BF-T3",
+      "kind": "faulty_T_design",
+      "module": "BF",
+      "overlay": "BAD-BF-T3",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "9d204c3810a270b96f27591d683a09306dfdbcaa0f336c715365b682a6336b50"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 0,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "76b0e99fba893d46009987891a5e955f3755f8567b89052d40b9cc7d56d70e37",
+        "resources/views/study/brute.blade.php": "798dc797ce6159bd9d31770de118ef76be9c7375f7afece2507faca0db95e09c",
+        "routes/study.php": "e94a371f5e376e76bdda4318af140686c32d5d5fad36fa95877a9b5a657a660b"
+      },
+      "human_review": "open",
+      "id": "BAD-BF-T4",
+      "kind": "faulty_T_design",
+      "module": "BF",
+      "overlay": "BAD-BF-T4",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "c5d69bb7c51fd469c351dd2e5ed43a023bd669574b31ed277781f2de1abd1560"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 0
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "bb447f15799c54580c4bfd8f85fc7bbcfb90ecf0f13f77b48e5e3ab22cb02be8",
+        "config/app.php": "349df80c9f1d52d5eafe8c0a3e9e867145a038d8918dbf62156b6a42f2e35050",
+        "resources/views/study/brute.blade.php": "798dc797ce6159bd9d31770de118ef76be9c7375f7afece2507faca0db95e09c",
+        "routes/study.php": "e94a371f5e376e76bdda4318af140686c32d5d5fad36fa95877a9b5a657a660b"
+      },
+      "human_review": "open",
+      "id": "BAD-BF-T5",
+      "kind": "faulty_T_design",
+      "module": "BF",
+      "overlay": "BAD-BF-T5",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "53b8e8eca9cbe638be2cba9fde43f79dee8d216f23dc59ca154bd96bf9f2376c"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "R": {
+          "R1": 0,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "SQL-R1-01-S01-FORM"
+          ]
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "8d0f60d44286c2cf777d686db45c09066142887002b38c67aaf5d8884de7f69a",
+        "resources/views/study/sqli.blade.php": "01d00283dac05c5c997575dbc42242ea99a81b7b3ba80f62005f16ef7eeec513",
+        "routes/study.php": "a28799439e170c862316850064dce26ce420b78cfc27f14ee01bf75a03d00f45"
+      },
+      "human_review": "open",
+      "id": "BAD-SQL-R1",
+      "kind": "faulty_R_design",
+      "module": "SQL",
+      "overlay": "BAD-SQL-R1",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "770c503a93194ff4addb3aef2744a19ba44d2bacb0d95e54de36f5c2d27cdc9d"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 3
+        },
+        "R": {
+          "R1": 1,
+          "R2": 0,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0,
+          "R6": 0
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "SQL-R2-01-S01-RESULT",
+            "SQL-R2-02-S01-RESULT",
+            "SQL-R5-01-S01-RESULT",
+            "SQL-R5-02-S01-RESULT",
+            "SQL-R6-01-S01-RESULT",
+            "SQL-R6-01-S03-RESULT"
+          ]
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "42517b953775ba9a92466de57d7326036dc8cbd8a1279308de7582391c5e67d8",
+        "resources/views/study/sqli.blade.php": "fbff2be116fdf83f2cf4dd2cd3ec9960c61a5bccc04af715cc67a02c08f54173",
+        "routes/study.php": "a28799439e170c862316850064dce26ce420b78cfc27f14ee01bf75a03d00f45"
+      },
+      "human_review": "open",
+      "id": "BAD-SQL-R2",
+      "kind": "faulty_R_design",
+      "module": "SQL",
+      "overlay": "BAD-SQL-R2",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "dd3b72b37010c3eb0ef66e9edf76cc60f94eb034e32511c2aa3f55a5a6a405fa"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 4
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 0,
+          "R4": 1,
+          "R5": 1,
+          "R6": 0
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "SQL-R3-01-S01-RESULT",
+            "SQL-R3-02-S01-RESULT",
+            "SQL-R6-01-S02-RESULT"
+          ]
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "c5c8353016b3b7846e9f343d0bee918f3c2ac3d23083f285bd9f9d63069e4c05",
+        "resources/views/study/sqli.blade.php": "fbff2be116fdf83f2cf4dd2cd3ec9960c61a5bccc04af715cc67a02c08f54173",
+        "routes/study.php": "a28799439e170c862316850064dce26ce420b78cfc27f14ee01bf75a03d00f45"
+      },
+      "human_review": "open",
+      "id": "BAD-SQL-R3",
+      "kind": "faulty_R_design",
+      "module": "SQL",
+      "overlay": "BAD-SQL-R3",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "fb15775765a277311c06c88007bdde0d2046807bcf02743496628f007ec313ae"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 0,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "SQL-R4-01-S01-HTTP",
+            "SQL-R4-01-S01-RESULT",
+            "SQL-R4-02-S01-HTTP",
+            "SQL-R4-02-S01-RESULT"
+          ]
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "07e5d5a20e6efb2c9b925f8f911c4ce512d55c6879e573efbedcdb432f32bcc5",
+        "resources/views/study/sqli.blade.php": "fbff2be116fdf83f2cf4dd2cd3ec9960c61a5bccc04af715cc67a02c08f54173",
+        "routes/study.php": "a28799439e170c862316850064dce26ce420b78cfc27f14ee01bf75a03d00f45"
+      },
+      "human_review": "open",
+      "id": "BAD-SQL-R4",
+      "kind": "faulty_R_design",
+      "module": "SQL",
+      "overlay": "BAD-SQL-R4",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "190ef83c3020eda72b3e7042c9bc55576fd0db0053d915cb58b8593c00833424"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 3
+        },
+        "R": {
+          "R1": 1,
+          "R2": 0,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0,
+          "R6": 0
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "SQL-R2-02-S01-RESULT",
+            "SQL-R5-02-S01-RESULT",
+            "SQL-R6-01-S03-RESULT"
+          ]
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "d80c8b633f589e8f946346b7b99ecf24c229259a07c867f88a40e28762c9b6a0",
+        "resources/views/study/sqli.blade.php": "fbff2be116fdf83f2cf4dd2cd3ec9960c61a5bccc04af715cc67a02c08f54173",
+        "routes/study.php": "a28799439e170c862316850064dce26ce420b78cfc27f14ee01bf75a03d00f45"
+      },
+      "human_review": "open",
+      "id": "BAD-SQL-R5",
+      "kind": "faulty_R_design",
+      "module": "SQL",
+      "overlay": "BAD-SQL-R5",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "fa80d43786b58ea96db2155471f6a6fed972d398e715db576c25285b814fb940"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 0
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "SQL-R6-01-S02-RESULT",
+            "SQL-R6-01-S03-RESULT"
+          ]
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "a1a8f57346587d2bb97327d01b97836dcbb07b327d225fab05e92dc47eacd5ff",
+        "resources/views/study/sqli.blade.php": "fbff2be116fdf83f2cf4dd2cd3ec9960c61a5bccc04af715cc67a02c08f54173",
+        "routes/study.php": "a28799439e170c862316850064dce26ce420b78cfc27f14ee01bf75a03d00f45"
+      },
+      "human_review": "open",
+      "id": "BAD-SQL-R6",
+      "kind": "faulty_R_design",
+      "module": "SQL",
+      "overlay": "BAD-SQL-R6",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "5d1d4e4195c96fcc3d3929c8ee0185084119ebcb5af6a99b9ee798db48cf1939"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": true,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 0,
+          "R2": 0,
+          "R3": 0,
+          "R4": 0,
+          "R5": 0,
+          "R6": 0
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 0,
+          "T2": null,
+          "T3": null,
+          "T4": null,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "blocked_by_candidate",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "bcfef338fe458298fbe91ce53829774fd2b1aabc89faaed9f13536acf32be291",
+        "resources/views/study/sqli.blade.php": "fbff2be116fdf83f2cf4dd2cd3ec9960c61a5bccc04af715cc67a02c08f54173",
+        "routes/study.php": "a28799439e170c862316850064dce26ce420b78cfc27f14ee01bf75a03d00f45"
+      },
+      "human_review": "open",
+      "id": "BAD-SQL-T1",
+      "kind": "faulty_T_design",
+      "module": "SQL",
+      "overlay": "BAD-SQL-T1",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "b805d737de9426e4c6afc07c7d8f9695cea80b40949f76176858d86ff40a526a"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 0,
+          "T3": 0,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "resources/views/study/sqli.blade.php": "fbff2be116fdf83f2cf4dd2cd3ec9960c61a5bccc04af715cc67a02c08f54173",
+        "routes/study.php": "80b77244b002fd2b16b1ca9cec83ddde30926c5ef786a160cda88bda120cf87b"
+      },
+      "human_review": "open",
+      "id": "BAD-SQL-T2",
+      "kind": "faulty_T_design",
+      "module": "SQL",
+      "overlay": "BAD-SQL-T2",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "9fb0a3c1e50e945ce0c0476bbf55feaa0d18e468804e3c1327a51c916b1c2f6f"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 0,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "000b6c5566e0fb03f2c72c9376f806714a141c82a62123f9bce45b6ff40d968b",
+        "resources/views/study/sqli.blade.php": "fbff2be116fdf83f2cf4dd2cd3ec9960c61a5bccc04af715cc67a02c08f54173",
+        "routes/study.php": "a28799439e170c862316850064dce26ce420b78cfc27f14ee01bf75a03d00f45"
+      },
+      "human_review": "open",
+      "id": "BAD-SQL-T3",
+      "kind": "faulty_T_design",
+      "module": "SQL",
+      "overlay": "BAD-SQL-T3",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "ceafcec27314ef23d1804376a9ffeb558ea142b6802859f21ce06f3da9b53878"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 0,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "f559eac61af89eb0493ec802dc564626116dd43e240ae66c4e9f3c715dc2c5eb",
+        "resources/views/study/sqli.blade.php": "fbff2be116fdf83f2cf4dd2cd3ec9960c61a5bccc04af715cc67a02c08f54173",
+        "routes/study.php": "a28799439e170c862316850064dce26ce420b78cfc27f14ee01bf75a03d00f45"
+      },
+      "human_review": "open",
+      "id": "BAD-SQL-T4",
+      "kind": "faulty_T_design",
+      "module": "SQL",
+      "overlay": "BAD-SQL-T4",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "0a7dda3f34807c68c3f9be9a38f7a3d61662756976672906c099a5c67d675656"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 0
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "8d0f60d44286c2cf777d686db45c09066142887002b38c67aaf5d8884de7f69a",
+        "config/app.php": "349df80c9f1d52d5eafe8c0a3e9e867145a038d8918dbf62156b6a42f2e35050",
+        "resources/views/study/sqli.blade.php": "fbff2be116fdf83f2cf4dd2cd3ec9960c61a5bccc04af715cc67a02c08f54173",
+        "routes/study.php": "a28799439e170c862316850064dce26ce420b78cfc27f14ee01bf75a03d00f45"
+      },
+      "human_review": "open",
+      "id": "BAD-SQL-T5",
+      "kind": "faulty_T_design",
+      "module": "SQL",
+      "overlay": "BAD-SQL-T5",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "d28921a7c061f47cd98b026a00fd7abd6471cf6ade7c5c0e161a40388237b202"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "R": {
+          "R1": 0,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "UP-R1-01-S01-FORM"
+          ]
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "160ce8d02f7860e749355b4375914eb1dd5243515bc164c34d28c809d71c4575",
+        "resources/views/study/upload.blade.php": "826ac75cafa9f5868b1b54ff606b24dadcfbd39de0484e344be21c680d64f993",
+        "routes/study.php": "12939664c2ccdb2df1294278d4be69bb714a4d4239d75d40e7c95a3357d748da"
+      },
+      "human_review": "open",
+      "id": "BAD-UP-R1",
+      "kind": "faulty_R_design",
+      "module": "UP",
+      "overlay": "BAD-UP-R1",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "01122953d1c5e2e35be7a565c2c793d53c39993f34d3de8a877fcd7a0b074fb1"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 3
+        },
+        "R": {
+          "R1": 1,
+          "R2": 0,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0,
+          "R6": 0
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "UP-R2-01-S01-FILES",
+            "UP-R2-02-S01-FILES",
+            "UP-R5-01-S01-FILES",
+            "UP-R5-02-S01-FILES",
+            "UP-R6-01-S01-FILES",
+            "UP-R6-01-S02-FILES",
+            "UP-R6-01-S03-FILES"
+          ]
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "2bead387f729634f1e95e7c942afa81ed5e928b36a6d181f40824501b704ccb5",
+        "resources/views/study/upload.blade.php": "8a667849a576a521a9ff43600bc4e2e0b044eaa0777368c12d68725cc786d7eb",
+        "routes/study.php": "12939664c2ccdb2df1294278d4be69bb714a4d4239d75d40e7c95a3357d748da"
+      },
+      "human_review": "open",
+      "id": "BAD-UP-R2",
+      "kind": "faulty_R_design",
+      "module": "UP",
+      "overlay": "BAD-UP-R2",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "69ea5cf12c07fb5f714f326388f360340b803b4f4dcb2553289749a1ad1fff5a"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 0,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "UP-R3-01-S01-HTTP",
+            "UP-R3-01-S01-RESULT"
+          ]
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "7a9e1e50178676492983b445b87095e61d6af22e8ce5070aaeaf8ed155a72eea",
+        "resources/views/study/upload.blade.php": "8a667849a576a521a9ff43600bc4e2e0b044eaa0777368c12d68725cc786d7eb",
+        "routes/study.php": "12939664c2ccdb2df1294278d4be69bb714a4d4239d75d40e7c95a3357d748da"
+      },
+      "human_review": "open",
+      "id": "BAD-UP-R3",
+      "kind": "faulty_R_design",
+      "module": "UP",
+      "overlay": "BAD-UP-R3",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "7ca53a499c5a1c83c509fc32cfc619c64adbfe6ca4ede922ade755ddd702e521"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 0,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "UP-R4-01-S01-HTTP",
+            "UP-R4-01-S01-RESULT",
+            "UP-R4-02-S01-HTTP",
+            "UP-R4-02-S01-RESULT"
+          ]
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "023c25f829489a108e64f4ee84eeb7d24f8ca04195f1d8c3dd3750df8097a997",
+        "resources/views/study/upload.blade.php": "8a667849a576a521a9ff43600bc4e2e0b044eaa0777368c12d68725cc786d7eb",
+        "routes/study.php": "12939664c2ccdb2df1294278d4be69bb714a4d4239d75d40e7c95a3357d748da"
+      },
+      "human_review": "open",
+      "id": "BAD-UP-R4",
+      "kind": "faulty_R_design",
+      "module": "UP",
+      "overlay": "BAD-UP-R4",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "459a0c0eb6bd25c42720e19906c0e6e633990ad042c0170d64e6ec88c174936f"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 3
+        },
+        "R": {
+          "R1": 1,
+          "R2": 0,
+          "R3": 1,
+          "R4": 1,
+          "R5": 0,
+          "R6": 0
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "UP-R2-01-S01-FILES",
+            "UP-R2-02-S01-FILES",
+            "UP-R5-01-S01-FILES",
+            "UP-R5-02-S01-FILES",
+            "UP-R6-01-S01-FILES",
+            "UP-R6-01-S02-FILES",
+            "UP-R6-01-S03-FILES"
+          ]
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "5678366607937ec5b8761da54498c975200c37433891105068d2777d017db4b3",
+        "resources/views/study/upload.blade.php": "8a667849a576a521a9ff43600bc4e2e0b044eaa0777368c12d68725cc786d7eb",
+        "routes/study.php": "12939664c2ccdb2df1294278d4be69bb714a4d4239d75d40e7c95a3357d748da"
+      },
+      "human_review": "open",
+      "id": "BAD-UP-R5",
+      "kind": "faulty_R_design",
+      "module": "UP",
+      "overlay": "BAD-UP-R5",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "c24a91df5c8e79f28d78707bd39f038b1b6db21e51b17638004ba1aaece05993"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 5
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 0
+        },
+        "T": 1,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": [
+            "UP-R6-01-S02-FILES",
+            "UP-R6-01-S03-FILES"
+          ]
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "b806427b95f34b291f926c790c2aefc81b3b851dddfad2954667291bd4601591",
+        "resources/views/study/upload.blade.php": "8a667849a576a521a9ff43600bc4e2e0b044eaa0777368c12d68725cc786d7eb",
+        "routes/study.php": "12939664c2ccdb2df1294278d4be69bb714a4d4239d75d40e7c95a3357d748da"
+      },
+      "human_review": "open",
+      "id": "BAD-UP-R6",
+      "kind": "faulty_R_design",
+      "module": "UP",
+      "overlay": "BAD-UP-R6",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "ced7f438a013e2653adbd90118c33e1a85c2cfcf27039ee122475f47f6b92990"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": true,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 0,
+          "R2": 0,
+          "R3": 0,
+          "R4": 0,
+          "R5": 0,
+          "R6": 0
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 0,
+          "T2": null,
+          "T3": null,
+          "T4": null,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "blocked_by_candidate",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "5522dfc0346663d8e9a74d4acb29a6c7aa9efa452cfcfd6bc3398ddcacde5c0e",
+        "resources/views/study/upload.blade.php": "8a667849a576a521a9ff43600bc4e2e0b044eaa0777368c12d68725cc786d7eb",
+        "routes/study.php": "12939664c2ccdb2df1294278d4be69bb714a4d4239d75d40e7c95a3357d748da"
+      },
+      "human_review": "open",
+      "id": "BAD-UP-T1",
+      "kind": "faulty_T_design",
+      "module": "UP",
+      "overlay": "BAD-UP-T1",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "c00a204b7394850872e5536d0c6630ed8fc3be39bc8c263a1b94ae80137a3b79"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 0,
+          "T3": 0,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "resources/views/study/upload.blade.php": "8a667849a576a521a9ff43600bc4e2e0b044eaa0777368c12d68725cc786d7eb",
+        "routes/study.php": "f4779dd61422007ec217ec1696b0c3cfc0575cdf47f5870121ce91922702d7f6"
+      },
+      "human_review": "open",
+      "id": "BAD-UP-T2",
+      "kind": "faulty_T_design",
+      "module": "UP",
+      "overlay": "BAD-UP-T2",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "6ebf7cd175cc706a62bca5d70af64f345226b196170c8bceac9edc646a212228"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 0,
+          "T4": 1,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "28ae9cb925be7e4fb1a646507b05b3bf83c0bc683c9140239ebdd19c8c9aa07f",
+        "resources/views/study/upload.blade.php": "8a667849a576a521a9ff43600bc4e2e0b044eaa0777368c12d68725cc786d7eb",
+        "routes/study.php": "12939664c2ccdb2df1294278d4be69bb714a4d4239d75d40e7c95a3357d748da"
+      },
+      "human_review": "open",
+      "id": "BAD-UP-T3",
+      "kind": "faulty_T_design",
+      "module": "UP",
+      "overlay": "BAD-UP-T3",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "74f01463765ec0746c2d8df261faf98503de5e7321eb7be45bdbc108ce29ea53"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 0,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "07468ba5694be5609fe4c1946988d4c469573babccb711fa9383b7f451cd620f",
+        "resources/views/study/upload.blade.php": "8a667849a576a521a9ff43600bc4e2e0b044eaa0777368c12d68725cc786d7eb",
+        "routes/study.php": "12939664c2ccdb2df1294278d4be69bb714a4d4239d75d40e7c95a3357d748da"
+      },
+      "human_review": "open",
+      "id": "BAD-UP-T4",
+      "kind": "faulty_T_design",
+      "module": "UP",
+      "overlay": "BAD-UP-T4",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "1dd18057cbb5c04d79205dbd2eb333f2ee191bac2dce3927c92973053df8afc4"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 0
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "160ce8d02f7860e749355b4375914eb1dd5243515bc164c34d28c809d71c4575",
+        "config/app.php": "349df80c9f1d52d5eafe8c0a3e9e867145a038d8918dbf62156b6a42f2e35050",
+        "resources/views/study/upload.blade.php": "8a667849a576a521a9ff43600bc4e2e0b044eaa0777368c12d68725cc786d7eb",
+        "routes/study.php": "12939664c2ccdb2df1294278d4be69bb714a4d4239d75d40e7c95a3357d748da"
+      },
+      "human_review": "open",
+      "id": "BAD-UP-T5",
+      "kind": "faulty_T_design",
+      "module": "UP",
+      "overlay": "BAD-UP-T5",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "13eed3b76c4a047c67e2eb0ebfbe833db105d35674e8853fcac1a6cc26232ce3"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 0,
+          "T3": 0,
+          "T4": 0,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "BF-R1-01",
+          "BF-R2-01",
+          "BF-R2-02",
+          "BF-R3-01",
+          "BF-R3-02",
+          "BF-R4-01",
+          "BF-R4-02",
+          "BF-R4-03",
+          "BF-R4-04",
+          "BF-R4-05",
+          "BF-R4-06",
+          "BF-R4-07",
+          "BF-R4-08",
+          "BF-R5-01",
+          "BF-R5-02",
+          "BF-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "3ec06c905f42cb6204f9da09dd140e9e0a6735bdb3ece6f4385ffdd42fa903ab",
+        "app/Study/legacy.php": "5d9dd6fab2bb22e1cb62c7fc74813ac7a68302c1433935a231d0efa89ac0a00c",
+        "resources/views/study/brute.blade.php": "798dc797ce6159bd9d31770de118ef76be9c7375f7afece2507faca0db95e09c",
+        "routes/study.php": "e94a371f5e376e76bdda4318af140686c32d5d5fad36fa95877a9b5a657a660b"
+      },
+      "human_review": "open",
+      "id": "BAD-BF-T2-FACADE",
+      "kind": "faulty_T_design",
+      "module": "BF",
+      "overlay": "BAD-BF-T2-FACADE",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "85b90413dd61389ac237a3e2440767edef22c56aac43fe46815f94946d94730f"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 0,
+          "T3": 0,
+          "T4": 0,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "SQL-R1-01",
+          "SQL-R2-01",
+          "SQL-R2-02",
+          "SQL-R3-01",
+          "SQL-R3-02",
+          "SQL-R4-01",
+          "SQL-R4-02",
+          "SQL-R5-01",
+          "SQL-R5-02",
+          "SQL-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "3ec06c905f42cb6204f9da09dd140e9e0a6735bdb3ece6f4385ffdd42fa903ab",
+        "app/Study/legacy.php": "611b8199b164eb04e85a53c9759b61d86d150605dc7462971b7d3ab0f725d0a7",
+        "resources/views/study/sqli.blade.php": "fbff2be116fdf83f2cf4dd2cd3ec9960c61a5bccc04af715cc67a02c08f54173",
+        "routes/study.php": "a28799439e170c862316850064dce26ce420b78cfc27f14ee01bf75a03d00f45"
+      },
+      "human_review": "open",
+      "id": "BAD-SQL-T2-FACADE",
+      "kind": "faulty_T_design",
+      "module": "SQL",
+      "overlay": "BAD-SQL-T2-FACADE",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "20ad9b9b309c93e0d5bfda78c38f17dc5c4721c7c0e4b6964c010c2bc1ca2411"
+    },
+    {
+      "construction": "materialized",
+      "deliberate_syntax_failure": false,
+      "expected": {
+        "F": {
+          "denominator": 6,
+          "numerator": 0
+        },
+        "R": {
+          "R1": 1,
+          "R2": 1,
+          "R3": 1,
+          "R4": 1,
+          "R5": 1,
+          "R6": 1
+        },
+        "T": 0,
+        "T_criteria": {
+          "T1": 1,
+          "T2": 0,
+          "T3": 0,
+          "T4": 0,
+          "T5": 1
+        },
+        "assertions": {
+          "default": "pass",
+          "fail_ids": []
+        },
+        "case_scope": [
+          "UP-R1-01",
+          "UP-R2-01",
+          "UP-R2-02",
+          "UP-R3-01",
+          "UP-R4-01",
+          "UP-R4-02",
+          "UP-R5-01",
+          "UP-R5-02",
+          "UP-R6-01"
+        ],
+        "complete": 0
+      },
+      "files": {
+        "app/Http/Controllers/Study/ModuleAction.php": "3ec06c905f42cb6204f9da09dd140e9e0a6735bdb3ece6f4385ffdd42fa903ab",
+        "app/Study/legacy.php": "33210af612bbbe243f92de6605d92e5e50a4c0bccb02abad3c2cac6b7fa50666",
+        "resources/views/study/upload.blade.php": "8a667849a576a521a9ff43600bc4e2e0b044eaa0777368c12d68725cc786d7eb",
+        "routes/study.php": "12939664c2ccdb2df1294278d4be69bb714a4d4239d75d40e7c95a3357d748da"
+      },
+      "human_review": "open",
+      "id": "BAD-UP-T2-FACADE",
+      "kind": "faulty_T_design",
+      "module": "UP",
+      "overlay": "BAD-UP-T2-FACADE",
+      "runtime_classification": "open; requires issues 7/10",
+      "tree_sha256": "b4604cb10ff4699e16fc85129b14a3e46c491b12ffae716d158d31008e147762"
+    }
+  ],
+  "schema_version": 1,
+  "source_catalog_sha256": "a7834bd3982e4a8dbdb14e155c85871e1eae313d8260c31ec2aa89c3decb1d11",
+  "suite_kind": "study_holdout",
+  "type": "reference"
+}

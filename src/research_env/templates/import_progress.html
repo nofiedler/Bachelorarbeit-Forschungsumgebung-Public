@@ -1,0 +1,8 @@
+<section class="import-progress" aria-label="Importfortschritt" aria-live="polite">
+  {% if progress.step %}<p class="eyebrow">Schritt {{ progress.step }} von 4</p>{% endif %}
+  <h2>{{ progress.stage }}</h2>
+  <div id="restore-meter-{{ copy.id }}" class="import-meter{% if progress.percent is none %} is-indeterminate{% endif %}" data-import-meter data-percent="{{ progress.percent if progress.percent is not none else '' }}" data-stage="{{ progress.stage }}" role="progressbar" aria-label="{{ progress.stage }}" aria-valuemin="0" aria-valuemax="100" {% if progress.percent is not none %}aria-valuenow="{{ progress.percent }}"{% endif %}><span class="import-meter-fill"></span></div>
+  {% if progress.percent is not none %}<p class="import-progress-count"><strong>{{ progress.percent }} % dieses Schritts</strong> · {{ '{:,}'.format(progress.done).replace(',', '.') }} von {{ '{:,}'.format(progress.total).replace(',', '.') }} {{ progress.unit }}</p>{% endif %}
+  <p>{{ progress.eta }}</p>
+  <p class="hint">Die Schätzung passt sich der gemessenen Geschwindigkeit an. Weitere Prüfungen können zusätzliche Zeit benötigen. Diese Ansicht aktualisiert sich automatisch.</p>
+</section>

@@ -1,0 +1,25 @@
+{
+  "files": 857,
+  "bytes": 35574226,
+  "unexpected_runtime_files": [],
+  "symlinks": [],
+  "files_over_20MiB": [],
+  "known_synthetic_redaction_test_constants": [
+    {
+      "path": "tests/pipeline_worker_probe.py",
+      "type": "openrouter_key",
+      "matches": 1
+    },
+    {
+      "path": "tests/test_adapter.py",
+      "type": "openrouter_key",
+      "matches": 1
+    }
+  ],
+  "other_credential_pattern_hits": [],
+  "external_source_redaction": {
+    "path": "docs/pruefungen/ui-matrix-2026-10-06/home-about-sources-2026-10-06/02.html",
+    "field": "props.mapboxPublicKey",
+    "remaining_mapbox_token_patterns": 0
+  }
+}

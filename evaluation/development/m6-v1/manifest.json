@@ -1,0 +1,12 @@
+{
+  "version": "M6-DEV-v1",
+  "suite_kind": "development",
+  "files": {
+    "README.md": "b8efc55c4a4d37362e9615c04fde210786d0470819822bdf415eaaa5c0ec091c",
+    "cases.json": "430dbcbe337c91b341d449555b8df53071535522f8e872de0f72a39b3a8ad01e",
+    "dev-orange.png": "18af837ca0a881a2cd9d60e289ed734b09cd5464b6a012bf6cad602a7651121c",
+    "dev-purple.png": "9f28ecabf2c8dc8de1c03261b16285a81da310092e2d7d655de19bf23ba5429e",
+    "development-existing.txt": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394",
+    "fixtures.json": "9e1eeff994ee7a851f28ce0b33893bd0f2e50e2d3f5f416ab2c97b1545016036"
+  }
+}

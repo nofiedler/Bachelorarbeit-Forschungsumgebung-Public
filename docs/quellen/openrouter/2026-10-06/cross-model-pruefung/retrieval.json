@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://openrouter.ai/api/v1/models/openai/gpt-6.1-sol/endpoints",
+    "retrieved_at": "2026-10-06T08:24:30.656089+00:00",
+    "file": "gpt-6.1-sol.json",
+    "sha256": "f05fe36a134f5c8d2009aca9c4cb26ec0337001cb8a9e6e16eb5f66afa0a458a"
+  },
+  {
+    "url": "https://openrouter.ai/api/v1/models/anthropic/claude-sonnet-4.5/endpoints",
+    "retrieved_at": "2026-10-06T08:24:30.771241+00:00",
+    "file": "claude-sonnet-4.5.json",
+    "sha256": "49c682cf4b172a4e6c8ce83db2c6807adec25446044fd985cccc469090479eb0"
+  }
+]

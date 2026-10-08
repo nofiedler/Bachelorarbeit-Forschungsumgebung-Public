@@ -1,0 +1,3238 @@
+{
+  "version": "M2-v0.1",
+  "rubric_version": "RT-v0.1",
+  "audience": "evaluator_only",
+  "oracle_policy": "Alle Sollwerte aus öffentlichem Vertrag, unverändertem Fixture und Eingabedatei abgeleitet; kein Kandidat wurde ausgeführt.",
+  "cases": [
+    {
+      "id": "BF-R1-01",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R1",
+      "purpose": "Formularanzeige ohne Aktionsfeld",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "form"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {}
+          },
+          "assertions": [
+            {
+              "id": "BF-R1-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R1-01-S01-FORM",
+              "target": "dom.form",
+              "expected": {
+                "action": "/study/brute",
+                "method": "GET",
+                "fields": [
+                  "username",
+                  "password",
+                  "Login"
+                ],
+                "password_type": "password",
+                "file_type": null,
+                "encoding": null
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R1-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": null,
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R1-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R1-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R1-01-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SQL-R1-01",
+      "version": "M2-v0.1",
+      "module": "SQL",
+      "category": "R1",
+      "purpose": "Formularanzeige ohne Aktionsfeld",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "form"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {}
+          },
+          "assertions": [
+            {
+              "id": "SQL-R1-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R1-01-S01-FORM",
+              "target": "dom.form",
+              "expected": {
+                "action": "/study/sqli",
+                "method": "GET",
+                "fields": [
+                  "id",
+                  "Submit"
+                ],
+                "password_type": null,
+                "file_type": null,
+                "encoding": null
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R1-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": null,
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R1-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R1-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UP-R1-01",
+      "version": "M2-v0.1",
+      "module": "UP",
+      "category": "R1",
+      "purpose": "Formularanzeige ohne Aktionsfeld",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "form"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/upload",
+            "encoding": "query",
+            "fields": {}
+          },
+          "assertions": [
+            {
+              "id": "UP-R1-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R1-01-S01-FORM",
+              "target": "dom.form",
+              "expected": {
+                "action": "/study/upload",
+                "method": "POST",
+                "fields": [
+                  "uploaded",
+                  "Upload"
+                ],
+                "password_type": null,
+                "file_type": "file",
+                "encoding": "multipart/form-data",
+                "valid_csrf_token": true
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R1-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": null,
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R1-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R1-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R2-01",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R2",
+      "purpose": "Erstes gültiges Paar",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "positive"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "lotus7",
+              "password": "Feld9",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R2-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R2-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [
+                  "study/avatars/lotus7.png"
+                ],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R2-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R2-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R2-01-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R2-02",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R2",
+      "purpose": "Zweites gültiges Paar",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "positive"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "mohn8",
+              "password": "Birke20",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R2-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R2-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [
+                  "study/avatars/mohn8.png"
+                ],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R2-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R2-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R2-02-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R3-01",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R3",
+      "purpose": "Falsches nicht leeres Passwort",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "wrong_password"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "lotus7",
+              "password": "Falsch99",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R3-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R3-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "NEGATIVE",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R3-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R3-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R3-01-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R3-02",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R3",
+      "purpose": "Unbekannter Benutzer",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "unknown_user"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "farn404",
+              "password": "Feld9",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R3-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R3-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "NEGATIVE",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R3-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R3-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R3-02-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R4-01",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "username_missing",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "username_missing"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "password": "Feld9",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R4-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 422,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-01-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R4-02",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "username_empty",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "username_empty"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "",
+              "password": "Feld9",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R4-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 422,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-02-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R4-03",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "password_missing",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "password_missing"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "lotus7",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R4-03-S01-HTTP",
+              "target": "response.status",
+              "expected": 422,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-03-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-03-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-03-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-03-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R4-04",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "password_empty",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "password_empty"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "lotus7",
+              "password": "",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R4-04-S01-HTTP",
+              "target": "response.status",
+              "expected": 422,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-04-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-04-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-04-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-04-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R4-05",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "both_missing",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "both_missing"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R4-05-S01-HTTP",
+              "target": "response.status",
+              "expected": 422,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-05-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-05-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-05-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-05-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R4-06",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "both_empty",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "both_empty"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "",
+              "password": "",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R4-06-S01-HTTP",
+              "target": "response.status",
+              "expected": 422,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-06-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-06-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-06-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-06-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R4-07",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "username_empty_password_missing",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "username_empty_password_missing"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R4-07-S01-HTTP",
+              "target": "response.status",
+              "expected": 422,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-07-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-07-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-07-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-07-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R4-08",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "username_missing_password_empty",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "username_missing_password_empty"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "password": "",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R4-08-S01-HTTP",
+              "target": "response.status",
+              "expected": 422,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-08-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-08-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-08-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R4-08-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R5-01",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R5",
+      "purpose": "Zuordnung bei gewechseltem Datenbestand, erster Benutzer",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-B",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "mapping",
+        "fixture_variation"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "lotus7",
+              "password": "Wind4",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R5-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R5-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [
+                  "study/avatars/lotus7b.png"
+                ],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R5-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-B",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R5-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R5-01-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R5-02",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R5",
+      "purpose": "Zuordnung bei gewechseltem Datenbestand, zweiter Benutzer",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-B",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "mapping",
+        "fixture_variation"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "mohn8",
+              "password": "Wiese6",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R5-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R5-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [
+                  "study/avatars/mohn8b.png"
+                ],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R5-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-B",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R5-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R5-02-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BF-R6-01",
+      "version": "M2-v0.1",
+      "module": "BF",
+      "category": "R6",
+      "purpose": "Session bleibt, Ergebnisspur muss wechseln",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "sequence"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "lotus7",
+              "password": "Feld9",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R6-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R6-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [
+                  "study/avatars/lotus7.png"
+                ],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R6-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R6-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R6-01-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "lotus7",
+              "password": "Falsch99",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R6-01-S02-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R6-01-S02-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "NEGATIVE",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R6-01-S02-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R6-01-S02-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R6-01-S02-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "mohn8",
+              "password": "Birke20",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "BF-R6-01-S03-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R6-01-S03-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [
+                  "study/avatars/mohn8.png"
+                ],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R6-01-S03-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R6-01-S03-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "BF-R6-01-S03-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged",
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SQL-R2-01",
+      "version": "M2-v0.1",
+      "module": "SQL",
+      "category": "R2",
+      "purpose": "Vorhandene ID 1",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "positive"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "17",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "SQL-R2-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R2-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "first_name": "Ada",
+                  "last_name": "Wolke"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R2-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R2-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SQL-R2-02",
+      "version": "M2-v0.1",
+      "module": "SQL",
+      "category": "R2",
+      "purpose": "Vorhandene ID 2",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "positive"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "82",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "SQL-R2-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R2-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "first_name": "Béla",
+                  "last_name": "Stein & Co"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R2-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R2-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SQL-R3-01",
+      "version": "M2-v0.1",
+      "module": "SQL",
+      "category": "R3",
+      "purpose": "Unbekannte gültige ID 1",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "unknown_id"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "404",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "SQL-R3-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R3-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "NEGATIVE",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R3-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R3-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SQL-R3-02",
+      "version": "M2-v0.1",
+      "module": "SQL",
+      "category": "R3",
+      "purpose": "Unbekannte gültige ID 2",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "unknown_id"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "999999",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "SQL-R3-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R3-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "NEGATIVE",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R3-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R3-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SQL-R4-01",
+      "version": "M2-v0.1",
+      "module": "SQL",
+      "category": "R4",
+      "purpose": "ID fehlt",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "id_missing"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "Submit": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "SQL-R4-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 422,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R4-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R4-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R4-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SQL-R4-02",
+      "version": "M2-v0.1",
+      "module": "SQL",
+      "category": "R4",
+      "purpose": "ID leer",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "id_empty"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "Submit": "",
+              "id": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "SQL-R4-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 422,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R4-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R4-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R4-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SQL-R5-01",
+      "version": "M2-v0.1",
+      "module": "SQL",
+      "category": "R5",
+      "purpose": "ID-Zuordnung bei gewechseltem vollständigem Datenbestand",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-B",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "mapping",
+        "fixture_variation"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "17",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "SQL-R5-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R5-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "first_name": "Mira",
+                  "last_name": "Nord"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R5-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-B",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R5-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SQL-R5-02",
+      "version": "M2-v0.1",
+      "module": "SQL",
+      "category": "R5",
+      "purpose": "ID-Zuordnung bei gewechseltem vollständigem Datenbestand",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-B",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "mapping",
+        "fixture_variation"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "82",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "SQL-R5-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R5-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "first_name": "Ivo",
+                  "last_name": "Süd"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R5-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-B",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R5-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SQL-R6-01",
+      "version": "M2-v0.1",
+      "module": "SQL",
+      "category": "R6",
+      "purpose": "Positiv/negativ/anderer Datensatz bei erhaltener Session",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "sequence"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "17",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "SQL-R6-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R6-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "first_name": "Ada",
+                  "last_name": "Wolke"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R6-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R6-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "404",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "SQL-R6-01-S02-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R6-01-S02-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "NEGATIVE",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R6-01-S02-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R6-01-S02-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "82",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "SQL-R6-01-S03-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R6-01-S03-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "first_name": "Béla",
+                  "last_name": "Stein & Co"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R6-01-S03-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "SQL-R6-01-S03-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UP-R2-01",
+      "version": "M2-v0.1",
+      "module": "UP",
+      "category": "R2",
+      "purpose": "Gültiges Bild 1",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "positive"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "fixture": "amber.png",
+              "filename": "amber.png",
+              "transport_complete": true
+            }
+          },
+          "assertions": [
+            {
+              "id": "UP-R2-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R2-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/amber.png"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R2-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R2-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                },
+                "amber.png": {
+                  "size": 73,
+                  "sha256": "5152b4f262397512ec8d1d6f076c509a6052674e3814a0c78fb7bf368b4d5b62"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UP-R2-02",
+      "version": "M2-v0.1",
+      "module": "UP",
+      "category": "R2",
+      "purpose": "Gültiges Bild 2",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "positive"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "fixture": "blue.jpg",
+              "filename": "blue.jpg",
+              "transport_complete": true
+            }
+          },
+          "assertions": [
+            {
+              "id": "UP-R2-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R2-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/blue.jpg"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R2-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R2-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                },
+                "blue.jpg": {
+                  "size": 777,
+                  "sha256": "bfd0fb4d7039a1716a766f83be930226c9d8649aa4deeb926013cbe24dd53888"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UP-R3-01",
+      "version": "M2-v0.1",
+      "module": "UP",
+      "category": "R3",
+      "purpose": "Wirksam kontrollierter Schreibfehler, alte Datei bleibt",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": "target_directory_not_writable"
+      },
+      "tags": [
+        "write_failure"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "fixture": "green.png",
+              "filename": "green.png",
+              "transport_complete": true
+            }
+          },
+          "assertions": [
+            {
+              "id": "UP-R3-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 500,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R3-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "UPLOAD_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R3-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R3-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UP-R4-01",
+      "version": "M2-v0.1",
+      "module": "UP",
+      "category": "R4",
+      "purpose": "Dateipart missing",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "file_missing"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "missing",
+              "fixture": null,
+              "filename": "",
+              "transport_complete": true
+            }
+          },
+          "assertions": [
+            {
+              "id": "UP-R4-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 422,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R4-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R4-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R4-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UP-R4-02",
+      "version": "M2-v0.1",
+      "module": "UP",
+      "category": "R4",
+      "purpose": "Dateipart empty",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "file_empty"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "empty",
+              "fixture": null,
+              "filename": "",
+              "transport_complete": true
+            }
+          },
+          "assertions": [
+            {
+              "id": "UP-R4-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 422,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R4-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R4-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R4-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UP-R5-01",
+      "version": "M2-v0.1",
+      "module": "UP",
+      "category": "R5",
+      "purpose": "Andere Bildbytes, Originalname und Hash erhalten",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "byte_fidelity"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "fixture": "blue.png",
+              "filename": "blue.png",
+              "transport_complete": true
+            }
+          },
+          "assertions": [
+            {
+              "id": "UP-R5-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R5-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/blue.png"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R5-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R5-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                },
+                "blue.png": {
+                  "size": 73,
+                  "sha256": "4442d728adc33566e2be10ba0d573a8b4ec1ca033335b75eaac003a97facfc26"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UP-R5-02",
+      "version": "M2-v0.1",
+      "module": "UP",
+      "category": "R5",
+      "purpose": "Andere Bildbytes, Originalname und Hash erhalten",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "byte_fidelity"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "fixture": "green.png",
+              "filename": "green.png",
+              "transport_complete": true
+            }
+          },
+          "assertions": [
+            {
+              "id": "UP-R5-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R5-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/green.png"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R5-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R5-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                },
+                "green.png": {
+                  "size": 73,
+                  "sha256": "31bd12297554963e960c136b22a7a6dade4b234dc5c5a370bb16671f12af98ad"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UP-R6-01",
+      "version": "M2-v0.1",
+      "module": "UP",
+      "category": "R6",
+      "purpose": "Drei Namen und alle vorherigen Bytes bleiben",
+      "provenance": [
+        "OP-2.3",
+        "ISSUE-3",
+        "DESIGN-v0.1"
+      ],
+      "setup": {
+        "database": "DB-A",
+        "uploads": "initial_uploads",
+        "session": "fresh_authenticated",
+        "csrf": "valid",
+        "cache": "fresh",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "tags": [
+        "sequence"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "fixture": "amber.png",
+              "filename": "seq-one.png",
+              "transport_complete": true
+            }
+          },
+          "assertions": [
+            {
+              "id": "UP-R6-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R6-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/seq-one.png"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R6-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R6-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                },
+                "seq-one.png": {
+                  "size": 73,
+                  "sha256": "5152b4f262397512ec8d1d6f076c509a6052674e3814a0c78fb7bf368b4d5b62"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "fixture": "blue.jpg",
+              "filename": "seq-two.jpeg",
+              "transport_complete": true
+            }
+          },
+          "assertions": [
+            {
+              "id": "UP-R6-01-S02-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R6-01-S02-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/seq-two.jpeg"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R6-01-S02-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R6-01-S02-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                },
+                "seq-one.png": {
+                  "size": 73,
+                  "sha256": "5152b4f262397512ec8d1d6f076c509a6052674e3814a0c78fb7bf368b4d5b62"
+                },
+                "seq-two.jpeg": {
+                  "size": 777,
+                  "sha256": "bfd0fb4d7039a1716a766f83be930226c9d8649aa4deeb926013cbe24dd53888"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "fixture": "green.png",
+              "filename": "seq-three.png",
+              "transport_complete": true
+            }
+          },
+          "assertions": [
+            {
+              "id": "UP-R6-01-S03-HTTP",
+              "target": "response.status",
+              "expected": 200,
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R6-01-S03-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/seq-three.png"
+                }
+              },
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R6-01-S03-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DB-A",
+              "expected_verdict": "pass"
+            },
+            {
+              "id": "UP-R6-01-S03-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "sentinel.txt": {
+                  "size": 28,
+                  "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+                },
+                "seq-one.png": {
+                  "size": 73,
+                  "sha256": "5152b4f262397512ec8d1d6f076c509a6052674e3814a0c78fb7bf368b4d5b62"
+                },
+                "seq-two.jpeg": {
+                  "size": 777,
+                  "sha256": "bfd0fb4d7039a1716a766f83be930226c9d8649aa4deeb926013cbe24dd53888"
+                },
+                "seq-three.png": {
+                  "size": 73,
+                  "sha256": "31bd12297554963e960c136b22a7a6dade4b234dc5c5a370bb16671f12af98ad"
+                }
+              },
+              "expected_verdict": "pass"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

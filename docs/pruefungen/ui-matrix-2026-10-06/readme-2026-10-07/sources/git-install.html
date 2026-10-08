@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+
+
+
+
+
+<head>
+  <script type="text/javascript">
+    
+    const currentTheme = localStorage.getItem("theme")
+    if (currentTheme) {
+      
+      const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+      if (prefersDarkScheme === (currentTheme === "dark")) localStorage.removeItem("theme")
+      else if ((prefersDarkScheme && currentTheme === "light")
+        || (!prefersDarkScheme && currentTheme === "dark")) {
+	document.documentElement.dataset.theme = currentTheme
+      }
+    }
+  </script>
+
+  <meta charset='utf-8'>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Git - Install</title>
+
+  <link href="/favicon.ico" rel='shortcut icon' type='image/x-icon'>
+
+  
+  <link rel="stylesheet" href="/application.min.d77757878f33cf09dd6819b01daf03446ce1768aa4b43e5743f3501e7a6fea99.css">
+  <script src="/js/modernizr.js"></script>
+  
+
+</head>
+
+<body id="install">
+
+  <div class="inner">
+    <header>
+  <a id="logo" href="/"><img src="/images/logo@2x.png" width="110" height="46" alt="Git" class="no-filter" /></a>
+  <span id="tagline"></span>
+  <script type="text/javascript">
+   const taglines = [
+     "fast-version-control",
+     "everything-is-local",
+     "distributed-even-if-your-workflow-isnt",
+     "local-branching-on-the-cheap",
+     "distributed-is-the-new-centralized"
+   ];
+   var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+   document.getElementById('tagline').innerHTML = '--' + tagline;
+  </script>
+
+  
+  <div id="search-container">
+    <form id="search" action="/search/results">
+      <input id="search-text" name="search" placeholder="Type / to search entire site…" autocomplete="off" type="text" />
+    </form>
+    <div id="search-results"></div>
+  </div>
+  
+  <img src="/images/dark-mode.svg" id="dark-mode-button" />
+</header>
+
+  </div> 
+
+  
+    <div class="inner">
+      <div id="content-wrapper">
+        
+<div tabindex="1" class="sidebar-btn"></div>
+<aside class="sidebar" id="sidebar">
+  <nav>
+    <ul>
+      <li>
+        <a href="/about">About</a>
+        <ul >
+          <li>
+            <a href="/about/trademark">Trademark</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="/learn">Learn</a>
+        <ul >
+          <li>
+            <a href="/book">Book</a>
+          </li>
+          <li>
+            <a href="/cheat-sheet">Cheat Sheet</a>
+          </li>
+          <li>
+            <a href="/videos">Videos</a>
+          </li>
+          <li>
+            <a href="/doc/ext">External Links</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="/tools">Tools</a>
+        <ul >
+          <li>
+            <a href="/tools/command-line">Command Line</a>
+          </li>
+          <li>
+            <a href="/tools/guis">GUIs</a>
+          </li>
+          <li>
+            <a href="/tools/hosting">Hosting</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/docs">Reference</a>
+      </li>
+      <li>
+        <a href="/install" class="install-link active">Install</a>
+      </li>
+      <li>
+        <a href="/community">Community</a>
+        <ul>
+          
+        </ul>
+      </li>
+    </ul>
+
+    
+    
+
+    
+      <hr class="sidebar">
+      <div class="callout">
+  <p>The entire <strong><a href="/book">Pro Git book</a></strong> written
+  by Scott Chacon and Ben Straub is available to <a href="/book">read online for free</a>.
+  Dead tree versions are available on <a href="https://www.amazon.com/Pro-Git-Scott-Chacon/dp/1484200772?ie=UTF8&camp=1789&creative=9325&creativeASIN=1430218339&linkCode=as2&tag=git-sfconservancy-20">Amazon.com</a>.
+  </p>
+</div>
+
+    
+  </nav>
+</aside>
+
+        <div id="content" data-pagefind-filter="category:install" data-pagefind-weight="0.05" data-pagefind-body>
+          
+            
+<div id="main">
+  <div class="install">
+    <div class="install-header">
+      <h1>Install</h1>
+      <div class="version-badge">
+        Latest version: 2.56.0
+        (<a href="https://gitlab.com/git-scm/git/-/blob/HEAD/Documentation/RelNotes/2.56.0.adoc">Release Notes</a>)
+      </div>
+    </div>
+  
+    <nav class="install-tabs" role="tablist" aria-label="Installation options">
+      <a href="/install/windows"
+         role="tab" aria-selected="false">
+        <span>Windows</span>
+      </a>
+      <a href="/install/mac"
+         role="tab" aria-selected="false">
+        <span>macOS</span>
+      </a>
+      <a href="/install/linux"
+         role="tab" aria-selected="false">
+        <span>Linux</span>
+      </a>
+      <a href="/install/source"
+         role="tab" aria-selected="false">
+        <span>Build from Source</span>
+      </a>
+    </nav>
+
+
+    <div class="install-content">
+      <p class="install-overview">
+      Choose your operating system above.
+      </p>
+    </div>
+  </div>
+</div>
+
+          
+        </div>
+      </div>
+      
+      <footer>
+  <div class="site-source">
+    <a href="/site">About this site</a><br>
+    Patches, suggestions, and comments are welcome.
+  </div>
+  <div class="sfc-member">
+    Git is a member of <a href="/sfc">Software Freedom Conservancy</a>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+<script src="/js/jquery.defaultvalue.js"></script>
+<script src="/js/session.min.js"></script>
+
+<script src="/js/application.min.2c50db482403f7c73cf1c3fdff10121a98d563baede24a87cbc8b056a298196a.js"></script>
+
+    </div>
+  
+
+</body>
+</html>
+

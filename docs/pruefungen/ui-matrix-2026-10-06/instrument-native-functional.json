@@ -1,0 +1,4230 @@
+{
+  "R": {
+    "R1": 1,
+    "R2": 1,
+    "R3": 1,
+    "R4": 1,
+    "R5": 1,
+    "R6": 1
+  },
+  "T": null,
+  "F": null,
+  "complete": null,
+  "assertions": 91,
+  "missing_assertions": 0,
+  "T_criteria": {
+    "T1": 1,
+    "T2": null,
+    "T3": null,
+    "T4": null,
+    "T5": 1
+  },
+  "version": "M6-evaluator-v1",
+  "run_id": "9a461a6a-1ffc-4e86-b9d0-15c3937e626a",
+  "candidate_hash": "9af76e32060081b162699231aa6c777da23e9c0fd96438b7c5fadf6f57fcde3b",
+  "measurement_id": "1e66a5a8-d953-4ae6-ab92-c8e0ce0bad0b",
+  "review_revision_ids": [
+    "bb5672df-a78d-415e-ba84-c7605a6c9bbf",
+    "a523ecff-9227-49a5-8d67-72971b081381",
+    "88231564-0a84-410c-a7f1-c27f62fc1bf1",
+    "471cc855-e1f1-4b7e-ac46-61c1c682c01d",
+    "51768546-a8b0-4ecc-850d-9510bbe968d9"
+  ],
+  "manual_T2_T3_T4": "open",
+  "T4_integration_measurement_id": "24c33807-cedb-4b05-9929-23e98a195d0e",
+  "interrupted": false,
+  "completion": "completed",
+  "entries": [
+    {
+      "case_id": "BF-R1-01",
+      "category": "R1",
+      "id": "BF-R1-01-S01-HTTP",
+      "expected": 200,
+      "expected_contract_selector": 200,
+      "actual": 200,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "49d9a067-0261-4133-adec-d9281c993c07",
+      "raw_artifact_id": "95e9b51d-631f-487e-92d6-92d321dfbd54"
+    },
+    {
+      "case_id": "BF-R1-01",
+      "category": "R1",
+      "id": "BF-R1-01-S01-FORM",
+      "expected": {
+        "action": "/study/brute",
+        "method": "GET",
+        "fields": [
+          "username",
+          "password",
+          "Login"
+        ],
+        "password_type": "password",
+        "file_type": null,
+        "encoding": null
+      },
+      "expected_contract_selector": {
+        "action": "/study/brute",
+        "method": "GET",
+        "fields": [
+          "username",
+          "password",
+          "Login"
+        ],
+        "password_type": "password",
+        "file_type": null,
+        "encoding": null
+      },
+      "actual": {
+        "action": "/study/brute",
+        "method": "GET",
+        "fields": [
+          "username",
+          "password",
+          "Login"
+        ],
+        "password_type": "password",
+        "file_type": null,
+        "encoding": null
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "49d9a067-0261-4133-adec-d9281c993c07",
+      "raw_artifact_id": "95e9b51d-631f-487e-92d6-92d321dfbd54"
+    },
+    {
+      "case_id": "BF-R1-01",
+      "category": "R1",
+      "id": "BF-R1-01-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": null,
+        "avatars": [],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": null,
+        "avatars": [],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": null,
+        "avatars": [],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "49d9a067-0261-4133-adec-d9281c993c07",
+      "raw_artifact_id": "95e9b51d-631f-487e-92d6-92d321dfbd54"
+    },
+    {
+      "case_id": "BF-R1-01",
+      "category": "R1",
+      "id": "BF-R1-01-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "49d9a067-0261-4133-adec-d9281c993c07",
+      "raw_artifact_id": "95e9b51d-631f-487e-92d6-92d321dfbd54"
+    },
+    {
+      "case_id": "BF-R1-01",
+      "category": "R1",
+      "id": "BF-R1-01-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "49d9a067-0261-4133-adec-d9281c993c07",
+      "raw_artifact_id": "95e9b51d-631f-487e-92d6-92d321dfbd54"
+    },
+    {
+      "case_id": "BF-R1-01",
+      "category": "R1",
+      "id": "BF-R1-01-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "hywgytHhRE6pvIlrbeurnYnBwHgqGaNWsaUXbnEe",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "hywgytHhRE6pvIlrbeurnYnBwHgqGaNWsaUXbnEe",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "49d9a067-0261-4133-adec-d9281c993c07",
+      "raw_artifact_id": "95e9b51d-631f-487e-92d6-92d321dfbd54"
+    },
+    {
+      "case_id": "BF-R2-01",
+      "category": "R2",
+      "id": "BF-R2-01-S01-HTTP",
+      "expected": 200,
+      "expected_contract_selector": 200,
+      "actual": 200,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "76dfe869-073d-4758-9733-49fb047c2aae",
+      "raw_artifact_id": "1cc95a75-d9ad-46e1-8ff6-d786d3d3c36d"
+    },
+    {
+      "case_id": "BF-R2-01",
+      "category": "R2",
+      "id": "BF-R2-01-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/lotus7.png"
+        ],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/lotus7.png"
+        ],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/lotus7.png"
+        ],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "76dfe869-073d-4758-9733-49fb047c2aae",
+      "raw_artifact_id": "1cc95a75-d9ad-46e1-8ff6-d786d3d3c36d"
+    },
+    {
+      "case_id": "BF-R2-01",
+      "category": "R2",
+      "id": "BF-R2-01-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "76dfe869-073d-4758-9733-49fb047c2aae",
+      "raw_artifact_id": "1cc95a75-d9ad-46e1-8ff6-d786d3d3c36d"
+    },
+    {
+      "case_id": "BF-R2-01",
+      "category": "R2",
+      "id": "BF-R2-01-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "76dfe869-073d-4758-9733-49fb047c2aae",
+      "raw_artifact_id": "1cc95a75-d9ad-46e1-8ff6-d786d3d3c36d"
+    },
+    {
+      "case_id": "BF-R2-01",
+      "category": "R2",
+      "id": "BF-R2-01-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "jLRweVi4oNcVVOthSCnWNRqYWTbylWsVSu3DTU0W",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "jLRweVi4oNcVVOthSCnWNRqYWTbylWsVSu3DTU0W",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "76dfe869-073d-4758-9733-49fb047c2aae",
+      "raw_artifact_id": "1cc95a75-d9ad-46e1-8ff6-d786d3d3c36d"
+    },
+    {
+      "case_id": "BF-R2-02",
+      "category": "R2",
+      "id": "BF-R2-02-S01-HTTP",
+      "expected": 200,
+      "expected_contract_selector": 200,
+      "actual": 200,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "b83a84cd-efa0-497d-83f0-0caac2cbdf0b",
+      "raw_artifact_id": "e32f893c-64e8-49fc-9625-b133a5f3ef27"
+    },
+    {
+      "case_id": "BF-R2-02",
+      "category": "R2",
+      "id": "BF-R2-02-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/mohn8.png"
+        ],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/mohn8.png"
+        ],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/mohn8.png"
+        ],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "b83a84cd-efa0-497d-83f0-0caac2cbdf0b",
+      "raw_artifact_id": "e32f893c-64e8-49fc-9625-b133a5f3ef27"
+    },
+    {
+      "case_id": "BF-R2-02",
+      "category": "R2",
+      "id": "BF-R2-02-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "b83a84cd-efa0-497d-83f0-0caac2cbdf0b",
+      "raw_artifact_id": "e32f893c-64e8-49fc-9625-b133a5f3ef27"
+    },
+    {
+      "case_id": "BF-R2-02",
+      "category": "R2",
+      "id": "BF-R2-02-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "b83a84cd-efa0-497d-83f0-0caac2cbdf0b",
+      "raw_artifact_id": "e32f893c-64e8-49fc-9625-b133a5f3ef27"
+    },
+    {
+      "case_id": "BF-R2-02",
+      "category": "R2",
+      "id": "BF-R2-02-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "BEOTHpkJLYzsAuTGFfsnShxE9bULOdlpJN2qGhEO",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "BEOTHpkJLYzsAuTGFfsnShxE9bULOdlpJN2qGhEO",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "b83a84cd-efa0-497d-83f0-0caac2cbdf0b",
+      "raw_artifact_id": "e32f893c-64e8-49fc-9625-b133a5f3ef27"
+    },
+    {
+      "case_id": "BF-R3-01",
+      "category": "R3",
+      "id": "BF-R3-01-S01-HTTP",
+      "expected": 200,
+      "expected_contract_selector": 200,
+      "actual": 200,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "8af0e8a4-afb8-4100-8577-5ced8cad78c9",
+      "raw_artifact_id": "f216cc8d-2176-4b7a-a0d9-f59c8d8e5d4e"
+    },
+    {
+      "case_id": "BF-R3-01",
+      "category": "R3",
+      "id": "BF-R3-01-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "NEGATIVE",
+        "avatars": [],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "NEGATIVE",
+        "avatars": [],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "NEGATIVE",
+        "avatars": [],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "8af0e8a4-afb8-4100-8577-5ced8cad78c9",
+      "raw_artifact_id": "f216cc8d-2176-4b7a-a0d9-f59c8d8e5d4e"
+    },
+    {
+      "case_id": "BF-R3-01",
+      "category": "R3",
+      "id": "BF-R3-01-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "8af0e8a4-afb8-4100-8577-5ced8cad78c9",
+      "raw_artifact_id": "f216cc8d-2176-4b7a-a0d9-f59c8d8e5d4e"
+    },
+    {
+      "case_id": "BF-R3-01",
+      "category": "R3",
+      "id": "BF-R3-01-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "8af0e8a4-afb8-4100-8577-5ced8cad78c9",
+      "raw_artifact_id": "f216cc8d-2176-4b7a-a0d9-f59c8d8e5d4e"
+    },
+    {
+      "case_id": "BF-R3-01",
+      "category": "R3",
+      "id": "BF-R3-01-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "NM3TieCTzYDZwNMZm3iieUjMMY4aBThZAOt8TPcN",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "NM3TieCTzYDZwNMZm3iieUjMMY4aBThZAOt8TPcN",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "8af0e8a4-afb8-4100-8577-5ced8cad78c9",
+      "raw_artifact_id": "f216cc8d-2176-4b7a-a0d9-f59c8d8e5d4e"
+    },
+    {
+      "case_id": "BF-R3-02",
+      "category": "R3",
+      "id": "BF-R3-02-S01-HTTP",
+      "expected": 200,
+      "expected_contract_selector": 200,
+      "actual": 200,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "b1daa5e4-0173-4b06-8ff6-aee91bdab2dd",
+      "raw_artifact_id": "5734cf10-666c-4976-ad28-62d061d7d267"
+    },
+    {
+      "case_id": "BF-R3-02",
+      "category": "R3",
+      "id": "BF-R3-02-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "NEGATIVE",
+        "avatars": [],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "NEGATIVE",
+        "avatars": [],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "NEGATIVE",
+        "avatars": [],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "b1daa5e4-0173-4b06-8ff6-aee91bdab2dd",
+      "raw_artifact_id": "5734cf10-666c-4976-ad28-62d061d7d267"
+    },
+    {
+      "case_id": "BF-R3-02",
+      "category": "R3",
+      "id": "BF-R3-02-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "b1daa5e4-0173-4b06-8ff6-aee91bdab2dd",
+      "raw_artifact_id": "5734cf10-666c-4976-ad28-62d061d7d267"
+    },
+    {
+      "case_id": "BF-R3-02",
+      "category": "R3",
+      "id": "BF-R3-02-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "b1daa5e4-0173-4b06-8ff6-aee91bdab2dd",
+      "raw_artifact_id": "5734cf10-666c-4976-ad28-62d061d7d267"
+    },
+    {
+      "case_id": "BF-R3-02",
+      "category": "R3",
+      "id": "BF-R3-02-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "7ccmwSaybJBF9N50O1rJdrqTm6J7iBsTqqIzmmi0",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "7ccmwSaybJBF9N50O1rJdrqTm6J7iBsTqqIzmmi0",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "b1daa5e4-0173-4b06-8ff6-aee91bdab2dd",
+      "raw_artifact_id": "5734cf10-666c-4976-ad28-62d061d7d267"
+    },
+    {
+      "case_id": "BF-R4-01",
+      "category": "R4",
+      "id": "BF-R4-01-S01-HTTP",
+      "expected": 422,
+      "expected_contract_selector": 422,
+      "actual": 422,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "8c8419ee-725d-490d-8cbb-f90b6f43f2b1",
+      "raw_artifact_id": "38f12c30-5215-4df6-a987-bec427857276"
+    },
+    {
+      "case_id": "BF-R4-01",
+      "category": "R4",
+      "id": "BF-R4-01-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "8c8419ee-725d-490d-8cbb-f90b6f43f2b1",
+      "raw_artifact_id": "38f12c30-5215-4df6-a987-bec427857276"
+    },
+    {
+      "case_id": "BF-R4-01",
+      "category": "R4",
+      "id": "BF-R4-01-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "8c8419ee-725d-490d-8cbb-f90b6f43f2b1",
+      "raw_artifact_id": "38f12c30-5215-4df6-a987-bec427857276"
+    },
+    {
+      "case_id": "BF-R4-01",
+      "category": "R4",
+      "id": "BF-R4-01-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "8c8419ee-725d-490d-8cbb-f90b6f43f2b1",
+      "raw_artifact_id": "38f12c30-5215-4df6-a987-bec427857276"
+    },
+    {
+      "case_id": "BF-R4-01",
+      "category": "R4",
+      "id": "BF-R4-01-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "Au2nNV9vlF0dRYfCqjQEDTbZ0CREnmo3XdtEVttE",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "Au2nNV9vlF0dRYfCqjQEDTbZ0CREnmo3XdtEVttE",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "8c8419ee-725d-490d-8cbb-f90b6f43f2b1",
+      "raw_artifact_id": "38f12c30-5215-4df6-a987-bec427857276"
+    },
+    {
+      "case_id": "BF-R4-02",
+      "category": "R4",
+      "id": "BF-R4-02-S01-HTTP",
+      "expected": 422,
+      "expected_contract_selector": 422,
+      "actual": 422,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "1a548a06-6fbf-4163-8c1a-aeef61eb9bd4",
+      "raw_artifact_id": "52bf9192-58c0-4896-bf4c-9b2c0018215e"
+    },
+    {
+      "case_id": "BF-R4-02",
+      "category": "R4",
+      "id": "BF-R4-02-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "1a548a06-6fbf-4163-8c1a-aeef61eb9bd4",
+      "raw_artifact_id": "52bf9192-58c0-4896-bf4c-9b2c0018215e"
+    },
+    {
+      "case_id": "BF-R4-02",
+      "category": "R4",
+      "id": "BF-R4-02-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "1a548a06-6fbf-4163-8c1a-aeef61eb9bd4",
+      "raw_artifact_id": "52bf9192-58c0-4896-bf4c-9b2c0018215e"
+    },
+    {
+      "case_id": "BF-R4-02",
+      "category": "R4",
+      "id": "BF-R4-02-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "1a548a06-6fbf-4163-8c1a-aeef61eb9bd4",
+      "raw_artifact_id": "52bf9192-58c0-4896-bf4c-9b2c0018215e"
+    },
+    {
+      "case_id": "BF-R4-02",
+      "category": "R4",
+      "id": "BF-R4-02-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "U8TzWj96QZQnRVs7IO6TxrmdmH3HFO6LtQ9THtKF",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "U8TzWj96QZQnRVs7IO6TxrmdmH3HFO6LtQ9THtKF",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "1a548a06-6fbf-4163-8c1a-aeef61eb9bd4",
+      "raw_artifact_id": "52bf9192-58c0-4896-bf4c-9b2c0018215e"
+    },
+    {
+      "case_id": "BF-R4-03",
+      "category": "R4",
+      "id": "BF-R4-03-S01-HTTP",
+      "expected": 422,
+      "expected_contract_selector": 422,
+      "actual": 422,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "896c6884-2be2-4878-adf2-234f40573c22",
+      "raw_artifact_id": "4546e2a1-0b19-40f5-9e8e-cff2055ec6ef"
+    },
+    {
+      "case_id": "BF-R4-03",
+      "category": "R4",
+      "id": "BF-R4-03-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "896c6884-2be2-4878-adf2-234f40573c22",
+      "raw_artifact_id": "4546e2a1-0b19-40f5-9e8e-cff2055ec6ef"
+    },
+    {
+      "case_id": "BF-R4-03",
+      "category": "R4",
+      "id": "BF-R4-03-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "896c6884-2be2-4878-adf2-234f40573c22",
+      "raw_artifact_id": "4546e2a1-0b19-40f5-9e8e-cff2055ec6ef"
+    },
+    {
+      "case_id": "BF-R4-03",
+      "category": "R4",
+      "id": "BF-R4-03-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "896c6884-2be2-4878-adf2-234f40573c22",
+      "raw_artifact_id": "4546e2a1-0b19-40f5-9e8e-cff2055ec6ef"
+    },
+    {
+      "case_id": "BF-R4-03",
+      "category": "R4",
+      "id": "BF-R4-03-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "oVcM2fSYOnZ6QZ5AgTdUpmiI7r0eCSJd7LE9gEoK",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "oVcM2fSYOnZ6QZ5AgTdUpmiI7r0eCSJd7LE9gEoK",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "896c6884-2be2-4878-adf2-234f40573c22",
+      "raw_artifact_id": "4546e2a1-0b19-40f5-9e8e-cff2055ec6ef"
+    },
+    {
+      "case_id": "BF-R4-04",
+      "category": "R4",
+      "id": "BF-R4-04-S01-HTTP",
+      "expected": 422,
+      "expected_contract_selector": 422,
+      "actual": 422,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "5c6c8a4f-decf-4ff4-a637-fccee6f8b550",
+      "raw_artifact_id": "bf3521e5-32dc-437f-ab74-194f80a3052b"
+    },
+    {
+      "case_id": "BF-R4-04",
+      "category": "R4",
+      "id": "BF-R4-04-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "5c6c8a4f-decf-4ff4-a637-fccee6f8b550",
+      "raw_artifact_id": "bf3521e5-32dc-437f-ab74-194f80a3052b"
+    },
+    {
+      "case_id": "BF-R4-04",
+      "category": "R4",
+      "id": "BF-R4-04-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "5c6c8a4f-decf-4ff4-a637-fccee6f8b550",
+      "raw_artifact_id": "bf3521e5-32dc-437f-ab74-194f80a3052b"
+    },
+    {
+      "case_id": "BF-R4-04",
+      "category": "R4",
+      "id": "BF-R4-04-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "5c6c8a4f-decf-4ff4-a637-fccee6f8b550",
+      "raw_artifact_id": "bf3521e5-32dc-437f-ab74-194f80a3052b"
+    },
+    {
+      "case_id": "BF-R4-04",
+      "category": "R4",
+      "id": "BF-R4-04-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "UUG4MTE4oxhWA1PECMmjXUDhNCemSQJjDHzobMR4",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "UUG4MTE4oxhWA1PECMmjXUDhNCemSQJjDHzobMR4",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "5c6c8a4f-decf-4ff4-a637-fccee6f8b550",
+      "raw_artifact_id": "bf3521e5-32dc-437f-ab74-194f80a3052b"
+    },
+    {
+      "case_id": "BF-R4-05",
+      "category": "R4",
+      "id": "BF-R4-05-S01-HTTP",
+      "expected": 422,
+      "expected_contract_selector": 422,
+      "actual": 422,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "3fc8913c-6c6f-4f09-8786-3030531ee760",
+      "raw_artifact_id": "b384ef24-9533-4d4a-9038-ea3ce509120a"
+    },
+    {
+      "case_id": "BF-R4-05",
+      "category": "R4",
+      "id": "BF-R4-05-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "3fc8913c-6c6f-4f09-8786-3030531ee760",
+      "raw_artifact_id": "b384ef24-9533-4d4a-9038-ea3ce509120a"
+    },
+    {
+      "case_id": "BF-R4-05",
+      "category": "R4",
+      "id": "BF-R4-05-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "3fc8913c-6c6f-4f09-8786-3030531ee760",
+      "raw_artifact_id": "b384ef24-9533-4d4a-9038-ea3ce509120a"
+    },
+    {
+      "case_id": "BF-R4-05",
+      "category": "R4",
+      "id": "BF-R4-05-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "3fc8913c-6c6f-4f09-8786-3030531ee760",
+      "raw_artifact_id": "b384ef24-9533-4d4a-9038-ea3ce509120a"
+    },
+    {
+      "case_id": "BF-R4-05",
+      "category": "R4",
+      "id": "BF-R4-05-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "GGogsi8O2iUsnPb6l40gYbl1sN6IkSmYvXCeqVgB",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "GGogsi8O2iUsnPb6l40gYbl1sN6IkSmYvXCeqVgB",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "3fc8913c-6c6f-4f09-8786-3030531ee760",
+      "raw_artifact_id": "b384ef24-9533-4d4a-9038-ea3ce509120a"
+    },
+    {
+      "case_id": "BF-R4-06",
+      "category": "R4",
+      "id": "BF-R4-06-S01-HTTP",
+      "expected": 422,
+      "expected_contract_selector": 422,
+      "actual": 422,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "fe51265b-7f8b-49ab-96a0-6d38666cc891",
+      "raw_artifact_id": "79b83abb-5e71-4f01-8e40-c5629c116aec"
+    },
+    {
+      "case_id": "BF-R4-06",
+      "category": "R4",
+      "id": "BF-R4-06-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "fe51265b-7f8b-49ab-96a0-6d38666cc891",
+      "raw_artifact_id": "79b83abb-5e71-4f01-8e40-c5629c116aec"
+    },
+    {
+      "case_id": "BF-R4-06",
+      "category": "R4",
+      "id": "BF-R4-06-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "fe51265b-7f8b-49ab-96a0-6d38666cc891",
+      "raw_artifact_id": "79b83abb-5e71-4f01-8e40-c5629c116aec"
+    },
+    {
+      "case_id": "BF-R4-06",
+      "category": "R4",
+      "id": "BF-R4-06-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "fe51265b-7f8b-49ab-96a0-6d38666cc891",
+      "raw_artifact_id": "79b83abb-5e71-4f01-8e40-c5629c116aec"
+    },
+    {
+      "case_id": "BF-R4-06",
+      "category": "R4",
+      "id": "BF-R4-06-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "imJjsl5ERdJzjc2dXLzleODIuPNP6Z2AMsXM6xqK",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "imJjsl5ERdJzjc2dXLzleODIuPNP6Z2AMsXM6xqK",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "fe51265b-7f8b-49ab-96a0-6d38666cc891",
+      "raw_artifact_id": "79b83abb-5e71-4f01-8e40-c5629c116aec"
+    },
+    {
+      "case_id": "BF-R4-07",
+      "category": "R4",
+      "id": "BF-R4-07-S01-HTTP",
+      "expected": 422,
+      "expected_contract_selector": 422,
+      "actual": 422,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "86135ee1-e4b5-4507-af75-5e7a1f15dd6d",
+      "raw_artifact_id": "c2f45b93-9f1f-4566-9e7d-0121089b77b5"
+    },
+    {
+      "case_id": "BF-R4-07",
+      "category": "R4",
+      "id": "BF-R4-07-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "86135ee1-e4b5-4507-af75-5e7a1f15dd6d",
+      "raw_artifact_id": "c2f45b93-9f1f-4566-9e7d-0121089b77b5"
+    },
+    {
+      "case_id": "BF-R4-07",
+      "category": "R4",
+      "id": "BF-R4-07-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "86135ee1-e4b5-4507-af75-5e7a1f15dd6d",
+      "raw_artifact_id": "c2f45b93-9f1f-4566-9e7d-0121089b77b5"
+    },
+    {
+      "case_id": "BF-R4-07",
+      "category": "R4",
+      "id": "BF-R4-07-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "86135ee1-e4b5-4507-af75-5e7a1f15dd6d",
+      "raw_artifact_id": "c2f45b93-9f1f-4566-9e7d-0121089b77b5"
+    },
+    {
+      "case_id": "BF-R4-07",
+      "category": "R4",
+      "id": "BF-R4-07-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "AWpMOeTWZOucTudlsaNoR916fyqn3Rlt38mUl2HM",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "AWpMOeTWZOucTudlsaNoR916fyqn3Rlt38mUl2HM",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "86135ee1-e4b5-4507-af75-5e7a1f15dd6d",
+      "raw_artifact_id": "c2f45b93-9f1f-4566-9e7d-0121089b77b5"
+    },
+    {
+      "case_id": "BF-R4-08",
+      "category": "R4",
+      "id": "BF-R4-08-S01-HTTP",
+      "expected": 422,
+      "expected_contract_selector": 422,
+      "actual": 422,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "4ebd9d3f-ca17-4a31-93ca-3e1ac1dac1e1",
+      "raw_artifact_id": "5fd04851-dead-4090-b829-0b5bb73a3c7f"
+    },
+    {
+      "case_id": "BF-R4-08",
+      "category": "R4",
+      "id": "BF-R4-08-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "INPUT_ERROR",
+        "avatars": [],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "4ebd9d3f-ca17-4a31-93ca-3e1ac1dac1e1",
+      "raw_artifact_id": "5fd04851-dead-4090-b829-0b5bb73a3c7f"
+    },
+    {
+      "case_id": "BF-R4-08",
+      "category": "R4",
+      "id": "BF-R4-08-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "4ebd9d3f-ca17-4a31-93ca-3e1ac1dac1e1",
+      "raw_artifact_id": "5fd04851-dead-4090-b829-0b5bb73a3c7f"
+    },
+    {
+      "case_id": "BF-R4-08",
+      "category": "R4",
+      "id": "BF-R4-08-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "4ebd9d3f-ca17-4a31-93ca-3e1ac1dac1e1",
+      "raw_artifact_id": "5fd04851-dead-4090-b829-0b5bb73a3c7f"
+    },
+    {
+      "case_id": "BF-R4-08",
+      "category": "R4",
+      "id": "BF-R4-08-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "JWGCz9yKpCbdyO4Vsa5Ovn3FaPOPmXJ9Gi1IZGeh",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "JWGCz9yKpCbdyO4Vsa5Ovn3FaPOPmXJ9Gi1IZGeh",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "4ebd9d3f-ca17-4a31-93ca-3e1ac1dac1e1",
+      "raw_artifact_id": "5fd04851-dead-4090-b829-0b5bb73a3c7f"
+    },
+    {
+      "case_id": "BF-R5-01",
+      "category": "R5",
+      "id": "BF-R5-01-S01-HTTP",
+      "expected": 200,
+      "expected_contract_selector": 200,
+      "actual": 200,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "fa8ce732-bf27-4523-8882-b6b701ac98b6",
+      "raw_artifact_id": "a2f7fee9-dc85-488d-9206-0874e81c32d9"
+    },
+    {
+      "case_id": "BF-R5-01",
+      "category": "R5",
+      "id": "BF-R5-01-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/lotus7b.png"
+        ],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/lotus7b.png"
+        ],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/lotus7b.png"
+        ],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "fa8ce732-bf27-4523-8882-b6b701ac98b6",
+      "raw_artifact_id": "a2f7fee9-dc85-488d-9206-0874e81c32d9"
+    },
+    {
+      "case_id": "BF-R5-01",
+      "category": "R5",
+      "id": "BF-R5-01-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Mira",
+            "last_name": "Nord",
+            "user": "lotus7",
+            "password": "75dc5c44434694c05c7a2bb62115a530",
+            "avatar": "study/avatars/lotus7b.png",
+            "last_login": null,
+            "failed_login": "2",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Ivo",
+            "last_name": "Süd",
+            "user": "mohn8",
+            "password": "c0a6c1a6709167da0250bad45e022bd4",
+            "avatar": "study/avatars/mohn8b.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "admin",
+            "account_enabled": "0"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-B",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Mira",
+            "last_name": "Nord",
+            "user": "lotus7",
+            "password": "75dc5c44434694c05c7a2bb62115a530",
+            "avatar": "study/avatars/lotus7b.png",
+            "last_login": null,
+            "failed_login": "2",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Ivo",
+            "last_name": "Süd",
+            "user": "mohn8",
+            "password": "c0a6c1a6709167da0250bad45e022bd4",
+            "avatar": "study/avatars/mohn8b.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "admin",
+            "account_enabled": "0"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "fa8ce732-bf27-4523-8882-b6b701ac98b6",
+      "raw_artifact_id": "a2f7fee9-dc85-488d-9206-0874e81c32d9"
+    },
+    {
+      "case_id": "BF-R5-01",
+      "category": "R5",
+      "id": "BF-R5-01-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "fa8ce732-bf27-4523-8882-b6b701ac98b6",
+      "raw_artifact_id": "a2f7fee9-dc85-488d-9206-0874e81c32d9"
+    },
+    {
+      "case_id": "BF-R5-01",
+      "category": "R5",
+      "id": "BF-R5-01-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "tdQU7Zi957OPD89zbBopCAhM2NsZxDxMrym0EFDn",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "tdQU7Zi957OPD89zbBopCAhM2NsZxDxMrym0EFDn",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "fa8ce732-bf27-4523-8882-b6b701ac98b6",
+      "raw_artifact_id": "a2f7fee9-dc85-488d-9206-0874e81c32d9"
+    },
+    {
+      "case_id": "BF-R5-02",
+      "category": "R5",
+      "id": "BF-R5-02-S01-HTTP",
+      "expected": 200,
+      "expected_contract_selector": 200,
+      "actual": 200,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "ccd2e29a-d0e4-48f1-a14e-c1df176654cb",
+      "raw_artifact_id": "daf40084-3fd0-459c-b633-2bcb5c19af15"
+    },
+    {
+      "case_id": "BF-R5-02",
+      "category": "R5",
+      "id": "BF-R5-02-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/mohn8b.png"
+        ],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/mohn8b.png"
+        ],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/mohn8b.png"
+        ],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "ccd2e29a-d0e4-48f1-a14e-c1df176654cb",
+      "raw_artifact_id": "daf40084-3fd0-459c-b633-2bcb5c19af15"
+    },
+    {
+      "case_id": "BF-R5-02",
+      "category": "R5",
+      "id": "BF-R5-02-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Mira",
+            "last_name": "Nord",
+            "user": "lotus7",
+            "password": "75dc5c44434694c05c7a2bb62115a530",
+            "avatar": "study/avatars/lotus7b.png",
+            "last_login": null,
+            "failed_login": "2",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Ivo",
+            "last_name": "Süd",
+            "user": "mohn8",
+            "password": "c0a6c1a6709167da0250bad45e022bd4",
+            "avatar": "study/avatars/mohn8b.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "admin",
+            "account_enabled": "0"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-B",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Mira",
+            "last_name": "Nord",
+            "user": "lotus7",
+            "password": "75dc5c44434694c05c7a2bb62115a530",
+            "avatar": "study/avatars/lotus7b.png",
+            "last_login": null,
+            "failed_login": "2",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Ivo",
+            "last_name": "Süd",
+            "user": "mohn8",
+            "password": "c0a6c1a6709167da0250bad45e022bd4",
+            "avatar": "study/avatars/mohn8b.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "admin",
+            "account_enabled": "0"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "ccd2e29a-d0e4-48f1-a14e-c1df176654cb",
+      "raw_artifact_id": "daf40084-3fd0-459c-b633-2bcb5c19af15"
+    },
+    {
+      "case_id": "BF-R5-02",
+      "category": "R5",
+      "id": "BF-R5-02-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "ccd2e29a-d0e4-48f1-a14e-c1df176654cb",
+      "raw_artifact_id": "daf40084-3fd0-459c-b633-2bcb5c19af15"
+    },
+    {
+      "case_id": "BF-R5-02",
+      "category": "R5",
+      "id": "BF-R5-02-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "XamuC1age5hoFNZKWY4p4uJajfKSsuFDjC0ViKAf",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "XamuC1age5hoFNZKWY4p4uJajfKSsuFDjC0ViKAf",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "ccd2e29a-d0e4-48f1-a14e-c1df176654cb",
+      "raw_artifact_id": "daf40084-3fd0-459c-b633-2bcb5c19af15"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S01-HTTP",
+      "expected": 200,
+      "expected_contract_selector": 200,
+      "actual": 200,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "1f77782f-e230-4ae6-afd8-5414d0996e7b"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S01-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/lotus7.png"
+        ],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/lotus7.png"
+        ],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/lotus7.png"
+        ],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "1f77782f-e230-4ae6-afd8-5414d0996e7b"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S01-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "1f77782f-e230-4ae6-afd8-5414d0996e7b"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S01-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "1f77782f-e230-4ae6-afd8-5414d0996e7b"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S01-SESSION",
+      "expected": [
+        {
+          "session_id": "gS6SHaMOnsgjbMaFlpGpeqz0rP8OJs60ixpyMez0",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "gS6SHaMOnsgjbMaFlpGpeqz0rP8OJs60ixpyMez0",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "1f77782f-e230-4ae6-afd8-5414d0996e7b"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S02-HTTP",
+      "expected": 200,
+      "expected_contract_selector": 200,
+      "actual": 200,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "2070a102-8049-49c2-9f39-107790e5620e"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S02-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "NEGATIVE",
+        "avatars": [],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "NEGATIVE",
+        "avatars": [],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "NEGATIVE",
+        "avatars": [],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "2070a102-8049-49c2-9f39-107790e5620e"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S02-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "2070a102-8049-49c2-9f39-107790e5620e"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S02-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "2070a102-8049-49c2-9f39-107790e5620e"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S02-SESSION",
+      "expected": [
+        {
+          "session_id": "gS6SHaMOnsgjbMaFlpGpeqz0rP8OJs60ixpyMez0",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "gS6SHaMOnsgjbMaFlpGpeqz0rP8OJs60ixpyMez0",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "2070a102-8049-49c2-9f39-107790e5620e"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S03-HTTP",
+      "expected": 200,
+      "expected_contract_selector": 200,
+      "actual": 200,
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "1b8837d7-0f6c-438a-b8c7-821fa3544d5c"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S03-RESULT",
+      "expected": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/mohn8.png"
+        ],
+        "data": {}
+      },
+      "expected_contract_selector": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/mohn8.png"
+        ],
+        "data": {}
+      },
+      "actual": {
+        "region_count": 1,
+        "marker": "SUCCESS",
+        "avatars": [
+          "study/avatars/mohn8.png"
+        ],
+        "data": {}
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "1b8837d7-0f6c-438a-b8c7-821fa3544d5c"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S03-DATABASE",
+      "expected": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "expected_contract_selector": "unchanged_from_DB-A",
+      "actual": {
+        "tables": [
+          [
+            "users",
+            "BASE TABLE"
+          ]
+        ],
+        "ddl": "CREATE TABLE `users` (\n  `user_id` int unsigned NOT NULL,\n  `first_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `last_name` varchar(15) COLLATE utf8mb4_bin NOT NULL,\n  `user` varchar(15) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `password` char(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,\n  `avatar` varchar(70) COLLATE utf8mb4_bin NOT NULL,\n  `last_login` timestamp NULL DEFAULT NULL,\n  `failed_login` int unsigned NOT NULL DEFAULT '0',\n  `role` varchar(20) COLLATE utf8mb4_bin NOT NULL DEFAULT 'user',\n  `account_enabled` tinyint unsigned NOT NULL DEFAULT '1',\n  PRIMARY KEY (`user_id`),\n  UNIQUE KEY `users_user_unique` (`user`),\n  CONSTRAINT `users_account_enabled` CHECK ((`account_enabled` in (0,1))),\n  CONSTRAINT `users_id_domain` CHECK ((`user_id` between 1 and 999999))\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin",
+        "rows": [
+          {
+            "user_id": "17",
+            "first_name": "Ada",
+            "last_name": "Wolke",
+            "user": "lotus7",
+            "password": "2680f8f661f88420be9406cc928abef6",
+            "avatar": "study/avatars/lotus7.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          },
+          {
+            "user_id": "82",
+            "first_name": "Béla",
+            "last_name": "Stein & Co",
+            "user": "mohn8",
+            "password": "376e70e526dd25f838f4af045b32aae1",
+            "avatar": "study/avatars/mohn8.png",
+            "last_login": "2026-01-02 03:04:05",
+            "failed_login": "0",
+            "role": "user",
+            "account_enabled": "1"
+          }
+        ],
+        "settings": [
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ],
+          "utf8mb4",
+          "utf8mb4_bin",
+          "+00:00",
+          [
+            "ERROR_FOR_DIVISION_BY_ZERO",
+            "NO_ENGINE_SUBSTITUTION",
+            "NO_ZERO_DATE",
+            "NO_ZERO_IN_DATE",
+            "ONLY_FULL_GROUP_BY",
+            "STRICT_TRANS_TABLES"
+          ]
+        ],
+        "reader_grants": [
+          "GRANT USAGE ON *.* TO `study_review`@`%`",
+          "GRANT SELECT ON `study`.* TO `study_review`@`%`"
+        ]
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "1b8837d7-0f6c-438a-b8c7-821fa3544d5c"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S03-FILES",
+      "expected": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "expected_contract_selector": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "actual": {
+        "sentinel.txt": {
+          "size": 28,
+          "sha256": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29"
+        }
+      },
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "1b8837d7-0f6c-438a-b8c7-821fa3544d5c"
+    },
+    {
+      "case_id": "BF-R6-01",
+      "category": "R6",
+      "id": "BF-R6-01-S03-SESSION",
+      "expected": [
+        {
+          "session_id": "gS6SHaMOnsgjbMaFlpGpeqz0rP8OJs60ixpyMez0",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "expected_contract_selector": "unchanged",
+      "actual": [
+        {
+          "session_id": "gS6SHaMOnsgjbMaFlpGpeqz0rP8OJs60ixpyMez0",
+          "auth_identity": [
+            "scaffold-operator"
+          ]
+        }
+      ],
+      "status": "passed",
+      "cause": "independent public-contract comparison",
+      "input_artifact_id": "2003a0ad-c684-4ddf-bbf6-198b3c8f6939",
+      "raw_artifact_id": "1b8837d7-0f6c-438a-b8c7-821fa3544d5c"
+    }
+  ],
+  "case_count": 16,
+  "raw_pass_ratio": {
+    "numerator": 16,
+    "denominator": 16
+  },
+  "receipt_artifact_id": "6b05af3e-741c-4f7f-8587-b15598d8d086"
+}

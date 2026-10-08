@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "expected": {
+    "data_origin": "synthetic",
+    "planned": 48,
+    "observed": 24,
+    "n_C": 2,
+    "delta": "5/18",
+    "lower": "-22/45",
+    "upper": "32/45",
+    "UF3_AB_AA": "0",
+    "UF3_BA_BB": "1/4",
+    "UF4_Interaction": "-1/6"
+  },
+  "package_id": "148e2d85-8102-4073-91bc-111ca401229d",
+  "analysis_id": "89c64c82-4829-45a8-a340-b34bddbd267c",
+  "study_id": "9221b049-0f24-4729-90ab-89030270523f",
+  "freeze_id": "1655d77c-e716-4f58-b262-a9543bab5bfc",
+  "checks": "24 exact run/plan/F/D/L bindings, 24 missing rows, all hand contrasts, complete ZIP roundtrip"
+}

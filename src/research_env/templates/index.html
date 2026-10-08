@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block title %}PHP nach Laravel · Forschungsumgebung zur Bachelorarbeit{% endblock %}
+{% block content %}
+<div class="page-intro">
+  <p class="eyebrow">Bachelorarbeit · FOM Hochschule</p>
+  <h1>KI-gestützte Migration von PHP nach Laravel</h1>
+  <p>Eine lokale Forschungsumgebung, um Migrationen mit KI-Agenten durchzuführen, ihre Ergebnisse unabhängig zu prüfen und verschiedene Versuchsbedingungen nachvollziehbar zu vergleichen.</p>
+</div>
+<section id="bachelorarbeit">
+  <h2>Zur Bachelorarbeit</h2>
+  <p>Diese Software ist das Versuchs- und Auswertungswerkzeug zur Bachelorarbeit <strong>„KI-Agenten zur Modernisierung von Legacy-PHP-Code: Eine empirische Evaluation am Beispiel der Migration zu Laravel“</strong> an der FOM Hochschule.</p>
+  <p>Untersucht werden drei ausgewählte PHP-Module aus DVWA. Mehrere KI-Rollen analysieren den alten Code, planen die Übertragung, erzeugen Laravel-Code und prüfen ihn intern. Die Umgebung hält Eingaben, erzeugte Dateien, Laufstatus, Messwerte und Kosten zusammen mit ihrer Herkunft fest.</p>
+  <p>Im Mittelpunkt steht eine konkrete Gestaltungsfrage: <strong>Was ändert sich am Migrationsergebnis, wenn die Agenten zusätzliche Informationen über die Einbindung des alten Codes erhalten?</strong> Die Software unterstützt die Erhebung und Auswertung; die wissenschaftliche Interpretation erfolgt in der Arbeit.</p>
+  <p class="hint"><a href="#einstieg">Anwendung ausprobieren</a> · <a href="#forschungsfragen">Forschungsfragen</a> · <a href="#kontextvergleich">Versuchsdesign</a> · <a href="#ablauf">Ablauf und Bewertung</a> · <a href="#technik">Technik erklärt</a></p>
+</section>
+
+<div id="einstieg" class="context-help">
+  <h2>Einstieg für Prüfer und Interessierte</h2>
+  <p>Zum Kennenlernen unter <a href="/settings">Einstellungen</a> die Grundausstattung vorbereiten und unter <a href="/free-tests">Testläufe</a> für beide Modellpakete die <strong>kostenfreie Demo</strong> wählen. Sie verwendet festgelegte Testantworten, benötigt keinen API-Key und zeigt den technischen Ablauf. Ihre synthetischen Ergebnisse messen keine KI-Modellleistung.</p>
+  <p>Vorhandene Läufe lassen sich mit Code, Status und Belegen ansehen. Ein bereitgestelltes <a href="/packages">Studienpaket kann importiert und aus seinen gespeicherten Messwerten nachgerechnet werden</a>, ohne neue Modelle aufzurufen. Für eigene reale Migrationen werden OpenRouter-Zugang, Modelle und eine bewusste Startentscheidung benötigt; dabei können API-Kosten entstehen.</p>
+</div>
+<div class="start-grid">
+  <section><h2>1. Einrichten</h2><p>Mitgelieferte Grundlagen vorbereiten, Agenteneingaben ansehen und bei Bedarf OpenRouter-Zugang und Modelle speichern.</p><a class="button" href="/settings">Einstellungen öffnen</a></section>
+  <section><h2>2. Ausprobieren</h2><p>Die Demo nutzen oder freie Testläufe mit eigenen Bedingungen durchführen. Freie Tests bleiben von den Hauptdaten der Studie getrennt.</p><a class="button" href="/free-tests">Zu den Testläufen</a></section>
+  <section><h2>3. Forschen</h2><p>Eine Laufmatrix mit Wiederholungen und Reihenfolge vorbereiten, Bedingungen fixieren und die geplanten Läufe einzeln starten.</p><a class="button" href="/studies">Zur Forschung</a></section>
+  <section><h2>4. Auswerten</h2><p>Laufdaten und offene Bewertungen prüfen, einen Analysestand bestätigen und Vergleiche, Tabellen und Grafiken exportieren.</p><a class="button" href="/analyses">Zur Auswertung</a></section>
+</div>
+
+<section id="forschungsfragen">
+  <h2>Welche Fragen soll die Untersuchung beantworten?</h2>
+  <p><strong>Hauptforschungsfrage F1:</strong> Wie beeinflussen literaturgestützt begründete Varianten des bereitgestellten Kontexts die funktionale Korrektheit bei der Migration ausgewählter Legacy-PHP-Module nach Laravel mit einer LLM-basierten Multi-Agenten-Pipeline, und welche Unterschiede bei statischen Qualitätsindikatoren und Ressourcenaufwand gehen damit einher?</p>
+  <p>Die Forschungsfragen stehen hier im Wortlaut. Die Reihenfolge folgt ihrem Schwerpunkt: Der direkte Kontextvergleich bildet den Kern; weitere Vergleiche ordnen seine Ergebnisse ein.</p>
+  <dl>
+    <dt>UF2 · Kontextvergleich</dt><dd>Welche Unterschiede in funktionaler Korrektheit und statischen Qualitätsindikatoren zeigen sich zwischen den Kontextvarianten bei jeweils gleichem Modul, gleicher Modellzuordnung und gleicher Pipeline?</dd>
+    <dt>UF1 · Unterschiede zwischen Modulen</dt><dd>Wie unterscheiden sich die beobachteten Kontextunterschiede zwischen den ausgewählten DVWA-Modulen Brute Force, SQL Injection und File Upload?</dd>
+    <dt>UF5 · Aufwand</dt><dd>Welcher Ressourcenaufwand entsteht bei den untersuchten Kontextvarianten, und wie verhält er sich zu deren funktionalen Ergebnissen und statischen Qualitätsindikatoren?</dd>
+    <dt>UF6 · Wiederholungen</dt><dd>Wie stark streuen die Ergebnisse wiederholter Läufe derselben Kontextkonfiguration, und wie ordnet diese Streuung die beobachteten Unterschiede zwischen den Kontextvarianten ein?</dd>
+    <dt>UF3 · Modellzuordnung, ergänzend explorativ</dt><dd>Welche Unterschiede in funktionaler Korrektheit und statischen Qualitätsindikatoren zeigen sich im ausgewählten Fokusfall bei festgelegtem Kontext zwischen konkreten Produzenten-/Verifikationsmodell-Zuordnungen, einschließlich Selbst- und Cross-Model-Verifikation?</dd>
+    <dt>UF4 · Planner und Review, ergänzend explorativ</dt><dd>Welche Unterschiede in funktionaler Korrektheit und statischen Qualitätsindikatoren zeigen sich im ausgewählten Fokusfall bei festgelegtem Kontext und gleicher Modellzuordnung zwischen Pipelinevarianten mit und ohne Planner beziehungsweise Review?</dd>
+  </dl>
+  <div class="context-help"><p><strong>Ergebnisoffen:</strong> Die Hypothese H-K erwartet einen Unterschied der mittleren funktionalen Leistung, legt aber keine Richtung fest. Mehr Kontext kann helfen, schaden oder in den Daten keinen erkennbaren Unterschied zeigen. Der Plan sieht eine beschreibende Auswertung vor; es werden keine p-Werte oder Konfidenzintervalle zur Bestätigung von H-K berechnet.</p></div>
+  <small>Planungsbezug: Forschungsfragen F1 und UF1–UF6; Hypothesen, Abschnitt 2; Operationalisierung, Abschnitte 7–8. Die Fragen beschreiben Erkenntnisziele, keine bereits festgestellten Ergebnisse.</small>
+</section>
+
+<section id="kontextvergleich">
+  <h2>Was wird konkret verglichen?</h2>
+  <p>Die drei Ausgangsfälle stammen aus <strong>DVWA</strong>: Brute Force umfasst eine Anmeldeverarbeitung, SQL Injection eine Datenbankabfrage über eine eingegebene ID und File Upload eine Dateiannahme mit Speicherung. Diese Modulnamen benennen die Ausgangsfälle der Untersuchung. Für die Migration gilt jeweils der vorab festgelegte öffentliche Zielvertrag.</p>
+  <div class="columns">
+    <div class="context-help"><h3>K0 · Lokaler Kontext</h3><p>Vollständiger Verarbeitungscode des Moduls, öffentlicher Auftrag mit allen bewerteten Anforderungen sowie gemeinsame Schnittstellen und Laravel-Gerüst.</p></div>
+    <div class="context-help"><h3>K1 · Zusätzlicher Integrationskontext</h3><p>Dieselben Grundlagen wie K0, ergänzt um ausgewählte umgebende DVWA-Quellstellen und die Erklärung des Weges von der Eingabe über Verarbeitung und Speicherung bis zur Ausgabe.</p></div>
+  </div>
+  <p>Damit verändern sich Inhalt, Umfang und Aufbereitung des Kontextpakets gemeinsam. Der Vergleich gilt für diese Pakete. Die konkreten externen Testdaten und Testimplementierungen bleiben in beiden Stufen von den Agenteneingaben getrennt.</p>
+  <p>Die vollständige Vorlage umfasst <strong>zwölf unterschiedliche Bedingungen</strong>: sechs für K0/K1 in den drei Modulen und sechs zusätzliche Modell- oder Pipelinevarianten bei SQL Injection. Wiederholungszahlen und die durch einen Seed bestimmte Laufreihenfolge werden vor dem <strong>Freeze</strong>, dem Fixieren der Bedingungen, festgelegt. Ein Pilotlauf ist optional.</p>
+  <p><a href="/settings#contexts">Kontextpakete und tatsächliche Agenteneingaben ansehen</a></p>
+  <small>Planungsbezug: Operationalisierung, Abschnitte 2–5; Baseline, Variablen und konstante Bedingungen, Abschnitt 4. Der Kontextvergleich verwendet A/A und die vollständige Pipeline. Die Zusatzvergleiche halten K1 fest.</small>
+</section>
+
+<section id="ablauf">
+  <h2>Was geschieht in einem Lauf?</h2>
+  <p>Jeder Versuch startet mit einem frischen Ausgangszustand. Eine Rolle ist ein festgelegter Arbeitsschritt mit eigenen Eingaben und einem festen Antwortformat; mehrere Rollen können dasselbe Modell verwenden.</p>
+  {% include 'pipeline_diagram.html' %}
+  <details><summary>Die Schritte als Text lesen</summary>
+  <ol>
+    <li><strong>Analyzer</strong> beschreibt den Ausgangscode und seine Zusammenhänge.</li>
+    <li><strong>Planner</strong> erstellt, wenn aktiviert, einen Migrationsplan.</li>
+    <li><strong>Migrate</strong> erzeugt die Laravel-Dateien im gemeinsamen Zielgerüst.</li>
+    <li><strong>Test</strong> erstellt interne Tests. Der technische Runner führt sie und die vorgesehenen Syntax- und Startprüfungen aus.</li>
+    <li><strong>Review</strong> prüft, wenn aktiviert, Code und interne Rückmeldungen.</li>
+    <li><strong>Repair</strong> kann bei festgelegtem Reparaturbedarf einmal korrigieren. Danach werden dieselben internen Tests erneut ausgeführt.</li>
+  </ol>
+  </details>
+  <p>Die Produktionsgruppe P umfasst Analyzer, Planner, Migrate und Repair; die Verifikationsgruppe V umfasst Test und Review. A/A bedeutet dasselbe Modellpaket in beiden Gruppen, A/B zwei verschiedene Pakete.</p>
+  <p>Am Ende wird der erzeugte Stand unveränderlich gesichert (<strong>Seal</strong>). Erst anschließend wird dieser Kandidat unabhängig bewertet. Die externen Messergebnisse werden nicht an die erzeugenden Agenten zurückgegeben.</p>
+  <h3>Wie werden die Ergebnisse bewertet?</h3>
+  <dl>
+    <dt>Funktionale Anforderungen</dt><dd>Externe Referenztests prüfen sechs vorab definierte Anforderungskategorien. Der Score F berücksichtigt zusätzlich, ob der Laravel-Zielauftrag erfüllt ist. Zur Zielprüfung gehören automatische Kontrollen und menschliche Codeurteile; offene Urteile bleiben sichtbar.</dd>
+    <dt>Statische Diagnosen</dt><dd>PHPStan mit Larastan ermittelt Meldungen im festgelegten Bereich der neuen oder geänderten PHP-Dateien. Angezeigt werden Diagnosezahl, untersuchte Codezeilen und Diagnosen je 100 Codezeilen.</dd>
+    <dt>Ressourcen und Nachvollziehbarkeit</dt><dd>Tokens, Modellaufrufe, verfügbare Kostenbelege, Zeiten und Reparaturnutzung bleiben der jeweiligen Lauf-ID zugeordnet. Technisch fehlende Messungen werden als Fehlwerte erfasst.</dd>
+  </dl>
+  <p>Die Auswertung fasst Wiederholungen zusammen und zeigt Kontextunterschiede, Streuung und fehlende Daten. Funktionalität, statische Diagnosen und Aufwand bleiben getrennte Ergebnisdimensionen. Ihre Aussage gilt für die untersuchten Module und Bedingungen; sie belegt keine allgemeine Sicherheit oder Überlegenheit von Multi-Agenten-Systemen.</p>
+  <p>Nach einem Hauptlauf werden Ergebnisse und gegebenenfalls offene Bewertungen gesichert. Vor dem nächsten Hauptlauf ist die Ablage einer aktuellen Sicherung zu bestätigen. Die Laufübersicht erhält dabei die geplante Reihenfolge und den Status jedes Laufs.</p>
+  <small>Planungsbezug: Forschungsablauf, Abschnitte 4 und 6; Operationalisierung, Abschnitte 6–8. Interne Tests gehören zur Erzeugungsmethode, externe Tests zur Bewertung.</small>
+</section>
+
+<section id="technik">
+  <h2>Welche Technik steckt dahinter?</h2>
+  <p>Die Werkzeuge übernehmen unterschiedliche Aufgaben. Die Links führen zu den offiziellen Projektseiten und Dokumentationen.</p>
+  <div class="columns">
+    <article class="context-help"><div class="technology-logos"><img src="/static/logos/dvwa.png" alt="DVWA" class="logo-dvwa" width="168" height="64" loading="lazy" decoding="async"></div><h3>DVWA · Quelle der Module</h3><p>Die Damn Vulnerable Web Application ist eine bewusst verwundbare PHP-Lernanwendung mit Datenbank. Aus ihr stammen die versionierten Ausgangsdateien für Brute Force, SQL Injection und File Upload.</p><a href="https://github.com/digininja/DVWA" target="_blank" rel="noopener noreferrer">DVWA-Projekt und Dokumentation ↗</a></article>
+    <article class="context-help"><div class="technology-logos"><img src="/static/logos/laravel.svg" alt="Laravel" class="logo-mark" width="168" height="64" loading="lazy" decoding="async"></div><h3>Laravel · Ziel der Migration</h3><p>Das PHP-Framework stellt das gemeinsame Zielgerüst bereit. Die Agenten übertragen die ausgewählten Funktionen auf dessen Routen, Controller sowie Datenbank-, Session- und Speicherschnittstellen.</p><a href="https://laravel.com/docs/13.x" target="_blank" rel="noopener noreferrer">Laravel-Dokumentation ↗</a></article>
+    <article class="context-help"><div class="technology-logos"><img src="/static/logos/langgraph.svg" alt="LangGraph" class="" width="168" height="64" loading="lazy" decoding="async"><img src="/static/logos/langchain.svg" alt="LangChain" class="" width="168" height="64" loading="lazy" decoding="async"></div><h3>LangGraph · Steuerung der Rollen</h3><p>LangGraph steuert die Arbeitsschritte, Verzweigungen und gespeicherten Zwischenstände. Es gehört zum LangChain-Ökosystem; diese Anwendung verwendet einen eigenen LangGraph-Ablauf und einen eigenen Adapter für Modellanfragen.</p><a href="https://docs.langchain.com/oss/python/langgraph/overview" target="_blank" rel="noopener noreferrer">LangGraph erklärt ↗</a> · <a href="https://docs.langchain.com/oss/python/langchain/overview" target="_blank" rel="noopener noreferrer">LangChain als verwandtes Agentenframework ↗</a></article>
+    <article class="context-help"><div class="technology-logos"><img src="/static/logos/phpstan.png" alt="PHPStan" class="logo-mark" width="168" height="64" loading="lazy" decoding="async"><img src="/static/logos/larastan.png" alt="Larastan" class="logo-larastan" width="168" height="64" loading="lazy" decoding="async"></div><h3>PHPStan &amp; Larastan · Statische Analyse</h3><p>PHPStan untersucht PHP-Code auf statische Auffälligkeiten. Larastan ergänzt Laravel-spezifisches Wissen. Hier liefern sie das festgelegte statische Messprofil; funktionale Tests und menschliche Bewertung ergänzen es.</p><a href="https://phpstan.org/user-guide/getting-started" target="_blank" rel="noopener noreferrer">PHPStan ↗</a> · <a href="https://github.com/larastan/larastan" target="_blank" rel="noopener noreferrer">Larastan ↗</a></article>
+    <article class="context-help"><div class="technology-logos"><img src="/static/logos/docker.svg" alt="Docker" class="" width="168" height="64" loading="lazy" decoding="async"></div><h3>Docker · Getrennte Laufumgebungen</h3><p>Container mit festgelegten Images stellen PHP/Laravel, MySQL und die Prüfwerkzeuge bereit. Getrennte Arbeitsverzeichnisse, Datenbanken und Dateiablagen helfen, die Versuche unter kontrollierten Bedingungen auszuführen.</p><a href="https://docs.docker.com/get-started/docker-overview/" target="_blank" rel="noopener noreferrer">Docker und Container erklärt ↗</a></article>
+    <article class="context-help"><div class="technology-logos"><img src="/static/logos/openrouter.svg" alt="OpenRouter" class="" width="168" height="64" loading="lazy" decoding="async"></div><h3>OpenRouter · Zugang zu den Modellen</h3><p>OpenRouter verbindet die Anwendung mit Sprachmodellen verschiedener Anbieter. Modell-ID, Provider-Endpunkt und Parameter werden für die Konfiguration festgehalten. Die kostenlose Demo verwendet stattdessen lokale Testantworten.</p><a href="https://openrouter.ai/docs/quickstart" target="_blank" rel="noopener noreferrer">OpenRouter-Dokumentation ↗</a> · <a href="/settings#openrouter">Zugang einrichten</a></article>
+  </div>
+</section>
+<details><summary>Betriebszustand und letzte Aufträge</summary>{% include 'status.html' %}{% for command in commands %}<p><a href="/commands/{{ command.id }}">{{ command.kind }} · {{ command.status }}</a> · {{ command.reason }}</p>{% endfor %}</details>
+{% endblock %}

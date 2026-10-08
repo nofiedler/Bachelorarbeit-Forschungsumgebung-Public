@@ -1,0 +1,17 @@
+{
+  "base_commit": "9ce2a119b972019456c85e00b0476c7648e08931",
+  "runtime_source_binding": "source-tree-sha256:37e81560f37f21117120ede85a9ac2a80c4eb51e96378b115056eedb403fbb58",
+  "files": {
+    "src/research_env/exchange_web.py": "8960e1f7cd184a4cc3f628ed5c72d6907b4d4757bba3234cb4601ee34f0dff82",
+    "src/research_env/templates/analysis.html": "a2a49fa420fe523a101e638cd208334092b98951a60b7cc99a0bf49688afa9e5",
+    "src/research_env/templates/analysis_report.html": "4c9936a83e28a176e1a96fec07b1d3e925251477a75cf1e2704312abd17f0e90",
+    "src/research_env/templates/package.html": "8cefffb0e3055175771064bdc10bfa24d055606947f27a2f9c46c0aaf13ec6ce",
+    "src/research_env/templates/results.html": "83f3d4d4c666e0175af45b26c605eef60511d80b3168edbf89fbafac1068e7e0",
+    "src/research_env/templates/settings.html": "75d484942894d2d22f74f90f6d3eb25b1efe68f46a0d5ac7014b2abfcdd222de",
+    "scripts/create-demo-study-package.py": "38291973539443e69eb52e08f0b79ef3536188e7b86a3a3c9f295cffcd77473f",
+    "tests/test_public_acceptance.py": "59e7d394c4e937b073f715b23a119b6c5849a2a6c41778a4c3fd3a7230427539",
+    "src/research_env/adapter.py": "dd214cec8961fa205b6fb0b8a37dac07a6c5da73a77e5742a7ae5fd8a90207a4",
+    "src/research_env/workflow_views.py": "73609f69d0cdfe821fcec6a45231fc98d3feeaf5556080021bf747559935741a"
+  },
+  "package_sha256": "abdcb5b37c6e9185fc18f2bac33a3d47bd69ae6a27ccd01e346b74b427b1f22e"
+}

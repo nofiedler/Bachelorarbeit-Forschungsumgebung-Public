@@ -1,0 +1,65 @@
+{% macro measured(value) -%}
+<span class="proposal-value {{ value.tone }}"{% if value.exact %} title="Originalwert: {{ value.exact }}"{% elif value.reason %} title="{{ value.reason }}"{% endif %}>{{ value.text }}</span>{% if value.note %} <span class="proposal-value-note">{{ value.note }}</span>{% endif %}
+{%- endmacro %}
+{% macro values(items) -%}
+<dl class="proposal-values">{% for item in items %}<div><dt>{{ item.label }}</dt><dd>{{ measured(item.value) }}</dd></div>{% endfor %}</dl>
+{%- endmacro %}
+<div class="proposal-coverage">
+  {% for item in resource_view.coverage %}<div><span>{{ item.label }}</span><strong>{{ item.count }} / {{ resource_view.rows|length }}</strong><small>Läufe mit vollständigem Wert</small></div>{% endfor %}
+</div>
+<p class="hint">Ergebnisse, Ressourcen und Bewertungen stammen aus diesem gespeicherten Datenstand. Die Details zeigen zusätzlich die damaligen Laufereignisse. Fehlende und unvollständige Werte bleiben ausdrücklich gekennzeichnet.</p>
+<div class="proposal-runs">
+{% for row in resource_view.rows %}
+  <details class="proposal-run" id="run-{{ row.position }}" data-position="{{ row.position }}"{% if row.planned_id %} data-planned-id="{{ row.planned_id }}"{% endif %}>
+    <summary>
+      <span class="proposal-summary-top">
+        <span class="proposal-run-identity"><strong>Lauf {{ row.position }}</strong><small>Konfiguration {{ row.cell }}{% if not row.run_id %} · Nicht gestartet{% endif %}</small><small>{{ row.configuration.module }} · {{ row.configuration.context }}</small><small>Planner {{ row.configuration.planner }} · Review {{ row.configuration.review }}</small></span>
+        <span class="proposal-run-stat"><small>Aktive Pipelinezeit</small>{{ measured(row.pipeline) }}</span>
+        <span class="proposal-run-stat"><small>Tokens gesamt</small>{{ measured(row.tokens) }}</span>
+        <span class="proposal-run-stat"><small>API-Kosten</small>{{ measured(row.costs) }}</span>
+      </span>
+      <span class="proposal-summary-results">
+        <span class="proposal-run-stat"><small>Funktionstests · unabhängige Prüfung</small><span class="status-badge {{ row.functional.tone }}">{{ row.functional.text }}</span>{% if row.functional.missing_cases %}<small>{{ row.functional.missing_cases }} Testfälle mit fehlenden Nachweisen</small>{% endif %}</span>
+        <span class="proposal-run-stat"><small>Statische Codeanalyse · PHPStan</small><span class="proposal-static-summary"><span><b>D</b> {{ measured(row.static.D) }}</span><span><b>L</b> {{ measured(row.static.L) }}</span><span><b>S</b> {{ measured(row.static.S) }}</span></span><small>Diagnosen · PHP-Zeilen · Diagnosen / 100 Zeilen</small></span>
+        <span class="proposal-run-stat"><small>Bewertungen T1–T5</small><span class="proposal-verdicts">{% for item in row.criteria %}<span class="status-badge {{ item.value.tone }}" title="{{ item.label }} · {{ item.title }}: {{ item.value.text }}" aria-label="{{ item.label }}: {{ item.value.text }}">{{ item.value.symbol }} {{ item.label }}</span>{% endfor %}</span><small>✓ erfüllt · × nicht erfüllt · ? offen</small></span>
+      </span>
+      <span class="proposal-toggle"><span class="when-closed">Details anzeigen</span><span class="when-open">Details schließen</span></span>
+    </summary>
+    <div class="proposal-run-body">
+      <div class="proposal-detail-section">
+        <h3>Pipeline: Zeit und Verbrauch je Schritt</h3>
+        <p class="hint">Schrittzeiten sind aus gespeicherten Start- und Endereignissen desselben Prozesses berechnet. Sie enthalten die Arbeit innerhalb des Schritts und sind keine reine Modell-Inferenzzeit. Lücken und Übergänge erklären Abweichungen zur aktiven Pipelinezeit. Tokens und Kosten umfassen die dokumentierten Aufrufversuche dieses Schritts.</p>
+        <div class="table-wrap"><table class="proposal-step-table"><thead><tr><th>Schritt / Modell</th><th>Ereigniszeit</th><th>Aufrufe / Versuche</th><th>Tokens gesamt</th><th>API-Kosten</th></tr></thead><tbody>
+        {% for step in row.pipeline_steps %}<tr><th scope="row">{{ loop.index }}. {{ step.title }}<small>{{ step.status }}</small>{% for model in step.models %}<small>{{ model }}</small>{% endfor %}</th><td>{{ measured(step.duration) }}</td><td>{% if step.model_step %}{{ step.calls }} / {{ step.transports }}{% else %}—<small>Kein Modellschritt</small>{% endif %}</td><td>{% if step.model_step and step.calls %}{{ measured(step.token_values.total) }}{% else %}—{% endif %}</td><td>{% if step.model_step and step.calls %}{{ measured(step.costs) }}{% else %}—{% endif %}</td></tr>{% endfor %}
+        </tbody></table></div>
+        <p class="hint">Aufrufe = gespeicherte Modellanfragen; Versuche = zugehörige Transportversuche, einschließlich Wiederholungen. „—“ bedeutet: kein Modellverbrauch ausgewiesen, kein gemessener Nullwert. API-Kosten enthalten keine lokalen Rechenkosten.</p>
+        <details class="proposal-subdetails"><summary>Tokenarten je Modellschritt</summary><div class="table-wrap"><table class="proposal-token-table"><thead><tr><th>Schritt</th><th>Eingabe</th><th>Ausgabe</th><th>Reasoning</th><th>Cache gelesen</th><th>Cache geschrieben</th></tr></thead><tbody>{% for step in row.pipeline_steps if step.calls %}<tr><th scope="row">{{ step.title }}</th>{% for key in ['input','output','reasoning','cache_read','cache_write'] %}<td>{{ measured(step.token_values[key]) }}</td>{% endfor %}</tr>{% endfor %}</tbody></table></div><p class="hint">Reasoning- und Cache-Tokens können bereits in Eingabe oder Ausgabe enthalten sein. Diese Kategorien werden nicht zusätzlich auf die Gesamtsumme aufgeschlagen.</p></details>
+      </div>
+      <div class="proposal-detail-section">
+        <h3>Ressourcen des gesamten Laufs</h3>
+        <div class="proposal-detail-grid">
+          <div><h4>Zeitmessung</h4>{{ values(row.times) }}{% if row.partial_times %}{{ values(row.partial_times) }}<p class="hint">Die Zeitnachweise sind unvollständig.{% if not row.time_partition_verified %} Ob die gemessenen Segmente überlappungsfrei sind, ist nicht nachgewiesen.{% endif %} Teilwerte ersetzen keine vollständige Laufzeit.</p>{% endif %}<p class="hint">Aktive Pipelinezeit: separat mit monotoner Uhr gemessene Generierung einschließlich interner Prüfungen. Gesamte erfasste Laufzeit: aktive Zeit plus dokumentierte Pausen und Ausfälle; ohne anschließende unabhängige Prüfung und manuelle Bewertung.</p></div>
+          <div><h4>Tokenverbrauch</h4>{{ values(row.token_categories) }}<p class="hint">Tokenarten können sich überschneiden und werden nicht zur Gesamtsumme addiert.</p></div>
+          <div><h4>Kosten und Aufrufe</h4>{{ values([{'label':'API-Kosten','value':row.costs}] + row.counts) }}<p class="hint">Teilwerte enthalten nur den bekannten Anteil; sie sind keine vollständige Gesamtsumme.</p></div>
+        </div>
+        {% if row.unavailable_times %}<details class="proposal-subdetails"><summary>Nicht separat erhobene Zeitkategorien ({{ row.unavailable_times|length }})</summary><p>{{ row.unavailable_times|join(' · ') }}</p><p class="hint">Nicht erhoben: Für diese Kategorien liegt in diesem Datenstand kein eindeutiger separater Messwert vor. Sie sind weder 0 noch nachträglich aus anderen Zeitspannen rekonstruierbar.</p></details>{% endif %}
+        {% if row.extra %}<h4>Weitere gespeicherte Messwerte</h4>{{ values(row.extra) }}{% endif %}
+      </div>
+      <div class="proposal-detail-section">
+        <h3>Unabhängige Prüfungen und Bewertungen</h3>
+        <div class="proposal-detail-grid">
+          <div><h4>Funktionale Anforderungen R1–R6</h4><p><span class="status-badge {{ row.functional.tone }}">{{ row.functional.text }}</span></p><div class="proposal-verdicts">{% for item in row.functional.categories %}<span class="status-badge {{ item.value.tone }}" title="{{ item.value.text }}">{{ item.label }} · {{ item.value.text }}</span>{% endfor %}</div><p class="hint">Funktionsscore F (inklusive T1–T5): {{ measured(row.functional.score) }}. Die Testquote allein ist nicht der Funktionsscore.</p></div>
+          <div><h4>Statische Codeanalyse</h4>{{ values([{'label':'Diagnosen D','value':row.static.D},{'label':'PHP-Codezeilen L','value':row.static.L},{'label':'Diagnosen je 100 Zeilen S','value':row.static.S}]) }}<p class="hint">0 Diagnosen sind kein Nachweis vollständiger Fehlerfreiheit.</p></div>
+        </div>
+        <div class="table-wrap"><table class="proposal-review-table"><thead><tr><th>Kriterium</th><th>Urteil</th><th>Gespeicherte Begründung</th></tr></thead><tbody>{% for item in row.criteria %}<tr><th scope="row">{{ item.label }} · {{ item.title }}</th><td><span class="status-badge {{ item.value.tone }}">{{ item.value.text }}</span></td><td>{{ item.reason or 'Keine abgeschlossene Begründung vorhanden.' }}{% if item.person %}<small>{{ item.person }} · Revision {{ item.revision }} · {{ item.reviewed_at|timestamp }}</small>{% endif %}</td></tr>{% endfor %}</tbody></table></div>
+        <details class="proposal-subdetails"><summary>Einzelne Funktionstestfälle und analysierte Dateien</summary><div class="table-wrap"><table><thead><tr><th>Testfall</th><th>Kategorie</th><th>Ergebnis</th></tr></thead><tbody>{% for case in row.functional.cases %}<tr><td>{{ case.case_id }}</td><td>{{ case.category }}</td><td>{{ case.label }}{% if case.missing_assertions %}<small>{{ case.missing_assertions }} Assertions ohne vollständigen Nachweis</small>{% endif %}</td></tr>{% endfor %}</tbody></table></div><div class="table-wrap"><table><thead><tr><th>Analysierte Datei</th><th>PHP-Zeilen</th><th>Diagnosen</th></tr></thead><tbody>{% for file in row.static_files %}<tr><td>{{ file.path }}</td><td>{{ file.lines if file.lines is not none else 'Nicht erhoben' }}</td><td>{{ file.diagnoses if file.diagnoses is not none else 'Nicht erhoben' }}</td></tr>{% else %}<tr><td colspan="3">Kein vollständiger Dateibefund gespeichert.</td></tr>{% endfor %}</tbody></table></div>{% if row.diagnostics %}<pre>{{ row.diagnostics|jsonpretty }}</pre>{% endif %}</details>
+        <details class="proposal-subdetails"><summary>Zeitlicher Ablauf der unabhängigen Prüfungen</summary><dl class="proposal-values">{% for check in row.checks %}<div><dt>{{ check.title }}</dt><dd>{{ measured(check.duration) }}</dd></div>{% endfor %}</dl><p class="hint">Ergänzende Ereigniszeiten der protokollierten Prüfschritte; keine nachträglich erhobene Gesamtprüfzeit. Sie gehören nicht zur aktiven Generierung.</p></details>
+      </div>
+      <div class="proposal-detail-section"><h3>Konfiguration und Herkunft</h3><p>{{ row.cell }} · {{ row.configuration.module }} · {{ row.configuration.context }} · Planner {{ row.configuration.planner }} · Review {{ row.configuration.review }}</p><p><strong>Produzent:</strong> {{ row.configuration.producer }}<br><strong>Verifikation:</strong> {{ row.configuration.verifier }}</p><small class="proposal-run-provenance">Geplante Lauf-ID: {{ row.planned_id or 'Nicht vorhanden' }}<br>Tatsächliche Lauf-ID: {{ row.run_id or 'Nicht gestartet' }}</small><br><small>Konfigurations-ID: {{ row.configuration.id or 'Nicht vorhanden' }}<br>Konfigurationshash: {{ row.configuration.hash or 'Nicht vorhanden' }}</small><p class="hint">{{ row.present }} / {{ row.expected }} ausgewählte Prüf- und Bewertungsnachweise vorhanden. Ein vorhandener Nachweis bedeutet nicht automatisch ein bestandenes Ergebnis.</p></div>
+      {% if row.missing %}<p class="hint">Für diesen Lauf fehlen verwertbare Daten: {{ row.missing }}</p>{% endif %}
+      {% if row.run_id and not imported_package|default(false) %}<div class="proposal-run-links"><a href="/runs/{{ row.run_id }}/results">Ergebnisse von Lauf {{ row.position }} öffnen →</a><a href="/runs/{{ row.run_id }}/evidence">Originalnachweise</a></div>{% endif %}
+    </div>
+  </details>
+{% endfor %}
+</div>
+<p class="hint">Anzeige gerundet; der Originalwert steht am Messwert als Tooltip. Gespeicherte Werte und Exporte behalten ihre volle Genauigkeit. Fehlende Werte werden nicht als 0 angezeigt.</p>

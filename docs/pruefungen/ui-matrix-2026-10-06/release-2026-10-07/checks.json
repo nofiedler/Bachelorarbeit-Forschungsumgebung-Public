@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-07",
+  "tests_passed": 713,
+  "test_seconds": 386.3,
+  "test_environment": "prepared Python dependency image, network none, repository read-only, fresh temporary test data, no research volumes or Docker socket",
+  "runtime_software": "source-tree-sha256:3acad58ac05abc25c5b684439f78141354ddd1e9395b5778e54b7f5194cbd327",
+  "running_services": "web healthy, worker running",
+  "frozen_matrix_technical_gates": "passed",
+  "registered_backup": "current (human storage receipt; no physical media verification)",
+  "active_jobs": {
+    "generation": 0,
+    "evaluation": 0
+  },
+  "model_calls_before": 6,
+  "local_runtime_source_difference": [
+    "pipeline_runtime.lock.json (installation-specific immutable image IDs)"
+  ],
+  "research_start_recommendation": "Existing test series is not recommended unchanged for the final data collection: decisions contain placeholders, and the frozen B endpoint is absent from current public metadata. Prepare a new final series with actual decisions and a currently listed fixed provider endpoint; preserve the existing test separately. No compulsory pilot added.",
+  "whitespace_check": {
+    "authored_changes": "passed",
+    "original_source_files_with_preserved_whitespace": 33
+  }
+}

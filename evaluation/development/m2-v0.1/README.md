@@ -1,0 +1,5 @@
+# Öffentliche Entwicklung M2-DEV-v0.1
+
+`suite_kind=development`, eigene synthetische Beispiele ausschließlich aus dem öffentlichen Vertrag: zwei Zeilen mit zehn Spalten, eigene Anmeldedaten für die BF-Modulfunktion und selbst erzeugtes PNG. Diese Zugangsdaten sind keine Gerüst-/DB-Secrets. Herkunft: unabhängig implementierender Agent; weder geschützte Fixturewerte/-dateien noch vorab formulierte Holdoutrequests/-sequenzen/-oracles kopiert. Keine empirischen Daten und keine Referenzcodeassets.
+
+`users.sql` dient dem DB-Start im technischen Entwicklungsprüfprojekt. `fixtures.json` bezeichnet dieselben öffentlichen Werte. `dev-pixel.png` ist ein eigenes 1×1 RGB-PNG. Die öffentliche Laufzeitfixturekopie im Gerüst ist bytegleich diesen eigenen SQL-Werten. `manifest.json` bindet Dateien/Hashes; getrennte Mountmenge im Gerüstvertrag. Der Laufprüfer führt einfache selbst formulierte Entwicklungsrequests mit diesen Werten aus; die spätere Entwicklungssuite kann sie getrennt ausbauen. Geschützte Bewertungen, Referenzen und Holdoutcode dürfen nicht in diese Ablage übernommen werden.

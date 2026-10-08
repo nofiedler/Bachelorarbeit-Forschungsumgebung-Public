@@ -1,0 +1,76 @@
+{
+  "access_scope": "only assigned module/condition role input",
+  "asset_version": "M2-CONTEXT-v0.1",
+  "bytes": 65064,
+  "characters": 64602,
+  "condition": "K0",
+  "files": [
+    {
+      "bytes": 32485,
+      "category": "gemeinsam/bereits K0",
+      "characters": 32485,
+      "path": "LICENSE-DVWA.txt",
+      "sha256": "6fdb4bcc182a526d6496c7adf24a82a01cc7e9727e5b2d0418a478bffe1f94a4"
+    },
+    {
+      "bytes": 2285,
+      "category": "gemeinsam/bereits K0",
+      "characters": 2245,
+      "path": "contract/README.md",
+      "sha256": "d981e9ddde27abc25cd7a5370f808c688e1dc44033b0ff8a341b66c7f4a0959a"
+    },
+    {
+      "bytes": 9432,
+      "category": "gemeinsam/bereits K0",
+      "characters": 9274,
+      "path": "contract/rubrik.md",
+      "sha256": "e3056197301bd09b43486d6b3e337c57c7fafc6cb544a838282dfa047f57c5f2"
+    },
+    {
+      "bytes": 933,
+      "category": "gemeinsam/bereits K0",
+      "characters": 930,
+      "path": "contract/users.sql",
+      "sha256": "a9f1de8ddef2507ee6c661c9cf1a15a949e832047b6f3c23287c1b009c07e272"
+    },
+    {
+      "bytes": 14953,
+      "category": "gemeinsam/bereits K0",
+      "characters": 14730,
+      "path": "contract/vertrag.md",
+      "sha256": "b14a5ff6fed94b4c92bff6b7c2547787001b2aa7abb5a0beab793b0035ffc21c"
+    },
+    {
+      "bytes": 2860,
+      "category": "gemeinsam/bereits K0",
+      "characters": 2822,
+      "path": "interfaces.md",
+      "sha256": "fd59707f499d791323a03f296258404f2739ef5e4920c78f5af40a8f8f30b6c1"
+    },
+    {
+      "bytes": 1028,
+      "category": "gemeinsam/bereits K0",
+      "characters": 1028,
+      "path": "legacy/low.php",
+      "sha256": "304781c4f17bdccbf85f834e29fa42ee9e0aa44658b2a261c3b32ce178713be9"
+    },
+    {
+      "bytes": 850,
+      "category": "gemeinsam/bereits K0",
+      "characters": 850,
+      "path": "tools.json",
+      "sha256": "5202037506d8b649fd5b2da32f8b2c74efb1190612287489cd5fdac6f2e51d8d"
+    }
+  ],
+  "follow_links": false,
+  "human_review": "open",
+  "model_input": "package.txt",
+  "module": "BF",
+  "package_sha256": "98b953cb258755530aeed2026e3a6138aed0b49fe247598649a02331ec128f76",
+  "provider_context_and_defaults": "open",
+  "schema_version": 1,
+  "source_commit": "b496a5d3de6b967410155e1b7d3e51e9d035eb22",
+  "token_status": "unbestimmt: Modell A/Tokenizer nicht gewählt; keine Schätzung vorgenommen",
+  "tokens": null,
+  "type": "source_context"
+}

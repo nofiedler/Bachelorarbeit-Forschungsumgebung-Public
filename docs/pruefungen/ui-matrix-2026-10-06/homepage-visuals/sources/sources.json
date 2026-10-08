@@ -1,0 +1,26 @@
+[
+  {
+    "file": "langchain.html",
+    "source": "https://www.langchain.com/brand-assets",
+    "captured_at_file_timestamp": "2026-10-06T21:43:17.701441+00:00",
+    "sha256": "d5a533fda62cc85126886d343f2d4c5f5215549c84c4de60df636b75dde9504f"
+  },
+  {
+    "file": "docker.html",
+    "source": "https://www.docker.com/company/newsroom/media-resources/",
+    "captured_at_file_timestamp": "2026-10-06T21:43:18.095481+00:00",
+    "sha256": "3530c42b64084305114534b6853d85fa86512e8491c7daa12c6c4c7ed787d500"
+  },
+  {
+    "file": "laravel.json",
+    "source": "https://api.github.com/repos/laravel/art/contents",
+    "captured_at_file_timestamp": "2026-10-06T21:43:18.442819+00:00",
+    "sha256": "d1134406079f5a6652388c831009d66e13b7541c26fa3468d7b6541209d94603"
+  },
+  {
+    "file": "google-fonts.css",
+    "source": "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;600&family=Geist+Mono:wght@400;500&display=swap",
+    "captured_at_file_timestamp": "2026-10-06T21:48:17.655814+00:00",
+    "sha256": "90222c9839d8b1cf3f6429adef57df110480a933071c44d82b628051c71b92c0"
+  }
+]

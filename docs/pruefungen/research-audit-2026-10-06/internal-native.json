@@ -1,0 +1,23 @@
+[
+  {
+    "case": "pass",
+    "expected_exit": 0,
+    "actual_exit": 0,
+    "stdout": "HELPER_PATH_OK",
+    "stderr": ""
+  },
+  {
+    "case": "throw",
+    "expected_exit": 1,
+    "actual_exit": 1,
+    "stdout": "",
+    "stderr": "PHP Fatal error: PIPELINE_INTERNAL_THROWABLE RuntimeException: EXPECTED_FAILURE\n"
+  },
+  {
+    "case": "parse",
+    "expected_exit": 1,
+    "actual_exit": 1,
+    "stdout": "",
+    "stderr": "PHP Fatal error: PIPELINE_INTERNAL_THROWABLE ParseError: syntax error, unexpected identifier \"is\"\n"
+  }
+]

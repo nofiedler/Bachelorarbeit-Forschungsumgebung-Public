@@ -1,0 +1,27 @@
+{% set pending = raw_export and raw_export.status in ['queued','running'] %}
+<div id="analysis-raw-export" class="analysis-raw-export" {% if pending %}hx-get="/analyses/{{ analysis.id }}/raw-data/status" hx-trigger="every 3s" hx-swap="outerHTML"{% endif %}>
+  {% if pending %}
+  <div class="submission-export-progress" role="status" aria-live="polite">
+    <span class="submission-export-spinner" aria-hidden="true"></span>
+    <div><strong>{{ 'Exportauftrag gespeichert' if raw_export.status=='queued' else 'Rohdatenpaket wird erstellt' }}</strong>
+      <p>{{ 'Die Erstellung beginnt, sobald der Auftrag an der Reihe ist.' if raw_export.status=='queued' else 'Die Originaldaten werden zusammengestellt und das ZIP wird vorbereitet.' }}</p>
+    </div>
+  </div>
+  <small>Der Download erscheint hier automatisch. Du kannst diese Seite verlassen und später wieder öffnen; der Auftrag bleibt gespeichert.</small>
+  {% elif raw_export and raw_export.status=='ready' %}
+  <a class="button" href="/packages/{{ raw_export.id }}/download?raw_data=true" download>Rohdatenpaket herunterladen</a>
+  <small>{% if raw_export.byte_count %}{{ ('%.1f'|format(raw_export.byte_count / 1024 / 1024)).replace('.', ',') }} MiB · {% endif %}ZIP erstellt</small>
+  {% if raw_export.sha256 %}<details class="submission-integrity"><summary>Prüfsumme der ZIP-Datei</summary><p>SHA-256: <code>{{ raw_export.sha256 }}</code></p></details>{% endif %}
+  <form method="post" action="/analyses/{{ analysis.id }}/raw-data" class="submission-repeat-export">
+    <input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="idempotency_key" value="{{ new_key }}">
+    <button class="secondary">Neues Rohdatenpaket erstellen</button>
+  </form>
+  {% else %}
+  {% if raw_export and raw_export.status=='failed' %}<div class="submission-export-error" role="status"><strong>Das Rohdatenpaket konnte nicht erstellt werden.</strong>{% if raw_export.error %}<p>{{ raw_export.error }}</p>{% endif %}<p>Du kannst die Erstellung erneut starten.</p></div>{% endif %}
+  <form method="post" action="/analyses/{{ analysis.id }}/raw-data">
+    <input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="idempotency_key" value="{{ new_key }}">
+    <button>Gesamte Rohdaten als ZIP erstellen</button>
+  </form>
+  <small>ZIP · Originaldaten, Analysestand und Exporte</small>
+  {% endif %}
+</div>

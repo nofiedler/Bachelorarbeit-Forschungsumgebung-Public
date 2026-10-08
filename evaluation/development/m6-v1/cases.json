@@ -1,0 +1,2652 @@
+{
+  "version": "M6-DEV-v1",
+  "suite_kind": "development",
+  "cases": [
+    {
+      "id": "DEV-BF-R1-01",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R1",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {}
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R1-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-BF-R1-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": null,
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R1-01-S01-FORM",
+              "target": "dom.form",
+              "expected": {
+                "action": "/study/brute",
+                "method": "GET",
+                "fields": [
+                  "username",
+                  "password",
+                  "Login"
+                ],
+                "password_type": "password",
+                "file_type": null,
+                "encoding": null
+              }
+            },
+            {
+              "id": "DEV-BF-R1-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R1-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R1-01-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-SQL-R1-01",
+      "version": "M6-DEV-v1",
+      "module": "SQL",
+      "category": "R1",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {}
+          },
+          "assertions": [
+            {
+              "id": "DEV-SQL-R1-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-SQL-R1-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": null,
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-SQL-R1-01-S01-FORM",
+              "target": "dom.form",
+              "expected": {
+                "action": "/study/sqli",
+                "method": "GET",
+                "fields": [
+                  "id",
+                  "Submit"
+                ],
+                "password_type": null,
+                "file_type": null,
+                "encoding": null
+              }
+            },
+            {
+              "id": "DEV-SQL-R1-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-SQL-R1-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-UP-R1-01",
+      "version": "M6-DEV-v1",
+      "module": "UP",
+      "category": "R1",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/upload",
+            "encoding": "query",
+            "fields": {}
+          },
+          "assertions": [
+            {
+              "id": "DEV-UP-R1-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-UP-R1-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": null,
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-UP-R1-01-S01-FORM",
+              "target": "dom.form",
+              "expected": {
+                "action": "/study/upload",
+                "method": "POST",
+                "fields": [
+                  "uploaded",
+                  "Upload"
+                ],
+                "password_type": null,
+                "file_type": "file",
+                "encoding": "multipart/form-data",
+                "valid_csrf_token": true
+              }
+            },
+            {
+              "id": "DEV-UP-R1-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-UP-R1-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R2-01",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R2",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "cedar41",
+              "password": "CedarPass9",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R2-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-BF-R2-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [
+                  "/dev-images/cedar41.png"
+                ],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R2-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R2-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R2-01-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-SQL-R2-01",
+      "version": "M6-DEV-v1",
+      "module": "SQL",
+      "category": "R2",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "211",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-SQL-R2-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-SQL-R2-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "first_name": "Cedar",
+                  "last_name": "Brook"
+                }
+              }
+            },
+            {
+              "id": "DEV-SQL-R2-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-SQL-R2-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R2-02",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R2",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "fern62",
+              "password": "FernPass8",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R2-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-BF-R2-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [
+                  "/dev-images/fern62.png"
+                ],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R2-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R2-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R2-02-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-SQL-R2-02",
+      "version": "M6-DEV-v1",
+      "module": "SQL",
+      "category": "R2",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "734",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-SQL-R2-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-SQL-R2-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "first_name": "Fern",
+                  "last_name": "Vale"
+                }
+              }
+            },
+            {
+              "id": "DEV-SQL-R2-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-SQL-R2-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R3-01",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R3",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "cedar41",
+              "password": "Incorrect9",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R3-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-BF-R3-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "NEGATIVE",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R3-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R3-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R3-01-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R3-02",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R3",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "unknown77",
+              "password": "CedarPass9",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R3-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-BF-R3-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "NEGATIVE",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R3-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R3-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R3-02-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-SQL-R3-01",
+      "version": "M6-DEV-v1",
+      "module": "SQL",
+      "category": "R3",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "333",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-SQL-R3-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-SQL-R3-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "NEGATIVE",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-SQL-R3-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-SQL-R3-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-SQL-R3-02",
+      "version": "M6-DEV-v1",
+      "module": "SQL",
+      "category": "R3",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "888888",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-SQL-R3-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-SQL-R3-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "NEGATIVE",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-SQL-R3-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-SQL-R3-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R4-01",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "password": "CedarPass9",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R4-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 422
+            },
+            {
+              "id": "DEV-BF-R4-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R4-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R4-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R4-01-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R4-02",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "",
+              "password": "CedarPass9",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R4-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 422
+            },
+            {
+              "id": "DEV-BF-R4-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R4-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R4-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R4-02-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R4-03",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "cedar41",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R4-03-S01-HTTP",
+              "target": "response.status",
+              "expected": 422
+            },
+            {
+              "id": "DEV-BF-R4-03-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R4-03-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R4-03-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R4-03-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R4-04",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "cedar41",
+              "password": "",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R4-04-S01-HTTP",
+              "target": "response.status",
+              "expected": 422
+            },
+            {
+              "id": "DEV-BF-R4-04-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R4-04-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R4-04-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R4-04-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R4-05",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R4-05-S01-HTTP",
+              "target": "response.status",
+              "expected": 422
+            },
+            {
+              "id": "DEV-BF-R4-05-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R4-05-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R4-05-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R4-05-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R4-06",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "",
+              "password": "",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R4-06-S01-HTTP",
+              "target": "response.status",
+              "expected": 422
+            },
+            {
+              "id": "DEV-BF-R4-06-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R4-06-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R4-06-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R4-06-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R4-07",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R4-07-S01-HTTP",
+              "target": "response.status",
+              "expected": 422
+            },
+            {
+              "id": "DEV-BF-R4-07-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R4-07-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R4-07-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R4-07-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R4-08",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R4",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "password": "",
+              "Login": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R4-08-S01-HTTP",
+              "target": "response.status",
+              "expected": 422
+            },
+            {
+              "id": "DEV-BF-R4-08-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R4-08-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R4-08-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R4-08-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-SQL-R4-01",
+      "version": "M6-DEV-v1",
+      "module": "SQL",
+      "category": "R4",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "Submit": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-SQL-R4-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 422
+            },
+            {
+              "id": "DEV-SQL-R4-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-SQL-R4-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-SQL-R4-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-SQL-R4-02",
+      "version": "M6-DEV-v1",
+      "module": "SQL",
+      "category": "R4",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "",
+              "Submit": ""
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-SQL-R4-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 422
+            },
+            {
+              "id": "DEV-SQL-R4-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-SQL-R4-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-SQL-R4-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R5-01",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R5",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-B",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "cedar41",
+              "password": "CedarPass9",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R5-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-BF-R5-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [
+                  "/dev-alt/cedar41.png"
+                ],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R5-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-B"
+            },
+            {
+              "id": "DEV-BF-R5-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R5-01-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-SQL-R5-01",
+      "version": "M6-DEV-v1",
+      "module": "SQL",
+      "category": "R5",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-B",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "211",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-SQL-R5-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-SQL-R5-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "first_name": "Maple",
+                  "last_name": "Field"
+                }
+              }
+            },
+            {
+              "id": "DEV-SQL-R5-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-B"
+            },
+            {
+              "id": "DEV-SQL-R5-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R5-02",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R5",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-B",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "fern62",
+              "password": "FernPass8",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R5-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-BF-R5-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [
+                  "/dev-alt/fern62.png"
+                ],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R5-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-B"
+            },
+            {
+              "id": "DEV-BF-R5-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R5-02-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-SQL-R5-02",
+      "version": "M6-DEV-v1",
+      "module": "SQL",
+      "category": "R5",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-B",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "734",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-SQL-R5-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-SQL-R5-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "first_name": "Juniper",
+                  "last_name": "Hill"
+                }
+              }
+            },
+            {
+              "id": "DEV-SQL-R5-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-B"
+            },
+            {
+              "id": "DEV-SQL-R5-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-BF-R6-01",
+      "version": "M6-DEV-v1",
+      "module": "BF",
+      "category": "R6",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "cedar41",
+              "password": "CedarPass9",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R6-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-BF-R6-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [
+                  "/dev-images/cedar41.png"
+                ],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R6-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R6-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R6-01-S01-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "cedar41",
+              "password": "Wrong77",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R6-01-S02-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-BF-R6-01-S02-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "NEGATIVE",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R6-01-S02-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R6-01-S02-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R6-01-S02-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "request": {
+            "method": "GET",
+            "path": "/study/brute",
+            "encoding": "query",
+            "fields": {
+              "username": "fern62",
+              "password": "FernPass8",
+              "Login": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-BF-R6-01-S03-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-BF-R6-01-S03-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [
+                  "/dev-images/fern62.png"
+                ],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-BF-R6-01-S03-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-BF-R6-01-S03-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            },
+            {
+              "id": "DEV-BF-R6-01-S03-SESSION",
+              "target": "session.auth_identity_and_id",
+              "expected": "unchanged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-SQL-R6-01",
+      "version": "M6-DEV-v1",
+      "module": "SQL",
+      "category": "R6",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "211",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-SQL-R6-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-SQL-R6-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "first_name": "Cedar",
+                  "last_name": "Brook"
+                }
+              }
+            },
+            {
+              "id": "DEV-SQL-R6-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-SQL-R6-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "333",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-SQL-R6-01-S02-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-SQL-R6-01-S02-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "NEGATIVE",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-SQL-R6-01-S02-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-SQL-R6-01-S02-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "request": {
+            "method": "GET",
+            "path": "/study/sqli",
+            "encoding": "query",
+            "fields": {
+              "id": "734",
+              "Submit": "1"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-SQL-R6-01-S03-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-SQL-R6-01-S03-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "first_name": "Fern",
+                  "last_name": "Vale"
+                }
+              }
+            },
+            {
+              "id": "DEV-SQL-R6-01-S03-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-SQL-R6-01-S03-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-UP-R2-01",
+      "version": "M6-DEV-v1",
+      "module": "UP",
+      "category": "R2",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "filename": "dev-orange.png",
+              "fixture": "dev-orange.png"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-UP-R2-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-UP-R2-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/dev-orange.png"
+                }
+              }
+            },
+            {
+              "id": "DEV-UP-R2-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-UP-R2-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                },
+                "dev-orange.png": {
+                  "size": 69,
+                  "sha256": "18af837ca0a881a2cd9d60e289ed734b09cd5464b6a012bf6cad602a7651121c"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-UP-R2-02",
+      "version": "M6-DEV-v1",
+      "module": "UP",
+      "category": "R2",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "filename": "dev-purple.png",
+              "fixture": "dev-purple.png"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-UP-R2-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-UP-R2-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/dev-purple.png"
+                }
+              }
+            },
+            {
+              "id": "DEV-UP-R2-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-UP-R2-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                },
+                "dev-purple.png": {
+                  "size": 69,
+                  "sha256": "9f28ecabf2c8dc8de1c03261b16285a81da310092e2d7d655de19bf23ba5429e"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-UP-R5-01",
+      "version": "M6-DEV-v1",
+      "module": "UP",
+      "category": "R5",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "filename": "dev-orange.png",
+              "fixture": "dev-orange.png"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-UP-R5-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-UP-R5-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/dev-orange.png"
+                }
+              }
+            },
+            {
+              "id": "DEV-UP-R5-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-UP-R5-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                },
+                "dev-orange.png": {
+                  "size": 69,
+                  "sha256": "18af837ca0a881a2cd9d60e289ed734b09cd5464b6a012bf6cad602a7651121c"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-UP-R5-02",
+      "version": "M6-DEV-v1",
+      "module": "UP",
+      "category": "R5",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "filename": "dev-purple.png",
+              "fixture": "dev-purple.png"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-UP-R5-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-UP-R5-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/dev-purple.png"
+                }
+              }
+            },
+            {
+              "id": "DEV-UP-R5-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-UP-R5-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                },
+                "dev-purple.png": {
+                  "size": 69,
+                  "sha256": "9f28ecabf2c8dc8de1c03261b16285a81da310092e2d7d655de19bf23ba5429e"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-UP-R3-01",
+      "version": "M6-DEV-v1",
+      "module": "UP",
+      "category": "R3",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": "target_directory_not_writable"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "filename": "dev-orange.png",
+              "fixture": "dev-orange.png"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-UP-R3-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 500
+            },
+            {
+              "id": "DEV-UP-R3-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "UPLOAD_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-UP-R3-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-UP-R3-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-UP-R4-01",
+      "version": "M6-DEV-v1",
+      "module": "UP",
+      "category": "R4",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "missing",
+              "filename": "",
+              "fixture": null
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-UP-R4-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 422
+            },
+            {
+              "id": "DEV-UP-R4-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-UP-R4-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-UP-R4-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-UP-R4-02",
+      "version": "M6-DEV-v1",
+      "module": "UP",
+      "category": "R4",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "empty",
+              "filename": "",
+              "fixture": null
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-UP-R4-02-S01-HTTP",
+              "target": "response.status",
+              "expected": 422
+            },
+            {
+              "id": "DEV-UP-R4-02-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "INPUT_ERROR",
+                "avatars": [],
+                "data": {}
+              }
+            },
+            {
+              "id": "DEV-UP-R4-02-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-UP-R4-02-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEV-UP-R6-01",
+      "version": "M6-DEV-v1",
+      "module": "UP",
+      "category": "R6",
+      "purpose": "public development contract example",
+      "setup": {
+        "database": "DEV-A",
+        "uploads": "initial_uploads",
+        "reset_before": true,
+        "reset_between_steps": false,
+        "fault": null
+      },
+      "steps": [
+        {
+          "number": 1,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "filename": "dev-sequence-1.png",
+              "fixture": "dev-orange.png"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-UP-R6-01-S01-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-UP-R6-01-S01-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/dev-sequence-1.png"
+                }
+              }
+            },
+            {
+              "id": "DEV-UP-R6-01-S01-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-UP-R6-01-S01-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                },
+                "dev-sequence-1.png": {
+                  "size": 69,
+                  "sha256": "18af837ca0a881a2cd9d60e289ed734b09cd5464b6a012bf6cad602a7651121c"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "filename": "dev-sequence-2.png",
+              "fixture": "dev-purple.png"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-UP-R6-01-S02-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-UP-R6-01-S02-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/dev-sequence-2.png"
+                }
+              }
+            },
+            {
+              "id": "DEV-UP-R6-01-S02-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-UP-R6-01-S02-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                },
+                "dev-sequence-1.png": {
+                  "size": 69,
+                  "sha256": "18af837ca0a881a2cd9d60e289ed734b09cd5464b6a012bf6cad602a7651121c"
+                },
+                "dev-sequence-2.png": {
+                  "size": 69,
+                  "sha256": "9f28ecabf2c8dc8de1c03261b16285a81da310092e2d7d655de19bf23ba5429e"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "request": {
+            "method": "POST",
+            "path": "/study/upload",
+            "encoding": "multipart/form-data",
+            "fields": {
+              "Upload": "1",
+              "_token": "<current_valid_session_token>"
+            },
+            "file": {
+              "part": "uploaded",
+              "mode": "present",
+              "filename": "dev-sequence-3.png",
+              "fixture": "dev-orange.png"
+            }
+          },
+          "assertions": [
+            {
+              "id": "DEV-UP-R6-01-S03-HTTP",
+              "target": "response.status",
+              "expected": 200
+            },
+            {
+              "id": "DEV-UP-R6-01-S03-RESULT",
+              "target": "dom.result",
+              "expected": {
+                "region_count": 1,
+                "marker": "SUCCESS",
+                "avatars": [],
+                "data": {
+                  "path": "study/uploads/dev-sequence-3.png"
+                }
+              }
+            },
+            {
+              "id": "DEV-UP-R6-01-S03-DATABASE",
+              "target": "database.full_schema_and_rows",
+              "expected": "unchanged_from_DEV-A"
+            },
+            {
+              "id": "DEV-UP-R6-01-S03-FILES",
+              "target": "uploads.inventory",
+              "expected": {
+                "development-existing.txt": {
+                  "size": 40,
+                  "sha256": "c5f6104b567a93f78c1b8e4d8891a370635e7f5d80bf4cebbef12fa9187d7394"
+                },
+                "dev-sequence-1.png": {
+                  "size": 69,
+                  "sha256": "18af837ca0a881a2cd9d60e289ed734b09cd5464b6a012bf6cad602a7651121c"
+                },
+                "dev-sequence-2.png": {
+                  "size": 69,
+                  "sha256": "9f28ecabf2c8dc8de1c03261b16285a81da310092e2d7d655de19bf23ba5429e"
+                },
+                "dev-sequence-3.png": {
+                  "size": 69,
+                  "sha256": "18af837ca0a881a2cd9d60e289ed734b09cd5464b6a012bf6cad602a7651121c"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

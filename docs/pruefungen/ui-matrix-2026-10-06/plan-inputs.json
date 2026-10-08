@@ -1,0 +1,28 @@
+[
+  {
+    "file": "/Users/noahfiedler/Bachelorarbeit/Bachelorarbeit-Dokumentation/003-Forschungsfragen/01-Forschungsfragen - Kontextgestaltung bei der Migration von PHP nach Laravel.md",
+    "sha256": "52ab6f9512014e12538ba40db6bfbc9e2921f422e6571be02942c1744ad4abab"
+  },
+  {
+    "file": "/Users/noahfiedler/Bachelorarbeit/Bachelorarbeit-Dokumentation/004-Hypothesen/01-Hypothesen und explorative Einordnung der Forschungsfragen.md",
+    "sha256": "b8cf2b50f36e6d51b6e35c7ae0547eea1b564d2e8e6f3f9fd637d7f5dd9adcd7"
+  },
+  {
+    "file": "/Users/noahfiedler/Bachelorarbeit/Bachelorarbeit-Dokumentation/005-Forschungsablauf/01-Operationalisierung-und-Auswertungsplan.md",
+    "sha256": "bc009d8c20e537c5c9a8a275c0244fb99b71de72252d25e7386ae4d301defb27"
+  },
+  {
+    "file": "/Users/noahfiedler/Bachelorarbeit/Bachelorarbeit-Dokumentation/005-Forschungsablauf/02-Forschungsablauf.md",
+    "sha256": "95b3aad74470b5d48696e744bc78b3d0448cec07145206437d2256c66be3e851"
+  },
+  {
+    "file": "/Users/noahfiedler/Bachelorarbeit/Bachelorarbeit-Dokumentation/005-Forschungsablauf/03-Baseline, Variablen und konstante Bedingungen.md",
+    "sha256": "8fe26a4c177894b78f1cdc57e859029fa7bd1c08aed5db6b8e623ef1cd315481",
+    "earlier_observed_sha256": "095f855d2f3c67278855dcfb6349101ba47981a8a7abb598fb5787ebd2190efb",
+    "verification_note": "Während der Prüfung extern geänderte Tabellenformatierung erneut gelesen; keine Änderung der geprüften Messregeln im aktuellen Git-Diff."
+  },
+  {
+    "file": "/Users/noahfiedler/Bachelorarbeit/Bachelorarbeit-Dokumentation/005-Forschungsablauf/04-Forschungsablauf einfach erklärt.md",
+    "sha256": "280f9d4ceb6247c6ee45d4af80f815c9340820d71e9cd73c7c4f8b1ff4d60c24"
+  }
+]

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}{{ module }} · {{ context }} im Klartext{% endblock %}
+{% block content %}
+<a class="back-link" href="/settings">← Einstellungen</a>
+<div class="page-intro">
+  <p class="eyebrow">Tatsächliche Agenteneingaben · Paketvorschau</p>
+  <h1>{{ {'BF':'Brute Force','SQL':'SQL Injection','UP':'File Upload'}[module] }} · {{ context }}</h1>
+  <p>{{ 'Modulcode und gemeinsame Vorgaben' if context=='K0' else 'Zusätzlich: Einbindung und Datenfluss' }}</p>
+</div>
+<section>
+  <form method="get" action="/settings/context" class="filters">
+    <label>Modul<select name="module">{% for code,label in [('BF','Brute Force'),('SQL','SQL Injection'),('UP','File Upload')] %}<option value="{{ code }}" {% if code==module %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label>
+    <label>Kontextstufe<select name="context">{% for k in ['K0','K1'] %}<option {% if k==context %}selected{% endif %}>{{ k }}</option>{% endfor %}</select></label>
+    <button>Paket anzeigen</button>
+  </form>
+  <p class="hint">Vorschau der installierten Paketversion {{ context_version }}. Die Bedingungen eines gespeicherten Laufs werden dadurch nicht geändert. Tatsächlich versandte Nachrichten und damalige Versionen werden am jeweiligen Modellaufruf gespeichert; diese Vorschau ist kein historisches Laufprotokoll.</p>
+</section>
+<section id="context-comparison">
+  <h2>Was unterscheidet K0 und K1?</h2>
+  <p>Der Auftrag bleibt gleich. K1 ergänzt Belege dafür, wie der Legacy-Code in DVWA eingebunden ist, und erläutert diese Zusammenhänge. Inhalt, Umfang und Aufbereitung ändern sich gemeinsam.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Bestandteil</th><th>K0 · Lokaler Kontext</th><th>K1 · Integrationskontext</th></tr></thead>
+    <tbody>
+      <tr><td>Verarbeitungscode</td><td>Vollständige <code>legacy/low.php</code> des ausgewählten Moduls.</td><td>Bytegleich zu K0.</td></tr>
+      <tr><td>Zielvertrag und Rubrik</td><td>Alle öffentlichen Sollregeln: R1–R6, T1–T5, Eingabedomänen, Antworten und CSRF-Präzisierung.</td><td>Identisch; keine exklusiven Bestehensregeln.</td></tr>
+      <tr><td>Gemeinsame Schnittstellen</td><td>Schema, Session, Speicher, Gerüst und technische Vorgaben.</td><td>Identisch.</td></tr>
+      {% if module=='SQL' %}<tr><td>MySQL-Zielzweig</td><td>In <code>mysql-target.md</code> markiert; die vollständige <code>low.php</code> bleibt enthalten.</td><td>Identische Zielmarkierung.</td></tr>{% endif %}
+      <tr><td>Zusätzliche Legacy-Quellen</td><td>Keine weiteren Legacy-Dateien.</td><td><code>integration/excerpts.md</code>: ausgewählte Zeilen aus der zugehörigen <code>index.php</code> und <code>dvwaPage.inc.php</code>, mit Herkunftszeilen.</td></tr>
+      <tr><td>Erläuterter Datenfluss</td><td>Kein zusätzlicher Zuordnungstext.</td><td><code>integration/mapping.md</code>: Eingabe → Verarbeitung → Daten/Datei → Ausgabe. Teilweise explizite Aufbereitung von bereits aus K0 ableitbaren Zusammenhängen.</td></tr>
+      <tr><td>Rollen und Antwortformat</td><td>Feste Rollen-Anweisungen, JSON-Vertrag <code>roles-v1</code> und vorgesehene Artefakte des eigenen Laufs.</td><td>Identisch; jede aktive Rolle erhält das zugewiesene K1-Paket.</td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>Für {{ {'BF':'Brute Force','SQL':'SQL Injection','UP':'File Upload'}[module] }} konkret:</strong>
+    {% if module=='BF' %}K1 belegt den Weg vom GET-Formular zur Passwort-/DB-Prüfung und zum Avatar in der Seitenausgabe. Es grenzt den vorgeschalteten DVWA-Sessionzugang von der zu migrierenden Modulprüfung ab.
+    {% elif module=='SQL' %}K1 belegt den Weg vom ID-Formular zur MySQL-Abfrage und zur Ausgabe von Vor-/Nachname. Die Herkunft der Verbindung wird sichtbar; das MySQL-Ziel und die Zielantworten kennt bereits K0.
+    {% else %}K1 belegt Multipart-Formular, Wurzelkonstante, relativen Legacy-Uploadpfad und Rückmeldung in der Seite. Der neue Laravel-Speicherpfad und die zulässigen Dateien sind bereits in K0 festgelegt.
+    {% endif %}
+  </p>
+  <p><strong>Ausgewähltes Paket:</strong> {{ files|length }} Dateien · {{ manifest.bytes }} Bytes · {{ manifest.characters }} Zeichen. Diese Menge zählt das Paket einschließlich Dateigrenzen; Gerüst, Rollen-Anweisung und spätere Laufartefakte kommen im Modellaufruf hinzu.</p>
+  <p class="hint">{% if manifest.tokens is none %}<strong>Tokenzahl noch nicht bestimmt.</strong> Eine exakte Paket-Tokenzahl benötigt den dokumentierten Tokenizer des gewählten Modells A. Bytes und Zeichen sind kein Tokenersatz.{% else %}Paket-Tokenzahl laut Manifest: {{ manifest.tokens }}.{% endif %} Menschliche Fachprüfung des Pakets: {{ 'noch offen' if manifest.human_review=='open' else manifest.human_review }}.</p>
+</section>
+<section>
+  <h2>Öffentliche Anforderungen sind kein Test-Leakage</h2>
+  <p><code>contract/vertrag.md</code> und <code>contract/rubrik.md</code> gehören absichtlich zu beiden Kontextstufen: Die Agenten müssen wissen, welches Verhalten sie implementieren sollen und woran es gemessen wird. Öffentliche Kategorien und allgemeine Sequenzanforderungen sind keine Offenlegung konkreter Prüfsequenzen mit Testwerten.</p>
+  <p>Zurückgehalten bleiben konkrete synthetische Testdaten, Eingabedateien, ausführbare Akzeptanztests, konkrete Prüfsequenzen, Referenzimplementierungen und externe Bewertungsbefunde. Diese werden weder als Paketinhalt noch als Rückmeldung an die Agenten übergeben. Der Test-Agent erzeugt eigene interne Tests; sie ersetzen die unabhängige Bewertung nicht.</p>
+  <p class="hint">K1 enthält zusätzliche Quellbelege und Erläuterungen, keine Laravel-Musterlösung. Beide Stufen haben dieselben öffentlichen Bestehensregeln.</p>
+</section>
+<section>
+  <h2>1. Was erhalten alle Agenten?</h2>
+  <p>Alle erhalten dieses vollständige Kontextpaket, dasselbe Laravel-Gerüst und den Vertrag für das Antwortformat. K0 und K1 haben dieselben Zielanforderungen.</p>
+  <h3>Zielvertrag und Antwortformat</h3>
+  <p><strong>Der Zielvertrag beschreibt die Aufgabe:</strong> Funktionen, Schnittstellen und Laravel-Zielkonformität. <strong>Der separate Antwortvertrag <code>roles-v1</code> beschreibt die Übergabe:</strong> ein JSON-Umschlag mit <code>schema</code>, <code>role</code> und den jeweiligen Analyse-, Plan-, Datei- oder Reviewfeldern. Die Pipeline validiert Format und erlaubte Dateipfade, bevor sie die Antwort weitergibt. Der Zielvertrag allein genügt dafür nicht.</p>
+  <p>Die genaue JSON-Form steht in der unten aufklappbaren Rollen-Anweisung. Die gemeinsame technische Schnittstellenbeschreibung ist keine zusätzliche Erlaubnis für eigenständige Tool- oder Netzwerkaufrufe; Dateien werden über die validierten Antworten übernommen und interne Tests durch den Runner ausgeführt.</p>
+  <h3>Enthaltene Dateien – Inhalt aufklappen</h3>
+  {% for file in files %}<details {% if file.path=='legacy/low.php' %}open{% endif %}><summary>{{ file.path }} <small>{{ file.category }} · {{ file.bytes }} Bytes</small></summary><pre>{{ file.content }}</pre></details>{% endfor %}
+</section>
+<section>
+  <h2>2. Was kommt je Agent hinzu?</h2>
+  <p>Zusätzlich zum Paket erhält jede Rolle die folgenden Ausgaben aus demselben Lauf. Noch nicht ausgeführte oder deaktivierte Schritte liefern keinen Input. Die Rollen-Anweisungen bleiben zwischen K0 und K1 gleich.</p>
+  <div class="table-wrap"><table><thead><tr><th>Agent</th><th>Zusätzlicher Kontext</th></tr></thead><tbody>{% for role in roles %}<tr><td>{{ role.name }}</td><td>{{ role.inputs }}<details><summary>Tatsächliche Rollen-Anweisung</summary><pre>{{ role.prompt }}</pre></details></td></tr>{% endfor %}</tbody></table></div>
+  <p class="hint">Unabhängige Bewertungsbefunde und zurückgehaltene Akzeptanztests werden keinem Agenten übergeben.</p>
+</section>
+<details><summary>Vollständiges Paket und Herkunft</summary><p>Version {{ context_version }} · DVWA-Commit <code>{{ manifest.source_commit }}</code> · {{ manifest.bytes }} Bytes.</p><p>SHA-256 des Pakets: <code>{{ manifest.package_sha256 }}</code>. Menschliche Fachprüfung: {{ 'noch offen' if manifest.human_review=='open' else manifest.human_review }}.</p><pre>{{ package_text }}</pre></details>
+{% endblock %}

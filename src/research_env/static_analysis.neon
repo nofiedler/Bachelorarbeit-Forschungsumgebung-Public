@@ -1,0 +1,17 @@
+includes:
+    - /opt/study/vendor/larastan/larastan/extension.neon
+parameters:
+    level: 5
+    tmpDir: /tmp/phpstan
+    phpVersion: 80426
+    reportUnmatchedIgnoredErrors: true
+    ignoreErrors: []
+    excludePaths: []
+    checkOctaneCompatibility: false
+    noEnvCallsOutsideOfConfig: true
+    noModelMake: true
+    noImplicitQueryBuilderCall: false
+    noUnnecessaryCollectionCall: true
+    checkModelProperties: false
+    checkUnusedViews: false
+    checkMissingTranslations: false

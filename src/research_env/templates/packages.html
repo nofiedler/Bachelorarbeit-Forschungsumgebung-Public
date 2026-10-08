@@ -1,0 +1,9 @@
+{% extends 'base.html' %}{% block title %}Studienpakete{% endblock %}{% block content %}
+<a href="/analyses">← Auswertung</a><h1>Studienpakete übertragen</h1>
+<p>Erstelle in einem bestätigten Analysestand ein Paket. Es enthält die Hauptmatrix, Ergebnisse, CSV-Dateien, Grafiken und zugehörige Originalbelege mit Prüfsummen. Freie Tests bleiben ausgeschlossen. Ein Studienpaket ersetzt keine vollständige Instanzsicherung und keine gesonderte Sicherung der Docker-Images.</p>
+<h2>Exportaufträge</h2><p>Während der Erstellung diese Seite erneut laden. Ein Neustart führt keine Modellaufrufe aus; bei einem unterbrochenen Export kannst du einen neuen Auftrag starten.</p>
+{% for job in jobs %}<article><p>{{ job.id }} · {{ job.status }}{% if job.byte_count %} · {{ job.byte_count }} Bytes{% endif %}</p>{% if job.status=='ready' %}<a href="/packages/{{ job.id }}/download">Studienpaket herunterladen</a><p>SHA-256: {{ job.sha256 }}</p>{% endif %}{% if job.error %}<p>{{ job.error }}</p>{% endif %}</article>{% else %}<p>Noch kein Paket erstellt.</p>{% endfor %}
+<h2>Paket importieren</h2><p>Importe bleiben getrennt von deiner aktiven Forschung. Die Anwendung prüft alle Dateien, Hashes und Referenzen. Sie startet weder Modelle noch enthaltenen Code. Maximal 2 GiB ZIP / 16 GiB entpackter Inhalt.</p>
+<form method="post" action="/packages/import" enctype="multipart/form-data" data-import-form data-server-progress><input type="hidden" name="csrf" value="{{ csrf }}"><label>Studienpaket (ZIP)<input type="file" name="archive" accept=".zip" required></label><button>Paket prüfen und importieren</button></form>
+<h2>Importierte Originale</h2>{% for item in imports %}<p><a href="/packages/imports/{{ item.package_id }}">{{ item.package_id }}</a> · {{ item.data_origin }} · {{ item.created_at }}</p>{% else %}<p>Noch kein Import.</p>{% endfor %}
+{% endblock %}

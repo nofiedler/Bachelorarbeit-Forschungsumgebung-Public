@@ -1,0 +1,29 @@
+{
+  "version": "M2-v0.1",
+  "rubric_version": "RT-v0.1",
+  "status": "draft_human_review_open",
+  "public_role_allowlist": [
+    "docs/vertraege/m2-v0.1/README.md",
+    "docs/vertraege/m2-v0.1/rubrik.md",
+    "docs/vertraege/m2-v0.1/users.sql",
+    "docs/vertraege/m2-v0.1/vertrag.md"
+  ],
+  "sha256": {
+    "docs/vertraege/m2-v0.1/README.md": "d981e9ddde27abc25cd7a5370f808c688e1dc44033b0ff8a341b66c7f4a0959a",
+    "docs/vertraege/m2-v0.1/rubrik.md": "e3056197301bd09b43486d6b3e337c57c7fafc6cb544a838282dfa047f57c5f2",
+    "docs/vertraege/m2-v0.1/users.sql": "a9f1de8ddef2507ee6c661c9cf1a15a949e832047b6f3c23287c1b009c07e272",
+    "docs/vertraege/m2-v0.1/vertrag.md": "b14a5ff6fed94b4c92bff6b7c2547787001b2aa7abb5a0beab793b0035ffc21c",
+    "evaluation/study_holdout/m2-v0.1/README.md": "997be8799270d23297d9ee9ef42e7595c6f87c9ab966c9e7383a39d754baed6c",
+    "evaluation/study_holdout/m2-v0.1/cases.json": "bad9734264cc07b02cb3bb3b75417591d0a4cbca4519812e1b5ecd25f7bd5cbe",
+    "evaluation/study_holdout/m2-v0.1/fixtures/amber.png": "5152b4f262397512ec8d1d6f076c509a6052674e3814a0c78fb7bf368b4d5b62",
+    "evaluation/study_holdout/m2-v0.1/fixtures/blue.jpg": "bfd0fb4d7039a1716a766f83be930226c9d8649aa4deeb926013cbe24dd53888",
+    "evaluation/study_holdout/m2-v0.1/fixtures/blue.png": "4442d728adc33566e2be10ba0d573a8b4ec1ca033335b75eaac003a97facfc26",
+    "evaluation/study_holdout/m2-v0.1/fixtures/green.png": "31bd12297554963e960c136b22a7a6dade4b234dc5c5a370bb16671f12af98ad",
+    "evaluation/study_holdout/m2-v0.1/fixtures/sentinel.txt": "cc809b73990c3ed04b989c020da6c36cfbefaff047c338817e10d2d086d9ec29",
+    "evaluation/study_holdout/m2-v0.1/fixtures.json": "fb7c869298f512be9b9a5282ec3fde4f682d7d757426fabb61eabe5cbda6b742",
+    "evaluation/study_holdout/m2-v0.1/outcomes.json": "ef3aceaa33ab0a80234019565e93726b219187ada2418d7014320eaca2cd49e2",
+    "evaluation/study_holdout/m2-v0.1/provenance.json": "513c227f7a9e1ce114d669fb1afead586e62ec67871c73c68dd52f74d177bc4f",
+    "evaluation/study_holdout/m2-v0.1/references.json": "a7834bd3982e4a8dbdb14e155c85871e1eae313d8260c31ec2aa89c3decb1d11",
+    "evaluation/study_holdout/m2-v0.1/referenzentwuerfe.md": "86bf2c205b53aae82c40cfccb88bee951a7713c5bd839ad11fa7a571c158dbdd"
+  }
+}

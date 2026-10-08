@@ -1,0 +1,114 @@
+{
+  "run_id": "3457ab97-0464-4ebd-b3bb-4b59c37ed1ed",
+  "purpose": "cost-free synthetic technical fixture; no empirical data",
+  "measurements": [
+    {
+      "id": "8b961396-0247-48ad-82d5-39c6a42ea82d",
+      "measurement_key": "functional_R",
+      "revision": 1,
+      "completion": "draft",
+      "exit_code": {
+        "reason": "Independent evaluation started; original draft remains",
+        "source": null,
+        "status": "pending",
+        "unit": "exit",
+        "value": null,
+        "value_kind": null
+      }
+    },
+    {
+      "id": "dfa62579-0604-4f08-afd6-720a1d4e48f7",
+      "measurement_key": "functional_R",
+      "revision": 2,
+      "completion": "completed",
+      "exit_code": {
+        "reason": null,
+        "source": "M6-evaluator-v1",
+        "status": "observed",
+        "unit": "exit",
+        "value": "0",
+        "value_kind": "decimal"
+      }
+    },
+    {
+      "id": "dd36da7d-e48e-4309-87e6-c6b5a80e760e",
+      "measurement_key": "T4_integration",
+      "revision": 1,
+      "completion": "completed",
+      "exit_code": {
+        "reason": null,
+        "source": "M6-evaluator-v1",
+        "status": "observed",
+        "unit": "exit",
+        "value": "0",
+        "value_kind": "decimal"
+      }
+    },
+    {
+      "id": "7f8bc6d6-5a43-40ef-b0b2-c90afbd728cc",
+      "measurement_key": "static_DLS",
+      "revision": 1,
+      "completion": "draft",
+      "exit_code": {
+        "reason": "Static measurement started; immutable draft",
+        "source": null,
+        "status": "technical_missing",
+        "unit": "exit",
+        "value": null,
+        "value_kind": null
+      }
+    },
+    {
+      "id": "297f26bc-ab5a-4070-80f7-dac75d4ad535",
+      "measurement_key": "static_DLS",
+      "revision": 2,
+      "completion": "completed",
+      "exit_code": {
+        "reason": null,
+        "source": "M6-static-v1",
+        "status": "observed",
+        "unit": "exit",
+        "value": "0",
+        "value_kind": "decimal"
+      }
+    }
+  ],
+  "static_profiles": [
+    {
+      "measurement_id": "297f26bc-ab5a-4070-80f7-dac75d4ad535",
+      "d": {
+        "reason": null,
+        "source": "M6-static-v1",
+        "status": "observed",
+        "unit": "count",
+        "value": "0",
+        "value_kind": "decimal"
+      },
+      "l": {
+        "reason": null,
+        "source": "M6-static-v1",
+        "status": "observed",
+        "unit": "count",
+        "value": "0",
+        "value_kind": "decimal"
+      },
+      "s": {
+        "reason": "L_zero",
+        "source": null,
+        "status": "technical_missing",
+        "unit": "diagnoses_per_100_lines",
+        "value": null,
+        "value_kind": null
+      },
+      "exit_code": {
+        "reason": null,
+        "source": "M6-static-v1",
+        "status": "observed",
+        "unit": "exit",
+        "value": "0",
+        "value_kind": "decimal"
+      },
+      "failure_reason": "L_zero"
+    }
+  ]
+}

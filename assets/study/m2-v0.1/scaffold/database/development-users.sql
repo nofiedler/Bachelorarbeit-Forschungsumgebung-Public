@@ -1,0 +1,2 @@
+INSERT INTO users (user_id,first_name,last_name,user,password,avatar,last_login,failed_login,role,account_enabled) VALUES (211,'Cedar','Brook','cedar41','bbe5baa01d1a751fa9c05430c5373776','/dev-images/cedar41.png',NULL,0,'user',1);
+INSERT INTO users (user_id,first_name,last_name,user,password,avatar,last_login,failed_login,role,account_enabled) VALUES (734,'Fern','Vale','fern62','00715a4921d4bbe081c16923e9c4820a','/dev-images/fern62.png',NULL,0,'user',1);

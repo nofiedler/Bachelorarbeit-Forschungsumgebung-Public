@@ -1,0 +1,10 @@
+{
+  "border": "dashed",
+  "buttonBackground": "rgb(255, 255, 255)",
+  "enctype": "multipart/form-data",
+  "formAction": "/studies/import",
+  "method": "post",
+  "name": "archive",
+  "padding": "16.5px 18.75px",
+  "required": true
+}

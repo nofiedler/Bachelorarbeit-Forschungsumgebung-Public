@@ -1,0 +1,11 @@
+{
+  "changed_files": [
+    "execution_compatibility.json",
+    "static/style.css"
+  ],
+  "all_templates_and_behavior_code_identical": true,
+  "persistent_records_identical": true,
+  "freeze_backup_next_run_identical": true,
+  "additional_model_calls": 0,
+  "source_after": "source-tree-sha256:3acad58ac05abc25c5b684439f78141354ddd1e9395b5778e54b7f5194cbd327"
+}

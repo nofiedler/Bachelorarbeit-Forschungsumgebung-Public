@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth scroll-pt-20">
+<head>
+	<meta charset="utf-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<title>Rule Levels | PHPStan</title>
+	
+	
+	<meta property="og:title" content="Rule Levels" />
+
+	
+		<meta property="og:image" content="/assets/logo-big-CbtT9iBK.png" />
+		<meta name="twitter:image" content="/assets/logo-big-CbtT9iBK.png" />
+	
+
+	<link rel="icon" type="image/png" href="/assets/favicon-DrgKtcYh.png">
+	<link rel="alternate" type="application/rss+xml" title="PHPStan Blog" href="/assets/rss-Dbj15Wiu.xml">
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@phpstan" />
+	<meta name="twitter:creator" content="@ondrejmirtes" />
+	<meta name="twitter:title" content="Rule Levels" />
+	<script src="https://cdn.usefathom.com/script.js" data-site="UDESFNRN" defer></script>
+	<script>
+		const query = window.matchMedia('(prefers-color-scheme: dark)');
+		const themeKey = 'phpstanWebTheme';
+		query.addEventListener('change', (event) => {
+			if (themeKey in localStorage) {
+				return;
+			}
+			if (event.matches) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+		});
+		if (localStorage[themeKey] === 'dark' || (!(themeKey in localStorage) && query.matches)) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+	</script>
+  <script type="module" crossorigin src="/assets/index-CvytLowo.js"></script>
+  <script type="module" crossorigin src="/assets/MainMenuViewModel-CqRrkSks.js"></script>
+  <script type="module" crossorigin src="/assets/prism-EB13jjpy.js"></script>
+  <script type="module" crossorigin src="/assets/user-guide-2DB7xPEq.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BBjC2Vqr.css">
+  <link rel="stylesheet" crossorigin href="/assets/MainMenuViewModel-DmyQxVw1.css">
+</head>
+<body>
+
+<div class="flex flex-col main-area" style="background-color: #fff">
+	<nav class="bg-white border-b border-gray-200 flex-shrink z-20 nav-header">
+		<!-- ko with: mainMenu -->
+			<div class="max-w-5xl mx-auto px-4 md:px-6">
+				<div class="flex justify-between h-16">
+					<div class="flex flex-grow">
+						<div class="w-64 flex flex-none items-center">
+							<a href="/"><img class="block h-12 w-auto rounded-lg" src="/assets/logo-D3DIJ-HJ.png" alt="PHPStan" /></a>
+							<a href="/" class="ml-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6" viewBox="0 0 275 46" fill="none">
+								<g clip-path="url(#clip0)">
+									<path d="M36.86 16.24C36.86 24.61 31.36 31.05 21.24 31.05H13.12V40.67C13.12 43.1 11.81 44.42 9.37 44.42H3.75C1.31 44.42 0 43.1 0 40.67V4.44C0 2 1.31 0.690002 3.75 0.690002H21.24C31.42 0.690002 36.86 7.87 36.86 16.24ZM23.74 16.37C23.74 14.06 22.11 11.93 19.87 11.93H13.12V20.62H19.87C20.9389 20.5481 21.9386 20.0656 22.6599 19.2735C23.3812 18.4813 23.7682 17.441 23.74 16.37V16.37Z" fill="#231F20"/>
+									<path d="M41.79 40.67V4.44C41.79 2 43.11 0.690002 45.54 0.690002H51.17C53.6 0.690002 54.91 2 54.91 4.44V18.12H67.72V4.44C67.72 2 69 0.690002 71.47 0.690002H77.09C79.53 0.690002 80.84 2 80.84 4.44V40.67C80.84 43.1 79.53 44.42 77.09 44.42H71.47C69.03 44.42 67.72 43.1 67.72 40.67V28.8H54.91V40.67C54.91 43.1 53.6 44.42 51.17 44.42H45.54C43.11 44.42 41.79 43.1 41.79 40.67Z" fill="#231F20"/>
+									<path d="M125.32 16.24C125.32 24.61 119.82 31.05 109.7 31.05H101.58V40.67C101.58 43.1 100.27 44.42 97.83 44.42H92.21C89.78 44.42 88.46 43.1 88.46 40.67V4.44C88.46 2 89.78 0.690002 92.21 0.690002H109.7C119.89 0.690002 125.32 7.87 125.32 16.24ZM112.2 16.37C112.2 14.06 110.58 11.93 108.33 11.93H101.58V20.62H108.33C109.4 20.5505 110.401 20.0688 111.123 19.2761C111.845 18.4834 112.231 17.4416 112.2 16.37V16.37Z" fill="#231F20"/>
+									<path d="M128.51 35.11C127.64 32.73 128.89 31.11 131.26 30.55L134.82 29.74C137.01 29.24 138.13 30.17 139.44 32.17C140.75 34.17 142.88 35.11 145.88 35.11C148.88 35.11 151 34.11 151 32C151 30.94 150.44 29.57 147.31 28.57L142.38 26.69C140.26 26.01 129.63 23.2 129.51 13.89C129.51 5.43 136.63 0 146.19 0C152.94 0 157.68 2.69 160.5 7.68C161.81 9.93 160.75 11.81 158.31 12.49L154.94 13.43C152.81 14.06 151.62 13.18 150.06 11.43C149.597 10.9432 149.033 10.5631 148.408 10.3161C147.782 10.0692 147.111 9.96131 146.44 10C144.32 10 142.32 10.87 142.32 12.74C142.32 13.99 143.19 15.12 145.88 16.05L150.75 17.74C160.5 21.12 163.56 25.36 163.75 31.55C163.75 40.86 155.38 45.1 145.89 45.1C137.26 45.1 131 41.54 128.51 35.11Z" fill="#231F20"/>
+									<path d="M170.56 33.05V20.87H167.93C167.678 20.8949 167.424 20.8636 167.186 20.7785C166.948 20.6933 166.731 20.5563 166.553 20.3775C166.374 20.1986 166.237 19.9822 166.152 19.7441C166.066 19.5059 166.035 19.2517 166.06 19V13.43C166.035 13.1783 166.066 12.9241 166.152 12.6859C166.237 12.4477 166.374 12.2314 166.553 12.0525C166.731 11.8737 166.948 11.7367 167.186 11.6515C167.424 11.5664 167.678 11.5351 167.93 11.56H171.93L173 5.75C173.068 5.08776 173.396 4.47943 173.911 4.05786C174.426 3.63628 175.087 3.43573 175.75 3.5H180.63C180.967 3.46111 181.308 3.49919 181.628 3.61139C181.948 3.72358 182.238 3.90695 182.477 4.14767C182.716 4.38839 182.897 4.68019 183.007 5.00105C183.116 5.32192 183.152 5.66348 183.11 6V11.56H189.05C189.302 11.5351 189.556 11.5664 189.794 11.6515C190.032 11.7367 190.249 11.8737 190.427 12.0525C190.606 12.2314 190.743 12.4477 190.828 12.6859C190.914 12.9241 190.945 13.1783 190.92 13.43V19C190.946 19.2525 190.916 19.5078 190.832 19.7472C190.747 19.9867 190.611 20.2043 190.432 20.3843C190.253 20.5643 190.036 20.7022 189.797 20.788C189.558 20.8737 189.303 20.9051 189.05 20.88H183.11V33.18C183.11 34.62 183.8 35.18 184.68 35.18C185.99 35.18 186.42 33.87 186.42 32.68C186.432 32.3455 186.412 32.0107 186.36 31.68C186.24 30.37 186.67 29.68 187.92 29.68H192.55C193.008 29.6305 193.47 29.7408 193.856 29.9923C194.242 30.2437 194.53 30.6209 194.67 31.06C194.963 31.8838 195.131 32.7466 195.17 33.62C195.17 42.8 188.67 45.11 183.05 45.11C177.18 45.1 170.56 42.67 170.56 33.05Z" fill="#231F20"/>
+									<path d="M197 28C197 18.06 203.69 10.88 212.43 10.88C216.68 10.88 220.06 12.69 221.81 15.69V15.32C221.81 12.88 223.12 11.57 225.55 11.57H230.92C233.36 11.57 234.67 12.88 234.67 15.32V40.67C234.67 43.1 233.36 44.42 230.92 44.42H225.55C223.12 44.42 221.81 43.1 221.81 40.67V40.36C220.06 43.29 216.68 45.1 212.43 45.1C203.67 45.1 197 37.92 197 28ZM222 28C222 23.87 219.69 20.69 215.94 20.69C212.19 20.69 209.88 23.87 209.88 28C209.88 32.13 212.19 35.31 215.94 35.31C219.69 35.31 222 32.11 222 28Z" fill="#231F20"/>
+									<path d="M240.78 40.67V15.31C240.78 12.87 242.09 11.56 244.53 11.56H249.9C252.34 11.56 253.65 12.87 253.65 15.31V15.62C255.46 12.68 258.33 10.87 262.77 10.87C272.95 10.87 274.2 19.8 274.2 25.18V40.67C274.2 43.1 272.89 44.42 270.45 44.42H265.08C262.64 44.42 261.33 43.1 261.33 40.67V26.42C261.33 23.86 260.77 20.87 257.46 20.87C254.15 20.87 253.65 23.87 253.65 26.42V40.67C253.65 43.1 252.34 44.42 249.9 44.42H244.53C242.09 44.42 240.78 43.1 240.78 40.67Z" fill="#231F20"/>
+								</g>
+								<defs>
+									<clipPath id="clip0">
+									<rect width="275" height="46" fill="white"/>
+									</clipPath>
+								</defs>
+							</svg></a>
+						</div>
+						<div class="flex flex-grow justify-between">
+							<div class="hidden md:-my-px md:flex px-4 flex-grow">
+								<div class="flex flex-shrink md:-my-px">
+									
+										
+											<a href="/" class="mr-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+												<span>Home</span>
+											</a>
+										
+									
+										
+											<a href="/try" class="mr-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+												<span>Try</span>
+											</a>
+										
+									
+										
+											<a href="/documentation" class="mr-8 inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-md font-medium leading-5 text-gray-900 focus:outline-none focus:border-blue-700 transition duration-150 ease-in-out">
+												<span>Documentation</span>
+											</a>
+										
+									
+										
+											<a href="/blog" class="mr-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+												<span>Blog</span>
+											</a>
+										
+									
+								</div>
+
+								<div class="items-center flex flex-grow justify-end">
+									<div id="docsearch"></div>
+									<a target="_blank" href="https://github.com/phpstan/phpstan" class="ml-4 px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 transition duration-150 ease-in-out">
+										<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+											<path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="-mr-2 flex items-center md:hidden">
+						<div id="docsearch-mobile"></div>
+						<button data-bind="click: toggleMainMenu" class="ml-2 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+							<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+								<path data-bind="css: {hidden: mainMenuOpen, 'inline-flex': !mainMenuOpen()}" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+								<path data-bind="css: {hidden: !mainMenuOpen(), 'inline-flex': mainMenuOpen}" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div data-bind="css: {block: mainMenuOpen, hidden: !mainMenuOpen()}" class="hidden md:hidden">
+				<div class="pt-2 pb-3">
+					
+						
+							<a href="/" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+								Home
+							</a>
+						
+					
+						
+							<a href="/try" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+								Try
+							</a>
+						
+					
+						
+							<a href="/documentation" class="algolia-active mt-1 block pl-3 pr-4 py-2 border-l-4 border-blue-500 text-base font-medium text-blue-700 bg-blue-50 focus:outline-none focus:text-blue-800 focus:bg-blue-100 focus:border-blue-700 transition duration-150 ease-in-out">
+								Documentation
+							</a>
+						
+					
+						
+							<a href="/blog" class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+								Blog
+							</a>
+						
+					
+
+					<a target="_blank" href="https://github.com/phpstan/phpstan" class="flex items-center mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+						<span>GitHub</span>
+						<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4 ml-1"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+					</a>
+				</div>
+			</div>
+		<!-- /ko -->
+	</nav>
+	<div>
+		<main>
+			<div class="max-w-5xl mx-auto md:px-6">
+				
+
+<div class="flex">
+	<!-- ko with: mainMenu -->
+		<div class="sidebar w-64 md:block hidden flex-none pr-4 border-r border-gray-200 fixed bg-white overflow-y-auto top-0 bottom-0 mt-16 pt-6 pl-4 md:pl-0 z-10 md:z-auto" data-bind="css: { hidden: !sidebarOpen() }, event: { click: handleSidebarClick }">
+			
+				<a href="/documentation" class="flex items-center px-3 py-1 text-sm text-gray-400 hover:text-gray-600 transition ease-in-out duration-150">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+					All Documentation
+				</a>
+			
+
+			<div class="flex items-center mt-1">
+				<span id="sectionTitle" class="group flex-grow items-center px-3 py-2 text-lg leading-5 font-bold text-gray-900">User Guide</span>
+
+				<span id="algoliaSectionTitle" class="hidden">User Guide</span>
+			
+
+				<a href="#" class="md:hidden text-gray-400 hover:text-gray-500" data-bind="click: closeSidebar">
+					<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</a>
+			</div>
+
+			
+				
+					
+						<div class="px-3 pt-5 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Setup</div>
+					
+					<ul>
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="/user-guide/getting-started">Getting Started</a></li>
+							
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="/user-guide/command-line-usage">Command Line Usage</a></li>
+							
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md bg-blue-500 text-white" href="/user-guide/rule-levels">Rule Levels</a></li>
+							
+						
+					</ul>
+				
+					
+						<div class="px-3 pt-5 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Handling Errors</div>
+					
+					<ul>
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="/user-guide/ignoring-errors">Ignoring Errors</a></li>
+							
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="/error-identifiers">Error Identifiers</a></li>
+							
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="/user-guide/baseline">The Baseline</a></li>
+							
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="/user-guide/output-format">Output Format</a></li>
+							
+						
+					</ul>
+				
+					
+						<div class="px-3 pt-5 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Advanced</div>
+					
+					<ul>
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="/user-guide/discovering-symbols">Discovering Symbols</a></li>
+							
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="/user-guide/stub-files">Stub Files</a></li>
+							
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="/user-guide/troubleshooting-types">Troubleshooting Types</a></li>
+							
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="/user-guide/result-cache">Result Cache</a></li>
+							
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="/user-guide/extension-library">Extension Library</a></li>
+							
+						
+							
+								<li><a class="flex px-3 py-2 text-sm leading-5 font-medium rounded-md hover:bg-gray-50 transition ease-in-out duration-150" href="/user-guide/backward-compatibility-promise">Backward Compatibility Promise</a></li>
+							
+						
+					</ul>
+				
+			
+
+			<div class="mt-8 pt-6 border-t border-gray-200">
+				<div class="px-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Other Sections</div>
+				<ul>
+					
+						<li>
+							<a href="/config-reference" class="flex items-center px-3 py-2 text-sm leading-5 font-semibold text-gray-700 rounded-md hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:bg-blue-50 transition ease-in-out duration-150">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+								Config Reference
+							</a>
+						</li>
+					
+						<li>
+							<a href="/writing-php-code/phpdocs-basics" class="flex items-center px-3 py-2 text-sm leading-5 font-semibold text-gray-700 rounded-md hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:bg-blue-50 transition ease-in-out duration-150">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+								Writing PHP Code
+							</a>
+						</li>
+					
+						<li>
+							<a href="/developing-extensions/extension-types" class="flex items-center px-3 py-2 text-sm leading-5 font-semibold text-gray-700 rounded-md hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:bg-blue-50 transition ease-in-out duration-150">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+								Developing Extensions
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+			<div class="mt-8 rounded-lg bg-gradient-to-b from-blue-400 to-blue-700 to-80% text-white text-center font-semibold flex justify-center items-center text-2xl exclude-from-dark">
+				<a class="px-3 py-3 md:py-10" href="/sponsor">Sponsor PHPStan!</a>
+			</div>
+		</div>
+	<!-- /ko -->
+	<div class="content px-4 pt-4 min-w-0 w-full ml-0 md:ml-64">
+		<!-- ko with: mainMenu -->
+			<a href="#" class="text-sm text-gray-400 md:hidden no-underline hover:underline" data-bind="click: openSidebar">Menu</a>
+		<!-- /ko -->
+
+		<div class="flex items-center justify-between gap-4 mb-4">
+			<h1 class="leading-tight !mb-0">Rule Levels</h1>
+			
+			<a href="https://github.com/phpstan/phpstan/edit/2.3.x/website/src/user-guide/rule-levels.md" class="flex-shrink-0 text-gray-300 hover:text-gray-500 transition duration-150" title="Edit this page on GitHub">
+				<svg fill="currentColor" viewBox="0 0 20 20" class="w-5 h-5"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+			</a>
+			
+		</div>
+		
+
+		
+			<p>If you want to use PHPStan but your codebase isn’t up to speed with strong typing and PHPStan’s strict checks, you can currently choose from 11 levels (0 is the loosest and 10 is the strictest) by passing <code>-l|--level</code> to the <code>analyse</code> command.</p>
+<pre class="language-bash"><code class="language-diff-bash diff-highlight">vendor/bin/phpstan analyse <span class="token parameter variable">-l</span> <span class="token number">6</span> src tests</code></pre>
+<p>The default level is 0. Once you specify a configuration file, you also have to specify the level to run.</p>
+<p>This feature enables incremental adoption of PHPStan checks. You can start using PHPStan with a lower rule level and increase it when you feel like it.</p>
+<div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4" role="alert">
+<p><strong>Baseline</strong></p>
+<p>To be able to run a higher level without fixing all the reported errors first, check out a feature called <a href="/user-guide/baseline">the baseline</a>.</p>
+</div>
+<p>You can also use <code>--level max</code> as an alias for the highest level. This will ensure that you will always use the highest level when upgrading to new versions of PHPStan. <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<p>Here’s a brief overview of what’s checked on each level. Levels are cumulative - for example running level 5 also gives you all the checks from levels 0-4.</p>
+<ol start="0">
+<li>basic checks, unknown classes, unknown functions, unknown methods called on <code>$this</code>, wrong number of arguments passed to those methods and functions, always undefined variables</li>
+<li>possibly undefined variables, unknown magic methods and properties on classes with <code>__call</code> and <code>__get</code></li>
+<li>unknown methods checked on all expressions (not just <code>$this</code>), validating PHPDocs</li>
+<li>return types, types assigned to properties</li>
+<li>basic dead code checking - always false <code>instanceof</code> and other type checks, dead <code>else</code> branches, unreachable code after return; etc.</li>
+<li>checking types of arguments passed to methods and functions</li>
+<li>report missing typehints</li>
+<li>report partially wrong union types - if you call a method that only exists on some types in a union type, level 7 starts to report that; other possibly incorrect situations</li>
+<li>report calling methods and accessing properties on nullable types</li>
+<li>be strict about explicit <code>mixed</code> type - the only allowed operation you can do with it is to pass it to another <code>mixed</code></li>
+<li>(New in PHPStan 2.0) be even more strict about the <code>mixed</code> type - reports errors even for implicit mixed (missing type), not just explicit mixed</li>
+</ol>
+<h2 id="want-to-go-further%3F" tabindex="-1">Want to go further? <a class="header-anchor ml-1 text-gray-300 hover:text-black" href="#want-to-go-further%3F">#</a></h2>
+<p>If the level 10 isn’t enough for you and you’re looking for even more strictness and type safety, here are some tips. You can use them even alongside lower rule levels.</p>
+<p>Use <a href="https://github.com/phpstan/phpstan-strict-rules">phpstan-strict-rules</a> extension. It configures PHPStan in a stricter way and offers additional rules that revolve around strictly and strongly typed code with no loose casting for those who want additional safety in extremely defensive programming.</p>
+<p>Enable <a href="/blog/what-is-bleeding-edge">Bleeding Edge</a>. It’s a preview of what’s coming in the next major release of PHPStan, but shipping in the current stable release. Bleeding edge users are often rewarded with a more capable analysis sooner than the rest. It can also come with performance improvements. If you enable bleeding edge, and adopt new PHPStan features continuously, you’re gonna have much less work to do when the next major version ships for everyone.</p>
+<p>If you use a popular framework like Symfony, Doctrine or Laravel etc., make sure you install a <a href="/user-guide/extension-library">corresponding extension</a>. It will improve understanding of your code, and also comes with extra rules for correct usage.</p>
+<p>Go through the extra <a href="/config-reference#stricter-analysis">configuration options</a> for stricter analysis. Some of them are enabled when you install phpstan-strict-rules, but there are some extra options that aren’t part of any rule level, nor phpstan-strict-rules. A few examples:</p>
+<ul>
+<li><a href="/config-reference#checkuninitializedproperties"><code>checkUninitializedProperties</code></a>: Report typed properties not set in constructor</li>
+<li><a href="/config-reference#checkbenevolentuniontypes"><code>checkBenevolentUnionTypes</code></a>: Report wrong usage of unknown array keys, and other types</li>
+<li><a href="/config-reference#rememberpossiblyimpurefunctionvalues"><code>rememberPossiblyImpureFunctionValues: false</code></a>: Do not remember return values of functions that are not marked as pure</li>
+<li><a href="/config-reference#reportpossiblynonexistentgeneralarrayoffset"><code>reportPossiblyNonexistentGeneralArrayOffset</code></a>: Make sure offset exists before accessing it on a general array</li>
+<li><a href="/config-reference#reportpossiblynonexistentconstantarrayoffset"><code>reportPossiblyNonexistentConstantArrayOffset</code></a>: Make sure offset exists before accessing it on an array shape</li>
+<li><a href="/blog/bring-your-exceptions-under-control">Bring your exceptions under control with <code>@throws</code></a></li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Please note that this can create a significant obstacle when upgrading to a newer version because you might have to fix a lot of code to bring the number of errors down to zero. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+		
+
+		
+		
+		<nav class="mt-12 pt-6 border-t border-gray-200 flex justify-between text-sm">
+			<div>
+				
+				<a href="/user-guide/command-line-usage" class="text-gray-400 hover:text-gray-600 transition duration-150">
+					&larr; Previous: Command Line Usage
+				</a>
+				
+			</div>
+			<div>
+				
+				<a href="/user-guide/ignoring-errors" class="text-gray-400 hover:text-gray-600 transition duration-150">
+					Next: Ignoring Errors &rarr;
+				</a>
+				
+			</div>
+		</nav>
+		
+
+		<div class="mt-16">
+			<div class="md:flex md:items-center md:justify-between mt-8 mb-8">
+	<div class="flex justify-center items-center md:order-2 text-gray-400">
+		<span class="text-sm">Theme</span>
+		<div class="ml-2 flex flex-col" data-bind="with: mainMenu">
+			<div class="flex rounded border border-gray-400 w-36 text-sm text-gray-400">
+				<div class="flex basis-0 flex-grow items-center justify-center py-1 font-medium text-base" data-bind="click: switchToAutoTheme, css: {'cursor-default text-white bg-gray-400': theme() === 'auto', 'cursor-pointer hover:text-gray-500 border-r border-gray-400': theme() !== 'auto'}" title="Theme follows system-level setting">
+					<span>A</span>
+				</div>
+				<div class="flex basis-0 flex-grow items-center justify-center py-1" data-bind="click: switchToLightTheme, css: {'cursor-default text-white bg-gray-400': theme() === 'light', 'cursor-pointer hover:text-gray-500 border-r border-gray-400': theme() !== 'light'}" title="Theme will always use light colors">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                    </svg>
+				</div>
+				<div class="flex basis-0 flex-grow items-center justify-center py-1" data-bind="click: switchToDarkTheme, css: {'cursor-default text-white bg-gray-400': theme() === 'dark', 'cursor-pointer hover:text-gray-500 border-gray-400': theme() !== 'dark'}" title="Theme will always use dark colors">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="flex justify-center md:order-3 mt-8 md:mt-0">
+		<a href="https://twitter.com/phpstan" class="ml-6 text-gray-400 hover:text-gray-500" target="_blank">
+			<span class="sr-only">Twitter</span>
+			<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+				<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+			</svg>
+		</a>
+		<a rel="me" href="https://phpc.social/@phpstan" class="ml-6 text-gray-400 hover:text-gray-500" target="_blank">
+			<span class="sr-only">Mastodon</span>
+			<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 216.4144 232.00976">
+				<path d="M211.80734 139.0875c-3.18125 16.36625-28.4925 34.2775-57.5625 37.74875-15.15875 1.80875-30.08375 3.47125-45.99875 2.74125-26.0275-1.1925-46.565-6.2125-46.565-6.2125 0 2.53375.15625 4.94625.46875 7.2025 3.38375 25.68625 25.47 27.225 46.39125 27.9425 21.11625.7225 39.91875-5.20625 39.91875-5.20625l.8675 19.09s-14.77 7.93125-41.08125 9.39c-14.50875.7975-32.52375-.365-53.50625-5.91875C9.23234 213.82 1.40609 165.31125.20859 116.09125c-.365-14.61375-.14-28.39375-.14-39.91875 0-50.33 32.97625-65.0825 32.97625-65.0825C49.67234 3.45375 78.20359.2425 107.86484 0h.72875c29.66125.2425 58.21125 3.45375 74.8375 11.09 0 0 32.975 14.7525 32.975 65.0825 0 0 .41375 37.13375-4.59875 62.915"/>
+			  	<path fill="#fff" d="M177.50984 80.077v60.94125h-24.14375v-59.15c0-12.46875-5.24625-18.7975-15.74-18.7975-11.6025 0-17.4175 7.5075-17.4175 22.3525v32.37625H96.20734V85.42325c0-14.845-5.81625-22.3525-17.41875-22.3525-10.49375 0-15.74 6.32875-15.74 18.7975v59.15H38.90484V80.077c0-12.455 3.17125-22.3525 9.54125-29.675 6.56875-7.3225 15.17125-11.07625 25.85-11.07625 12.355 0 21.71125 4.74875 27.8975 14.2475l6.01375 10.08125 6.015-10.08125c6.185-9.49875 15.54125-14.2475 27.8975-14.2475 10.6775 0 19.28 3.75375 25.85 11.07625 6.36875 7.3225 9.54 17.22 9.54 29.675"/>
+
+			</svg>
+		</a>
+		<a href="https://www.youtube.com/@phpstan" class="ml-6 text-gray-400 hover:text-gray-500" target="_blank">
+			<span class="sr-only">YouTube</span>
+			<svg viewBox="0 0 28.57 20" class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					<path d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5677 5.35042 27.9727 3.12324Z"></path>
+					<path d="M11.4253 14.2854L18.8477 10.0004L11.4253 5.71533V14.2854Z" fill="white"></path>
+				</g>
+			</svg>
+		</a>
+		<a href="/rss.xml" class="ml-6 text-gray-400 hover:text-gray-500" target="_blank">
+			<span class="sr-only">RSS</span>
+			<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+				<path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.71-7.118-15.758-15.839-15.82zm0-3.368c10.58.046 19.152 8.594 19.183 19.188h4.817c-.03-13.231-10.755-23.954-24-24v4.812z"/>
+			</svg>
+		</a>
+	</div>
+	<div class="mt-8 md:mt-0 md:order-1 flex items-center justify-center">
+		<div class="text-center text-sm leading-6 text-gray-400">&copy; 2026 PHPStan s.r.o.</div>
+	</div>
+</div>
+
+		</div>
+	</div>
+</div>
+
+
+			</div>
+		</main>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

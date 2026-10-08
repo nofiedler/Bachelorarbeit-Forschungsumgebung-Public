@@ -1,0 +1,27 @@
+{
+  "version": "M6-static-instrument-v1",
+  "measure_version": "M6-static-level5-v1",
+  "php": "8.4.26",
+  "phpstan": "2.2.16",
+  "larastan": "v3.12.1",
+  "phpstan_distribution": {
+    "type": "zip",
+    "url": "https://api.github.com/repos/phpstan/phpstan/zipball/46a6d9060e5a7763adfcc21ebcb8b504ebdbcb92",
+    "reference": "46a6d9060e5a7763adfcc21ebcb8b504ebdbcb92",
+    "shasum": ""
+  },
+  "larastan_distribution": {
+    "type": "zip",
+    "url": "https://api.github.com/repos/larastan/larastan/zipball/168fd3b955e723c51dbf81709849b0c3ac4ac5f6",
+    "reference": "168fd3b955e723c51dbf81709849b0c3ac4ac5f6",
+    "shasum": ""
+  },
+  "phpstan_phar_sha256": "1a2fb5460c142502d3cd06272529c18b19fda004ada974bd2581cb9fd6c0a53b",
+  "phpstan_entry_sha256": "9bc7af1d6a040fea36f9375e75d662ad3916fff045d4d77780cc972e09ef656d",
+  "vendor_sha256": "b5a9638815c5a32fe1a41519c379a3440df5ed3096edaef2799d6e527804251b",
+  "vendor_file_count": 7912,
+  "image": "sha256:b2173054c736ad9cd5af6d06e814a891c393929ad983bc918db96e798354762d",
+  "level": 5,
+  "parallel": "disabled by --debug; no worker processTimeout",
+  "candidate_baselines": false
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "study": "original",
+    "technical_gates": "passed",
+    "backup": "current",
+    "next": "f40ffede-3c4f-526f-a87f-7b83c9107407"
+  },
+  {
+    "study": "importierte Kopie",
+    "technical_gates": "passed",
+    "backup": "awaiting_confirmation",
+    "next": "f40ffede-3c4f-526f-a87f-7b83c9107407"
+  }
+]

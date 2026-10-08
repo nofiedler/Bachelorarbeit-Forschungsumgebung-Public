@@ -1,0 +1,5 @@
+<div class="condition-tags">
+<div class="condition-group"><span class="condition-tag module-tag">{{ tags[0] }}</span><span class="condition-tag {{ 'context-k1' if tags[1].startswith('K1') else 'context-k0' }}">{{ tags[1] }}</span></div>
+<div class="condition-group toggles">{% for tag in tags[2:4] %}<span class="condition-tag {{ 'enabled' if tag.endswith(' an') else 'disabled' }}">{{ tag }}</span>{% endfor %}</div>
+<div class="condition-models" aria-label="Modelle: P Produzent, V Verifikation">{% for tag in tags[4:] %}<span class="model-row"><strong>{{ tag[0] }}</strong><span>· {{ tag[4:] }}</span></span>{% endfor %}</div>
+</div>

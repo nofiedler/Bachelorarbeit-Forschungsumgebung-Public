@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/laravel/laravel",
+  "commit": "06d016a364a37430eec9cbc52209adce3d7667ce",
+  "archive_sha256": "b0f319f551761a47b4d2be7cfe789423dec3376343b1c9fd7d6d958270ba764c",
+  "local_changes": [
+    "composer.json: PHP8.4, framework13.34.0, PHPUnit, PHPStan2.2.16/Larastan3.12.1; remove optional development helpers; disable plugins; composer.lock added.",
+    "No npm install, starter kit or migrated module; original source remains preparation material.",
+    "AGENTS.md and CLAUDE.md excluded from materialized skeleton; upstream archive preserves originals. Their global PHP/Boost installation instructions conflict with the authorized container-only setup and were not executed."
+  ]
+}

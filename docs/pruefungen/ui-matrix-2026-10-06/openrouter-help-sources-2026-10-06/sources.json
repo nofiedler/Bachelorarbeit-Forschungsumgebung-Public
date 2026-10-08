@@ -1,0 +1,16 @@
+[
+  {
+    "file": "openrouter-faq.html",
+    "url": "https://openrouter.ai/docs/faq",
+    "retrieved_at": "2026-10-06T21:30:22.347116+00:00",
+    "format": "text/html",
+    "sha256": "85e9ed1956f995cbe4886a7f24d0e9ea6642fdeb50d2fe3e330505837b963e4c"
+  },
+  {
+    "file": "openrouter-authentication.html",
+    "url": "https://openrouter.ai/docs/api/reference/authentication",
+    "retrieved_at": "2026-10-06T21:30:22.347514+00:00",
+    "format": "text/html",
+    "sha256": "0437325c78fb0c59a9897c2f374b59e94bc33588a32d3b0ccd86039371911e13"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "asset_version": "M2-ALLOWLIST-v0.1",
+  "execution_writable": [
+    "storage",
+    "bootstrap/cache",
+    "own temporary area"
+  ],
+  "file_type": "regular file only; no links/traversal",
+  "glob_semantics": "** includes direct directory level",
+  "paths": [
+    "routes/study.php",
+    "app/Http/Controllers/Study/**/*.php",
+    "app/Study/**/*.php",
+    "resources/views/study/**/*.blade.php"
+  ],
+  "protected": "all scaffold files except routes/study.php; no new files outside explicit allowlist",
+  "schema_version": 1
+}

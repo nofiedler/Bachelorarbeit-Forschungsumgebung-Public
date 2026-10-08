@@ -1,0 +1,36 @@
+{
+  "phpstan.png": {
+    "mode": "RGBA",
+    "size": [
+      236,
+      200
+    ],
+    "alpha_range": [
+      0,
+      255
+    ]
+  },
+  "dvwa.png": {
+    "mode": "RGBA",
+    "size": [
+      200,
+      114
+    ],
+    "alpha_range": [
+      0,
+      255
+    ]
+  },
+  "larastan.png": {
+    "mode": "RGBA",
+    "size": [
+      600,
+      503
+    ],
+    "alpha_range": [
+      0,
+      255
+    ]
+  },
+  "wheel_files_verified": 21
+}

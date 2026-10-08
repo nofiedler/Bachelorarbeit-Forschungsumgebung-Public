@@ -1,0 +1,19 @@
+{% from 'analysis_figure_population.html' import population %}
+{% macro val(value, scale=1) -%}<span class="report-number"{% if value is mapping and value.value is not none %} title="Exakt: {{ value.value }} {{ value.unit }}"{% endif %}>{{ value|report_number(scale) }}</span>{%- endmacro %}
+{% macro download(name, label='CSV herunterladen') -%}{% if report.output_base %}<a class="report-download" download="{{ name }}" href="{{ report.output_base }}{{ name }}{% if report.cache_key %}?v={{ report.cache_key }}{% endif %}">{{ label }} ↓</a>{% endif %}{%- endmacro %}
+{% macro heading(number, question, title, subtitle) -%}<header class="report-section-heading"><span class="report-section-number">{{ number }}</span><div><p class="report-kicker">{{ question }}</p><h2>{{ title }}</h2><p>{{ subtitle }}</p></div></header>{%- endmacro %}
+{% macro stats_head(first='Bedingung',unit='F, Skala 0–1') -%}<thead><tr><th scope="col">{{ first }}</th><th scope="col">n</th><th scope="col">Mittelwert</th><th scope="col">Median</th><th scope="col">Minimum</th><th scope="col">Maximum</th><th scope="col">s</th></tr></thead>{%- endmacro %}
+{% macro stats_cells(stats, scale=1) -%}<td>{{ stats.n }}</td>{% for key in ['mean','median','min','max','sample_sd'] %}<td>{{ val(stats[key],scale) }}</td>{% endfor %}{%- endmacro %}
+{% macro guide(purpose, reading, limit='') -%}<div class="report-reading-aid"><p><strong>Wofür?</strong> {{ purpose }}</p><p><strong>So liest du es:</strong> {{ reading }}</p>{% if limit %}<p class="report-reading-limit"><strong>Beachte:</strong> {{ limit }}</p>{% endif %}</div>{%- endmacro %}
+{% macro question(code, title, category, exact, purpose, shows, reading, limit) -%}
+{{ heading(code, category, title, purpose) }}
+<div class="report-question-reading"><p><strong>Was siehst du?</strong> {{ shows }}</p><p><strong>So liest du es:</strong> {{ reading }}</p><p><strong>Grenze:</strong> {{ limit }}</p></div>
+<details class="report-question-wording"><summary>{{ code }} · vollständige Forschungsfrage</summary><p>{{ exact }}</p></details>
+{%- endmacro %}
+{% macro figure(name, number, title, purpose='', reading='', limit='') -%}
+{% set plot=report.plots.get(name) %}{% if plot %}
+<figure class="report-figure plot-card" data-figure="{{ name }}">
+<div class="report-figure-title"><strong>Abbildung {{ number }} · {{ title }}</strong>{% if purpose %}<p>{{ purpose }}</p>{% endif %}</div>
+<a href="{{ plot.inline }}" target="_blank" rel="noopener" aria-label="Abbildung {{ number }} vergrößern"><img loading="lazy" src="{{ plot.inline }}" alt="{{ title }}. {{ reading or plot.caption }}"></a>
+<figcaption>{{ population(plot.population, plot.population_csv) }}{% if reading %}<p><strong>So liest du es:</strong> {{ reading }}</p>{% endif %}{% if limit %}<p><strong>Beachte:</strong> {{ limit }}</p>{% endif %}<details class="report-figure-method"><summary>Genaue Datenauswahl und Darstellung</summary><p>{{ plot.caption }}</p></details><div class="report-figure-downloads">{% for format in ['pdf','svg','png','csv','json'] %}{% if plot[format] %}<a download="{{ name }}{{ '-data' if format in ['csv','json'] else '' }}.{{ format }}" href="{{ plot[format] }}">{{ format|upper }} ↓</a>{% endif %}{% endfor %}</div></figcaption>
+</figure>{% endif %}{%- endmacro %}

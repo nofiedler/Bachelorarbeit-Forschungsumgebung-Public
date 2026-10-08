@@ -1,0 +1,62 @@
+{
+  "health_status": 200,
+  "real_calls": 0,
+  "htmx_sha256": "d6fdc75f204e6bdefa99b69bf1e6d4ac69b8a364f77929f45c13476b4000f717",
+  "components": [
+    {
+      "name": "Kontrollspeicher",
+      "state": "ok",
+      "detail": "Verf\u00fcgbar; 196219 MiB frei."
+    },
+    {
+      "name": "Artefakte",
+      "state": "ok",
+      "detail": "Verf\u00fcgbar; 196219 MiB frei."
+    },
+    {
+      "name": "Staging",
+      "state": "ok",
+      "detail": "Verf\u00fcgbar; 196219 MiB frei."
+    },
+    {
+      "name": "SQLite",
+      "state": "ok",
+      "detail": "SQLite 3.46.1; Journal DELETE, synchronous=2 (FULL=2)."
+    },
+    {
+      "name": "Worker",
+      "state": "ok",
+      "detail": "Lebenszeichen aktuell; persistente Auftr\u00e4ge und serielle Pipeline verf\u00fcgbar."
+    },
+    {
+      "name": "Docker",
+      "state": "ok",
+      "detail": "Daemon erreichbar."
+    },
+    {
+      "name": "Laravel / PHP",
+      "state": "ok",
+      "detail": "Vorbereitetes Image vorhanden."
+    },
+    {
+      "name": "MySQL",
+      "state": "ok",
+      "detail": "Vorbereitetes Image vorhanden."
+    },
+    {
+      "name": "Pr\u00fcfclient",
+      "state": "ok",
+      "detail": "Vorbereitetes Image vorhanden."
+    },
+    {
+      "name": "Netzwerkisolation",
+      "state": "ok",
+      "detail": "Vorbereitetes Image vorhanden."
+    },
+    {
+      "name": "Checkpoints",
+      "state": "ok",
+      "detail": "Verf\u00fcgbar; 196219 MiB frei."
+    }
+  ]
+}

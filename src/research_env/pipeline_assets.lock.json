@@ -1,0 +1,15 @@
+{
+  "assets/context/m2-v0.1-csrf1/BF/K0/manifest.json": "611d5e9cce4f6a86bdc6556b99725652fc37b6cf146f0967df6fbeed9007abde",
+  "assets/context/m2-v0.1-csrf1/BF/K1/manifest.json": "f943a2dcc0fd4d428a4809b6061b2f9eafdc1008e921548d73654ff572c92918",
+  "assets/context/m2-v0.1-csrf1/SQL/K0/manifest.json": "83ce7e2f69a06fcac084bc4c46895f99d57a76ee68fabbde1ebc0e752061291c",
+  "assets/context/m2-v0.1-csrf1/SQL/K1/manifest.json": "7e51598fc8ec128dc7c4f852cc1de4982420b98300a2d351056c584853d4dc8b",
+  "assets/context/m2-v0.1-csrf1/UP/K0/manifest.json": "a9e69d4e65619f409425ba6bf1bbb3e4182082a8411e871e0a9b74009af42581",
+  "assets/context/m2-v0.1-csrf1/UP/K1/manifest.json": "ddffd1bfacd61c2a3eecdc061fa088602acf9da19cfee6b3498e227927fb81ff",
+  "assets/context/m2-v0.1/BF/K0/manifest.json": "1e3ae44cdd1f2c83b20443a0376563a5a92a24b34195f5e2599d7f431220a7b1",
+  "assets/context/m2-v0.1/BF/K1/manifest.json": "eeb626ead081cc9aba62b17f4b9c9b896f410d46a17dfdf1e1bffb4e46328335",
+  "assets/context/m2-v0.1/SQL/K0/manifest.json": "20f0afc169e05e2f5bed0b0bf3b1d228a7cea5122b31da447dacb48a2605e34d",
+  "assets/context/m2-v0.1/SQL/K1/manifest.json": "7deabcb5e04e8c88e5c3acf05520ee43495e9a711661a301d27123f1d4eda8bd",
+  "assets/context/m2-v0.1/UP/K0/manifest.json": "152aea1f922b6919a23aa4281e31c76482b2a106334af47c892ed256a893afda",
+  "assets/context/m2-v0.1/UP/K1/manifest.json": "48b10d7a02f9e4575e913195afb9574376217a7faec072535cfe4680ff000cf7",
+  "assets/study/m2-v0.1/manifest.json": "89bf4d29a81c74e3138303a560af00e1984ab7c46dd30f4feb0fe9fcd632e46a"
+}

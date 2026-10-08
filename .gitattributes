@@ -1,0 +1,2 @@
+# Research inputs and evidence are SHA-256 bound; preserve exact bytes on checkout.
+* -text

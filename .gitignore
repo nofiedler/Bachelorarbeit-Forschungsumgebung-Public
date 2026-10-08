@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+.env.*
+!.env.example
+*.sqlite3
+*.sqlite3-journal
+/assets/laravel/vendor/
+node_modules/
+/secrets/
+*.oci.tar
+*.docker.tar
+/artifacts/
+/staging/
+/checkpoints/
+/control/
+
+.DS_Store
+
+# Local copies for human inspection; immutable originals remain in the artifact volume.
+/local/inspections/
+/local/runtime-images.json
+/local/runtime-images.json.new
